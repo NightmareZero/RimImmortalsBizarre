@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- 指甲 -->
+    <AbilityDef>
+        <defName>NzRI_AoJing_FingerNail</defName>
+        <label>fingernail</label>
+        <description></description>
+        <iconPath>Ability/Base/LG</iconPath>
+        <cooldownTicksRange>60</cooldownTicksRange>
+        <category>Sanguophage</category>
+        <displayOrder>200</displayOrder>
+        <aiCanUse>true</aiCanUse>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>3.9</range>
+            <warmupTime>0.5</warmupTime>
+            <soundCast>PiercingSpine_Launch</soundCast>
+        </verbProperties>
+        <comps>
+            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+                <rEnergy>-5</rEnergy>
+            </li>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>NzRI_SmallBloodGuts</projectileDef>
+            </li>
+        </comps>
+    </AbilityDef>
+    <!-- 血糜 小 -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>NzRI_SmallBloodGuts</defName>
+        <label>blood guts</label>
+        <graphicData>
+            <texPath>Things/Projectile/PiercingSpine</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>RangedStab</damageDef>
+            <damageAmountBase>25</damageAmountBase>
+            <armorPenetrationBase>1</armorPenetrationBase>
+            <stoppingPower>3</stoppingPower>
+            <speed>55</speed>
+        </projectile>
+    </ThingDef>
+
+    <!-- 手指/脚趾 -->
+
+    <!-- 手/脚 -->
+
+    <!-- 胳膊/腿 -->
+
+    <!-- 火疗 -->
+
+    <!-- 再生 -->
+
+    <!-- 蜕皮 -->
+</Defs>
