@@ -18,10 +18,15 @@
         </verbProperties>
         <comps>
             <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
-                <rEnergy>-5</rEnergy>
+                <rEnergy>-3</rEnergy>
             </li>
             <li Class="CompProperties_AbilityLaunchProjectile">
                 <projectileDef>NzRI_SmallBloodGuts</projectileDef>
+            </li>
+            <li Class="CompProperties_AoJing_DismemberSelf">
+                <level>1</level>
+                <demageMin>1</demageMin>
+                <demageMax>2</demageMax>
             </li>
         </comps>
     </AbilityDef>
