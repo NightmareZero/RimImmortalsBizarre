@@ -17,8 +17,8 @@
 	<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
 		<DefineConstants>DEBUG;TRACE</DefineConstants>
 		<Optimize>false</Optimize>
-        <DebugType>full</DebugType>
-        <DebugSymbols>true</DebugSymbols>
+		<DebugType>full</DebugType>
+		<DebugSymbols>true</DebugSymbols>
 		<!-- 其他Debug特定的设置 -->
 	</PropertyGroup>
 
@@ -49,6 +49,23 @@
 
 		<!-- Harmony -->
 		<Reference Include="../../Harmony/Current/Assemblies/0Harmony.dll">
+			<Private>False</Private>
+		</Reference>
+
+		<!-- RimImmortal-Core -->
+		<Reference Include="../../RimImmortal-Core/1.5/Assemblies/Mod.dll">
+			<Private>False</Private>
+		</Reference>
+
+		<Reference Include="../../RimImmortal-Core/1.5/Assemblies/RI_Effect.dll">
+			<Private>False</Private>
+		</Reference>
+
+		<Reference Include="../../RimImmortal-Core/1.5/Assemblies/RimImmortalEffect_Library.dll">
+			<Private>False</Private>
+		</Reference>
+
+		<Reference Include="../../RimImmortal-Core/1.5/Assemblies/RimImmortalEffect_Library.dll">
 			<Private>False</Private>
 		</Reference>
 	</ItemGroup>
