@@ -6,7 +6,7 @@ namespace NzRimImmortalBizarre
     public class XmlOf
     {
 
-        
+        public static DefDismemberSelf defDismemberSelf;
 
 
         static XmlOf()

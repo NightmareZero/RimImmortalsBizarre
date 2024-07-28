@@ -24,6 +24,7 @@
                 <projectileDef>NzRI_SmallBloodGuts</projectileDef>
             </li>
             <li Class="CompProperties_AoJing_DismemberSelf">
+                <group>projectile</group>
                 <level>1</level>
                 <demageMin>1</demageMin>
                 <demageMax>2</demageMax>
