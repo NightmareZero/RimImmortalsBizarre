@@ -3,27 +3,27 @@ using RimWorld;
 using Verse;
 
 namespace NzRimImmortalBizarre
-{ 
-
+{
     public class DefDismemberSelf : Def
     {
-       public List<DefDismemberSelfLevel> levels;
+        public List<DefDismemberSelfLevel> levels;
 
-       public DefDismemberSelfLevel GetLevel(string group, int level)
-       {
-           foreach (DefDismemberSelfLevel defDismemberSelfLevel in levels)
-           {
-               if (defDismemberSelfLevel.group == group && defDismemberSelfLevel.level == level)
-               {
-                   return defDismemberSelfLevel;
-               }
-           }
+        public DefDismemberSelfLevel GetLevel(string group, int level)
+        {
+            foreach (DefDismemberSelfLevel defDismemberSelfLevel in levels)
+            {
+                if (defDismemberSelfLevel.group == group && defDismemberSelfLevel.level == level)
+                {
+                    return defDismemberSelfLevel;
+                }
+            }
 
-           return null;
-       }
+            return null;
+        }
     }
 
-    public class DefDismemberSelfLevel { 
+    public class DefDismemberSelfLevel
+    {
         public int level;
         public string group;
 
@@ -32,7 +32,7 @@ namespace NzRimImmortalBizarre
 
         private List<BodyPartDef> caches;
 
-        
+
         public List<BodyPartDef> GetBodyPartDefs()
         {
             // 如果缓存为空，则进行初始化
