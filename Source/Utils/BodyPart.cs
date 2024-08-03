@@ -3,6 +3,7 @@ using System.Linq;
 using RimWorld;
 using Verse;
 using Verse.Noise;
+using System.Collections.Generic;
 
 namespace NzRimImmortalBizarre
 {
@@ -19,7 +20,7 @@ namespace NzRimImmortalBizarre
         public static void DamageBodyPart(this Pawn pawn, string Group, int level, int min, int max)
         {
             // 获取符合要求的BodyPartDefs
-            var bodyPartDefs = XmlOf.defPartHurt.GetLevel(Group, level).bodyParts;
+            var bodyPartDefs = GetPartHurtLevel(Group, level).bodyParts;
 
             // 获取所有不缺失的身体部件
             var notMissingParts = pawn.health.hediffSet.GetNotMissingParts();
@@ -47,7 +48,7 @@ namespace NzRimImmortalBizarre
         public static bool HasCanDamageBodyPart(this Pawn pawn, string Group, int level)
         {
             // 获取符合要求的BodyPartDefs
-            var bodyPartDefs = XmlOf.defPartHurt.GetLevel(Group, level).bodyParts;
+            var bodyPartDefs = GetPartHurtLevel(Group, level).bodyParts;
 
             // 获取所有不缺失的身体部件
             var notMissingParts = pawn.health.hediffSet.GetNotMissingParts();
@@ -61,9 +62,10 @@ namespace NzRimImmortalBizarre
             return targetPart != null;
         }
 
-        public static DefPartHurtLevel GetLevel(this DefPartHurt defPartHurt, string group, int level)
+        public static DefPartHurtLevel GetPartHurtLevel(string group, int level)
         {
-            foreach (DefPartHurtLevel DefPartHurtLevel in defPartHurt.levels)
+           
+            foreach (DefPartHurtLevel DefPartHurtLevel in DataOf.allDefPartHurts)
             {
                 if (DefPartHurtLevel.group == group && DefPartHurtLevel.level == level)
                 {
@@ -73,6 +75,35 @@ namespace NzRimImmortalBizarre
             return null;
         }
 
+
+        // private static List<BodyPartDef> caches;
+
+        // public static List<BodyPartDef> GetBodyParts(this DefPartHurtLevel level)
+        // {
+
+        //     // 如果缓存为空，则进行初始化
+        //     if (caches == null)
+        //     {
+        //         caches = new List<BodyPartDef>();
+
+        //         // 遍历 bodyParts 列表中的每一个字符串
+        //         foreach (string part in level.bodyParts)
+        //         {
+        //             // 尝试从 DefDatabase 中获取对应的 BodyPartDef 对象
+        //             BodyPartDef bodyPartDef = DefDatabase<BodyPartDef>.GetNamedSilentFail(part);
+
+        //             // 如果找到了对应的 BodyPartDef 对象，则将其添加到缓存列表中
+        //             if (bodyPartDef != null)
+        //             {
+        //                 caches.Add(bodyPartDef);
+        //             }
+        //         }
+        //     }
+
+        //     // 返回缓存的 BodyPartDef 对象列表
+        //     return caches;
+
+        // }
     }
 
 }
