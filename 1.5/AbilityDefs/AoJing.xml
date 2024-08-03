@@ -49,6 +49,35 @@
     </ThingDef>
 
     <!-- 手指/脚趾 -->
+    <AbilityDef>
+        <defName>Finger</defName>
+        <label>finger</label>
+        <description>Spit a stream of sticky, flammable bile from the mouth. The bile can ignite anything or anyone it hits, and also form flaming pools on the ground.\n\nThe bile is generated and stored by an organ in the neck, along with a separate pouch of hypergolic reactant for ignition.</description>
+        <iconPath>UI/Abilities/FireSpew</iconPath>
+        <cooldownTicksRange>300000</cooldownTicksRange>
+        <aiCanUse>true</aiCanUse>
+        <ai_IsIncendiary>true</ai_IsIncendiary>
+        <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+        <warmupStartSound>FireSpew_Warmup</warmupStartSound>
+        <verbProperties>
+          <verbClass>Verb_CastAbility</verbClass>
+          <range>7.9</range>
+          <warmupTime>1</warmupTime>
+          <soundCast>FireSpew_Resolve</soundCast>
+          <targetParams>
+            <canTargetLocations>true</canTargetLocations>
+          </targetParams>
+        </verbProperties>
+        <comps>
+          <li Class="CompProperties_AbilityFireSpew">
+            <range>7.9</range>
+            <lineWidthEnd>3</lineWidthEnd>
+            <filthDef>Filth_FlammableBile</filthDef>
+            <effecterDef>Fire_Spew</effecterDef>
+            <canHitFilledCells>true</canHitFilledCells>
+          </li>
+        </comps>
+      </AbilityDef>
 
     <!-- 手/脚 -->
 

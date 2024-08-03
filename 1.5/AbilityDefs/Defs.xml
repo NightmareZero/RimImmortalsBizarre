@@ -8,12 +8,19 @@
                 <level>1</level>
                 <parts>
                     <li>Finger</li>
+                </parts>
+            </NzRimImmortalBizarre.DefDismemberSelfLevel>    
+            <NzRimImmortalBizarre.DefDismemberSelfLevel>
+                <group>projectile</group>
+                <level>2</level>
+                <parts>
+                    <li>Finger</li>
                     <li>Toe</li>
                 </parts>
             </NzRimImmortalBizarre.DefDismemberSelfLevel>      
             <NzRimImmortalBizarre.DefDismemberSelfLevel>
                 <group>projectile</group>
-                <level>2</level>
+                <level>3</level>
                 <parts>
                     <li>Hand</li>
                     <li>Foot</li>
@@ -21,7 +28,7 @@
             </NzRimImmortalBizarre.DefDismemberSelfLevel>
             <NzRimImmortalBizarre.DefDismemberSelfLevel>
                 <group>projectile</group>
-                <level>3</level>
+                <level>4</level>
                 <parts>
                     <li>Arm</li>
                     <li>Leg</li>
