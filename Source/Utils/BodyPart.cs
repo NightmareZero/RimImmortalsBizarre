@@ -19,7 +19,7 @@ namespace NzRimImmortalBizarre
         public static void DamageBodyPart(this Pawn pawn, string Group, int level, int min, int max)
         {
             // 获取符合要求的BodyPartDefs
-            var bodyPartDefs = XmlOf.defDismemberSelf.GetLevel(Group, level).GetBodyPartDefs();
+            var bodyPartDefs = XmlOf.defPartHurt.GetLevel(Group, level).bodyParts;
 
             // 获取所有不缺失的身体部件
             var notMissingParts = pawn.health.hediffSet.GetNotMissingParts();
@@ -47,7 +47,7 @@ namespace NzRimImmortalBizarre
         public static bool HasCanDamageBodyPart(this Pawn pawn, string Group, int level)
         {
             // 获取符合要求的BodyPartDefs
-            var bodyPartDefs = XmlOf.defDismemberSelf.GetLevel(Group, level).GetBodyPartDefs();
+            var bodyPartDefs = XmlOf.defPartHurt.GetLevel(Group, level).bodyParts;
 
             // 获取所有不缺失的身体部件
             var notMissingParts = pawn.health.hediffSet.GetNotMissingParts();
@@ -55,10 +55,24 @@ namespace NzRimImmortalBizarre
             // 找到受伤害最小的符合要求的部件
             BodyPartRecord targetPart = notMissingParts
                 .Where(part => bodyPartDefs.Contains(part.def))
-                .FirstOrDefault();
+                .First();
+
 
             return targetPart != null;
         }
+
+        public static DefPartHurtLevel GetLevel(this DefPartHurt defPartHurt, string group, int level)
+        {
+            foreach (DefPartHurtLevel DefPartHurtLevel in defPartHurt.levels)
+            {
+                if (DefPartHurtLevel.group == group && DefPartHurtLevel.level == level)
+                {
+                    return DefPartHurtLevel;
+                }
+            }
+            return null;
+        }
+
     }
 
 }

@@ -23,11 +23,11 @@
             <li Class="CompProperties_AbilityLaunchProjectile">
                 <projectileDef>NzRI_SmallBloodGuts</projectileDef>
             </li>
-            <li Class="CompProperties_AoJing_DismemberSelf">
+            <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
                 <group>projectile</group>
                 <level>1</level>
-                <demageMin>1</demageMin>
-                <demageMax>2</demageMax>
+                <damageMin>1</damageMin>
+                <damageMax>2</damageMax>
             </li>
         </comps>
     </AbilityDef>
@@ -48,7 +48,7 @@
         </projectile>
     </ThingDef>
 
-    <!-- 手指/脚趾 -->
+    <!-- 手指/脚趾
     <AbilityDef>
         <defName>NzRI_AoJing_Finger</defName>
         <label>finger</label>
@@ -79,14 +79,14 @@
                 <effecterDef>Fire_Spew</effecterDef>
                 <canHitFilledCells>true</canHitFilledCells>
             </li>
-            <li Class="CompProperties_AoJing_DismemberSelf">
+            <li Class="CompProperties_AoJing_HurtSelf">
                 <group>projectile</group>
                 <level>2</level>
                 <demageMin>6</demageMin>
                 <demageMax>12</demageMax>
             </li>
         </comps>
-    </AbilityDef>
+    </AbilityDef> -->
 
     <!-- 手/脚 -->
 

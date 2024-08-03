@@ -3,7 +3,7 @@ using RimWorld;
 
 namespace NzRimImmortalBizarre
 {
-    public class CompProperties_AoJing_DismemberSelf : CompProperties_AbilityEffect
+    public class CompProperties_AoJing_HurtSelf : CompProperties_AbilityEffect
     {
         // 损毁等级
         public int level;
@@ -14,9 +14,10 @@ namespace NzRimImmortalBizarre
         // 伤害默认值为 1 ~ 2
         public int damageMin = 1;
         public int damageMax = 2;
-        public CompProperties_AoJing_DismemberSelf()
+        
+        public CompProperties_AoJing_HurtSelf()
         {
-            this.compClass = typeof(CompAbilityEffect_AoJing_DismemberSelf);
+            compClass = typeof(CompAbilityEffect_AoJing_HurtSelf);
         }
     }
 }

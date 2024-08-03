@@ -3,10 +3,10 @@ using Verse;
 
 namespace NzRimImmortalBizarre
 {
-    public class CompAbilityEffect_AoJing_DismemberSelf : CompAbilityEffect
+    public class CompAbilityEffect_AoJing_HurtSelf : CompAbilityEffect
     {
 
-        public new CompProperties_AoJing_DismemberSelf Props => (CompProperties_AoJing_DismemberSelf)props;
+        public new CompProperties_AoJing_HurtSelf Props => (CompProperties_AoJing_HurtSelf)props;
 
         public override void Initialize(AbilityCompProperties props)
         {
@@ -20,7 +20,7 @@ namespace NzRimImmortalBizarre
             // 输出消息
             if (!canDamage)
             {
-                Messages.Message("Nz_AoJing_DismemberSelf_NoBodyPart".Translate(parent.pawn.Name.ToStringShort), parent.pawn, MessageTypeDefOf.RejectInput);
+                Messages.Message("Nz_AoJing_HurtSelf_NoBodyPart".Translate(parent.pawn.Name.ToStringShort), parent.pawn, MessageTypeDefOf.RejectInput);
             }
             return base.CanApplyOn(target, dest) &&  canDamage;
         }

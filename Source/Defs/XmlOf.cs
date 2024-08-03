@@ -6,12 +6,9 @@ namespace NzRimImmortalBizarre
     [DefOf]
     public static class XmlOf
     {
-        public static DefDismemberSelf defDismemberSelf;
+        public static DefPartHurt defPartHurt;
 
         public static AbilityDef NzRI_AoJing_FingerNail;
-
-
-        public static XenoGeneTemplateDef xenoGeneTemplateDef;
 
         static XmlOf()
         {
