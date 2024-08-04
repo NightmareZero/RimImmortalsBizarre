@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <FleckDef ParentName="FleckBase_Thrown">
+        <defName>FireSpew_A1</defName>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <fadeInTime>0.2</fadeInTime>
+        <solidTime>0.4</solidTime>
+        <fadeOutTime>0.2</fadeOutTime>
+        <rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+        <rotateTowardsMoveDirectionExtraAngle>-90</rotateTowardsMoveDirectionExtraAngle>
+        <graphicData>
+          <graphicClass>Graphic_FleckPulse</graphicClass>
+          <shaderType>GlowAnimated</shaderType>
+          <texPath>Things/Mote/BloodSplash</texPath>
+          <shaderParameters>
+            <_NumFrames>5</_NumFrames>
+            <_FramesPerSec>7</_FramesPerSec>
+          </shaderParameters>
+          <drawSize>1.2</drawSize>
+        </graphicData>
+      </FleckDef>
+</Defs>

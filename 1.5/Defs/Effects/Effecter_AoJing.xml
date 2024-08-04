@@ -6,7 +6,7 @@
           <li>
             <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
             <positionRadius>0.15</positionRadius>
-            <fleckDef>FireSpew_A</fleckDef>
+            <fleckDef>FireSpew_A1</fleckDef>
             <chancePerTick>0.9</chancePerTick>
             <speed>9.5</speed>
             <scale>0.8~1.2</scale>
