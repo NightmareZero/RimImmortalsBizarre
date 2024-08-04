@@ -10,6 +10,7 @@ namespace NzRimImmortalBizarre
 
         public override void Initialize(AbilityCompProperties props)
         {
+            // CompAbilityEffect_FireSpew
             base.Initialize(props);
         }
 
@@ -28,23 +29,8 @@ namespace NzRimImmortalBizarre
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
-            Pawn pawn = target.Pawn;
-            if (pawn == null)
-            {
-                return;
-            }
             Pawn caster = parent.pawn;
             caster.DamageBodyPart(Props.group, Props.level, Props.damageMin, Props.damageMax);
-
-            
-            
-            
-            // BodyPartRecord bodyPartRecord = pawn.health.hediffSet.GetNotMissingParts().RandomElementByWeight((BodyPartRecord x) => x.coverageAbs);
-            // if (bodyPartRecord == null)
-            // {
-            //     return;
-            // }
-            // pawn.TakeDamage(new DamageInfo(DamageDefOf.SurgicalCut, 99999f, 999f, -1f, null, bodyPartRecord));
         }
     }
 }

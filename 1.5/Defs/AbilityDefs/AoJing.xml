@@ -7,19 +7,19 @@
         <description>#TODO</description>
         <iconPath>Ability/Base/LG</iconPath>
         <cooldownTicksRange>60</cooldownTicksRange>
-        <category>Sanguophage</category>
+        <!-- <category>TODO</category> -->
         <displayOrder>200</displayOrder>
         <aiCanUse>true</aiCanUse>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
-            <range>3.9</range>
+            <range>23.9</range>
             <warmupTime>0.5</warmupTime>
             <soundCast>PiercingSpine_Launch</soundCast>
         </verbProperties>
         <comps>
-            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
                 <rEnergy>-3</rEnergy>
-            </li>
+            </li> -->
             <li Class="CompProperties_AbilityLaunchProjectile">
                 <projectileDef>NzRI_SmallBloodGuts</projectileDef>
             </li>
@@ -48,20 +48,20 @@
         </projectile>
     </ThingDef>
 
-    <!-- 手指/脚趾
+    <!-- 手指/脚趾 -->
     <AbilityDef>
         <defName>NzRI_AoJing_Finger</defName>
         <label>finger</label>
         <description>#TODO</description>
-        <iconPath>UI/Abilities/FireSpew</iconPath>
-        <cooldownTicksRange>300000</cooldownTicksRange>
+        <iconPath>Ability/Base/LG</iconPath>
+        <cooldownTicksRange>120</cooldownTicksRange>
         <aiCanUse>true</aiCanUse>
         <ai_IsIncendiary>true</ai_IsIncendiary>
         <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
         <warmupStartSound>FireSpew_Warmup</warmupStartSound>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
-            <range>7.9</range>
+            <range>10.9</range>
             <warmupTime>1</warmupTime>
             <soundCast>FireSpew_Resolve</soundCast>
             <targetParams>
@@ -69,24 +69,24 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
                 <rEnergy>-10</rEnergy>
-            </li>
+            </li> -->
             <li Class="CompProperties_AbilityFireSpew">
-                <range>7.9</range>
+                <range>10.9</range>
                 <lineWidthEnd>3</lineWidthEnd>
                 <filthDef>Filth_FlammableBile</filthDef>
                 <effecterDef>Fire_Spew</effecterDef>
                 <canHitFilledCells>true</canHitFilledCells>
             </li>
-            <li Class="CompProperties_AoJing_HurtSelf">
+            <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
                 <group>projectile</group>
                 <level>2</level>
-                <demageMin>6</demageMin>
-                <demageMax>12</demageMax>
+                <damageMin>4</damageMin>
+                <damageMax>8</damageMax>
             </li>
         </comps>
-    </AbilityDef> -->
+    </AbilityDef>
 
     <!-- 手/脚 -->
 

@@ -36,6 +36,9 @@ namespace NzRimImmortalBizarre
             {
                 pawn.TakeDamage(new DamageInfo(DamageDefOf.SurgicalCut, Rand.Range(min, max), 999f, -1f, null, targetPart));
             }
+            else { 
+                Log.Message("Nz_AoJing_HurtSelf_NoBodyPart".Translate(pawn.Name.ToStringShort));
+            }
         }
 
         /// <summary>
