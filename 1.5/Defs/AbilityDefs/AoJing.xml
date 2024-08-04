@@ -72,11 +72,12 @@
             <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
                 <rEnergy>-10</rEnergy>
             </li> -->
-            <li Class="CompProperties_AbilityFireSpew">
+            <li Class="NzRimImmortalBizarre.CompProperties_AbilitySpew">
                 <range>10.9</range>
-                <lineWidthEnd>3</lineWidthEnd>
-                <filthDef>Filth_FlammableBile</filthDef>
-                <effecterDef>Fire_Spew</effecterDef>
+                <lineWidthEnd>5</lineWidthEnd>
+                <filthDef>NzRI_Filth_AcidMucus</filthDef>
+                <damageType>AcidBurn</damageType>
+                <effecterDef>Acid_Spew</effecterDef>
                 <canHitFilledCells>true</canHitFilledCells>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
