@@ -135,8 +135,8 @@
         <useHitPoints>False</useHitPoints>
         <neverMultiSelect>True</neverMultiSelect>
         <graphicData>
-          <texPath>Things/Projectile/Acid</texPath>
-          <graphicClass>Graphic_Random</graphicClass>
+          <texPath>Things/Mote/VaporizeExplosionGlow</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
           <shaderType>MoteGlow</shaderType>
           <drawSize>2</drawSize>
         </graphicData>
