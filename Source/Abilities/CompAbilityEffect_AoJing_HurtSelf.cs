@@ -1,5 +1,6 @@
 using RimWorld;
 using Verse;
+using Verse.Sound;
 
 namespace NzRimImmortalBizarre
 {
@@ -31,6 +32,8 @@ namespace NzRimImmortalBizarre
             base.Apply(target, dest);
             Pawn caster = parent.pawn;
             caster.DamageBodyPart(Props.group, Props.level, Props.damageMin, Props.damageMax);
+            // 播放声音
+            XmlOf.NzRI_HurtSelf.PlayOneShot(new TargetInfo(caster.Position, caster.Map));
         }
     }
 }

@@ -90,6 +90,68 @@
     </AbilityDef>
 
     <!-- 手/脚 -->
+    <AbilityDef>
+        <defName>NzRI_AoJing_Hand</defName>
+        <label>hand</label>
+        <description>#TODO</description>
+        <iconPath>Ability/Base/LG</iconPath>
+        <cooldownTicksRange>1000</cooldownTicksRange>
+        <aiCanUse>true</aiCanUse>
+        <displayOrder>300</displayOrder>
+        <!-- <category>Sanguophage</category> -->
+        <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+        <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
+        <verbProperties>
+          <verbClass>Verb_CastAbility</verbClass>
+          <range>16.9</range>
+          <warmupTime>0.5</warmupTime>
+          <soundCast>RocketswarmLauncher_Fire</soundCast>
+          <targetParams>
+            <canTargetLocations>true</canTargetLocations>
+          </targetParams>
+        </verbProperties>
+        <comps>
+          <li Class="NzRimImmortalBizarre.CompProperties_AbilitySpray">
+            <projectileDef>NzRI_BloodGuts</projectileDef>
+            <numCellsToHit>36</numCellsToHit>
+            <sprayEffecter>ArrowSpray_Directional</sprayEffecter>
+          </li>
+          <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
+            <group>projectile</group>
+            <level>3</level>
+            <damageMin>8</damageMin>
+            <damageMax>17</damageMax>
+        </li>
+        </comps>
+      </AbilityDef>
+      <!-- 血糜 中 -->
+      <ThingDef>
+        <defName>NzRI_BloodGuts</defName>
+        <label>blood guts</label>
+        <thingClass>Projectile_Liquid</thingClass>
+        <category>Projectile</category>
+        <tickerType>Normal</tickerType>
+        <altitudeLayer>Projectile</altitudeLayer>
+        <useHitPoints>False</useHitPoints>
+        <neverMultiSelect>True</neverMultiSelect>
+        <graphicData>
+          <texPath>Things/Projectile/Acid</texPath>
+          <graphicClass>Graphic_Random</graphicClass>
+          <shaderType>MoteGlow</shaderType>
+          <drawSize>2</drawSize>
+        </graphicData>
+        <projectile>
+          <damageDef>Bomb</damageDef>
+          <speed>125</speed>
+          <damageAmountBase>40</damageAmountBase>
+          <arcHeightFactor>0.4</arcHeightFactor>
+          <armorPenetrationBase>0.8</armorPenetrationBase>
+          <stoppingPower>2</stoppingPower>
+          <shadowSize>0</shadowSize>
+          <filth>Filth_BloodSmear</filth>
+          <filthCount>2</filthCount>
+        </projectile>
+      </ThingDef>
 
     <!-- 胳膊/腿 -->
 

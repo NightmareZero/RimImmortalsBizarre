@@ -12,6 +12,8 @@ namespace NzRimImmortalBizarre
 
         public static AbilityDef NzRI_AoJing_FingerNail;
 
+        public static SoundDef NzRI_HurtSelf;
+
 
 
         static XmlOf()
