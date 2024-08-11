@@ -156,6 +156,43 @@
     <!-- 胳膊/腿 -->
 
     <!-- 火疗 -->
+    <AbilityDef ParentName="AbilityTouchBase">
+        <defName>NzRI_FireTherapy</defName>
+        <label>fire therapy</label>
+        <description>#TODO</description>
+        <iconPath>UI/Abilities/FireSpew</iconPath>
+        <stunTargetWhileCasting>true</stunTargetWhileCasting>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <warmupMote>Mote_CoagulateStencil</warmupMote>
+        <warmupEffecter>Coagulate</warmupEffecter>
+        <warmupStartSound>FireSpew_Warmup</warmupStartSound>
+        <jobDef>CastAbilityOnThingMelee</jobDef>
+        <displayOrder>400</displayOrder>
+        <hostile>false</hostile>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <verbProperties>
+          <verbClass>Verb_CastAbilityTouch</verbClass>
+          <drawAimPie>false</drawAimPie>
+          <range>-1</range>
+          <warmupTime>1</warmupTime>
+          <targetParams>
+            <canTargetAnimals>true</canTargetAnimals>
+            <canTargetSelf>true</canTargetSelf>
+            <canTargetBuildings>false</canTargetBuildings>
+            <canTargetMechs>false</canTargetMechs>
+            <!-- <canTargetBloodfeeders>true</canTargetBloodfeeders> -->
+          </targetParams>
+        </verbProperties>
+        <comps>
+          <li Class="NzRimImmortalBizarre.CompProperties_FireTherapy">
+            <tendQualityRange>0.5~0.9</tendQualityRange>
+          </li>
+          <li Class="CompProperties_AbilityRequiresCapacity">
+            <capacity>Manipulation</capacity>
+          </li>
+        </comps>
+      </AbilityDef>
 
     <!-- 再生 -->
 

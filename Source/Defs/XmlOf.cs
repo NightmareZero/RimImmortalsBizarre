@@ -14,6 +14,8 @@ namespace NzRimImmortalBizarre
 
         public static SoundDef NzRI_HurtSelf;
 
+        public static HediffDef Burn;
+
 
 
         static XmlOf()
