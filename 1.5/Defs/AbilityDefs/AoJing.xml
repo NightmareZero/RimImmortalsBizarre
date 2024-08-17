@@ -256,14 +256,14 @@
       </targetParams>
     </verbProperties>
     <comps>
-      <li Class="NzRimImmortalBizarre.CompProperties_FireTherapy">
-        <tendQualityRange>0.5~0.9</tendQualityRange>
+      <li Class="NzRimImmortalBizarre.CompProperties_Regeneration">
+        <times>2</times>
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
         <group>offering</group>
         <level>2</level>
-        <damageMin>1</damageMin>
-        <damageMax>3</damageMax>
+        <damageMin>6</damageMin>
+        <damageMax>11</damageMax>
       </li>
     </comps>
   </AbilityDef>

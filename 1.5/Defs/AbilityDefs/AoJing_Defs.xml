@@ -49,8 +49,8 @@
         <group>offering</group>
         <level>1</level>
         <bodyParts>
-            <li>Hand</li>
-            <li>Foot</li>
+            <li>Finger</li>
+            <li>Toe</li>
         </bodyParts>
     </NzRimImmortalBizarre.DefPartHurtLevel>
 
