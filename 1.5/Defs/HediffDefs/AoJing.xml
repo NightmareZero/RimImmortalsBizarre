@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <!-- 蜕皮 -->
+    <HediffDef>
+        <defName>NzRI_AoJing_Molt</defName>
+        <label>molt</label>
+        <description>#TODO</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <initialSeverity>0.001</initialSeverity>
+        <defaultLabelColor>(0.6, 0, 0, 1)</defaultLabelColor>
+     
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>30000</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+                <canUseDecimalsShortForm>true</canUseDecimalsShortForm>
+            </li>
+        </comps>
+    </HediffDef>
+</Defs>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+    <!-- 指甲技能 -->
     <NzRimImmortalBizarre.DefPartHurtLevel>
         <defName>defP1</defName>
         <group>projectile</group>
@@ -9,6 +10,7 @@
         </bodyParts>
     </NzRimImmortalBizarre.DefPartHurtLevel>
 
+    <!-- 手指/脚趾技能 -->
     <NzRimImmortalBizarre.DefPartHurtLevel>
         <defName>defP2</defName>
         <group>projectile</group>
@@ -19,6 +21,7 @@
         </bodyParts>
     </NzRimImmortalBizarre.DefPartHurtLevel>
 
+    <!-- 手/脚技能 -->
     <NzRimImmortalBizarre.DefPartHurtLevel>
         <defName>defP3</defName>
         <group>projectile</group>
@@ -29,6 +32,7 @@
         </bodyParts>
     </NzRimImmortalBizarre.DefPartHurtLevel>
 
+    <!-- 手臂/腿技能 -->
     <NzRimImmortalBizarre.DefPartHurtLevel>
         <defName>defP4</defName>
         <group>projectile</group>
@@ -38,5 +42,36 @@
             <li>Leg</li>
         </bodyParts>
     </NzRimImmortalBizarre.DefPartHurtLevel>
+
+    <!-- 火疗技能 -->
+    <NzRimImmortalBizarre.DefPartHurtLevel>
+        <defName>defO1</defName>
+        <group>offering</group>
+        <level>1</level>
+        <bodyParts>
+            <li>Hand</li>
+            <li>Foot</li>
+        </bodyParts>
+    </NzRimImmortalBizarre.DefPartHurtLevel>
+
+    <!-- 再生技能 -->
+    <NzRimImmortalBizarre.DefPartHurtLevel>
+        <defName>defO2</defName>
+        <group>offering</group>
+        <level>2</level>
+        <bodyParts>
+            <li>Kidney</li>
+            <li>Lung</li>
+        </bodyParts>
+    </NzRimImmortalBizarre.DefPartHurtLevel>
     
+    <!-- 蜕皮技能 -->
+    <NzRimImmortalBizarre.DefPartHurtLevel>
+        <defName>defO3</defName>
+        <group>offering</group>
+        <level>3</level>
+        <bodyParts>
+            <li>Torso</li>
+        </bodyParts>
+    </NzRimImmortalBizarre.DefPartHurtLevel>    
 </Defs>
