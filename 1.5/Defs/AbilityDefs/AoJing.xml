@@ -38,6 +38,7 @@
         <graphicData>
             <texPath>Things/Projectile/PiercingSpine</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <color>(0.6, 0, 0, 1)</color> <!-- 血红色 -->
         </graphicData>
         <projectile>
             <damageDef>RangedStab</damageDef>
@@ -138,6 +139,7 @@
           <texPath>Things/Mote/VaporizeExplosionGlow</texPath>
           <graphicClass>Graphic_Single</graphicClass>
           <shaderType>MoteGlow</shaderType>
+          <color>(0.6, 0, 0, 1)</color> <!-- 血红色 -->
           <drawSize>2</drawSize>
         </graphicData>
         <projectile>
