@@ -177,14 +177,14 @@
     </graphicData>
     <projectile>
       <damageDef>Bomb</damageDef>
-      <speed>125</speed>
+      <speed>275</speed>
       <damageAmountBase>40</damageAmountBase>
       <arcHeightFactor>0.4</arcHeightFactor>
       <armorPenetrationBase>0.8</armorPenetrationBase>
       <stoppingPower>2</stoppingPower>
       <shadowSize>0</shadowSize>
       <filth>Filth_BloodSmear</filth>
-      <filthCount>2</filthCount>
+      <filthCount>6</filthCount>
     </projectile>
   </ThingDef>
 
@@ -253,7 +253,6 @@
         <canTargetSelf>true</canTargetSelf>
         <canTargetBuildings>false</canTargetBuildings>
         <canTargetMechs>false</canTargetMechs>
-        <!-- <canTargetBloodfeeders>true</canTargetBloodfeeders> -->
       </targetParams>
     </verbProperties>
     <comps>

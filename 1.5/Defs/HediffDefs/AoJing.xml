@@ -14,9 +14,9 @@
 					<IncomingDamageFactor>0.8</IncomingDamageFactor>
 				</statFactors>
 				<statOffsets>
-					<ArmorRating_Sharp>1.3</ArmorRating_Sharp>
-					<ArmorRating_Blunt>0.9</ArmorRating_Blunt>
-					<ArmorRating_Heat>1.4</ArmorRating_Heat>
+					<ArmorRating_Sharp>1.4</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1.1</ArmorRating_Blunt>
+					<ArmorRating_Heat>1.5</ArmorRating_Heat>
 				</statOffsets>
 			</li>
 		</stages>
