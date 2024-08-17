@@ -260,12 +260,61 @@
       <li Class="NzRimImmortalBizarre.CompProperties_FireTherapy">
         <tendQualityRange>0.5~0.9</tendQualityRange>
       </li>
-      <li Class="CompProperties_AbilityRequiresCapacity">
-        <capacity>Manipulation</capacity>
+      <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
+        <group>offering</group>
+        <level>2</level>
+        <damageMin>1</damageMin>
+        <damageMax>3</damageMax>
       </li>
     </comps>
   </AbilityDef>
 
 
   <!-- 蜕皮 -->
+  <AbilityDef ParentName="AbilityTouchBase">
+    <defName>NzRI_AoJing_Molt</defName>
+    <label>molt</label>
+    <description>#TODO</description>
+    <iconPath>Ability/Base/LG</iconPath>
+    <stunTargetWhileCasting>true</stunTargetWhileCasting>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <warmupMote>Mote_CoagulateStencil</warmupMote>
+    <warmupEffecter>Coagulate</warmupEffecter>
+    <warmupStartSound>FireSpew_Warmup</warmupStartSound>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <displayOrder>400</displayOrder>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <range>-1</range>
+      <warmupTime>1</warmupTime>
+      <targetParams>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetMechs>false</canTargetMechs>
+        <!-- <canTargetBloodfeeders>true</canTargetBloodfeeders> -->
+      </targetParams>
+    </verbProperties>
+    <statBases>
+      <Ability_Duration>800</Ability_Duration>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>NzRI_AoJing_Molt</hediffDef>
+				<psychic>False</psychic>
+				<replaceExisting>True</replaceExisting>
+			</li>
+      <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
+        <group>offering</group>
+        <level>3</level>
+        <damageMin>7</damageMin>
+        <damageMax>17</damageMax>
+      </li>
+    </comps>
+  </AbilityDef>   
 </Defs>
