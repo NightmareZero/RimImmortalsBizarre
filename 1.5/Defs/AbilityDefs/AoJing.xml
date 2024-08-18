@@ -59,7 +59,7 @@
     <aiCanUse>true</aiCanUse>
     <ai_IsIncendiary>true</ai_IsIncendiary>
     <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
-    <warmupStartSound>FireSpew_Warmup</warmupStartSound>
+    <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <range>10.9</range>
@@ -156,7 +156,50 @@
   </ThingDef>
 
   <!-- 胳膊/腿 -->
-
+  <AbilityDef>
+    <defName>NzRI_AoJing_Arm</defName>
+    <label>Arm</label>
+    <description>#TODO</description>
+    <iconPath>Ability/Base/LG</iconPath>
+    <cooldownTicksRange>1000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <displayOrder>300</displayOrder>
+    <!-- <category>Sanguophage</category> -->
+    <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+    <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>16.9</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>RocketswarmLauncher_Fire</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeExplosion">
+        <targetRange>7.9</targetRange>
+        <explosionRange>6.9</explosionRange>
+        <filthDef>NzRI_BloodGuts</filthDef>
+        <damageTypes>
+          <li>AcidBurn</li>
+          <li>Blunt</li>
+          <li>Bomb</li>
+          <li>Cut</li>
+        </damageTypes>
+        <damageTimes>5</damageTimes>
+        <damage>35</damage>
+        
+        <effecterDef>ArrowSpray_Directional</effecterDef>
+      </li>
+      <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
+        <group>projectile</group>
+        <level>4</level>
+        <damageMin>21</damageMin>
+        <damageMax>33</damageMax>
+      </li>
+    </comps>
+  </AbilityDef>
 
   <!-- 血糜 大 -->
   <ThingDef>
@@ -199,7 +242,7 @@
     <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
     <warmupMote>Mote_CoagulateStencil</warmupMote>
     <warmupEffecter>Coagulate</warmupEffecter>
-    <warmupStartSound>FireSpew_Warmup</warmupStartSound>
+    <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound>
     <jobDef>CastAbilityOnThingMelee</jobDef>
     <displayOrder>400</displayOrder>
     <hostile>false</hostile>
@@ -238,7 +281,7 @@
     <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
     <warmupMote>Mote_CoagulateStencil</warmupMote>
     <warmupEffecter>Coagulate</warmupEffecter>
-    <warmupStartSound>FireSpew_Warmup</warmupStartSound>
+    <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound>
     <jobDef>CastAbilityOnThingMelee</jobDef>
     <displayOrder>400</displayOrder>
     <hostile>false</hostile>
@@ -280,7 +323,7 @@
     <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
     <warmupMote>Mote_CoagulateStencil</warmupMote>
     <warmupEffecter>Coagulate</warmupEffecter>
-    <warmupStartSound>FireSpew_Warmup</warmupStartSound>
+    <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound>
     <jobDef>CastAbilityOnThingMelee</jobDef>
     <displayOrder>400</displayOrder>
     <hostile>false</hostile>
