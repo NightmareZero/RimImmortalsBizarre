@@ -8,7 +8,7 @@ namespace NzRimImmortalBizarre
 {
     public class CompAbilityEffect_RangeExplosion : CompAbilityEffect
     {
-        private readonly List<IntVec3> tmpCells = new List<IntVec3>();
+
 
         private new CompProperties_AbilityRangeExplosion Props => (CompProperties_AbilityRangeExplosion)props;
 
@@ -16,13 +16,24 @@ namespace NzRimImmortalBizarre
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            GenExplosion.DoExplosion(target.Cell, parent.pawn.MapHeld, 0f, Props.damageTypes[0], Caster,
-             postExplosionSpawnThingDef: Props.filthDef, damAmount: Props.damage, armorPenetration: -1f, explosionSound: null, weapon: null,
-              projectile: null, intendedTarget: null, postExplosionSpawnChance: 1f, postExplosionSpawnThingCount: 1, postExplosionGasType: null,
-               applyDamageToExplosionCellsNeighbors: false, preExplosionSpawnThingDef: null, preExplosionSpawnChance: 0f, preExplosionSpawnThingCount: 1,
-                chanceToStartFire: 0f, damageFalloff: false, direction: null, ignoredThings: null, affectedAngle: null, doVisualEffects: false,
-                 propagationSpeed: 0.6f, excludeRadius: 0f, doSoundEffects: false, postExplosionSpawnThingDefWater: null, screenShakeFactor: 1f,
-                  flammabilityChanceCurve: parent.verb.verbProps.flammabilityAttachFireChanceCurve, overrideCells: TargetCells(target));
+
+            for (int i = 0; i < Props.damageTimes; i++)
+            {
+                // 从TargetAffectedCells取随机格子
+                var targetCell = TargetAffectedCells(target).RandomElement();
+                var explosionCells = GetRangeCells(targetCell, Props.explosionRange);
+
+
+                GenExplosion.DoExplosion(target.Cell, parent.pawn.MapHeld, 0f,  Props.damageTypes.RandomElement(), Caster,
+                 postExplosionSpawnThingDef: Props.filthDef, damAmount: Props.damage, armorPenetration: 1f, explosionSound: null, weapon: null,
+                  projectile: null, intendedTarget: null, postExplosionSpawnChance: 1f, postExplosionSpawnThingCount: 1, postExplosionGasType: null,
+                   applyDamageToExplosionCellsNeighbors: false, preExplosionSpawnThingDef: null, preExplosionSpawnChance: 0f, preExplosionSpawnThingCount: 1,
+                    chanceToStartFire: 0f, damageFalloff: false, direction: null, ignoredThings: null, affectedAngle: null, doVisualEffects: false,
+                     propagationSpeed: 0.6f, excludeRadius: 0f, doSoundEffects: false, postExplosionSpawnThingDefWater: null, screenShakeFactor: 1f,
+                      flammabilityChanceCurve: parent.verb.verbProps.flammabilityAttachFireChanceCurve, overrideCells: explosionCells);
+            }
+
+           
             base.Apply(target, dest);
         }
 
@@ -43,7 +54,7 @@ namespace NzRimImmortalBizarre
 
         public override void DrawEffectPreview(LocalTargetInfo target)
         {
-            GenDraw.DrawFieldEdges(TargetCells(target));
+            GenDraw.DrawFieldEdges(TargetAffectedCells(target));
         }
 
         public override bool AICanTargetNow(LocalTargetInfo target)
@@ -51,28 +62,32 @@ namespace NzRimImmortalBizarre
             return false;
         }
 
-        private List<IntVec3> TargetCells(LocalTargetInfo target)
+        private List<IntVec3> TargetAffectedCells(LocalTargetInfo target)
         {
-            tmpCells.Clear();
-            Vector3 vector = Caster.Position.ToVector3Shifted().Yto0();
             IntVec3 intVec = target.Cell.ClampInsideMap(Caster.Map);
             if (Caster.Position == intVec)
             {
-                return tmpCells;
+                return new List<IntVec3>();
             }
 
             float targetRange = Props.targetRange; // 获取 targetRange 的值
+            IntVec3 targetCell = target.Cell; // 获取目标位置
 
-            foreach (IntVec3 intVec2 in GenRadial.RadialCellsAround(target.Cell, targetRange, true))
+            return GetRangeCells(targetCell, targetRange);
+        }
+
+        private List<IntVec3> GetRangeCells(IntVec3 targetCell, float targetRange)
+        {
+            List<IntVec3> cells = new List<IntVec3>();
+            foreach (IntVec3 intVec2 in GenRadial.RadialCellsAround(targetCell, targetRange, true))
             {
                 if (intVec2.InBounds(Caster.Map) && CanUseCell(intVec2))
                 {
-                    tmpCells.Add(intVec2);
+                    cells.Add(intVec2);
                 }
             }
 
-            return tmpCells;
-
+            return cells;
         }
 
         private bool CanUseCell(IntVec3 c)
