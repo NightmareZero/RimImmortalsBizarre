@@ -99,7 +99,6 @@
     <cooldownTicksRange>1000</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <displayOrder>300</displayOrder>
-    <!-- <category>Sanguophage</category> -->
     <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
     <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
     <verbProperties>
@@ -169,7 +168,7 @@
     <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
-      <range>16.9</range>
+      <range>19.9</range>
       <warmupTime>0.5</warmupTime>
       <soundCast>RocketswarmLauncher_Fire</soundCast>
       <targetParams>
@@ -178,8 +177,8 @@
     </verbProperties>
     <comps>
       <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeExplosion">
-        <targetRange>7.9</targetRange>
-        <explosionRange>6.9</explosionRange>
+        <targetRange>6.9</targetRange>
+        <explosionRange>5.9</explosionRange>
         <filthDef>NzRI_BloodGuts</filthDef>
         <damageTypes>
           <li>AcidBurn</li>
@@ -196,7 +195,7 @@
         <group>projectile</group>
         <level>4</level>
         <damageMin>21</damageMin>
-        <damageMax>33</damageMax>
+        <damageMax>31</damageMax>
       </li>
     </comps>
   </AbilityDef>

@@ -16,6 +16,10 @@ namespace NzRimImmortalBizarre
 
         public static HediffDef Burn;
 
+        public static SoundDef Explosion_GiantBomb;
+
+        public static EffecterDef GiantExplosion;
+
 
 
         static XmlOf()
