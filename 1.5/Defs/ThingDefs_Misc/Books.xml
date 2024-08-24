@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <ThingDef ParentName="RI_BookBase">
+		<defName>NzRI_BookAoJing</defName>
+		<label>Initial approach book-AoJing</label>
+		<description>An ancient book in tatters, pieced together from different materials, with even half of the cover missing, leaving only the characters "Ao Jing" on it.\n\n The main content of this book seems to be about how to manipulate one's flesh and blood to inflict harm on enemies.\n\n There also seem to be annotations from many cultivators who have practiced this book, describing several methods for rapidly healing oneself.\n\n Note: Once you have fully studied one Initial Approach book, the cultivator will be bound to that Initial Approach and will not be able to learn any other Initial Approach!</description>
+		<graphicData>
+			<texPath>Things/Item/Books/RI_BookC</texPath>
+		</graphicData>
+		<comps>
+			<li Class="WhoXiuXian.CompProperties_BookStudiable">
+				<route>NzRI_AoJing</route>
+				<cost>20</cost>
+				<abilities>
+					<li>NzRI_AoJing_FingerNail</li>
+					<li>NzRI_AoJing_Finger</li>
+					<li>NzRI_FireTherapy</li>
+					<li>NzRI_AoJing_Hand</li>
+					<li>NzRI_AoJing_Molt</li>
+					<li>NzRI_AoJing_Arm</li>
+					<li>NzRI_AoJing_Regeneration</li>
+				</abilities>
+				<researchProjectDef>RI_InitialApproach</researchProjectDef>
+				<completedLetterTitle>{PARENT_label} The book couldn't withstand the test of time and has shattered.</completedLetterTitle>
+				<completedLetterText>After reading {PARENT_label}, the cultivator{STUDIER_labelShort} takes the AoJing approach as his cultivation direction!</completedLetterText>
+				<completedLetterDef>PositiveEvent</completedLetterDef>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

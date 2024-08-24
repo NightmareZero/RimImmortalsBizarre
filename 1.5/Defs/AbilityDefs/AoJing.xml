@@ -27,7 +27,7 @@
         <group>projectile</group>
         <level>1</level>
         <damageMin>1</damageMin>
-        <damageMax>2</damageMax>
+        <damageMax>4</damageMax>
       </li>
     </comps>
   </AbilityDef>
@@ -85,7 +85,7 @@
         <group>projectile</group>
         <level>2</level>
         <damageMin>4</damageMin>
-        <damageMax>8</damageMax>
+        <damageMax>11</damageMax>
       </li>
     </comps>
   </AbilityDef>
@@ -119,8 +119,8 @@
       <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
         <group>projectile</group>
         <level>3</level>
-        <damageMin>8</damageMin>
-        <damageMax>17</damageMax>
+        <damageMin>7</damageMin>
+        <damageMax>21</damageMax>
       </li>
     </comps>
   </AbilityDef>

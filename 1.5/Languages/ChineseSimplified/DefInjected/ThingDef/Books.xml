@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+    <NzRI_BookAoJing.label>破烂的法门书《袄景...》</NzRI_BookAoJing.label>
+    <NzRI_BookAoJing.description>一本破破烂烂的书籍，由不同材质拼接而成，甚至封面都只剩下一半，上面仅剩袄景两个字。\n\n 这本书上的主要内容似乎是，如何操纵自己的血肉，以对敌人造成杀伤。\n\n 上面似乎还有不少修炼过这本书的人的注解，描述了几篇快速愈合自身的法门\n\n 注：一旦你完全学习了一本初始法门书籍，修炼者将被绑定在该初始法门上，无法学习其他初始法门！</NzRI_BookAoJing.description>
+    <NzRI_BookAoJing.comps.CompBookStudiable.completedLetterText>阅读了{PARENT_label}后, 修炼者{STUDIER_labelShort}将袄景教法门作为了自己的修炼方向！</NzRI_BookAoJing.comps.CompBookStudiable.completedLetterText>
+    <NzRI_BookAoJing.comps.CompBookStudiable.completedLetterTitle>{PARENT_label}经不住岁月洗礼，破碎了。</NzRI_BookAoJing.comps.CompBookStudiable.completedLetterTitle>
+</LanguageData>
