@@ -28,4 +28,39 @@
             </li>
         </comps>
     </HediffDef>
+    <!-- 登阶 -->
+	<HediffDef>
+		<defName>NzRI_AoJing_Ascend</defName>
+		<label>CangQiang Ascend</label>
+		<hediffClass>NzRimImmortalBizarre.AoJing_Ascend</hediffClass>
+		<description></description>
+		<stages>
+			<li>
+				<label>level1</label>
+				<statFactors>
+					<GI_EnergyGainEff>0.8</GI_EnergyGainEff>
+				</statFactors>
+			</li>
+			<li>
+				<label>level2</label>
+				<minSeverity>0.19</minSeverity>
+			</li>
+			<li>
+				<label>level3</label>
+				<minSeverity>0.29</minSeverity>
+				<statFactors>
+					<GI_EnergyGainEff>1.3</GI_EnergyGainEff>
+				</statFactors>
+			</li>
+            <li>
+				<label>level4</label>
+				<minSeverity>0.39</minSeverity>
+			</li>
+            <li>
+				<label>level5</label>
+				<minSeverity>0.49</minSeverity>
+			</li>
+		</stages>
+		<isBad>false</isBad>
+	</HediffDef>
 </Defs>

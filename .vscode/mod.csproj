@@ -39,6 +39,7 @@
 		<Compile Include="../Source/Defs/*" />
 		<Compile Include="../Source/Utils/*" />
 		<Compile Include="../Source/Abilities/*" />
+		<Compile Include="../Source/Hediffs/*" />
 		<Compile Include="../Source/ModExtension/*" />
 		<Compile Include="../Source/UI/*" />
 
