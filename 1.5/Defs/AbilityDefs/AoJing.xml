@@ -5,7 +5,7 @@
     <defName>NzRI_AoJing_FingerNail</defName>
     <label>fingernail</label>
     <description>#TODO</description>
-    <iconPath>Ability/Base/LG</iconPath>
+    <iconPath>Ability/AoJing1</iconPath>
     <cooldownTicksRange>60</cooldownTicksRange>
     <!-- <category>TODO</category> -->
     <displayOrder>200</displayOrder>
@@ -17,9 +17,9 @@
       <soundCast>PiercingSpine_Launch</soundCast>
     </verbProperties>
     <comps>
-      <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
-                <rEnergy>-3</rEnergy>
-            </li> -->
+      <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+        <rEnergy>-1</rEnergy>
+      </li>
       <li Class="CompProperties_AbilityLaunchProjectile">
         <projectileDef>NzRI_SmallBloodGuts</projectileDef>
       </li>
@@ -54,7 +54,7 @@
     <defName>NzRI_AoJing_Finger</defName>
     <label>finger</label>
     <description>#TODO</description>
-    <iconPath>Ability/Base/LG</iconPath>
+    <iconPath>Ability/AoJing2</iconPath>
     <cooldownTicksRange>120</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <ai_IsIncendiary>true</ai_IsIncendiary>
@@ -70,9 +70,9 @@
       </targetParams>
     </verbProperties>
     <comps>
-      <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
-                <rEnergy>-10</rEnergy>
-            </li> -->
+      <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+        <rEnergy>-5</rEnergy>
+      </li>
       <li Class="NzRimImmortalBizarre.CompProperties_AbilitySpew">
         <range>10.9</range>
         <lineWidthEnd>5</lineWidthEnd>
@@ -95,7 +95,7 @@
     <defName>NzRI_AoJing_Hand</defName>
     <label>hand</label>
     <description>#TODO</description>
-    <iconPath>Ability/Base/LG</iconPath>
+    <iconPath>Ability/AoJing3</iconPath>
     <cooldownTicksRange>1000</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <displayOrder>300</displayOrder>
@@ -159,7 +159,7 @@
     <defName>NzRI_AoJing_Arm</defName>
     <label>Arm</label>
     <description>#TODO</description>
-    <iconPath>Ability/Base/LG</iconPath>
+    <iconPath>Ability/AoJing4</iconPath>
     <cooldownTicksRange>1000</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <displayOrder>300</displayOrder>
@@ -188,7 +188,7 @@
         </damageTypes>
         <damageTimes>5</damageTimes>
         <damage>35</damage>
-        
+
         <effecterDef>ArrowSpray_Directional</effecterDef>
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
@@ -235,7 +235,7 @@
     <defName>NzRI_FireTherapy</defName>
     <label>fire therapy</label>
     <description>#TODO</description>
-    <iconPath>UI/Abilities/FireSpew</iconPath>
+    <iconPath>Ability/AoJing5</iconPath>
     <stunTargetWhileCasting>true</stunTargetWhileCasting>
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
@@ -274,7 +274,7 @@
     <defName>NzRI_AoJing_Regeneration</defName>
     <label>regeneration</label>
     <description>#TODO</description>
-    <iconPath>UI/Abilities/FireSpew</iconPath>
+    <iconPath>Ability/AoJing6</iconPath>
     <stunTargetWhileCasting>true</stunTargetWhileCasting>
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
@@ -316,7 +316,7 @@
     <defName>NzRI_AoJing_Molt</defName>
     <label>molt</label>
     <description>#TODO</description>
-    <iconPath>Ability/Base/LG</iconPath>
+    <iconPath>Ability/AoJing7</iconPath>
     <stunTargetWhileCasting>true</stunTargetWhileCasting>
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
@@ -345,11 +345,11 @@
     </statBases>
     <comps>
       <li Class="CompProperties_AbilityGiveHediff">
-				<compClass>CompAbilityEffect_GiveHediff</compClass>
-				<hediffDef>NzRI_AoJing_Molt</hediffDef>
-				<psychic>False</psychic>
-				<replaceExisting>True</replaceExisting>
-			</li>
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>NzRI_AoJing_Molt</hediffDef>
+        <psychic>False</psychic>
+        <replaceExisting>True</replaceExisting>
+      </li>
       <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
         <group>offering</group>
         <level>3</level>
@@ -357,5 +357,5 @@
         <damageMax>17</damageMax>
       </li>
     </comps>
-  </AbilityDef>   
+  </AbilityDef>
 </Defs>
