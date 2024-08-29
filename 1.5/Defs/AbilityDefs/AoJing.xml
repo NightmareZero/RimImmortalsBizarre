@@ -75,6 +75,7 @@
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_AbilitySpew">
         <range>10.9</range>
+        <damAmount>37</damAmount>
         <lineWidthEnd>5</lineWidthEnd>
         <filthDef>NzRI_Filth_AcidMucus</filthDef>
         <damageType>AcidBurn</damageType>
