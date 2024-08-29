@@ -4,7 +4,7 @@
   <AbilityDef>
     <defName>NzRI_AoJing_FingerNail</defName>
     <label>fingernail</label>
-    <description>#TODO</description>
+    <description>attach your fingernails to your aura and fire them out, dealing a small amount of damage to the enemy.</description>
     <iconPath>Ability/AoJing1</iconPath>
     <cooldownTicksRange>60</cooldownTicksRange>
     <!-- <category>TODO</category> -->
@@ -53,7 +53,7 @@
   <AbilityDef>
     <defName>NzRI_AoJing_Finger</defName>
     <label>finger</label>
-    <description>#TODO</description>
+    <description>sacrifice your finger and spray acidic liquid to damage enemies</description>
     <iconPath>Ability/AoJing2</iconPath>
     <cooldownTicksRange>120</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
@@ -94,7 +94,7 @@
   <AbilityDef>
     <defName>NzRI_AoJing_Hand</defName>
     <label>hand</label>
-    <description>#TODO</description>
+    <description>infuse your aura into your palm and fire it out, causing a small explosion.</description>
     <iconPath>Ability/AoJing3</iconPath>
     <cooldownTicksRange>1000</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
@@ -111,6 +111,9 @@
       </targetParams>
     </verbProperties>
     <comps>
+      <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+        <rEnergy>-15</rEnergy>
+      </li>
       <li Class="NzRimImmortalBizarre.CompProperties_AbilitySpray">
         <projectileDef>NzRI_BloodGuts</projectileDef>
         <numCellsToHit>36</numCellsToHit>
@@ -158,7 +161,7 @@
   <AbilityDef>
     <defName>NzRI_AoJing_Arm</defName>
     <label>Arm</label>
-    <description>#TODO</description>
+    <description>use your arm as a medium to cause multiple large explosions at the target location, dealing high damage to enemies within range.</description>
     <iconPath>Ability/AoJing4</iconPath>
     <cooldownTicksRange>1000</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
@@ -176,6 +179,9 @@
       </targetParams>
     </verbProperties>
     <comps>
+      <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+        <rEnergy>-150</rEnergy>
+      </li>      
       <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeExplosion">
         <targetRange>6.9</targetRange>
         <explosionRange>5.9</explosionRange>
@@ -234,7 +240,7 @@
   <AbilityDef ParentName="AbilityTouchBase">
     <defName>NzRI_FireTherapy</defName>
     <label>fire therapy</label>
-    <description>#TODO</description>
+    <description>shoots a small burst of flame at the target so that their wounds will heal quickly, but also causes a small amount of burns.\n\nIt seems to have been taken from the another book.</description>
     <iconPath>Ability/AoJing5</iconPath>
     <stunTargetWhileCasting>true</stunTargetWhileCasting>
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -260,11 +266,20 @@
       </targetParams>
     </verbProperties>
     <comps>
+      <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+        <rEnergy>-50</rEnergy>
+      </li>
       <li Class="NzRimImmortalBizarre.CompProperties_FireTherapy">
         <tendQualityRange>0.5~0.9</tendQualityRange>
       </li>
       <li Class="CompProperties_AbilityRequiresCapacity">
         <capacity>Manipulation</capacity>
+      </li>
+      <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
+        <group>offering</group>
+        <level>1</level>
+        <damageMin>1</damageMin>
+        <damageMax>2</damageMax>
       </li>
     </comps>
   </AbilityDef>
@@ -273,7 +288,7 @@
   <AbilityDef ParentName="AbilityTouchBase">
     <defName>NzRI_AoJing_Regeneration</defName>
     <label>regeneration</label>
-    <description>#TODO</description>
+    <description>use a secret spell as far as the target's missing parts, but it will cause damage to your own internal organs.</description>
     <iconPath>Ability/AoJing6</iconPath>
     <stunTargetWhileCasting>true</stunTargetWhileCasting>
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -298,6 +313,9 @@
       </targetParams>
     </verbProperties>
     <comps>
+      <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+        <rEnergy>-250</rEnergy>
+      </li>
       <li Class="NzRimImmortalBizarre.CompProperties_Regeneration">
         <times>2</times>
       </li>
@@ -315,7 +333,7 @@
   <AbilityDef ParentName="AbilityTouchBase">
     <defName>NzRI_AoJing_Molt</defName>
     <label>molt</label>
-    <description>#TODO</description>
+    <description>strip your own skin and infuse a large amount of aura into it, turning it into armor</description>
     <iconPath>Ability/AoJing7</iconPath>
     <stunTargetWhileCasting>true</stunTargetWhileCasting>
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -344,6 +362,9 @@
       <Ability_Duration>800</Ability_Duration>
     </statBases>
     <comps>
+      <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+        <rEnergy>-50</rEnergy>
+      </li>
       <li Class="CompProperties_AbilityGiveHediff">
         <compClass>CompAbilityEffect_GiveHediff</compClass>
         <hediffDef>NzRI_AoJing_Molt</hediffDef>
