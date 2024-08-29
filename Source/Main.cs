@@ -31,8 +31,8 @@ namespace NzRimImmortalBizarre
         public MyMapComponent(Map map) : base(map){}
         public override void FinalizeInit()
         {
-            Messages.Message("Success", null, MessageTypeDefOf.PositiveEvent);
-            Find.LetterStack.ReceiveLetter(new TaggedString("Success"), new TaggedString("Success message"), TemplateDefOf.success_letter, "", 0);
+            // Messages.Message("Success", null, MessageTypeDefOf.PositiveEvent);
+            // Find.LetterStack.ReceiveLetter(new TaggedString("Success"), new TaggedString("Success message"), TemplateDefOf.success_letter, "", 0);
         }
     }
 
@@ -41,7 +41,7 @@ namespace NzRimImmortalBizarre
     {
         static Start()
         {
-            Log.Message("Mod template loaded successfully!");
+            Log.Message("RimImmortalsBizarre loaded successfully!");
 
             // *Uncomment for Harmony*
             // Harmony harmony = new Harmony("Template");
