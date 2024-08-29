@@ -247,7 +247,7 @@
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
     <warmupMote>Mote_CoagulateStencil</warmupMote>
-    <warmupEffecter>Coagulate</warmupEffecter>
+    <!-- <warmupEffecter>Coagulate</warmupEffecter> -->
     <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound>
     <jobDef>CastAbilityOnThingMelee</jobDef>
     <displayOrder>400</displayOrder>

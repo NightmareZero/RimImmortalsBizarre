@@ -4,7 +4,7 @@
     <HediffDef>
         <defName>NzRI_AoJing_Molt</defName>
         <label>molt</label>
-        <description>#TODO</description>
+        <description>You are covered in a hard epidermis with a vague blood light and aura flowing through it.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <initialSeverity>0.001</initialSeverity>
         <defaultLabelColor>(0.6, 0, 0, 1)</defaultLabelColor>
@@ -33,7 +33,7 @@
 		<defName>NzRI_AoJing_Ascend</defName>
 		<label>CangQiang Ascend</label>
 		<hediffClass>NzRimImmortalBizarre.AoJing_Ascend</hediffClass>
-		<description>#TODO</description>
+		<description>You're watched by Ba-Hui, your skill power is increased, and your recovery speed is increased.</description>
 		<stages>
 			<li>
 				<label>level1</label>
