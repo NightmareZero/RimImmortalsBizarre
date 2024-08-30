@@ -12,7 +12,7 @@
     <aiCanUse>true</aiCanUse>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
-      <range>23.9</range>
+      <range>28.9</range>
       <warmupTime>0.5</warmupTime>
       <soundCast>PiercingSpine_Launch</soundCast>
     </verbProperties>
@@ -42,7 +42,7 @@
     </graphicData>
     <projectile>
       <damageDef>RangedStab</damageDef>
-      <damageAmountBase>25</damageAmountBase>
+      <damageAmountBase>33</damageAmountBase>
       <armorPenetrationBase>1</armorPenetrationBase>
       <stoppingPower>3</stoppingPower>
       <speed>55</speed>
@@ -62,7 +62,7 @@
     <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
-      <range>10.9</range>
+      <range>13.9</range>
       <warmupTime>1</warmupTime>
       <soundCast>FireSpew_Resolve</soundCast>
       <targetParams>
@@ -104,7 +104,7 @@
     <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
-      <range>16.9</range>
+      <range>22.9</range>
       <warmupTime>0.5</warmupTime>
       <soundCast>RocketswarmLauncher_Fire</soundCast>
       <targetParams>
@@ -117,7 +117,7 @@
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_AbilitySpray">
         <projectileDef>NzRI_BloodGuts</projectileDef>
-        <numCellsToHit>36</numCellsToHit>
+        <numCellsToHit>42</numCellsToHit>
         <sprayEffecter>ArrowSpray_Directional</sprayEffecter>
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
@@ -315,7 +315,7 @@
     </verbProperties>
     <comps>
       <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
-        <rEnergy>-250</rEnergy>
+        <rEnergy>-200</rEnergy>
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_Regeneration">
         <times>2</times>
@@ -376,7 +376,7 @@
         <group>offering</group>
         <level>3</level>
         <damageMin>7</damageMin>
-        <damageMax>17</damageMax>
+        <damageMax>11</damageMax>
       </li>
     </comps>
   </AbilityDef>
