@@ -18,8 +18,10 @@ namespace NzRimImmortalBizarre
             #if DEBUG
             Log.Message("NzRI_Ascend_Apply Pawn Mood : " + pawn.GetPawnMoods() + " Pawn Pain: "+ pawn.GetPawnPain() + ", SuccessRate: " + getSuccessRate(pawn));
             #endif
-            float successRate = getSuccessRate(pawn);
-            var message = "NzRI_WarningAscendSuccessRate".Translate(successRate.Named("SUCCESSRATE"));
+            float moodRate = (1-pawn.GetPawnMoods()) * 100;
+            float painRate = (pawn.GetPawnPain()) * 100;
+            float successRate = getSuccessRate(pawn) * 100;
+            var message = "NzRI_WarningAscendSuccessRate".Translate(successRate.Named("Success"),painRate.Named("Pain"),moodRate.Named("Mood"));
             return Dialog_MessageBox.CreateConfirmation(message, confirmAction, destructive: true);
         }
 
@@ -43,7 +45,6 @@ namespace NzRimImmortalBizarre
             {
                 successRate = 0.9f;
             }
-            successRate *= 100;
             return successRate;
         }
     }
