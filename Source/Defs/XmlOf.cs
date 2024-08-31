@@ -20,6 +20,8 @@ namespace NzRimImmortalBizarre
 
         public static EffecterDef GiantExplosion;
 
+        public static HediffDef NzRI_AscendHediff;
+
 
 
         static XmlOf()

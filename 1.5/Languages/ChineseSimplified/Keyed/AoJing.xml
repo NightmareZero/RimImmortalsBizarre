@@ -2,4 +2,5 @@
 <LanguageData>
   <Nz_AoJing_HurtSelf_NoBodyPart>{0} 没有可供分解的身体部位。</Nz_AoJing_HurtSelf_NoBodyPart>
   <NzRI_WarningAscendSuccessRate>苍羌登阶\n\n 心情痛苦: {Mood}% \n\n 身体痛苦 {Pain}% \n\n 总体成功率：{Success}%</NzRI_WarningAscendSuccessRate>
+  <NzRI_Ascend_FailMsg> {PAWN_nameDef} 试图登阶，但是失败了。</NzRI_Ascend_FailMsg>
 </LanguageData>

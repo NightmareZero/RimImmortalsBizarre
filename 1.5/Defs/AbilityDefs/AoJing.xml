@@ -410,6 +410,9 @@
 			</targetParams>
 		</verbProperties>
 		<comps>
+      <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+        <rEnergy>-1</rEnergy>
+      </li>
 			<li Class="NzRimImmortalBizarre.CompProperties_AbilityAscend" />
       <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
         <group>ascend</group>
