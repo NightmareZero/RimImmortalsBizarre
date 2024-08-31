@@ -384,8 +384,8 @@
   <AbilityDef>
 		<defName>NzRI_AoJing_Ascend</defName>
 		<label>Ascend</label>
-		<cooldownTicksRange>180000</cooldownTicksRange>
-		<description>Attract the attention of the demon Ba-Hui. The more pain and suffering one experiences in their mind and body, the higher the chances of success. However, if one fails to ascend, it can cause severe damage to their internal organs.</description>
+		<cooldownTicksRange>120000</cooldownTicksRange>
+		<description>Attract the attention of the demon Ba-Hui. The more pain and suffering one experiences in their mind and body, the higher the chances of success. However, it can cause severe damage to their internal organs.</description>
     <iconPath>Ability/AoJing8</iconPath>
 		<warmupStartSound>ReimplantXenogerm_Cast</warmupStartSound>
 		<warmupEffecter>Implant_Xenogerm</warmupEffecter>
