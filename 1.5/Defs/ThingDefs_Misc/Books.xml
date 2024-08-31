@@ -10,7 +10,7 @@
 		<comps>
 			<li Class="WhoXiuXian.CompProperties_BookStudiable">
 				<route>NzRI_AoJing</route>
-				<cost>20</cost>
+				<cost>13</cost>
 				<abilities>
 					<li>NzRI_AoJing_FingerNail</li>
 					<li>NzRI_AoJing_Finger</li>

@@ -36,7 +36,8 @@ namespace NzRimImmortalBizarre
             {
                 pawn.TakeDamage(new DamageInfo(DamageDefOf.SurgicalCut, Rand.Range(min, max), 999f, -1f, null, targetPart));
             }
-            else { 
+            else
+            {
                 Log.Message("Nz_AoJing_HurtSelf_NoBodyPart".Translate(pawn.Name.ToStringShort));
             }
         }
@@ -67,7 +68,7 @@ namespace NzRimImmortalBizarre
 
         public static DefPartHurtLevel GetPartHurtLevel(string group, int level)
         {
-           
+
             foreach (DefPartHurtLevel DefPartHurtLevel in DataOf.allDefPartHurts)
             {
                 if (DefPartHurtLevel.group == group && DefPartHurtLevel.level == level)
@@ -79,34 +80,33 @@ namespace NzRimImmortalBizarre
         }
 
 
-        // private static List<BodyPartDef> caches;
+        /// <summary>
+        /// 获取Pawn的心情值
+        /// </summary>
+        /// <param name="pawn">目标Pawn</param>
+        /// <returns>心情值</returns
+        public static float GetPawnMoods(this Pawn pawn)
+        {
+            if (pawn == null || pawn.needs == null || pawn.needs.mood == null)
+            {
+                return 0;
+            }
+            return pawn.needs.mood.CurLevel;
+        }
 
-        // public static List<BodyPartDef> GetBodyParts(this DefPartHurtLevel level)
-        // {
-
-        //     // 如果缓存为空，则进行初始化
-        //     if (caches == null)
-        //     {
-        //         caches = new List<BodyPartDef>();
-
-        //         // 遍历 bodyParts 列表中的每一个字符串
-        //         foreach (string part in level.bodyParts)
-        //         {
-        //             // 尝试从 DefDatabase 中获取对应的 BodyPartDef 对象
-        //             BodyPartDef bodyPartDef = DefDatabase<BodyPartDef>.GetNamedSilentFail(part);
-
-        //             // 如果找到了对应的 BodyPartDef 对象，则将其添加到缓存列表中
-        //             if (bodyPartDef != null)
-        //             {
-        //                 caches.Add(bodyPartDef);
-        //             }
-        //         }
-        //     }
-
-        //     // 返回缓存的 BodyPartDef 对象列表
-        //     return caches;
-
-        // }
+        /// <summary>
+        /// 获取Pawn的疼痛值
+        /// </summary>
+        /// <param name="pawn">目标Pawn</param>
+        /// <returns>疼痛值</returns>
+        public static float GetPawnPain(this Pawn pawn)
+        {
+            if (pawn == null || pawn.health == null || pawn.health.hediffSet == null)
+            {
+                return 0;
+            }
+            return pawn.health.hediffSet.PainTotal;
+        }
     }
 
 }

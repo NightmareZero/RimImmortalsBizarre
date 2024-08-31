@@ -74,4 +74,16 @@
             <li>Torso</li>
         </bodyParts>
     </NzRimImmortalBizarre.DefPartHurtLevel>    
+
+
+    <NzRimImmortalBizarre.DefPartHurtLevel>
+        <defName>defA1</defName>
+        <group>ascend</group>
+        <level>1</level>
+        <bodyParts>
+            <li>Heart</li>
+            <li>Kidney</li>
+            <li>Lung</li>
+        </bodyParts>
+    </NzRimImmortalBizarre.DefPartHurtLevel>  
 </Defs>

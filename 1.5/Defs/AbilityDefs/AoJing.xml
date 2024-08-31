@@ -395,11 +395,9 @@
 		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
 		<stunTargetWhileCasting>True</stunTargetWhileCasting>
 		<showPsycastEffects>True</showPsycastEffects>
-		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
-		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
 		<verbProperties>
 			<verbClass>Verb_CastAbility</verbClass>
-			<warmupTime>4</warmupTime>
+			<warmupTime>10</warmupTime>
 			<drawAimPie>False</drawAimPie>
 			<requireLineOfSight>False</requireLineOfSight>
 			<targetParams>
