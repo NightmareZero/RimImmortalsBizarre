@@ -26,4 +26,7 @@
 
     <NzRI_AoJing_Molt.label>蜕皮</NzRI_AoJing_Molt.label>
     <NzRI_AoJing_Molt.description>剥离自己的皮肤，将大量灵气注入其中，化作盔甲</NzRI_AoJing_Molt.description>
+
+    <NzRI_AoJing_Ascend.label>苍羌登阶</NzRI_AoJing_Ascend.label>
+    <NzRI_AoJing_Ascend.description>润置五行, 换取巴虺的注视，内心和身体越痛苦，成功率越高，如果登阶失败，则会对内脏造成大量伤害</NzRI_AoJing_Ascend.description>
 </LanguageData>

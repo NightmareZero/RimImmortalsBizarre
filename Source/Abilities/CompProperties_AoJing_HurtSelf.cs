@@ -11,6 +11,9 @@ namespace NzRimImmortalBizarre
         // 组别
         public string group;
 
+        // 伤害次数
+        public int times = 1;
+
         // 伤害默认值为 1 ~ 2
         public int damageMin = 1;
         public int damageMax = 2;

@@ -24,16 +24,21 @@ namespace NzRimImmortalBizarre
             {
                 Messages.Message("Nz_AoJing_HurtSelf_NoBodyPart".Translate(parent.pawn.Name.ToStringShort), parent.pawn, MessageTypeDefOf.RejectInput);
             }
-            return base.CanApplyOn(target, dest) &&  canDamage;
+            return base.CanApplyOn(target, dest) && canDamage;
         }
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
             Pawn caster = parent.pawn;
-            caster.DamageBodyPart(Props.group, Props.level, Props.damageMin, Props.damageMax);
-            // 播放声音
+            for (int i = 0; i < Props.times; i++)
+            {
+                caster.DamageBodyPart(Props.group, Props.level, Props.damageMin, Props.damageMax);
+                // 播放声音
+            }
             XmlOf.NzRI_HurtSelf.PlayOneShot(new TargetInfo(caster.Position, caster.Map));
         }
+
+
     }
 }

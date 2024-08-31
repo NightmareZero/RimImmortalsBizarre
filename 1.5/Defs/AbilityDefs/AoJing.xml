@@ -380,4 +380,46 @@
       </li>
     </comps>
   </AbilityDef>
+
+  <AbilityDef>
+		<defName>NzRI_AoJing_Ascend</defName>
+		<label>Ascend</label>
+		<cooldownTicksRange>180000</cooldownTicksRange>
+		<description>Attract the attention of the demon Ba-Hui. The more pain and suffering one experiences in their mind and body, the higher the chances of success. However, if one fails to ascend, it can cause severe damage to their internal organs.</description>
+    <iconPath>Ability/AoJing8</iconPath>
+		<warmupStartSound>ReimplantXenogerm_Cast</warmupStartSound>
+		<warmupEffecter>Implant_Xenogerm</warmupEffecter>
+		<aiCanUse>false</aiCanUse>
+		<jobDef>CastAbilityOnThing</jobDef>
+		<targetRequired>False</targetRequired>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<stunTargetWhileCasting>True</stunTargetWhileCasting>
+		<showPsycastEffects>True</showPsycastEffects>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<warmupTime>4</warmupTime>
+			<drawAimPie>False</drawAimPie>
+			<requireLineOfSight>False</requireLineOfSight>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetAnimals>false</canTargetAnimals>
+				<canTargetHumans>false</canTargetHumans>
+				<canTargetMechs>false</canTargetMechs>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="NzRimImmortalBizarre.CompProperties_AbilityAscend" />
+      <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
+        <group>ascend</group>
+        <level>1</level>
+        <times>5</times>
+        <damageMin>9</damageMin>
+        <damageMax>11</damageMax>
+      </li>
+		</comps>
+	</AbilityDef>
 </Defs>

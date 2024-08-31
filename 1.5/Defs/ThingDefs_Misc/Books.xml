@@ -19,6 +19,7 @@
 					<li>NzRI_AoJing_Molt</li>
 					<li>NzRI_AoJing_Arm</li>
 					<li>NzRI_AoJing_Regeneration</li>
+					<li>NzRI_AoJing_Ascend</li>
 				</abilities>
 				<researchProjectDef>RI_InitialApproach</researchProjectDef>
 				<completedLetterTitle>{PARENT_label} The book couldn't withstand the test of time and has shattered.</completedLetterTitle>
