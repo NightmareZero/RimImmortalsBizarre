@@ -29,6 +29,27 @@
 			</li>
 		</comps>
 	</HediffDef>
+	<!-- 剧痛 -->
+	<HediffDef>
+		<defName>NzRI_AoJing_Agony</defName>
+		<label>Agony</label>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>It's like a thousand ants are biting you, and you can't help but scream.</description>
+		<initialSeverity>0.001</initialSeverity>
+		<defaultLabelColor>(0.6, 0, 0, 1)</defaultLabelColor>
+		<stages>
+			<li>
+				<painOffset>0.65</painOffset>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>3000</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+				<canUseDecimalsShortForm>true</canUseDecimalsShortForm>
+			</li>
+		</comps>
+	</HediffDef>
 	<!-- 登阶 -->
 	<HediffDef>
 		<defName>NzRI_AoJing_Ascend</defName>

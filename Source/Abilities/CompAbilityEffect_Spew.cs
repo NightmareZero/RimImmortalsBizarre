@@ -16,13 +16,24 @@ namespace NzRimImmortalBizarre
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
+            List<IntVec3> affected = AffectedCells(target);
             GenExplosion.DoExplosion(target.Cell, parent.pawn.MapHeld, 0f, Props.damageType, Caster,
              postExplosionSpawnThingDef: Props.filthDef, damAmount: Props.damAmount, armorPenetration: -1f, explosionSound: null, weapon: null,
               projectile: null, intendedTarget: null, postExplosionSpawnChance: 1f, postExplosionSpawnThingCount: 1, postExplosionGasType: null,
                applyDamageToExplosionCellsNeighbors: false, preExplosionSpawnThingDef: null, preExplosionSpawnChance: 0f, preExplosionSpawnThingCount: 1,
                 chanceToStartFire: 0f, damageFalloff: false, direction: null, ignoredThings: null, affectedAngle: null, doVisualEffects: false,
                  propagationSpeed: 0.6f, excludeRadius: 0f, doSoundEffects: false, postExplosionSpawnThingDefWater: null, screenShakeFactor: 1f,
-                  flammabilityChanceCurve: parent.verb.verbProps.flammabilityAttachFireChanceCurve, overrideCells: AffectedCells(target));
+                  flammabilityChanceCurve: parent.verb.verbProps.flammabilityAttachFireChanceCurve, overrideCells: affected);
+
+
+            Utils.EveryPawnInAffectedArea(Caster.Map, affected, delegate (Pawn p)
+            {
+                if (p != Caster && p.Faction != Caster.Faction)
+                {
+                    // 附加一个30秒的Hediff
+                    Hediff hediff = HediffMaker.MakeHediff(XmlOf.NzRI_AoJing_Agony, p);
+                }
+            });
             base.Apply(target, dest);
         }
 

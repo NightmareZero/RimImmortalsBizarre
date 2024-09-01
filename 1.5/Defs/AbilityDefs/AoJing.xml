@@ -20,7 +20,7 @@
       <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
         <rEnergy>-1</rEnergy>
       </li>
-      <li Class="CompProperties_AbilityLaunchProjectile">
+      <li Class="NzRimImmortalBizarre.CompProperties_AbilityLaunchProjectile">
         <projectileDef>NzRI_SmallBloodGuts</projectileDef>
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
@@ -42,7 +42,7 @@
     </graphicData>
     <projectile>
       <damageDef>RangedStab</damageDef>
-      <damageAmountBase>33</damageAmountBase>
+      <damageAmountBase>39</damageAmountBase>
       <armorPenetrationBase>1</armorPenetrationBase>
       <stoppingPower>3</stoppingPower>
       <speed>55</speed>
@@ -69,14 +69,17 @@
         <canTargetLocations>true</canTargetLocations>
       </targetParams>
     </verbProperties>
+    <statBases>
+      <Ability_Duration>60</Ability_Duration>
+    </statBases>
     <comps>
       <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
         <rEnergy>-5</rEnergy>
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_AbilitySpew">
-        <range>10.9</range>
-        <damAmount>37</damAmount>
-        <lineWidthEnd>5</lineWidthEnd>
+        <range>13.9</range>
+        <damAmount>43</damAmount>
+        <lineWidthEnd>7</lineWidthEnd>
         <filthDef>NzRI_Filth_AcidMucus</filthDef>
         <damageType>AcidBurn</damageType>
         <effecterDef>Acid_Spew</effecterDef>
@@ -148,7 +151,7 @@
     <projectile>
       <damageDef>Bomb</damageDef>
       <speed>125</speed>
-      <damageAmountBase>40</damageAmountBase>
+      <damageAmountBase>51</damageAmountBase>
       <arcHeightFactor>0.4</arcHeightFactor>
       <armorPenetrationBase>0.8</armorPenetrationBase>
       <stoppingPower>2</stoppingPower>
@@ -194,7 +197,7 @@
           <li>Cut</li>
         </damageTypes>
         <damageTimes>5</damageTimes>
-        <damage>35</damage>
+        <damage>49</damage>
 
         <effecterDef>ArrowSpray_Directional</effecterDef>
       </li>

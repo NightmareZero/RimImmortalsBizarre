@@ -15,8 +15,6 @@ namespace NzRimImmortalBizarre
     {
         private new CompProperties_AbilityAscend Props => (CompProperties_AbilityAscend)props;
 
-
-
         public override Window ConfirmationDialog(LocalTargetInfo target, Action confirmAction)
         {
             Pawn pawn = target.Pawn;
@@ -24,7 +22,7 @@ namespace NzRimImmortalBizarre
             Log.Message("NzRI_Ascend_Apply Pawn Mood : " + pawn.GetPawnMoods() + " Pawn Pain: " + pawn.GetPawnPain() + ", SuccessRate: " + getSuccessRate(pawn));
 #endif
             float moodRate = (1 - pawn.GetPawnMoods()) * 100;
-            float painRate = (pawn.GetPawnPain()) * 100;
+            float painRate = pawn.GetPawnPain() * 100;
             float successRate = getSuccessRate(pawn) * 100;
             var message = "NzRI_WarningAscendSuccessRate".Translate(successRate.Named("Success"), painRate.Named("Pain"), moodRate.Named("Mood"));
             return Dialog_MessageBox.CreateConfirmation(message, confirmAction, destructive: true);
@@ -63,7 +61,7 @@ namespace NzRimImmortalBizarre
             }
             else
             {
-                Hediff hediff = HediffMaker.MakeHediff(XmlOf.NzRI_AscendHediff, pawn);
+                Hediff hediff = HediffMaker.MakeHediff(XmlOf.NzRI_AoJing_Ascend, pawn);
                 hediff.Severity = 0.1f;
                 pawn.health.AddHediff(hediff);
             }
