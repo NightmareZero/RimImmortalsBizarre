@@ -123,7 +123,7 @@
       <li Class="NzRimImmortalBizarre.CompProperties_AbilitySpray">
         <skillRoute>1</skillRoute>
         <projectileDef>NzRI_BloodGuts</projectileDef>
-        <numCellsToHit>43</numCellsToHit>
+        <numCellsToHit>37</numCellsToHit>
         <sprayEffecter>ArrowSpray_Directional</sprayEffecter>
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
