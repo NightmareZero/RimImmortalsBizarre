@@ -296,7 +296,7 @@
   <AbilityDef ParentName="AbilityTouchBase">
     <defName>NzRI_AoJing_Regeneration</defName>
     <label>regeneration</label>
-    <description>use a secret spell as far as the target's missing parts, but it will cause damage to your own internal organs.</description>
+    <description>Use a secret spell to repair the target's missing parts, but it will cause damage to your own internal organs.</description>
     <iconPath>Ability/AoJing6</iconPath>
     <stunTargetWhileCasting>true</stunTargetWhileCasting>
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>

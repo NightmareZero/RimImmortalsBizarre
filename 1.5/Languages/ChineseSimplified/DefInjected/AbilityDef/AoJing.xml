@@ -22,7 +22,7 @@
     <NzRI_FireTherapy.description>向目标射出一小团火焰，使其伤口会快速愈合，但是也会造成少量烧伤。似乎是从《火袄箴经》上面摘抄而来。</NzRI_FireTherapy.description>
 
     <NzRI_AoJing_Regeneration.label>再生</NzRI_AoJing_Regeneration.label>
-    <NzRI_AoJing_Regeneration.description>使用秘法，至于目标的缺失部位，但是会对自己的内脏造成损伤。</NzRI_AoJing_Regeneration.description>
+    <NzRI_AoJing_Regeneration.description>使用秘法，修复目标的缺失部位，但是会对自己的内脏造成损伤。</NzRI_AoJing_Regeneration.description>
 
     <NzRI_AoJing_Molt.label>蜕皮</NzRI_AoJing_Molt.label>
     <NzRI_AoJing_Molt.description>剥离自己的皮肤，将大量灵气注入其中，化作盔甲</NzRI_AoJing_Molt.description>
