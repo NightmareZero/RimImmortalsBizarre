@@ -34,7 +34,7 @@
 		<defName>NzRI_AoJing_Agony</defName>
 		<label>Agony</label>
 		<hediffClass>HediffWithComps</hediffClass>
-		<description>It's like a thousand ants are biting you, and you can't help but scream.</description>
+		<description>Acidic remnants of flesh and blood try to burrow into your body like maggots, and you nearly faint from the pain.</description>
 		<initialSeverity>0.001</initialSeverity>
 		<defaultLabelColor>(0.6, 0, 0, 1)</defaultLabelColor>
 		<stages>
@@ -44,7 +44,7 @@
 		</stages>
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
-				<disappearsAfterTicks>3000</disappearsAfterTicks>
+				<disappearsAfterTicks>12000</disappearsAfterTicks>
 				<showRemainingTime>true</showRemainingTime>
 				<canUseDecimalsShortForm>true</canUseDecimalsShortForm>
 			</li>

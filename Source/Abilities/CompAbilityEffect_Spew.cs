@@ -40,6 +40,7 @@ namespace NzRimImmortalBizarre
                 {
                     // 附加一个30秒的Hediff
                     Hediff hediff = HediffMaker.MakeHediff(XmlOf.NzRI_AoJing_Agony, p);
+                    p.health.AddHediff(hediff);
                 }
             });
 
