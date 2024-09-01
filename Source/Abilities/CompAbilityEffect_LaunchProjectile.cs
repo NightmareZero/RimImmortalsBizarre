@@ -5,13 +5,16 @@ using RimWorld;
 namespace NzRimImmortalBizarre
 {
 
-    public class CompAbilityEffect_LaunchProjectile : CompAbilityEffect
+    public class CompAbilityEffect_LaunchProjectile : CompAbilityEffect, DamagePatcher
     {
         public new CompProperties_AbilityLaunchProjectile Props => (CompProperties_AbilityLaunchProjectile)props;
+
+        private float damageMultiplier = 1f;
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
+            Patcher.DoDamagePatch(this,this);
             LaunchProjectile(target);
         }
 
@@ -29,6 +32,21 @@ namespace NzRimImmortalBizarre
         public override bool AICanTargetNow(LocalTargetInfo target)
         {
             return target.Pawn != null;
+        }
+
+        public int PatchType()
+        {
+            return Props.skillRoute;
+        }
+
+        public void SetDamageMultiplier(float multiplier)
+        {
+            damageMultiplier = multiplier;
+        }
+
+        public void SetArmorPenetrationMultiplier(float penetration)
+        {
+            
         }
     }
 }

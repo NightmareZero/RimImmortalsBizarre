@@ -6,7 +6,7 @@ using RimWorld;
 namespace NzRimImmortalBizarre
 {
     // CompAbilityEffect_FireSpew
-    public class CompAbilityEffect_Spew : CompAbilityEffect
+    public class CompAbilityEffect_Spew : CompAbilityEffect, DamagePatcher
     {
         private readonly List<IntVec3> tmpCells = new List<IntVec3>();
 
@@ -14,11 +14,19 @@ namespace NzRimImmortalBizarre
 
         private Pawn Caster => parent.pawn;
 
+        private float damageMultiplier = 1f;
+
+        private float armorPenetrationMultiplier = 1f;
+
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
+            Patcher.DoDamagePatch(this,this);
+
+            var damage = Props.damAmount * damageMultiplier;
+            var armorPenetration = 1f * armorPenetrationMultiplier;
             List<IntVec3> affected = AffectedCells(target);
             GenExplosion.DoExplosion(target.Cell, parent.pawn.MapHeld, 0f, Props.damageType, Caster,
-             postExplosionSpawnThingDef: Props.filthDef, damAmount: Props.damAmount, armorPenetration: -1f, explosionSound: null, weapon: null,
+             postExplosionSpawnThingDef: Props.filthDef, damAmount: (int)damage, armorPenetration: armorPenetration, explosionSound: null, weapon: null,
               projectile: null, intendedTarget: null, postExplosionSpawnChance: 1f, postExplosionSpawnThingCount: 1, postExplosionGasType: null,
                applyDamageToExplosionCellsNeighbors: false, preExplosionSpawnThingDef: null, preExplosionSpawnChance: 0f, preExplosionSpawnThingCount: 1,
                 chanceToStartFire: 0f, damageFalloff: false, direction: null, ignoredThings: null, affectedAngle: null, doVisualEffects: false,
@@ -26,7 +34,7 @@ namespace NzRimImmortalBizarre
                   flammabilityChanceCurve: parent.verb.verbProps.flammabilityAttachFireChanceCurve, overrideCells: affected);
 
 
-            Utils.EveryPawnInAffectedArea(Caster.Map, affected, delegate (Pawn p)
+            var pawnNum = Utils.EveryPawnInAffectedArea(Caster.Map, affected, delegate (Pawn p)
             {
                 if (p != Caster && p.Faction != Caster.Faction)
                 {
@@ -34,6 +42,11 @@ namespace NzRimImmortalBizarre
                     Hediff hediff = HediffMaker.MakeHediff(XmlOf.NzRI_AoJing_Agony, p);
                 }
             });
+
+            #if DEBUG
+            Log.Message("NzRI_Spew_Apply PawnNum: " + pawnNum);
+            #endif
+
             base.Apply(target, dest);
         }
 
@@ -142,6 +155,21 @@ namespace NzRimImmortalBizarre
                 ShootLine resultingLine;
                 return parent.verb.TryFindShootLineFromTo(parent.pawn.Position, c, out resultingLine);
             }
+        }
+
+        public int PatchType()
+        {
+            return Props.skillRoute;
+        }
+
+        public void SetDamageMultiplier(float multiplier)
+        {
+            damageMultiplier = multiplier;
+        }
+
+        public void SetArmorPenetrationMultiplier(float penetration)
+        {
+            armorPenetrationMultiplier = penetration;
         }
     }
 }

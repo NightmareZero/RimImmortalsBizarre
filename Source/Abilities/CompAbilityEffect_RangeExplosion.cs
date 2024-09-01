@@ -6,7 +6,7 @@ using System;
 
 namespace NzRimImmortalBizarre
 {
-    public class CompAbilityEffect_RangeExplosion : CompAbilityEffect
+    public class CompAbilityEffect_RangeExplosion : CompAbilityEffect, DamagePatcher
     {
 
 
@@ -14,15 +14,22 @@ namespace NzRimImmortalBizarre
 
         private Pawn Caster => parent.pawn;
 
+        private float damageMultiplier = 1f;
+        
+        private float armorPenetrationMultiplier = 1f;
+
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
+            Patcher.DoDamagePatch(this,this);
+
             for (int i = 0; i < Props.damageTimes; i++)
             {
                 var targetCell = TargetAffectedCells(target).RandomElement();
                 var explosionCells = GetRangeCells(targetCell, Props.explosionRange);
+                var damage = Props.damage * damageMultiplier;
 
                 GenExplosion.DoExplosion(target.Cell, parent.pawn.MapHeld, Props.explosionRange, Props.damageTypes.RandomElement(), Caster,
-                    postExplosionSpawnThingDef: Props.filthDef, damAmount: Props.damage, armorPenetration: 1f, explosionSound: XmlOf.Explosion_GiantBomb, weapon: null,
+                    postExplosionSpawnThingDef: Props.filthDef, damAmount: (int)damage, armorPenetration: 1f, explosionSound: XmlOf.Explosion_GiantBomb, weapon: null,
                     projectile: null, intendedTarget: null, postExplosionSpawnChance: 1f, postExplosionSpawnThingCount: 1, postExplosionGasType: null,
                     applyDamageToExplosionCellsNeighbors: false, preExplosionSpawnThingDef: null, preExplosionSpawnChance: 0f, preExplosionSpawnThingCount: 1,
                     chanceToStartFire: 0f, damageFalloff: false, direction: null, ignoredThings: null, affectedAngle: null, doVisualEffects: true,
@@ -100,6 +107,21 @@ namespace NzRimImmortalBizarre
             }
 
             return true;
+        }
+
+        public int PatchType()
+        {
+            return Props.skillRoute;
+        }
+
+        public void SetDamageMultiplier(float multiplier)
+        {
+            damageMultiplier = multiplier;
+        }
+
+        public void SetArmorPenetrationMultiplier(float penetration)
+        {
+            armorPenetrationMultiplier = penetration;
         }
     }
 }

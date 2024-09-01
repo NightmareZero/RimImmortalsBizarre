@@ -39,9 +39,12 @@ namespace NzRimImmortalBizarre
             float random = Rand.Value;
             if (random > successRate) // 失败
             {
-                Log.Message("NzRI_Ascend_FailMsg".Translate(pawn.Named("Pawn")));
+                Messages.Message("NzRI_Ascend_FailMsg".Translate(pawn.Name.Named("Caster")),MessageTypeDefOf.NegativeEvent);
+                // 清除冷却时间
+                this.parent.ResetCooldown();
                 return;
             }
+            Messages.Message("NzRI_Ascend_OkMsg".Translate(pawn.Name.Named("Caster")),MessageTypeDefOf.NegativeEvent);
             // 成功
             if (Utils.HasAscendHediff(pawn))
             {
@@ -72,15 +75,15 @@ namespace NzRimImmortalBizarre
         private float getSuccessRate(Pawn pawn)
         {
             float successRate = 0.1f;
-            successRate += (1 - pawn.GetPawnMoods()) / 2;
-            successRate += pawn.GetPawnPain() / 2;
+            successRate += (1 - pawn.GetPawnMoods()) * 0.9f;
+            successRate += pawn.GetPawnPain() * 0.9f;
             if (successRate < 0.1f)
             {
                 successRate = 0.1f;
             }
-            else if (successRate > 0.9f)
+            else if (successRate > 0.99f)
             {
-                successRate = 0.9f;
+                successRate = 0.99f;
             }
             return successRate;
         }

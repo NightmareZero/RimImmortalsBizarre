@@ -8,6 +8,9 @@ namespace NzRimImmortalBizarre
     {
         public ThingDef projectileDef;
 
+        // 技能教派
+        public int skillRoute = 0;
+
         public CompProperties_AbilityLaunchProjectile()
         {
             compClass = typeof(CompAbilityEffect_LaunchProjectile);

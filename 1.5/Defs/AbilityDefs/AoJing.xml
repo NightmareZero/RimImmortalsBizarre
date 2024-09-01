@@ -21,6 +21,7 @@
         <rEnergy>-1</rEnergy>
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_AbilityLaunchProjectile">
+        <skillRoute>1</skillRoute>
         <projectileDef>NzRI_SmallBloodGuts</projectileDef>
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
@@ -43,7 +44,7 @@
     <projectile>
       <damageDef>RangedStab</damageDef>
       <damageAmountBase>39</damageAmountBase>
-      <armorPenetrationBase>1</armorPenetrationBase>
+      <armorPenetrationBase>1.1</armorPenetrationBase>
       <stoppingPower>3</stoppingPower>
       <speed>55</speed>
     </projectile>
@@ -77,9 +78,10 @@
         <rEnergy>-5</rEnergy>
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_AbilitySpew">
+        <skillRoute>1</skillRoute>
         <range>13.9</range>
-        <damAmount>43</damAmount>
-        <lineWidthEnd>7</lineWidthEnd>
+        <damAmount>35</damAmount>
+        <lineWidthEnd>9</lineWidthEnd>
         <filthDef>NzRI_Filth_AcidMucus</filthDef>
         <damageType>AcidBurn</damageType>
         <effecterDef>Acid_Spew</effecterDef>
@@ -119,8 +121,9 @@
         <rEnergy>-15</rEnergy>
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_AbilitySpray">
+        <skillRoute>1</skillRoute>
         <projectileDef>NzRI_BloodGuts</projectileDef>
-        <numCellsToHit>42</numCellsToHit>
+        <numCellsToHit>43</numCellsToHit>
         <sprayEffecter>ArrowSpray_Directional</sprayEffecter>
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
@@ -151,9 +154,9 @@
     <projectile>
       <damageDef>Bomb</damageDef>
       <speed>125</speed>
-      <damageAmountBase>51</damageAmountBase>
+      <damageAmountBase>43</damageAmountBase>
       <arcHeightFactor>0.4</arcHeightFactor>
-      <armorPenetrationBase>0.8</armorPenetrationBase>
+      <armorPenetrationBase>1.4</armorPenetrationBase>
       <stoppingPower>2</stoppingPower>
       <shadowSize>0</shadowSize>
       <filth>Filth_BloodSmear</filth>
@@ -184,9 +187,10 @@
     </verbProperties>
     <comps>
       <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
-        <rEnergy>-150</rEnergy>
+        <rEnergy>-50</rEnergy>
       </li>      
       <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeExplosion">
+        <skillRoute>1</skillRoute>
         <targetRange>6.9</targetRange>
         <explosionRange>5.9</explosionRange>
         <filthDef>NzRI_BloodGuts</filthDef>
@@ -271,7 +275,7 @@
     </verbProperties>
     <comps>
       <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
-        <rEnergy>-50</rEnergy>
+        <rEnergy>-30</rEnergy>
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_FireTherapy">
         <tendQualityRange>0.5~0.9</tendQualityRange>
@@ -318,7 +322,7 @@
     </verbProperties>
     <comps>
       <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
-        <rEnergy>-200</rEnergy>
+        <rEnergy>-150</rEnergy>
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_Regeneration">
         <times>2</times>
@@ -367,7 +371,7 @@
     </statBases>
     <comps>
       <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
-        <rEnergy>-50</rEnergy>
+        <rEnergy>-40</rEnergy>
       </li>
       <li Class="CompProperties_AbilityGiveHediff">
         <compClass>CompAbilityEffect_GiveHediff</compClass>

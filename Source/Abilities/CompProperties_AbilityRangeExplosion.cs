@@ -27,6 +27,8 @@ namespace NzRimImmortalBizarre
         // 伤害值
         public int damage = 40;
 
+        // 技能教派
+        public int skillRoute = 0;
 
         public EffecterDef effecterDef;
 

@@ -21,6 +21,9 @@ namespace NzRimImmortalBizarre
 
         public bool canHitFilledCells;
 
+        // 技能教派
+        public int skillRoute = 0;
+
         public CompProperties_AbilitySpew()
         {
             compClass = typeof(CompAbilityEffect_Spew);
