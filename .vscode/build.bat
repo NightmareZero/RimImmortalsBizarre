@@ -7,6 +7,10 @@ if "%1"=="" (
     set BUILD_CONFIG=%1
 )
 
+REM output build configuration
+echo Building with configuration: %BUILD_CONFIG%
+echo
+
 REM remove unnecessary assemblies
 DEL /Q .\*\Assemblies\*.*
 
