@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <AbilityDef ParentName="RI_PsycastBase">
+        <defName>NzRI_Zw_GracefulWords</defName>
+        <label>GracefulWords</label>
+        <description>&lt;color=#28BD75&gt;This technique is learned by the ElixirsStrengthen method
+            in the Strengthening foundation Realm\n\n&lt;/color&gt;Qi cost40\n\nUse spiritual energy
+            to enter the target's body from both hands, instantly healing a bandaged wound.</description>
+        <jobDef>CastAbilityOnThingMelee</jobDef>
+        <iconPath>Ability/Base/Lg</iconPath>
+        <hostile>false</hostile>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <statBases>
+            <Ability_EntropyGain>0</Ability_EntropyGain>
+            <Ability_PsyfocusCost>0</Ability_PsyfocusCost>
+            <Ability_Duration>500</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <violent>false</violent>
+            <warmupTime>0.3</warmupTime>
+            <range>50</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>False</canTargetSelf>
+                <canTargetAnimals>False</canTargetAnimals>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetMechs>False</canTargetMechs>
+                <canTargetItems>False</canTargetItems>
+                <canTargetHumans>True</canTargetHumans>
+                <canTargetMutants>False</canTargetMutants>
+                <neverTargetHostileFaction>True</neverTargetHostileFaction>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <!-- <li Class="CompProperties_AbilityGiveHediff"> -->
+            <!--     <compClass>CompAbilityEffect_GiveHediff</compClass> -->
+            <!--     <hediffDef>RI_ManipulationHediff</hediffDef> -->
+            <!--     <psychic>True</psychic> -->
+            <!--     <replaceExisting>True</replaceExisting> -->
+            <!-- </li> -->
+            <!-- <li Class="WhoXiuXian.Abilities.CompProperties_SpawnMoteCasting"> -->
+            <!--     <moteCastDef>RI_Ability_Massage_Mote</moteCastDef> -->
+            <!-- </li> -->
+            <!-- <li Class="WhoXiuXian.Abilities.CompProperties_SpawnMoteSinging"> -->
+            <!--     <moteCastDef>RI_Ability_ElixirsStrengthen_Singing</moteCastDef> -->
+            <!-- </li> -->
+            <!-- <li Class="WhoXiuXian.Abilities.CompProperties_SpawnMoteCast"> -->
+            <!--     <moteCastDef>RI_Ability_Massage_Mote</moteCastDef> -->
+            <!-- </li> -->
+            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy"> -->
+            <!--     <rEnergy>-40</rEnergy> -->
+            <!-- </li> -->
+        </comps>
+    </AbilityDef>
+</Defs>
