@@ -61,7 +61,7 @@
 			<li>
 				<label>lv1</label>
 				<painOffset>-0.05</painOffset>
-				<painFactor>1.3</painFactor>
+				<painFactor>0.9</painFactor>
 				<statFactors>
 					<InjuryHealingFactor>1.5</InjuryHealingFactor>
 					<IncomingDamageFactor>0.9</IncomingDamageFactor>
@@ -71,7 +71,7 @@
 			<li>
 				<label>lv2</label>
 				<painOffset>-0.1</painOffset>
-				<painFactor>1.6</painFactor>
+				<painFactor>0.8</painFactor>
 				<minSeverity>0.19</minSeverity>
 				<statFactors>
 					<InjuryHealingFactor>3</InjuryHealingFactor>
@@ -81,7 +81,7 @@
 			<li>
 				<label>lv3</label>
 				<painOffset>-0.15</painOffset>
-				<painFactor>1.9</painFactor>
+				<painFactor>0.7</painFactor>
 				<minSeverity>0.29</minSeverity>
 				<statFactors>
 					<InjuryHealingFactor>5</InjuryHealingFactor>
@@ -91,7 +91,7 @@
 			<li>
 				<label>lv4</label>
 				<painOffset>-0.2</painOffset>
-				<painFactor>2.2</painFactor>
+				<painFactor>0.6</painFactor>
 				<minSeverity>0.39</minSeverity>
 				<statFactors>
 					<InjuryHealingFactor>7</InjuryHealingFactor>
@@ -101,7 +101,7 @@
 			<li>
 				<label>lv5</label>
 				<painOffset>-0.3</painOffset>
-				<painFactor>2.5</painFactor>
+				<painFactor>0.5</painFactor>
 				<minSeverity>0.49</minSeverity>
 				<statFactors>
 					<InjuryHealingFactor>9</InjuryHealingFactor>
