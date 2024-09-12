@@ -11,6 +11,7 @@
 		<defaultLabelColor>(0.6, 0, 0, 1)</defaultLabelColor>
 		<stages>
 			<li>
+				<painOffset>-0.35</painOffset>
 				<statFactors>
 					<IncomingDamageFactor>0.8</IncomingDamageFactor>
 				</statFactors>
