@@ -382,8 +382,8 @@
       <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
         <group>offering</group>
         <level>3</level>
-        <damageMin>7</damageMin>
-        <damageMax>11</damageMax>
+        <damageMin>4</damageMin>
+        <damageMax>7</damageMax>
       </li>
     </comps>
   </AbilityDef>
