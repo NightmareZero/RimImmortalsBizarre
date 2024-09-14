@@ -11,6 +11,7 @@
 			<li Class="WhoXiuXian.CompProperties_BookStudiable">
 				<route>NzRI_AoJing</route>
 				<cost>13</cost>
+				<canCopy>true</canCopy>
 				<abilities>
 					<li>NzRI_AoJing_FingerNail</li>
 					<li>NzRI_AoJing_Finger</li>
