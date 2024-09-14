@@ -40,6 +40,8 @@
 		<Compile Include="../Source/Utils/*" />
 		<Compile Include="../Source/Abilities/*" />
 		<Compile Include="../Source/Abilities/AoJing/*" />
+		<Compile Include="../Source/Abilities/Common/*" />
+		<Compile Include="../Source/Abilities/ZoWang/*" />
 		<Compile Include="../Source/Hediffs/*" />
 		<Compile Include="../Source/ModExtension/*" />
 		<Compile Include="../Source/UI/*" />
