@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThoughtDef>
+        <defName>NzRI_SaveMe</defName>
+        <thoughtClass>Thought_MemorySocial</thoughtClass>
+        <durationDays>60</durationDays>
+        <stackLimit>300</stackLimit>
+        <stackLimitForSameOtherPawn>15</stackLimitForSameOtherPawn>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>save me</label>
+                <baseOpinionOffset>150</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+    <ThoughtDef>
+        <defName>NzRI_CheatMe</defName>
+        <thoughtClass>Thought_MemorySocial</thoughtClass>
+        <durationDays>30</durationDays>
+        <stackLimit>300</stackLimit>
+        <stackLimitForSameOtherPawn>5</stackLimitForSameOtherPawn>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>cheat me</label>
+                <baseOpinionOffset>-15</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+</Defs>

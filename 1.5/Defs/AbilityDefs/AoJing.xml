@@ -60,7 +60,7 @@
     <aiCanUse>true</aiCanUse>
     <ai_IsIncendiary>true</ai_IsIncendiary>
     <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
-    <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound>
+    <!-- <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound> -->
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <range>13.9</range>
@@ -254,8 +254,7 @@
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
     <warmupMote>Mote_CoagulateStencil</warmupMote>
-    <!-- <warmupEffecter>Coagulate</warmupEffecter> -->
-    <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound>
+    <warmupStartSound>FireSpew_Warmup</warmupStartSound>
     <jobDef>CastAbilityOnThingMelee</jobDef>
     <displayOrder>400</displayOrder>
     <hostile>false</hostile>
@@ -303,7 +302,7 @@
     <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
     <warmupMote>Mote_CoagulateStencil</warmupMote>
     <warmupEffecter>Coagulate</warmupEffecter>
-    <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound>
+    <!-- <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound> -->
     <jobDef>CastAbilityOnThingMelee</jobDef>
     <displayOrder>400</displayOrder>
     <hostile>false</hostile>
@@ -348,7 +347,7 @@
     <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
     <warmupMote>Mote_CoagulateStencil</warmupMote>
     <warmupEffecter>Coagulate</warmupEffecter>
-    <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound>
+    <!-- <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound> -->
     <jobDef>CastAbilityOnThingMelee</jobDef>
     <displayOrder>400</displayOrder>
     <hostile>false</hostile>

@@ -26,6 +26,12 @@ namespace NzRimImmortalBizarre
         // 剧痛
         public static HediffDef NzRI_AoJing_Agony;
 
+        // 救了我
+        public static ThoughtDef NzRI_SaveMe;
+
+        // 骗了我
+        public static ThoughtDef NzRI_CheatMe;
+
 
         static XmlOf()
         {
