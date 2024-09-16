@@ -11,37 +11,32 @@ namespace NzRimImmortalBizarre
 
 	public class Gizmo_EnergyBar : Gizmo
 	{
-		public Pawn pawn;
-		public IEnergyHediff eh;
-		public EnergyBarOpt guiOpt;
+		public IEnergyHediff data;
 
-		private Texture2D EmptyBarTex = SolidColorMaterials.NewSolidColorTexture(Color.clear);
-		private Texture2D FirstBarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.7f, 1.0f, 0.9f));
-		private Texture2D SecondBarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.3f, 0.4f, 0.4f));
+		private float barLength = 122f; // 每个bar的长度
+		private float gizmoLength = 180f; // 整个gizmo的长度
 
-		private static readonly Texture2D High = ContentFinder<Texture2D>.Get("UI/Icons/High");
-		private static readonly Texture2D Middle = ContentFinder<Texture2D>.Get("UI/Icons/Middle");
-		private static readonly Texture2D Lower = ContentFinder<Texture2D>.Get("UI/Icons/Lower");
 		public override bool Visible
 		{
 			get
 			{
-				if (pawn == null || eh == null)
-					return false;
-				return true;
+				// 如果没有数据, 或者数据不完整, 则不显示
+				if (data == null) return false;
+				if (data.bar1Num == null && data.bar2Num == null && data.icon == null) return false;
+
+				// 如果设置了不显示, 则不显示
+				return data.Visible;
 			}
 		}
 		public override float GetWidth(float maxWidth)
 		{
-			return 180f;
+			return gizmoLength;
 		}
 
-		public Gizmo_EnergyBar(Pawn pawn, IEnergyHediff energy)
+		public Gizmo_EnergyBar(IEnergyHediff energy)
 		{
 			Order = -110f;
-			this.pawn = pawn;
-			this.eh = energy;
-			this.guiOpt = eh.opt;
+			this.data = energy;
 
 			// 根据opt配置
 			this.configOpt();
@@ -49,8 +44,20 @@ namespace NzRimImmortalBizarre
 
 		private void configOpt()
 		{
-			this.FirstBarTex = SolidColorMaterials.NewSolidColorTexture(guiOpt.FirstColor);
-			this.SecondBarTex = SolidColorMaterials.NewSolidColorTexture(guiOpt.SecondColor);
+			// 根据是否启用了能量条, 设置是否显示, 以及相关偏移量
+			
+			// 如果没有图标
+			if (data.icon == null)
+			{
+				barLength = 176f;
+			}
+
+			// 如果只有图标
+			if (data.bar1Num == null && data.bar2Num == null)
+			{
+				barLength = 60f;
+			}
+			
 		}
 
 		public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)
@@ -59,21 +66,28 @@ namespace NzRimImmortalBizarre
 			Rect rect2 = rect.ContractedBy(2f);
 			Widgets.DrawWindowBackground(rect);
 
+			// 偏移量
+			float bar1Fix = data.bar2Num == null ? 0 : 25f;
+
 			// 画第一栏
 			Rect rect3 = rect2;
-			rect3.width = 122f;
+			rect3.width = barLength;
 			rect3.height = rect.height / 2f;
-			DrawBar(rect3, this.eh.bar1Num);
+			rect3.yMin = bar1Fix;
+			DrawBar(rect3, data.bar1Num);
 
 			// 画第二栏
-			Rect rect4 = rect2;
-			rect4.width = 122f;
-			rect4.yMin = rect2.y + rect2.height / 2f;
-			DrawBar(rect4, this.eh.bar2Num);
+			if (data.bar2Num != null)
+			{
+				Rect rect4 = rect2;
+				rect4.width = barLength;
+				rect4.yMin = rect2.y + rect2.height / 2f;
+				DrawBar(rect4, data.bar2Num);
+			}
 
 			// 画图标
 			Rect rect5 = new Rect(rect2.x + 125, rect2.y + 8, 50, 60);
-			GUI.DrawTexture(rect5, eh.icon);
+			GUI.DrawTexture(rect5, data.icon);
 			Text.Anchor = TextAnchor.UpperLeft;
 			return new GizmoResult(GizmoState.Clear);
 		}
@@ -84,8 +98,8 @@ namespace NzRimImmortalBizarre
 			Rect rect2 = new Rect(rect.x + 60f, rect.y, 100f, 25f);
 			Rect rect3 = new Rect(rect.x, rect.y + 25f, 120f, 10f);
 			Widgets.Label(rect1, n.label);
-			Widgets.Label(rect2, n.current.ToString("F0") + " / " + n.max.ToString("F0"));
-			Widgets.FillableBar(rect3, n.current / n.max, FirstBarTex, EmptyBarTex, doBorder: false);
+			Widgets.Label(rect2, n.num.ToString("F0") + " / " + n.max.ToString("F0"));
+			Widgets.FillableBar(rect3, n.num / n.max, n.barTex, n.emptyBarTex, doBorder: false);
 		}
 		// private void Draw2Bar(Rect rect, float a, float b, string label)
 		// {
