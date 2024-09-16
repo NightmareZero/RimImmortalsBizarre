@@ -32,21 +32,15 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <!-- <li Class="CompProperties_AbilityGiveHediff"> -->
-            <!--     <compClass>CompAbilityEffect_GiveHediff</compClass> -->
-            <!--     <hediffDef>RI_ManipulationHediff</hediffDef> -->
-            <!--     <psychic>True</psychic> -->
-            <!--     <replaceExisting>True</replaceExisting> -->
-            <!-- </li> -->
-            <!-- <li Class="WhoXiuXian.Abilities.CompProperties_SpawnMoteCasting"> -->
-            <!--     <moteCastDef>RI_Ability_Massage_Mote</moteCastDef> -->
-            <!-- </li> -->
-            <!-- <li Class="WhoXiuXian.Abilities.CompProperties_SpawnMoteSinging"> -->
-            <!--     <moteCastDef>RI_Ability_ElixirsStrengthen_Singing</moteCastDef> -->
-            <!-- </li> -->
-            <!-- <li Class="WhoXiuXian.Abilities.CompProperties_SpawnMoteCast"> -->
-            <!--     <moteCastDef>RI_Ability_Massage_Mote</moteCastDef> -->
-            <!-- </li> -->
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess"/>
+            <li Class="NzRimImmortalBizarre.CompProperties_GoodImpression">
+                <onSuccess>NzRI_SaveMe</onSuccess>
+                <onFail>NzRI_CheatMe</onFail>
+            </li>
+            <li Class="NzRimImmortalBizarre.CompAbilityEffect_FactionFavorability">
+                <onSuccess>11</onSuccess>
+                <onFail>17</onFail>
+            </li>
             <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy"> -->
             <!--     <rEnergy>-40</rEnergy> -->
             <!-- </li> -->
