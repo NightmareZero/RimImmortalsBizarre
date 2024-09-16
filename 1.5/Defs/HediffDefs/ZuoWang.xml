@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
+    <!-- 非罡 -->
+    <HediffDef>
+		<defName>NzRI_Zw_Fg</defName>
+		<label>FeiGang</label>
+		<hediffClass>NzRimImmortalBizarre.Zw_Fg</hediffClass>
+		<description>#TODO</description>
+		<minSeverity>0</minSeverity>
+		<maxSeverity>3000</maxSeverity>
+		<isBad>false</isBad>
+	</HediffDef>
+
     <!-- 他是不是可能在骗我 -->
     <HediffDef>
         <defName>NzRI_ZuoWang_Cheat</defName>
