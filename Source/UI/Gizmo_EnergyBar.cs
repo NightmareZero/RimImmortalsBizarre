@@ -14,6 +14,8 @@ namespace NzRimImmortalBizarre
 		public IEnergyBar data;
 
 		private float barLength = 122f; // 每个bar的长度
+
+		private float barLineHeight = 10f; // 每个bar的高度
 		private float gizmoLength = 180f; // 整个gizmo的长度
 
 		public override bool Visible
@@ -45,11 +47,14 @@ namespace NzRimImmortalBizarre
 		private void configOpt()
 		{
 			// 根据是否启用了能量条, 设置是否显示, 以及相关偏移量
-			
+#if DEBUG
+			Log.Message("Gizmo_EnergyBar:" + " bar1: open=" + (data.bar1Num != null) + " bar2: open=" + (data.bar2Num != null) + " icon: open=" + (data.icon != null));
+#endif
 			// 如果没有图标
 			if (data.icon == null)
 			{
-				barLength = 176f;
+				barLength = 174f;
+				barLineHeight = 20f;
 			}
 
 			// 如果只有图标
@@ -57,7 +62,7 @@ namespace NzRimImmortalBizarre
 			{
 				barLength = 60f;
 			}
-			
+
 		}
 
 		public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)
@@ -73,7 +78,7 @@ namespace NzRimImmortalBizarre
 			Rect rect3 = rect2;
 			rect3.width = barLength;
 			rect3.height = rect.height / 2f;
-			rect3.yMin = rect2 .y + bar1Fix;
+			rect3.yMin = rect2.y + bar1Fix;
 			DrawBar(rect3, data.bar1Num);
 
 			// 画第二栏
@@ -86,17 +91,21 @@ namespace NzRimImmortalBizarre
 			}
 
 			// 画图标
-			Rect rect5 = new Rect(rect2.x + 125, rect2.y + 8, 50, 60);
-			GUI.DrawTexture(rect5, data.icon);
-			Text.Anchor = TextAnchor.UpperLeft;
+			if (data.icon != null)
+			{
+				Rect rect5 = new Rect(rect2.x + 125, rect2.y + 8, 50, 60);
+				GUI.DrawTexture(rect5, data.icon);
+				Text.Anchor = TextAnchor.UpperLeft;
+
+			}
 			return new GizmoResult(GizmoState.Clear);
 		}
 		private void DrawBar(Rect rect, BarNum n)
 		{
 			Text.Font = GameFont.Small;
 			Rect rect1 = new Rect(rect.x, rect.y, 60f, 25f);
-			Rect rect2 = new Rect(rect.x + 60f, rect.y, 100f, 25f);
-			Rect rect3 = new Rect(rect.x, rect.y + 25f, 120f, 10f);
+			Rect rect2 = new Rect(rect.x + 60f, rect.y, barLength - 10f, 25f);
+			Rect rect3 = new Rect(rect.x, rect.y + 25f, barLength, barLineHeight);
 			Widgets.Label(rect1, n.Label);
 			Widgets.Label(rect2, n.Num.ToString("F0") + " / " + n.Max.ToString("F0"));
 			Widgets.FillableBar(rect3, n.Num / n.Max, n.BarTex, n.EmptyBarTex, doBorder: false);
