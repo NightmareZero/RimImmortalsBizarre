@@ -21,7 +21,7 @@ namespace NzRimImmortalBizarre
             }
 
 
-            if (GetCastSuccess())
+            if (GetCheatSuccess())
             {
                 targetPawn.needs.mood.thoughts.memories.TryGainMemory(Props.onSuccess, Caster);
             }

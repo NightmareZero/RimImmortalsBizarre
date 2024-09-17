@@ -20,7 +20,7 @@ namespace NzRimImmortalBizarre
                 return;
             }
 
-            if (GetCastSuccess())
+            if (GetCheatSuccess())
             {
                 targetPawn.Faction.TryAffectGoodwillWith(Caster.Faction, Props.onSuccess);
             }

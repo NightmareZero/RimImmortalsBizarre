@@ -7,7 +7,7 @@
             in the Strengthening foundation Realm\n\n&lt;/color&gt;Qi cost40\n\nUse spiritual energy
             to enter the target's body from both hands, instantly healing a bandaged wound.</description>
         <jobDef>CastAbilityOnThingMelee</jobDef>
-        <iconPath>Ability/Base/Lg</iconPath>
+        <iconPath>Ability/Base/LG</iconPath>
         <hostile>false</hostile>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <statBases>
@@ -34,10 +34,10 @@
         <comps>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess"/>
             <li Class="NzRimImmortalBizarre.CompProperties_GoodImpression">
-                <onSuccess>NzRI_SaveMe</onSuccess>
-                <onFail>NzRI_CheatMe</onFail>
+                <!-- <onSuccess>NzRI_SaveMe</onSuccess>
+                <onFail>NzRI_CheatMe</onFail> -->
             </li>
-            <li Class="NzRimImmortalBizarre.CompAbilityEffect_FactionFavorability">
+            <li Class="NzRimImmortalBizarre.CompProperties_FactionFavorability">
                 <onSuccess>11</onSuccess>
                 <onFail>17</onFail>
             </li>

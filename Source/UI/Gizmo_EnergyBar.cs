@@ -11,7 +11,7 @@ namespace NzRimImmortalBizarre
 
 	public class Gizmo_EnergyBar : Gizmo
 	{
-		public IEnergyHediff data;
+		public IEnergyBar data;
 
 		private float barLength = 122f; // 每个bar的长度
 		private float gizmoLength = 180f; // 整个gizmo的长度
@@ -33,10 +33,10 @@ namespace NzRimImmortalBizarre
 			return gizmoLength;
 		}
 
-		public Gizmo_EnergyBar(IEnergyHediff energy)
+		public Gizmo_EnergyBar(IEnergyBar hediff)
 		{
 			Order = -110f;
-			this.data = energy;
+			this.data = hediff;
 
 			// 根据opt配置
 			this.configOpt();
@@ -73,7 +73,7 @@ namespace NzRimImmortalBizarre
 			Rect rect3 = rect2;
 			rect3.width = barLength;
 			rect3.height = rect.height / 2f;
-			rect3.yMin = bar1Fix;
+			rect3.yMin = rect2 .y + bar1Fix;
 			DrawBar(rect3, data.bar1Num);
 
 			// 画第二栏
@@ -97,22 +97,11 @@ namespace NzRimImmortalBizarre
 			Rect rect1 = new Rect(rect.x, rect.y, 60f, 25f);
 			Rect rect2 = new Rect(rect.x + 60f, rect.y, 100f, 25f);
 			Rect rect3 = new Rect(rect.x, rect.y + 25f, 120f, 10f);
-			Widgets.Label(rect1, n.label);
-			Widgets.Label(rect2, n.num.ToString("F0") + " / " + n.max.ToString("F0"));
-			Widgets.FillableBar(rect3, n.num / n.max, n.barTex, n.emptyBarTex, doBorder: false);
+			Widgets.Label(rect1, n.Label);
+			Widgets.Label(rect2, n.Num.ToString("F0") + " / " + n.Max.ToString("F0"));
+			Widgets.FillableBar(rect3, n.Num / n.Max, n.BarTex, n.EmptyBarTex, doBorder: false);
 		}
-		// private void Draw2Bar(Rect rect, float a, float b, string label)
-		// {
-		// 	Text.Font = GameFont.Small;
-		// 	Rect rect1 = new Rect(rect.x, rect.y, 60f, 25f);
-		// 	Rect rect2 = new Rect(rect.x + 60f, rect.y, 100f, 25f);
-		// 	Rect rect3 = new Rect(rect.x, rect.y + 25f, 120f, 10f);
-		// 	Widgets.Label(rect1, label);
-		// 	float num = (a / b) * 100f;
-		// 	if (num >= 100) num = 100;
-		// 	Widgets.Label(rect2, (num).ToString("F0") + "%");
-		// 	Widgets.FillableBar(rect3, a / b, SecondBarTex, EmptyBarTex, doBorder: false);
-		// }
+
 	}
 
 }
