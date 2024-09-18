@@ -11,7 +11,7 @@ namespace NzRimImmortalBizarre
     public class Zw_Tracker : IExposable, IEnergyBar
     {
 
-
+        private Pawn pawn;
         // 非罡
         private float feigang;
         // 非罡最大值
@@ -55,6 +55,10 @@ namespace NzRimImmortalBizarre
         private void init()
         {
 
+        }
+
+        public void injectHediff(Zw_Fg fgHediff) { 
+            this.pawn = fgHediff.pawn;
         }
 
         private bool enableGizmo()

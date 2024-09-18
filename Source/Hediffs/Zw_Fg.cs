@@ -24,8 +24,9 @@ namespace NzRimImmortalBizarre
 
         public override void PostMake()
         {
-            this.Init();
             base.PostMake();
+            this.Init();
+            this.Tracker?.injectHediff(this);
         }
         public override void Tick()
         {
