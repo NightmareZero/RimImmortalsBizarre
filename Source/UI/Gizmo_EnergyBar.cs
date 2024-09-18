@@ -24,7 +24,7 @@ namespace NzRimImmortalBizarre
 			{
 				// 如果没有数据, 或者数据不完整, 则不显示
 				if (data == null) return false;
-				if (data.bar1Num == null && data.bar2Num == null && data.icon == null) return false;
+				if (!data.bar1Num.Enabled() && !data.bar2Num.Enabled() && data.icon == null) return false;
 
 				// 如果设置了不显示, 则不显示
 				return data.Visible;
@@ -58,7 +58,7 @@ namespace NzRimImmortalBizarre
 			}
 
 			// 如果只有图标
-			if (data.bar1Num == null && data.bar2Num == null)
+			if (!data.bar1Num.Enabled() && !data.bar2Num.Enabled())
 			{
 				barLength = 60f;
 			}

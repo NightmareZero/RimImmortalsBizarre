@@ -27,9 +27,12 @@ namespace NzRimImmortalBizarre
         bool Visible { get; }
     }
 
+
+
     public class BarNum
     {
         // ====== 设置部分 ======
+        public bool enable { get; } = true;
         public string Label;
         // 条材质, 满
         public Texture2D BarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.7f, 1.0f, 0.9f));
@@ -43,7 +46,7 @@ namespace NzRimImmortalBizarre
         private float _max = 100;
 
         // ====== 构造部分 ======
-        public BarNum(string label,ref float num, ref float max)
+        public BarNum(string label, ref float num, ref float max)
         {
             _num = num;
             _max = max;
@@ -54,8 +57,16 @@ namespace NzRimImmortalBizarre
         {
             return $"{Label}: {Num}/{Max}";
         }
+
     }
 
+    public static class GizmoEnergyBarUtil { 
+        
+        public static bool Enabled(this BarNum barNum)
+        {
+            return barNum != null && barNum.enable;
+        }
+    }
 
 
 
