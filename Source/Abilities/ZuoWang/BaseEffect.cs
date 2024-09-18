@@ -10,10 +10,14 @@ namespace NzRimImmortalBizarre
 
         protected bool GetCheatSuccess()
         {
-            // 使用 FirstOrDefault 查找第一个 IsFailable success == false 类型的组件
-            var failableComp = parent.comps.OfType<IsFailable>().FirstOrDefault(f => !f.IsCastingSuccess());
-            return failableComp == null;
+            // 查找comps中comp的每一个prop是否有IsCastingFailable的子类，返回所有子类
+            var fail = parent.comps
+                .Where(comp => comp.props is IsCastingFailable)
+                .Select(comp => comp.props as IsCastingFailable)
+                // 查找是否有一个子类的IsCastingSuccess为false
+                .Any(f => f != null && !f.IsCastingSuccess());
+        
+            return !fail;
         }
-
     }
 }

@@ -11,7 +11,7 @@ using WhoXiuXian;
 
 namespace NzRimImmortalBizarre
 { 
-    public interface IsFailable
+    public interface IsCastingFailable
     {
         bool IsCastingSuccess();
     }

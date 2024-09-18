@@ -6,26 +6,22 @@ using NzRimImmortalBizarre;
 
 namespace NzRimImmortalBizarre
 {
-    public class CompAbilityEffect_Zw_AddFg : CompAbilityEffect
+    public class CompAbilityEffect_Zw_AddFg : CompAbilityEffect_ZuoWangBase
     {
         private new CompProperties_Zw_AddFg Props => (CompProperties_Zw_AddFg)props;
 
+        private Pawn Caster => parent.pawn;
+
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            // var targetPawn = target.Pawn;
-            // if (targetPawn == null)
-            // {
-            //     return;
-            // }
+            bool enough = Caster.ChangeFeiGang(Props.change);
+            if (!enough)
+            {
+                Messages.Message("NzRI_Zw_ReduceFg_NotEnough".Translate(), MessageTypeDefOf.RejectInput);
+                Props.enough = false;
+                return;
+            }
 
-            // var energyRoot = targetPawn?.health?.hediffSet?.GetFirstHediff<Hediff_RI_EnergyRoot>();
-            // if (energyRoot == null)
-            // {
-            //     Log.Error("NzRI_ReduceFg_EnergyRootNotExist" + targetPawn.Name);
-            //     return;
-            // }
-
-            // energyRoot.energy.ChangeEnergy(-Props.change);
             base.Apply(target, dest);
         }
     }
