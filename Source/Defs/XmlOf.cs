@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace NzRimImmortalBizarre
 {
     [DefOf]
-    public static class XmlOf
+    public static partial class XmlOf
     {
         // public static DefPartHurtLevel defPartHurt;
 

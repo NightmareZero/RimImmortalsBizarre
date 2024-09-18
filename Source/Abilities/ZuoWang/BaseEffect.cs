@@ -8,7 +8,7 @@ namespace NzRimImmortalBizarre
     public class CompAbilityEffect_ZuoWangBase : CompAbilityEffect
     {
 
-        protected bool GetCheatSuccess()
+        protected bool GetCastSuccess()
         {
             // 查找comps中comp的每一个prop是否有IsCastingFailable的子类，返回所有子类
             var fail = parent.comps
