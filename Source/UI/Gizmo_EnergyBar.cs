@@ -40,11 +40,11 @@ namespace NzRimImmortalBizarre
 			Order = -110f;
 			this.data = hediff;
 
-			// 根据opt配置
-			this.configOpt();
+			// 重设界面条
+			this.ResetDrawCfg();
 		}
 
-		private void configOpt()
+		public void ResetDrawCfg()
 		{
 			// 根据是否启用了能量条, 设置是否显示, 以及相关偏移量
 #if DEBUG
@@ -62,7 +62,6 @@ namespace NzRimImmortalBizarre
 			{
 				barLength = 60f;
 			}
-
 		}
 
 		public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)
