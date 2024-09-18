@@ -26,6 +26,9 @@ namespace NzRimImmortalBizarre
         // 剧痛
         public static HediffDef NzRI_AoJing_Agony;
 
+        // 非罡
+        public static HediffDef NzRI_Zw_Fg;
+
         // 救了我
         public static ThoughtDef NzRI_SaveMe;
 

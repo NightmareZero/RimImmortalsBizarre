@@ -46,10 +46,32 @@ namespace NzRimImmortalBizarre
             Scribe_Values.Look(ref yiqi, "yiqi");
         }
 
-        public void ChangeFg(float value)
+        /// <summary>
+        /// 增加或者减少非罡值,
+        /// 增加不会溢出
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns>是否有足够的非罡(供消耗)</returns>
+        public bool ChangeFg(float value)
         {
+            if (value < 0 && feigang < -value)
+            {
+                return false;
+            }
             feigang += value;
             feigang = Mathf.Clamp(feigang, 0, fgMax);
+            return true;
+        }
+
+        /// <summary>
+        /// 是否有足够的非罡, 会自动取绝对值, 所以传入负数也可以
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public bool EnoughFg(float value)
+        {
+            value = Mathf.Abs(value);
+            return feigang >= value;
         }
 
         private void init()
@@ -57,7 +79,8 @@ namespace NzRimImmortalBizarre
 
         }
 
-        public void injectHediff(Zw_Fg fgHediff) { 
+        public void injectHediff(Zw_Fg fgHediff)
+        {
             this.pawn = fgHediff.pawn;
         }
 

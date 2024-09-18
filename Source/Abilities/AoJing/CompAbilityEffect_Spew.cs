@@ -33,12 +33,12 @@ namespace NzRimImmortalBizarre
                  propagationSpeed: 0.6f, excludeRadius: 0f, doSoundEffects: false, postExplosionSpawnThingDefWater: null, screenShakeFactor: 1f,
                   flammabilityChanceCurve: parent.verb.verbProps.flammabilityAttachFireChanceCurve, overrideCells: affected);
 
-
-            var pawnNum = Utils.EveryPawnInAffectedArea(Caster.Map, affected, delegate (Pawn p)
+            // 在影响区域内获取所有Pawn, 并且对非自己的Pawn附加一个30秒的剧痛Hediff
+            var pawnNum = Utils.ApplyPawnInAffectedArea(Caster.Map, affected, delegate (Pawn p)
             {
                 if (p != Caster && p.Faction != Caster.Faction)
                 {
-                    // 附加一个30秒的Hediff
+                    // 附加一个30秒的剧痛Hediff
                     Hediff hediff = HediffMaker.MakeHediff(XmlOf.NzRI_AoJing_Agony, p);
                     p.health.AddHediff(hediff);
                 }
