@@ -128,6 +128,12 @@
                 <change>-123</change>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess" />
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_MvIllness">
+                <range>9.9</range>
+                <clamorType>Ability</clamorType>
+                <clamorRadius>3</clamorRadius>
+                <stunTicks>300~720</stunTicks>
+            </li>
             
             <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy"> -->
             <!--     <rEnergy>-40</rEnergy> -->
