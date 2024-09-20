@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace NzRimImmortalBizarre
 {
-    public class CompAbilityEffect_DropTargetItem : CompAbilityEffect_ZuoWangBase { 
+    public class CompAbilityEffect_DropTargetItem : CompAbilityEffect { 
         public new CompProperties_DropTargetItem Props => (CompProperties_DropTargetItem)props;
 
         private Pawn Caster => parent.pawn;
@@ -20,7 +20,7 @@ namespace NzRimImmortalBizarre
                 return;
             }
 
-            if (GetCastSuccess())
+            if (this.GetCastSuccess())
             {
                 foreach (var category in Props.allowTypes)
             {

@@ -6,7 +6,7 @@ using NzRimImmortalBizarre;
 
 namespace NzRimImmortalBizarre
 {
-    public class CompAbilityEffect_Zw_AddFg : CompAbilityEffect_ZuoWangBase
+    public class CompAbilityEffect_Zw_AddFg : CompAbilityEffect
     {
         private new CompProperties_Zw_AddFg Props => (CompProperties_Zw_AddFg)props;
 

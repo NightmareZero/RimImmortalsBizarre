@@ -6,7 +6,7 @@ using NzRimImmortalBizarre;
 
 namespace NzRimImmortalBizarre
 {
-    public class CompAbilityEffect_GoodImpression : CompAbilityEffect_ZuoWangBase
+    public class CompAbilityEffect_GoodImpression : CompAbilityEffect
     {
         public new CompProperties_GoodImpression Props => (CompProperties_GoodImpression)props;
 
@@ -21,7 +21,7 @@ namespace NzRimImmortalBizarre
             }
 
 
-            if (GetCastSuccess())
+            if (this.GetCastSuccess())
             {
                 targetPawn.needs.mood.thoughts.memories.TryGainMemory(Props.onSuccess, Caster);
             }

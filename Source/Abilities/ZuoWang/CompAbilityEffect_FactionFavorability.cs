@@ -6,7 +6,7 @@ using NzRimImmortalBizarre;
 
 namespace NzRimImmortalBizarre
 {
-    public class CompAbilityEffect_FactionFavorability : CompAbilityEffect_ZuoWangBase
+    public class CompAbilityEffect_FactionFavorability : CompAbilityEffect
     {
         public new CompProperties_FactionFavorability Props => (CompProperties_FactionFavorability)props;
 
@@ -25,7 +25,7 @@ namespace NzRimImmortalBizarre
                 return;
             }
 
-            if (GetCastSuccess())
+            if (this.GetCastSuccess())
             {
                 targetPawn.Faction.TryAffectGoodwillWith(Caster.Faction, Props.onSuccess);
             }
