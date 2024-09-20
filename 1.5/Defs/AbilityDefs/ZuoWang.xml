@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+    <!-- 花言巧语 -->
     <AbilityDef ParentName="RI_PsycastBase">
         <defName>NzRI_Zw_GracefulWords</defName>
-        <label>GracefulWords</label>
+        <label>graceful words</label>
         <description>&lt;color=#28BD75&gt;This technique is learned by the ElixirsStrengthen method
             in the Strengthening foundation Realm\n\n&lt;/color&gt;Qi cost40\n\nUse spiritual energy
             to enter the target's body from both hands, instantly healing a bandaged wound.</description>
@@ -44,6 +45,90 @@
                 <onSuccess>11</onSuccess>
                 <onFail>17</onFail>
             </li>
+            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy"> -->
+            <!--     <rEnergy>-40</rEnergy> -->
+            <!-- </li> -->
+        </comps>
+    </AbilityDef>
+    <AbilityDef ParentName="RI_PsycastBase">
+        <defName>NzRI_Zw_CoerciveDeception</defName>
+        <label>coercive deception</label>
+        <description>#TODO</description>
+        <jobDef>CastAbilityOnThingMelee</jobDef>
+        <iconPath>Ability/Base/LG</iconPath>
+        <hostile>false</hostile>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <statBases>
+            <Ability_EntropyGain>0</Ability_EntropyGain>
+            <Ability_PsyfocusCost>0</Ability_PsyfocusCost>
+            <Ability_Duration>500</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <violent>false</violent>
+            <warmupTime>0.3</warmupTime>
+            <range>50</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>False</canTargetSelf>
+                <canTargetAnimals>False</canTargetAnimals>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetMechs>False</canTargetMechs>
+                <canTargetItems>False</canTargetItems>
+                <canTargetHumans>True</canTargetHumans>
+                <canTargetMutants>False</canTargetMutants>
+                <neverTargetHostileFaction>True</neverTargetHostileFaction>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
+                <change>-30</change>
+            </li>
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess" />
+            <li Class="NzRimImmortalBizarre.CompAbilityEffect_DropTargetItem">
+
+            </li>
+            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy"> -->
+            <!--     <rEnergy>-40</rEnergy> -->
+            <!-- </li> -->
+        </comps>
+    </AbilityDef>
+
+    <!-- 巧言令色 -->
+    <AbilityDef ParentName="RI_PsycastBase">
+        <defName>NzRI_Zw_DeceptiveFlattery</defName>
+        <label>deceptive flattery</label>
+        <description>#TODO</description>
+        <jobDef>CastAbilityOnThingMelee</jobDef>
+        <iconPath>Ability/Base/LG</iconPath>
+        <hostile>false</hostile>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <statBases>
+            <Ability_EntropyGain>0</Ability_EntropyGain>
+            <Ability_PsyfocusCost>0</Ability_PsyfocusCost>
+            <Ability_Duration>500</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <violent>false</violent>
+            <warmupTime>0.3</warmupTime>
+            <range>50</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>False</canTargetSelf>
+                <canTargetAnimals>False</canTargetAnimals>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetMechs>False</canTargetMechs>
+                <canTargetItems>False</canTargetItems>
+                <canTargetHumans>True</canTargetHumans>
+                <canTargetMutants>False</canTargetMutants>
+                <neverTargetHostileFaction>True</neverTargetHostileFaction>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
+                <change>-123</change>
+            </li>
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess" />
+            
             <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy"> -->
             <!--     <rEnergy>-40</rEnergy> -->
             <!-- </li> -->

@@ -19,6 +19,11 @@ namespace NzRimImmortalBizarre
             {
                 return;
             }
+            // 如果目标的派系和施法者的派系相同，直接返回
+            if (targetPawn.Faction == Caster.Faction)
+            {
+                return;
+            }
 
             if (GetCastSuccess())
             {

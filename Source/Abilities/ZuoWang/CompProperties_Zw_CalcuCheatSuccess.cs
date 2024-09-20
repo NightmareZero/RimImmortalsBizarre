@@ -15,5 +15,10 @@ namespace NzRimImmortalBizarre
         {
             return cheatSuccess;
         }
+
+        public CompProperties_Zw_CalcuCheatSuccess()
+        {
+            compClass = typeof(CompAbilityEffect_Zw_CalcuCheatSuccess);
+        }
     }
 }
