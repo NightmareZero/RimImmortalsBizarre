@@ -3,7 +3,7 @@ using Verse;
 
 namespace NzRimImmortalBizarre
 {
-    public static partial class XmlOf {
+    public static class ThingOf {
 
         // 类别: 附件
         public static ThingCategoryDef ApparelUtility;
@@ -13,5 +13,8 @@ namespace NzRimImmortalBizarre
 
         // 类别: 衣服
         public static ThingCategoryDef Apparel;
+
+        // 类别: 一切
+        public static ThingCategoryDef Root;
     }
 }

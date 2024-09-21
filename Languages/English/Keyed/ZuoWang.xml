@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <NzRI_Zw_ReduceFg_NotEnough>Not enough feigang</NzRI_Zw_ReduceFg_NotEnough>
+
+    <NzRI_Zw_DropTargetItem_Droped>{Pawn} traded their items</NzRI_Zw_DropTargetItem_Droped>
+
+    <NzRI_Zw_DropTargetItem_NoItem>{Pawn} has no items to trade</NzRI_Zw_DropTargetItem_NoItem>
+
+</LanguageData>

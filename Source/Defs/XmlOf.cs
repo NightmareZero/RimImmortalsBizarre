@@ -35,6 +35,12 @@ namespace NzRimImmortalBizarre
         // 骗了我
         public static ThoughtDef NzRI_CheatMe;
 
+        // 说话动听
+        public static ThoughtDef NzRI_T_GracefulWords;
+
+        // 说话难听
+        public static ThoughtDef NzRI_T_NonsenseWords;
+
 
         static XmlOf()
         {

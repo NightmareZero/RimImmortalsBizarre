@@ -33,26 +33,29 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
-                <change>11</change>
-            </li>
+            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy"> -->
+                <!-- <rEnergy>-40</rEnergy> -->
+            <!-- </li>             -->
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess" />
             <li Class="NzRimImmortalBizarre.CompProperties_GoodImpression">
-                <!-- <onSuccess>NzRI_SaveMe</onSuccess>
-                <onFail>NzRI_CheatMe</onFail> -->
+                <onSuccess>NzRI_T_GracefulWords</onSuccess>
+                <onFail>NzRI_T_NonsenseWords</onFail> 
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_FactionFavorability">
                 <onSuccess>11</onSuccess>
                 <onFail>17</onFail>
             </li>
-            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy"> -->
-            <!--     <rEnergy>-40</rEnergy> -->
-            <!-- </li> -->
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
+                <change>11</change>
+                <onFail>3</onFail>
+            </li>
         </comps>
     </AbilityDef>
+
+    <!-- 鱼目混珠 -->
     <AbilityDef ParentName="RI_PsycastBase">
-        <defName>NzRI_Zw_CoerciveDeception</defName>
-        <label>coercive deception</label>
+        <defName>NzRI_Zw_Counterfeit</defName>
+        <label>Counterfeit</label>
         <description>#TODO</description>
         <jobDef>CastAbilityOnThingMelee</jobDef>
         <iconPath>Ability/Base/LG</iconPath>
@@ -84,7 +87,7 @@
                 <change>-30</change>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess" />
-            <li Class="NzRimImmortalBizarre.CompAbilityEffect_DropTargetItem">
+            <li Class="NzRimImmortalBizarre.CompProperties_DropTargetItem">
 
             </li>
             <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy"> -->
@@ -132,7 +135,7 @@
                 <range>9.9</range>
                 <clamorType>Ability</clamorType>
                 <clamorRadius>3</clamorRadius>
-                <stunTicks>300~720</stunTicks>
+                <stunTicks>300</stunTicks>
             </li>
             
             <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy"> -->

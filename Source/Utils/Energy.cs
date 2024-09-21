@@ -15,8 +15,14 @@ namespace NzRimImmortalBizarre
         public static bool ChangeFeiGang(this Pawn pawn, float value)
         {
             Zw_Fg fg = GetFeiGang(pawn);
+            #if DEBUG
+            Log.Message("ChangeFeiGang: " + value);
+            #endif
             if (fg == null)
             {
+                #if DEBUG
+                Log.Warning("Pawn " + pawn.Name + " has no FeiGang hediff, creating one.");
+                #endif
                 // 生成一个非罡状态
                 fg = HediffMaker.MakeHediff(XmlOf.NzRI_Zw_Fg, pawn) as Zw_Fg;
                 if (value < 0) // 如果是消耗，此时已经判断消耗失败了
@@ -25,9 +31,9 @@ namespace NzRimImmortalBizarre
                 }
             }
 
-            fg.Tracker.ChangeFg(value);
+            
 
-            return false;
+            return fg.Tracker.ChangeFg(value);
         }
 
         /// <summary>

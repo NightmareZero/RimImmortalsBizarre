@@ -63,6 +63,12 @@ namespace NzRimImmortalBizarre
             return true;
         }
 
+        public void mustChangeFg(float value)
+        {
+            feigang += value;
+            feigang = Mathf.Clamp(feigang, 0, fgMax);
+        }
+
         /// <summary>
         /// 是否有足够的非罡, 会自动取绝对值, 所以传入负数也可以
         /// </summary>

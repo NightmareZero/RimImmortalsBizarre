@@ -3,14 +3,14 @@
     <ThoughtDef>
         <defName>NzRI_SaveMe</defName>
         <thoughtClass>Thought_MemorySocial</thoughtClass>
-        <durationDays>60</durationDays>
+        <durationDays>360</durationDays>
         <stackLimit>300</stackLimit>
-        <stackLimitForSameOtherPawn>15</stackLimitForSameOtherPawn>
+        <stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
         <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
         <stages>
             <li>
                 <label>save me</label>
-                <baseOpinionOffset>150</baseOpinionOffset>
+                <baseOpinionOffset>27</baseOpinionOffset>
             </li>
         </stages>
     </ThoughtDef>
@@ -25,6 +25,34 @@
             <li>
                 <label>cheat me</label>
                 <baseOpinionOffset>-15</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+    <ThoughtDef>
+        <defName>NzRI_T_GracefulWords</defName>
+        <thoughtClass>Thought_MemorySocial</thoughtClass>
+        <durationDays>60</durationDays>
+        <stackLimit>300</stackLimit>
+        <stackLimitForSameOtherPawn>10</stackLimitForSameOtherPawn>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>This person speaks very eloquently.</label>
+                <baseOpinionOffset>10</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+    <ThoughtDef>
+        <defName>NzRI_T_NonsenseWords</defName>
+        <thoughtClass>Thought_MemorySocial</thoughtClass>
+        <durationDays>60</durationDays>
+        <stackLimit>300</stackLimit>
+        <stackLimitForSameOtherPawn>10</stackLimitForSameOtherPawn>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>This person is talking nonsense.</label>
+                <baseOpinionOffset>-7</baseOpinionOffset>
             </li>
         </stages>
     </ThoughtDef>

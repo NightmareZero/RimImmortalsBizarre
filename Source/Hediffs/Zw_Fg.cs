@@ -85,6 +85,17 @@ namespace NzRimImmortalBizarre
                         Tracker.ChangeFg(1000);
                     }
                 };
+                yield return new Command_Action
+                {
+                    defaultLabel = "非罡清除",
+                    defaultDesc = "清空",
+                    icon = ContentFinder<Texture2D>.Get("Ability/Base/LG"),
+                    action = delegate
+                    {
+                        // 生成非罡
+                        Tracker.mustChangeFg(-1000);
+                    }
+                };
             }
 
             // 能量条

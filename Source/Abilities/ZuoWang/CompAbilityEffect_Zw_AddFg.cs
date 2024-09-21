@@ -14,7 +14,19 @@ namespace NzRimImmortalBizarre
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            bool enough = Caster.ChangeFeiGang(Props.change);
+            base.Apply(target, dest);
+            #if DEBUG
+            Log.Message("CompAbilityEffect_Zw_AddFg.Apply");
+            #endif
+
+            // 计算变更的非罡值
+            var addFg = Props.change;
+            if (!this.GetCastSuccess())
+            {
+                addFg = Props.onFail;
+            }
+
+            bool enough = Caster.ChangeFeiGang(addFg);
             if (!enough)
             {
                 Messages.Message("NzRI_Zw_ReduceFg_NotEnough".Translate(), MessageTypeDefOf.RejectInput);
@@ -22,7 +34,7 @@ namespace NzRimImmortalBizarre
                 return;
             }
 
-            base.Apply(target, dest);
+            
         }
     }
 }

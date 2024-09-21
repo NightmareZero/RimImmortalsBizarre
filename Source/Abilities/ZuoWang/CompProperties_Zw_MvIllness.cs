@@ -8,6 +8,7 @@ namespace NzRimImmortalBizarre
 {
     public class CompProperties_Zw_MvIllness :  CompProperties_EffectWithDest
     {
+        public int stunTicks = 60;
 
         public CompProperties_Zw_MvIllness()
         {
