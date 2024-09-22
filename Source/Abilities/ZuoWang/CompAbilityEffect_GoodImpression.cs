@@ -14,6 +14,7 @@ namespace NzRimImmortalBizarre
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
+            
             propDefault();
             var targetPawn = target.Pawn;
             if (targetPawn == null || targetPawn == Caster)

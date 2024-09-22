@@ -15,4 +15,5 @@ namespace NzRimImmortalBizarre
     {
         bool IsCastingSuccess();
     }
+
 }

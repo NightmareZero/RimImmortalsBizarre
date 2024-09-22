@@ -34,12 +34,12 @@
         </verbProperties>
         <comps>
             <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy"> -->
-                <!-- <rEnergy>-40</rEnergy> -->
+            <!-- <rEnergy>-40</rEnergy> -->
             <!-- </li>             -->
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess" />
             <li Class="NzRimImmortalBizarre.CompProperties_GoodImpression">
                 <onSuccess>NzRI_T_GracefulWords</onSuccess>
-                <onFail>NzRI_T_NonsenseWords</onFail> 
+                <onFail>NzRI_T_NonsenseWords</onFail>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_FactionFavorability">
                 <onSuccess>11</onSuccess>
@@ -52,10 +52,10 @@
         </comps>
     </AbilityDef>
 
-    <!-- 鱼目混珠 -->
+    <!-- 混珠诳取 -->
     <AbilityDef ParentName="RI_PsycastBase">
         <defName>NzRI_Zw_Counterfeit</defName>
-        <label>Counterfeit</label>
+        <label>Counterfeit trade</label>
         <description>#TODO</description>
         <jobDef>CastAbilityOnThingMelee</jobDef>
         <iconPath>Ability/Base/LG</iconPath>
@@ -96,7 +96,7 @@
         </comps>
     </AbilityDef>
 
-    <!-- 巧言令色 -->
+    <!-- 李代桃僵 -->
     <AbilityDef ParentName="RI_PsycastBase">
         <defName>NzRI_Zw_DeceptiveFlattery</defName>
         <label>deceptive flattery</label>
@@ -137,7 +137,7 @@
                 <clamorRadius>3</clamorRadius>
                 <stunTicks>300</stunTicks>
             </li>
-            
+
             <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy"> -->
             <!--     <rEnergy>-40</rEnergy> -->
             <!-- </li> -->

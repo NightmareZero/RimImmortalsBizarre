@@ -3,6 +3,7 @@ using Verse;
 
 namespace NzRimImmortalBizarre
 {
+    [DefOf]
     public static class ThingOf {
 
         // 类别: 附件
@@ -16,5 +17,10 @@ namespace NzRimImmortalBizarre
 
         // 类别: 一切
         public static ThingCategoryDef Root;
+
+        static ThingOf()
+        {
+            DefOfHelper.EnsureInitializedInCtor(typeof(ThingOf));
+        }
     }
 }

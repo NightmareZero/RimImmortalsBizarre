@@ -12,6 +12,23 @@ namespace NzRimImmortalBizarre
 
         private Pawn Caster => parent.pawn;
 
+        public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
+        {
+            if (!base.Valid(target, throwMessages))
+            {
+                return false;
+            }
+
+            bool enough = Caster.HasEnoughFeiGang(Props.change);
+            if (!enough)
+            {
+                Messages.Message("NzRI_Zw_ReduceFg_NotEnough".Translate(), MessageTypeDefOf.RejectInput);
+                return false;
+            }
+
+            return true;
+        }
+
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
@@ -26,14 +43,7 @@ namespace NzRimImmortalBizarre
                 addFg = Props.onFail;
             }
 
-            bool enough = Caster.ChangeFeiGang(addFg);
-            if (!enough)
-            {
-                Messages.Message("NzRI_Zw_ReduceFg_NotEnough".Translate(), MessageTypeDefOf.RejectInput);
-                Props.enough = false;
-                return;
-            }
-
+            Caster.ChangeFeiGang(addFg);
             
         }
     }

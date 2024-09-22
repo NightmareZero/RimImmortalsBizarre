@@ -22,9 +22,10 @@ namespace NzRimImmortalBizarre
                 return;
             }
 
+            var targetPawnItems = targetPawn.GetAllItems();
 #if DEBUG
-            Log.Message(targetPawn.Name+" inventory:");
-            targetPawn.inventory.innerContainer.InnerListForReading.ForEach(x =>
+            Log.Message(targetPawn.Name + " inventory:");
+            targetPawnItems.ForEach(x =>
             {
                 Log.Message(x.def.label.Translate());
                 x.def.thingCategories.ForEach(y =>
@@ -36,12 +37,11 @@ namespace NzRimImmortalBizarre
 
             if (this.GetCastSuccess())
             {
-
                 var droped = false;
                 foreach (var category in Props.allowTypes)
                 {
                     // 尝试获取一个符合条件的物品
-                    var item = targetPawn.inventory.innerContainer.InnerListForReading.Where(x => x.def.thingCategories != null && x.def.thingCategories.Contains(category)).FirstOrDefault();
+                    var item = targetPawnItems.Where(x => x.def.IsItemParentCategory(category)).FirstOrDefault();
                     if (item != null)
                     {
                         GenPlace.TryPlaceThing(item, targetPawn.Position, targetPawn.Map, ThingPlaceMode.Near);
@@ -50,6 +50,7 @@ namespace NzRimImmortalBizarre
                         break; // 成功掉落一个物品后终止
                     }
                 }
+
                 // TODO Message
                 if (droped)
                 {
@@ -70,15 +71,30 @@ namespace NzRimImmortalBizarre
 
         private void defaultProp()
         {
-            if (Props.allowTypes == null || Props.allowTypes.Count == 0)
+            if (Props.allowTypes == null)
             {
                 Props.allowTypes = new List<ThingCategoryDef>() {
                     ThingOf.ApparelUtility,
-                    ThingOf.Weapons,
                     ThingOf.Apparel,
+                    ThingOf.Weapons,
                     ThingOf.Root,
                 };
+
+                // 异常检测
+                Props.allowTypes.ForEach(x =>
+                {
+                    if (x == null)
+                    {
+                        Log.Error("CompAbilityEffect_DropTargetItem: allowTypes is null");
+                    }
+                });
             }
         }
+
+        
+
+   
+
+
     }
 }

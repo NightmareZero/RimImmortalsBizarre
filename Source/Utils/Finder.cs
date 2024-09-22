@@ -31,7 +31,8 @@ namespace NzRimImmortalBizarre
         /// </summary>
         /// <param name="pawn"></param>
         /// <returns></returns>
-        public static Zw_Fg GetFeiGang(Pawn pawn) { 
+        public static Zw_Fg GetFeiGang(Pawn pawn)
+        {
             return (Zw_Fg)pawn.health.hediffSet.GetFirstHediffOfDef(XmlOf.NzRI_Zw_Fg);
         }
 
@@ -51,7 +52,7 @@ namespace NzRimImmortalBizarre
         /// <param name="map"></param>
         /// <param name="affectedCells"></param>
         /// <returns></returns>
-        public static List<Pawn> GetPawnsInAffectedArea(Map map,List<IntVec3> affectedCells)
+        public static List<Pawn> GetPawnsInAffectedArea(Map map, List<IntVec3> affectedCells)
         {
             List<Pawn> pawnsInAffectedArea = new List<Pawn>();
             foreach (IntVec3 cell in affectedCells)
@@ -89,6 +90,36 @@ namespace NzRimImmortalBizarre
                 }
             }
             return count;
+        }
+
+        /// <summary>
+        /// 获取Pawn的所有物品, 包括携带物品, 穿戴装备, 装备武器
+        /// </summary>
+        /// <param name="pawn"></param>
+        /// <returns></returns>
+        public static List<Thing> GetAllItems(this Pawn pawn)
+        {
+            List<Thing> allItems = new List<Thing>();
+
+            // 获取Pawn的携带物品
+            if (pawn.inventory != null)
+            {
+                allItems.AddRange(pawn.inventory.innerContainer.InnerListForReading);
+            }
+
+            // 获取Pawn的穿戴装备
+            if (pawn.apparel != null)
+            {
+                allItems.AddRange(pawn.apparel.WornApparel);
+            }
+
+            // 获取Pawn的装备武器
+            if (pawn.equipment != null)
+            {
+                allItems.AddRange(pawn.equipment.AllEquipmentListForReading);
+            }
+
+            return allItems;
         }
 
     }
