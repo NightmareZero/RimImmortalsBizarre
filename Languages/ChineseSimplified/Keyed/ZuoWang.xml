@@ -7,4 +7,6 @@
     <NzRI_Zw_DropTargetItem_NoItem>{Pawn} 没有物品可以交易</NzRI_Zw_DropTargetItem_NoItem>
 
     <NzRI_Zw_Is_Cheater>{Pawn} 回绝了交易并觉得 {Caster} 是个骗子</NzRI_Zw_Is_Cheater>
+
+    <NzRI_Zw_MvIllness_NoDest>没有目标</NzRI_Zw_MvIllness_NoDest>
 </LanguageData>

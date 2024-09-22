@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+    <!-- 舌灿莲花 (群体花言巧语) -->
     <!-- 花言巧语 -->
     <AbilityDef ParentName="RI_PsycastBase">
         <defName>NzRI_Zw_GracefulWords</defName>

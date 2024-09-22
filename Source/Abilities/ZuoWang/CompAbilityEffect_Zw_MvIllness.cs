@@ -37,6 +37,7 @@ namespace NzRimImmortalBizarre
             if (extraTarget == null || extraTarget.Pawn == null)
             {
                 // 如果没有指定目标地点，或者目标地点没有人，直接消息错误
+                Messages.Message("NzRI_Zw_MvIllness_NoDest".Translate(), MessageTypeDefOf.RejectInput);
                 return;
             }
             
