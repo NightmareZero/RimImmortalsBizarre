@@ -9,4 +9,6 @@
     <NzRI_Zw_Is_Cheater>{Pawn} 回绝了交易并觉得 {Caster} 是个骗子</NzRI_Zw_Is_Cheater>
 
     <NzRI_Zw_MvIllness_NoDest>没有目标</NzRI_Zw_MvIllness_NoDest>
+
+    <NzRI_Zw_MvIllness_NoPerson>目标处没有人</NzRI_Zw_MvIllness_NoPerson>
 </LanguageData>

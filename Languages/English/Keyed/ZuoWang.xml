@@ -7,4 +7,6 @@
     <NzRI_Zw_DropTargetItem_NoItem>{Pawn} has no items to trade</NzRI_Zw_DropTargetItem_NoItem>
 
     <NzRI_Zw_MvIllness_NoDest>No target</NzRI_Zw_MvIllness_NoDest>
+
+    <NzRI_Zw_MvIllness_NoPerson>No one at the target location</NzRI_Zw_MvIllness_NoPerson>
 </LanguageData>

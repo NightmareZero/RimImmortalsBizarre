@@ -25,21 +25,48 @@ namespace NzRimImmortalBizarre
             return true;
         }
 
+        // public override bool CanApplyOn(LocalTargetInfo target, LocalTargetInfo dest)
+        // {
+        //     if (dest.Pawn == null)
+        //     {
+        //         return false;
+        //     }
+        //     Log.Message("CompAbilityEffect_Zw_MvIllness.CanApplyOn");
+        //     return true;
+        // }
+
+        private bool preApply(LocalTargetInfo target, LocalTargetInfo dest)
+        {
+            if (target == null || target.Pawn == null)
+            {
+                #if DEBUG
+                Log.Warning("CompAbilityEffect_Zw_MvIllness.preApply: target.Pawn is null");
+                #endif
+                return false;
+            }
+            if (dest == null || dest.Pawn == null)
+            {
+                #if DEBUG
+                Log.Warning("CompAbilityEffect_Zw_MvIllness.preApply: dest.Pawn is null");
+                Messages.Message("NzRI_Zw_MvIllness_NoPerson".Translate(), MessageTypeDefOf.RejectInput);
+                #endif
+                return false;
+            }
+        
+            return true;
+        }
+
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            if (target.Pawn == null)
+            if (!preApply(target, dest))
             {
-                
                 return;
             }
-            // 目标地点
-            LocalTargetInfo extraTarget = this.selectedTarget;
-            if (extraTarget == null || extraTarget.Pawn == null)
-            {
-                // 如果没有指定目标地点，或者目标地点没有人，直接消息错误
-                Messages.Message("NzRI_Zw_MvIllness_NoDest".Translate(), MessageTypeDefOf.RejectInput);
-                return;
-            }
+            #if DEBUG
+            Log.Message("CompAbilityEffect_Zw_MvIllness.Apply: " + target.Pawn.Name +" to " + dest.Pawn.Name);
+            #endif
+            
+            
             
             
         }
