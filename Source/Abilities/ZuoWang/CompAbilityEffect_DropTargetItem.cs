@@ -55,6 +55,7 @@ namespace NzRimImmortalBizarre
                 if (droped)
                 {
                     Messages.Message("NzRI_Zw_DropTargetItem_Droped".Translate(targetPawn.Name.Named("Pawn")), MessageTypeDefOf.PositiveEvent);
+                    Caster.ChangeFeiGang(17);  // TODO: 先写死
                 }
                 else
                 {
