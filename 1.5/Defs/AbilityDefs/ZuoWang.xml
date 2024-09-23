@@ -128,6 +128,9 @@
             </targetParams>
         </verbProperties>
         <comps>
+            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy"> -->
+            <!--     <rEnergy>-40</rEnergy> -->
+            <!-- </li> -->            
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
                 <change>-12</change>
             </li>
@@ -139,9 +142,41 @@
                 <stunTicks>300</stunTicks>
             </li>
 
-            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy"> -->
-            <!--     <rEnergy>-40</rEnergy> -->
-            <!-- </li> -->
+
         </comps>
     </AbilityDef>
+
+    <!-- 迷阵布施 -->
+    <AbilityDef>
+        <defName>NzRI_Zw_JoinUs</defName>
+        <label>fake memory</label>
+        <description>#TODO</description>
+        <iconPath>Ability/Base/LG</iconPath>
+        <cooldownTicksRange>60</cooldownTicksRange>
+        <displayOrder>200</displayOrder>
+        <aiCanUse>true</aiCanUse>
+        <statBases>
+            <Ability_EntropyGain>0</Ability_EntropyGain>
+            <Ability_PsyfocusCost>0</Ability_PsyfocusCost>
+            <Ability_Duration>500</Ability_Duration>
+        </statBases>        
+        <verbProperties>
+          <verbClass>Verb_CastAbility</verbClass>
+          <range>10.9</range>
+          <warmupTime>0.5</warmupTime>
+          <soundCast>PiercingSpine_Launch</soundCast>
+        </verbProperties>
+        <comps>
+          <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+            <rEnergy>-1</rEnergy>
+          </li> -->
+          <li Class="NzRimImmortalBizarre.CompProperties_Zw_JoinFaction">
+          </li>
+          <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess" />
+          <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
+            <change>-99</change>
+        </li>
+        </comps>
+      </AbilityDef>
+
 </Defs>
