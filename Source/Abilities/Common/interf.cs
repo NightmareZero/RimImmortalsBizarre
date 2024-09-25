@@ -16,4 +16,9 @@ namespace NzRimImmortalBizarre
         bool IsCastingSuccess();
     }
 
+    public interface PawnsSelector
+    {
+        List<Pawn> GetSelectedPawns();
+    }
+
 }

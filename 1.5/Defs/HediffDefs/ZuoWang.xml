@@ -2,20 +2,20 @@
 <Defs>
     <!-- 非罡 -->
     <HediffDef>
-		<defName>NzRI_Zw_Fg</defName>
-		<label>FeiGang</label>
-		<hediffClass>NzRimImmortalBizarre.Zw_Fg</hediffClass>
-		<description>#TODO</description>
-		<minSeverity>0</minSeverity>
-		<maxSeverity>3000</maxSeverity>
-		<isBad>false</isBad>
-	</HediffDef>
+        <defName>NzRI_Zw_Fg</defName>
+        <label>FeiGang</label>
+        <hediffClass>NzRimImmortalBizarre.Zw_Fg</hediffClass>
+        <description>#TODO</description>
+        <minSeverity>0</minSeverity>
+        <maxSeverity>3000</maxSeverity>
+        <isBad>false</isBad>
+    </HediffDef>
 
     <!-- 他是不是可能在骗我 -->
     <HediffDef>
-        <defName>NzRI_ZuoWang_Cheat</defName>
-        <label>cheat?</label>
-        <description>Is he possibly cheating me?</description>
+        <defName>NzRI_Zw_Mahjong</defName>
+        <label>Mahjong tiles</label>
+        <description>Vaguely, a spinning mahjong tile could be seen in his eyes.</description>
         <defaultLabelColor>(0.6, 0, 0, 1)</defaultLabelColor>
         <hediffClass>HediffWithComps</hediffClass>
         <initialSeverity>0.001</initialSeverity>
@@ -28,20 +28,22 @@
         </comps>
     </HediffDef>
 
-    <!-- 这货又骗人了，但是配合他好了 -->
+    <!-- 美好幻景 -->
     <HediffDef>
-        <defName>NzRI_ZuoWang_CheatAndCooperate</defName>
-        <label>cheat...</label>
-        <description>He cheated again, but it's okay to cooperate with him.</description>
+        <defName>NzRI_Zw_Fantasy</defName>
+        <label>FantasyWorld</label>
+        <description>He script is in a fantasy world.</description>
         <defaultLabelColor>(0.6, 0, 0, 1)</defaultLabelColor>
         <hediffClass>HediffWithComps</hediffClass>
         <initialSeverity>0.001</initialSeverity>
         <comps>
             <li Class="HediffCompProperties_Disappears">
-                <disappearsAfterTicks>10000</disappearsAfterTicks>
+                <disappearsAfterTicks>180000</disappearsAfterTicks>
                 <showRemainingTime>false</showRemainingTime>
                 <canUseDecimalsShortForm>true</canUseDecimalsShortForm>
             </li>
         </comps>
     </HediffDef>
+
+
 </Defs>
