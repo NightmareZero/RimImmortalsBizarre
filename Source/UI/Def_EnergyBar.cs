@@ -32,7 +32,8 @@ namespace NzRimImmortalBizarre
     public class BarNum
     {
         // ====== 设置部分 ======
-        public bool enable { get; } = true;
+        public delegate bool Enable();
+        public Enable enable = () => true;
         public string Label;
         // 条材质, 满
         public Texture2D BarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.7f, 1.0f, 0.9f));
@@ -60,11 +61,12 @@ namespace NzRimImmortalBizarre
 
     }
 
-    public static class GizmoEnergyBarUtil { 
-        
+    public static class GizmoEnergyBarUtil
+    {
+
         public static bool Enabled(this BarNum barNum)
         {
-            return barNum != null && barNum.enable;
+            return barNum != null && barNum.enable();
         }
     }
 

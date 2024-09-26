@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Core;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -15,8 +16,7 @@ namespace NzRimImmortalBizarre
     {
 
         public Zw_Tracker Tracker;
-        private int tickAge = 0;
-        private int tickInterval = 300;
+        private int tickInterval = 600;
 
         public override string LabelInBrackets => Tracker?.bar1Num?.ToString() ?? "";
 
@@ -30,9 +30,12 @@ namespace NzRimImmortalBizarre
         }
         public override void Tick()
         {
+            base.Tick();
             // 计算tick触发
-            if (tickAge++ == tickInterval) return; // 每tickInterval触发一次
-            tickAge = 0;
+            if (this.ageTicks % tickInterval == 0)
+            {
+                this.Tracker.Tick();   
+            }
 
             // TODO do something
 

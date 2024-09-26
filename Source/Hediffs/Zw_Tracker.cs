@@ -15,12 +15,12 @@ namespace NzRimImmortalBizarre
         // 非罡
         private float feigang;
         // 非罡最大值
-        private float fgMax = 100f;
+        private float fgMax = 1000f;
 
         // 先天一气
         private float yiqi;
         // 先天一气最大值
-        private float yqMax = 100f;
+        private float yqMax = 1000f;
 
         public Zw_Tracker()
         {
@@ -33,7 +33,11 @@ namespace NzRimImmortalBizarre
         };
 
         // 暂时关闭第二栏
-        public BarNum bar2Num => null;
+        public BarNum bar2Num => new BarNum("先天一气", ref yiqi, ref yqMax)
+        {
+            BarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.75f, 0.75f, 0.75f)),
+            enable = enableSecondBar
+        };
 
         // 暂时关闭图标
         public Texture2D icon => null;
@@ -44,6 +48,8 @@ namespace NzRimImmortalBizarre
         {
             Scribe_Values.Look(ref feigang, "feigang"); // 非罡
             Scribe_Values.Look(ref yiqi, "yiqi");
+            Scribe_Values.Look(ref fgMax, "fgMax");
+            Scribe_Values.Look(ref yqMax, "yqMax");
         }
 
         /// <summary>
@@ -85,6 +91,16 @@ namespace NzRimImmortalBizarre
 
         }
 
+        public void Tick()
+        {
+            // 根据境界修改非罡上限
+            var level = pawn.GetRiEnergyRootLevel();
+            this.fgMax = level * 100;
+            // 根据身体部件修改先天一气上限
+            var xs = pawn.GetXinSuPartCount();
+            this.yqMax = xs * 100;
+        }
+
         public void injectHediff(Zw_Fg fgHediff)
         {
             this.pawn = fgHediff.pawn;
@@ -93,7 +109,12 @@ namespace NzRimImmortalBizarre
         private bool enableGizmo()
         {
             // TODO 添加灵芽检测, 有灵芽的时候才显示非罡条
-            return feigang > 0;
+            return fgMax > 0;
+        }
+
+        private bool enableSecondBar()
+        {
+            return yqMax > 0;
         }
 
     }

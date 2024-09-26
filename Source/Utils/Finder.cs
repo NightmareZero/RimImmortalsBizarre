@@ -1,6 +1,8 @@
 using Verse;
 using RimWorld;
 using System.Collections.Generic;
+using WhoXiuXian;
+using Core;
 
 namespace NzRimImmortalBizarre
 {
@@ -118,9 +120,61 @@ namespace NzRimImmortalBizarre
             {
                 allItems.AddRange(pawn.equipment.AllEquipmentListForReading);
             }
-            
+
             return allItems;
         }
 
+
+        /// <summary>
+        /// 计算Pawn的心素部位数量
+        /// </summary>
+        /// <param name="pawn"></param>
+        /// <returns></returns>
+        public static int GetXinSuPartCount(this Pawn pawn)
+        {
+            int count = 0;
+            foreach (Hediff hediff in pawn.health.hediffSet.hediffs)
+            {
+                hediff.def.tags.ForEach(tag =>
+                {
+                    if (tag == TagDefOf.NzRI_XinSuBodyPart.defName)
+                    {
+                        count++;
+                    }
+                });
+            }
+            return count;
+        }
+
+
+        /// <summary>
+        /// 检查Pawn是否有灵芽
+        /// </summary>
+        /// <param name="pawn"></param>
+        /// <returns></returns>
+        public static bool HasRiEnergyRoot(this Pawn pawn)
+        {
+            return pawn.health.hediffSet.HasHediff(RI_DefOf.Hediff_RI_EnergyRoot);
+        }
+
+        /// <summary>
+        /// 获取Pawn的境界Hediff
+        /// </summary>
+        /// <param name="pawn"></param>
+        /// <returns></returns>
+        public static Hediff_RI_EnergyRoot GetRiEnergyRoot(this Pawn pawn)
+        {
+            return pawn.HasRiEnergyRoot() ? ((Hediff_RI_EnergyRoot)pawn.health.hediffSet.GetFirstHediffOfDef(RI_DefOf.Hediff_RI_EnergyRoot)) : null;
+        }
+
+        /// <summary>
+        /// 获取Pawn的境界等级
+        /// </summary>
+        /// <param name="pawn"></param>
+        /// <returns></returns>
+        public static int GetRiEnergyRootLevel(this Pawn pawn)
+        {
+            return pawn.GetRiEnergyRoot()?.energy?.currentRI?.def?.level ?? 0;
+        }
     }
 }
