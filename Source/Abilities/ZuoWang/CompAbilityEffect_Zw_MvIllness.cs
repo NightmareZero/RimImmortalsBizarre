@@ -1,6 +1,9 @@
 using Verse;
 using RimWorld;
 using NzRimImmortalBizarre;
+using System.Collections.Generic;
+using System.Linq;
+using Verse.Noise;
 
 namespace NzRimImmortalBizarre
 {
@@ -39,20 +42,20 @@ namespace NzRimImmortalBizarre
         {
             if (target == null || target.Pawn == null)
             {
-                #if DEBUG
+#if DEBUG
                 Log.Warning("CompAbilityEffect_Zw_MvIllness.preApply: target.Pawn is null");
-                #endif
+#endif
                 return false;
             }
             if (dest == null || dest.Pawn == null)
             {
-                #if DEBUG
+#if DEBUG
                 Log.Warning("CompAbilityEffect_Zw_MvIllness.preApply: dest.Pawn is null");
                 Messages.Message("NzRI_Zw_MvIllness_NoPerson".Translate(), MessageTypeDefOf.RejectInput);
-                #endif
+#endif
                 return false;
             }
-        
+
             return true;
         }
 
@@ -62,12 +65,12 @@ namespace NzRimImmortalBizarre
             {
                 return;
             }
-            #if DEBUG
-            Log.Message("CompAbilityEffect_Zw_MvIllness.Apply: " + target.Pawn.Name +" to " + dest.Pawn.Name);
-            #endif
+#if DEBUG
+            Log.Message("CompAbilityEffect_Zw_MvIllness.Apply: " + target.Pawn.Name + " to " + dest.Pawn.Name);
+#endif
 
             // 获得一处待治愈的
-            var get = HealthUtility.TryGetWorstHealthCondition(target.Pawn, out Hediff worstHealth, out var worstBodyPart);
+            var get = Utils.TryGetWorstHealthCondition(target.Pawn, out Hediff worstHealth, out var worstBodyPart);
             if (!get)
             {
                 Messages.Message("NzRI_Zw_MvIllness_NoIllness".Translate(), MessageTypeDefOf.RejectInput);
@@ -79,11 +82,8 @@ namespace NzRimImmortalBizarre
             // 在目标身上添加一个相同的疾病
             worstHealth.pawn = dest.Pawn;
             dest.Pawn.health.AddHediff(worstHealth, worstBodyPart);
-
-            
-            
-            
-            
         }
+
+
     }
 }

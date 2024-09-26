@@ -185,7 +185,7 @@
         <label>Invoke deity</label>
         <cooldownTicksRange>120000</cooldownTicksRange>
         <description>#TODO</description>
-        <iconPath>Ability/AoJing8</iconPath>
+        <iconPath>Ability/Base/LG</iconPath>
         <!-- <warmupStartSound>ReimplantXenogerm_Cast</warmupStartSound> -->
         <!-- <warmupEffecter>Implant_Xenogerm</warmupEffecter> -->
         <aiCanUse>false</aiCanUse>
@@ -212,6 +212,10 @@
             <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
                 <rEnergy>-1</rEnergy>
             </li>
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
+                <compClass>NzRimImmortalBizarre.CompAbilityEffect_Zw_AddYq</compClass>
+                <change>-699</change>
+            </li>
             <li Class="NzRimImmortalBizarre.CompProperties_AreaAddHediff">
                 <hediffDef>NzRI_Zw_Fantasy</hediffDef>
                 <compClass>NzRimImmortalBizarre.CompAbilityEffect_Zw_InvokeDeity</compClass>
@@ -225,6 +229,47 @@
                 <toHuman>true</toHuman>
                 <toMechanoids>false</toMechanoids>
             </li>
+        </comps>
+    </AbilityDef>
+
+    <!-- 灵丹妙药 -->
+    <AbilityDef ParentName="AbilityTouchBase">
+        <defName>NzRI_Zw_Therapy</defName>
+        <label>Miraculous cure</label>
+        <description>#TODO</description>
+        <iconPath>Ability/Base/LG</iconPath>
+        <stunTargetWhileCasting>true</stunTargetWhileCasting>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <warmupMote>Mote_CoagulateStencil</warmupMote>
+        <warmupStartSound>FireSpew_Warmup</warmupStartSound>
+        <jobDef>CastAbilityOnThingMelee</jobDef>
+        <displayOrder>400</displayOrder>
+        <hostile>false</hostile>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <verbProperties>
+            <verbClass>Verb_CastAbilityTouch</verbClass>
+            <drawAimPie>false</drawAimPie>
+            <range>-1</range>
+            <warmupTime>1</warmupTime>
+            <targetParams>
+                <canTargetHumans>true</canTargetHumans>
+                <canTargetAnimals>true</canTargetAnimals>
+                <canTargetSelf>true</canTargetSelf>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetMechs>false</canTargetMechs>
+                <!-- <canTargetBloodfeeders>true</canTargetBloodfeeders> -->
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+                <rEnergy>-30</rEnergy>
+            </li> -->
+            <li Class="NzRimImmortalBizarre.CompProperties_FireTherapy">
+                <tendQualityRange>0.5~0.9</tendQualityRange>
+            </li>
+
+
         </comps>
     </AbilityDef>
 </Defs>

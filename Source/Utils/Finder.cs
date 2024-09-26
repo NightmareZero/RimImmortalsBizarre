@@ -3,6 +3,7 @@ using RimWorld;
 using System.Collections.Generic;
 using WhoXiuXian;
 using Core;
+using System.Linq;
 
 namespace NzRimImmortalBizarre
 {
@@ -175,6 +176,53 @@ namespace NzRimImmortalBizarre
         public static int GetRiEnergyRootLevel(this Pawn pawn)
         {
             return pawn.GetRiEnergyRoot()?.energy?.currentRI?.def?.level ?? 0;
+        }
+
+        /// <summary>
+        /// 尝试获取最糟糕的健康状况(包括不可治愈的成瘾)
+        /// </summary>
+        /// <param name="pawn"></param>
+        /// <param name="worstHealth"></param>
+        /// <param name="worstBodyPart"></param>
+        /// <returns></returns>
+        public static bool TryGetWorstHealthCondition(Pawn pawn, out Hediff worstHealth, out BodyPartRecord worstBodyPart)
+        {
+            var get = HealthUtility.TryGetWorstHealthCondition(pawn, out worstHealth, out worstBodyPart);
+            if (get)
+            {
+                return true;
+            }
+
+            // 找到身上一处成瘾
+            var add = FindAllAddiction(pawn, null);
+            if (add != null)
+            {
+                worstHealth = add;
+                worstBodyPart = add.Part;
+                return true;
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// 寻找所有成瘾(包括不可治愈的)
+        /// </summary>
+        /// <param name="pawn"></param>
+        /// <param name="exclude"></param>
+        /// <returns></returns>
+        private static Hediff_Addiction FindAllAddiction(Pawn pawn, params HediffDef[] exclude)
+        {
+            List<Hediff> hediffs = pawn.health.hediffSet.hediffs;
+            for (int i = 0; i < hediffs.Count; i++)
+            {
+                if (hediffs[i] is Hediff_Addiction addiction && addiction.Visible && (exclude == null || !exclude.Contains(hediffs[i].def)))
+                {
+                    return addiction;
+                }
+            }
+
+            return null;
         }
     }
 }

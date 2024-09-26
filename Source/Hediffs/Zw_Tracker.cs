@@ -69,6 +69,17 @@ namespace NzRimImmortalBizarre
             return true;
         }
 
+        public bool ChangeYq(float value)
+        {
+            if (value < 0 && yiqi < -value)
+            {
+                return false;
+            }
+            yiqi += value;
+            yiqi = Mathf.Clamp(yiqi, 0, yqMax);
+            return true;
+        }
+
         public void mustChangeFg(float value)
         {
             feigang += value;
@@ -84,6 +95,12 @@ namespace NzRimImmortalBizarre
         {
             value = Mathf.Abs(value);
             return feigang >= value;
+        }
+
+        public bool EnoughYq(float value)
+        {
+            value = Mathf.Abs(value);
+            return yiqi >= value;
         }
 
         private void init()
