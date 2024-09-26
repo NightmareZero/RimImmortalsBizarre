@@ -31,5 +31,8 @@
         </renderNodeProperties>
         <hediffClass>Zw_BodyPart_XinSuBase</hediffClass>
         <priceImpact>true</priceImpact>
+        <tags>
+          <li>NzRI_XinSuBodyPart</li>
+        </tags>
       </HediffDef>
 </Defs>
