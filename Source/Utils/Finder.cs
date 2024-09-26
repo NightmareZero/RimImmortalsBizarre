@@ -118,7 +118,7 @@ namespace NzRimImmortalBizarre
             {
                 allItems.AddRange(pawn.equipment.AllEquipmentListForReading);
             }
-
+            
             return allItems;
         }
 
