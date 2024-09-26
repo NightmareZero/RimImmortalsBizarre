@@ -14,7 +14,9 @@ namespace NzRimImmortalBizarre
         // 治疗次数
         public int therapyTimes = 1;
 
-        // 能否治疗成瘾
-        public bool canAddiction = false;
+        public CompProperties_Zw_Therapy()
+        {
+            compClass = typeof(CompAbilityEffect_Zw_Therapy);
+        }
     }
 }

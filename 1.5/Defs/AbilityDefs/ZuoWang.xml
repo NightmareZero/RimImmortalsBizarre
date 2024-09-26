@@ -213,7 +213,6 @@
                 <rEnergy>-1</rEnergy>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
-                <compClass>NzRimImmortalBizarre.CompAbilityEffect_Zw_AddYq</compClass>
                 <change>-699</change>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_AreaAddHediff">
@@ -256,17 +255,22 @@
                 <canTargetHumans>true</canTargetHumans>
                 <canTargetAnimals>true</canTargetAnimals>
                 <canTargetSelf>true</canTargetSelf>
+                <canTargetCorpses>true</canTargetCorpses>
                 <canTargetBuildings>false</canTargetBuildings>
                 <canTargetMechs>false</canTargetMechs>
-                <!-- <canTargetBloodfeeders>true</canTargetBloodfeeders> -->
             </targetParams>
         </verbProperties>
         <comps>
             <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
                 <rEnergy>-30</rEnergy>
             </li> -->
-            <li Class="NzRimImmortalBizarre.CompProperties_FireTherapy">
-                <tendQualityRange>0.5~0.9</tendQualityRange>
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
+                <compClass>NzRimImmortalBizarre.CompAbilityEffect_Zw_AddYq</compClass>
+                <change>-69</change>
+            </li>            
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_Therapy">
+                <canRevive>true</canRevive>
+                <therapyTimes>2</therapyTimes>
             </li>
 
 
