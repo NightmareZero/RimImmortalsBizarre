@@ -28,6 +28,7 @@
             </li>
         </stages>
     </ThoughtDef>
+    <!-- 好话 -->
     <ThoughtDef>
         <defName>NzRI_T_GracefulWords</defName>
         <thoughtClass>Thought_MemorySocial</thoughtClass>
@@ -42,6 +43,7 @@
             </li>
         </stages>
     </ThoughtDef>
+    <!-- 无意义的话 -->
     <ThoughtDef>
         <defName>NzRI_T_NonsenseWords</defName>
         <thoughtClass>Thought_MemorySocial</thoughtClass>
@@ -53,6 +55,22 @@
             <li>
                 <label>This person is talking nonsense.</label>
                 <baseOpinionOffset>-7</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <!-- 好心情 -->
+    <ThoughtDef>
+        <defName>NzRI_Thought_Zw_FantasyMemory</defName>
+        <label>Beautiful Memory</label>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <stackLimit>1</stackLimit>
+        <durationDays>15</durationDays>
+        <thoughtClass>Thought_MemoryDynamic</thoughtClass>
+        <stages>
+            <li>
+                <label>Beautiful Memory</label>
+                <baseMoodEffect>50</baseMoodEffect>
             </li>
         </stages>
     </ThoughtDef>

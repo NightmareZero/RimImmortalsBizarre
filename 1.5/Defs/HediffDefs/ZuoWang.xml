@@ -55,5 +55,35 @@
         </stages>
     </HediffDef>
 
+    <!-- 美好回忆 -->
+    <HediffDef>
+        <defName>NzRI_Zw_FantasyMemory</defName>
+        <label>Memory</label>
+        <description>He is immersed in a beautiful memory.</description>
+        <defaultLabelColor>(0.6, 0, 0, 1)</defaultLabelColor>
+        <hediffClass>HediffWithComps</hediffClass>
+        <initialSeverity>0.001</initialSeverity>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>900000</disappearsAfterTicks>
+                <showRemainingTime>false</showRemainingTime>
+                <canUseDecimalsShortForm>true</canUseDecimalsShortForm>
+            </li>
+            <li Class="HediffCompProperties_Thought">
+                <thoughtDef>NzRI_Thought_Zw_FantasyMemory</thoughtDef>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <setMax>0.99</setMax>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
 
 </Defs>

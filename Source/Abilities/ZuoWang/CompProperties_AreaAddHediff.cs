@@ -1,5 +1,6 @@
 using RimWorld;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Verse;
 
@@ -15,7 +16,7 @@ namespace NzRimImmortalBizarre
     public class CompProperties_AreaAddHediff : CompProperties_AbilityEffect
     {
 
-        public HediffDef hediffDef;
+        public List<HediffDef> hediffDef;
 
         public string target;
 
@@ -27,33 +28,33 @@ namespace NzRimImmortalBizarre
         public const string TargetSelected = "selected";
 
         // 自己
-        public bool noSelf;
+        public bool noSelf = false;
 
         // 是否筛选
-        public bool noFilter;
+        public bool noFilter = false;
 
         // 派系目标
 
-        public bool toEnemies;
+        public bool toEnemies = true;
 
-        public bool toAllies;
+        public bool toAllies = true;
 
-        public bool toNeutral;
+        public bool toNeutral = true;
 
-        public bool toColonists;
+        public bool toColonists = true;
 
         // 种类目标
 
         // 对动物生效
-        public bool toAnimals;
+        public bool toAnimals = true;
 
         // 对人类生效
-        public bool toHuman;
+        public bool toHuman = true;
 
         // 对机械生效
-        public bool toMechanoids;
+        public bool toMechanoids = false;
 
-        public bool notBoss;
+        public bool notBoss = true;
 
         // 对异常实体生效
         // public bool ApplyToAnomaly;
