@@ -63,13 +63,14 @@
     <ThoughtDef>
         <defName>NzRI_Thought_Zw_FantasyMemory</defName>
         <label>Beautiful Memory</label>
+        <description>this person is immersed in a beautiful memory.</description>
         <thoughtClass>Thought_Memory</thoughtClass>
         <stackLimit>1</stackLimit>
         <durationDays>15</durationDays>
-        <thoughtClass>Thought_MemoryDynamic</thoughtClass>
         <stages>
             <li>
                 <label>Beautiful Memory</label>
+                <description>this person is immersed in a beautiful memory.</description>
                 <baseMoodEffect>50</baseMoodEffect>
             </li>
         </stages>

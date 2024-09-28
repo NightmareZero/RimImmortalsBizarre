@@ -218,6 +218,7 @@
             <li Class="NzRimImmortalBizarre.CompProperties_AreaAddHediff">
                 <hediffDef>
                     <li>NzRI_Zw_Fantasy</li>
+                    <li>NzRI_Zw_FantasyMemory</li>
                 </hediffDef>
                 <compClass>NzRimImmortalBizarre.CompAbilityEffect_Zw_InvokeDeity</compClass>
                 <target>map</target>
@@ -229,14 +230,7 @@
                 <toAnimals>false</toAnimals>
                 <toHuman>true</toHuman>
                 <toMechanoids>false</toMechanoids>
-            </li>
-            <li Class="NzRimImmortalBizarre.CompProperties_AreaAddHediff">
-                <hediffDef>
-                    <li>NzRI_Zw_FantasyMemory</li>
-                </hediffDef>
-                <compClass>NzRimImmortalBizarre.CompAbilityEffect_Zw_InvokeDeity</compClass>
-                <target>map</target>
-            </li>            
+            </li>     
         </comps>
     </AbilityDef>
 

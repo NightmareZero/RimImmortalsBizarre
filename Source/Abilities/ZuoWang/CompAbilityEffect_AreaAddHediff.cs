@@ -21,24 +21,39 @@ namespace NzRimImmortalBizarre
 
             if (Props.target == CompProperties_AreaAddHediff.TargetSelf)
             {
-                if (parent.pawn != null)
+                if (parent.pawn != null && (Props.hediffDef?.Count ?? 0) > 0)
                 {
-                    parent.pawn.health.AddHediff(Props.hediffDef);
+                    Props.hediffDef.ForEach((hediff) =>
+                    {
+                        parent.pawn.health.AddHediff(hediff);
+                    });
                 }
             }
             else if (Props.target == CompProperties_AreaAddHediff.TargetMap)
             {
-                EachFilteredPawnDo(Find.CurrentMap.mapPawns.AllPawns, (pawn) =>
+                if ((Props.hediffDef?.Count ?? 0) > 0)
                 {
-                    pawn.health.AddHediff(Props.hediffDef);
-                });
+                    EachFilteredPawnDo(Find.CurrentMap.mapPawns.AllPawns, (pawn) =>
+                    {
+                        Props.hediffDef.ForEach((hediff) =>
+                        {
+                            pawn.health.AddHediff(hediff);
+                        });
+                    });
+                }
             }
             else if (Props.target == CompProperties_AreaAddHediff.TargetSelected)
             {
-                EachFilteredPawnDo(SelectPawn(), (pawn) =>
+                if ((Props.hediffDef?.Count ?? 0) > 0)
                 {
-                    pawn.health.AddHediff(Props.hediffDef);
-                });
+                    EachFilteredPawnDo(SelectPawn(), (pawn) =>
+                    {
+                        Props.hediffDef.ForEach((hediff) =>
+                        {
+                            pawn.health.AddHediff(hediff);
+                        });
+                    });
+                }
             }
         }
 

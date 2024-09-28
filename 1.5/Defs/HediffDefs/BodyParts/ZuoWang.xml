@@ -29,7 +29,7 @@
             </drawData>
           </li>
         </renderNodeProperties>
-        <hediffClass>Zw_BodyPart_XinSuBase</hediffClass>
+        <hediffClass>NzRimImmortalBizarre.Zw_BodyPart_XinSuBase</hediffClass>
         <priceImpact>true</priceImpact>
         <tags>
           <li>NzRI_XinSuBodyPart</li>

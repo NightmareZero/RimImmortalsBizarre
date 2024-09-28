@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
     <!-- 心素的眼睛 -->
-    <ThingDef ParentName="BodyPartBionicBase">
+    <ThingDef ParentName="NzRI_BodyPartBionicBase">
         <defName>NzRI_XinSu_Eye</defName>
         <label>xinsu's eye</label>
         <description>#TODO</description>
@@ -33,8 +33,8 @@
         </techHediffsTags>
         <!-- <statBases>
           <WorkToMake>26000</WorkToMake>
-        </statBases>
-        <recipeMaker>
+        </statBases> -->
+        <!-- <recipeMaker>
           <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
           <workSkill>Crafting</workSkill>
           <effectWorking>Smith</effectWorking>
@@ -43,9 +43,9 @@
           <skillRequirements>
             <Crafting>8</Crafting>
           </skillRequirements>
-          <researchPrerequisite>Bionics</researchPrerequisite>
+            <researchPrerequisite>Bionics</researchPrerequisite>
           <recipeUsers>
-            <li>FabricationBench</li>
+              <li>FabricationBench</li>
           </recipeUsers>
           <displayPriority>300</displayPriority>
         </recipeMaker> -->

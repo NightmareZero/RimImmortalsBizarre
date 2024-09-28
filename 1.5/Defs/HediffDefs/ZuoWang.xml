@@ -69,8 +69,8 @@
                 <showRemainingTime>false</showRemainingTime>
                 <canUseDecimalsShortForm>true</canUseDecimalsShortForm>
             </li>
-            <li Class="HediffCompProperties_Thought">
-                <thoughtDef>NzRI_Thought_Zw_FantasyMemory</thoughtDef>
+            <li Class="HediffCompProperties_ThoughtSetter">
+                <thought>NzRI_Thought_Zw_FantasyMemory</thought>
             </li>
         </comps>
         <stages>
