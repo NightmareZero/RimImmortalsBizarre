@@ -267,8 +267,7 @@
             <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
                 <rEnergy>-30</rEnergy>
             </li> -->
-            <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
-                <compClass>NzRimImmortalBizarre.CompAbilityEffect_Zw_AddYq</compClass>
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddYq">
                 <change>-69</change>
             </li>            
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_Therapy">
@@ -277,6 +276,60 @@
             </li>
 
 
+        </comps>
+    </AbilityDef>
+
+    <!-- 化虚为实 -->
+    <AbilityDef>
+        <defName>NzRI_Zw_FictionReality</defName>
+        <label>fiction to reality</label>
+        <cooldownTicksRange>1200</cooldownTicksRange>
+        <description>#TODO</description>
+        <iconPath>Ability/Base/LG</iconPath>
+        <!-- <warmupStartSound>ReimplantXenogerm_Cast</warmupStartSound> -->
+        <!-- <warmupEffecter>Implant_Xenogerm</warmupEffecter> -->
+        <aiCanUse>false</aiCanUse>
+        <jobDef>CastAbilityOnThing</jobDef>
+        <targetRequired>False</targetRequired>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <stunTargetWhileCasting>True</stunTargetWhileCasting>
+        <showPsycastEffects>True</showPsycastEffects>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>20</warmupTime>
+            <drawAimPie>False</drawAimPie>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+                <canTargetPawns>false</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>false</canTargetAnimals>
+                <canTargetHumans>false</canTargetHumans>
+                <canTargetMechs>false</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+                <rEnergy>-1</rEnergy>
+            </li> -->
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
+                <change>99</change>
+            </li>
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddYq">
+                <change>-49</change>
+            </li>
+            <li Class="NzRimImmortalBizarre.FictionReality">
+                <thingLists>
+                    <li>Core</li>
+                    <li>Immortal</li>
+                    <li MayRequire="RI.RimImmortal.Forge">Forge</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">Ideology</li>
+                    <li MayRequire="Ludeon.RimWorld.Royalty">Royalty</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">Biotech</li>
+                    <li MayRequire="Ludeon.RimWorld.Anomaly">Phenomenon</li>
+                </thingLists>
+            </li>
+           
         </comps>
     </AbilityDef>
 </Defs>

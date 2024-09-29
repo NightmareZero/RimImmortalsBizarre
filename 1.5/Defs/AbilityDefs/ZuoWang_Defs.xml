@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- 仙路物品 -->
+    <NzRimImmortalBizarre.ThingList>
+        <defName>Immortal</defName>
+        <things>
+            <li>EnergyRoot</li>
+            <li>EnergyRootHigh</li>
+        </things>
+    </NzRimImmortalBizarre.ThingList>
+
+    <!-- 神机天纵 -->
+    <NzRimImmortalBizarre.ThingList MayRequire="RI.RimImmortal.Forge">
+        <defName>Forge</defName>
+        <things>
+            <li></li>
+        </things>
+    </NzRimImmortalBizarre.ThingList>
+
+    <!-- 原版物品 -->
+    <NzRimImmortalBizarre.ThingList>
+        <defName>Core</defName>
+        <things>
+            <li></li>
+        </things>
+    </NzRimImmortalBizarre.ThingList>
+
+    <!-- 文化物品 -->
+    <NzRimImmortalBizarre.ThingList MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>Ideology</defName>
+        <things>
+            <li></li>
+        </things>
+    </NzRimImmortalBizarre.ThingList>
+
+    <!-- 皇权物品 -->
+    <NzRimImmortalBizarre.ThingList MayRequire="Ludeon.RimWorld.Royalty">
+        <defName>Royalty</defName>
+        <things>
+            <li></li>
+        </things>
+    </NzRimImmortalBizarre.ThingList>
+
+    <!-- 生物科技 -->
+    <NzRimImmortalBizarre.ThingList MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>Biotech</defName>
+        <things>
+            <li></li>
+        </things>
+    </NzRimImmortalBizarre.ThingList>
+
+    <!-- 异象 -->
+    <NzRimImmortalBizarre.ThingList MayRequire="Ludeon.RimWorld.Anomaly">
+        <defName>Phenomenon</defName>
+        <things>
+            <li></li>
+        </things>
+    </NzRimImmortalBizarre.ThingList>
+</Defs>
