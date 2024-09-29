@@ -28,6 +28,10 @@ namespace NzRimImmortalBizarre
                 return;
             }
 
+            if (targetPawn.kindDef.isBoss) { 
+                Messages.Message("NzRI_Zw_Is_TooPowerful".Translate(targetPawn.Name.Named("Pawn")), MessageTypeDefOf.RejectInput);
+            }
+
             if (this.GetCastSuccess())
             {
                 if (Props.chIdeo)

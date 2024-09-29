@@ -13,4 +13,6 @@
     <NzRI_Zw_MvIllness_NoPerson>目标处没有人</NzRI_Zw_MvIllness_NoPerson>
 
     <NzRI_Zw_MvIllness_NoIllness>没有可治愈的</NzRI_Zw_MvIllness_NoIllness>
+
+    <NzRI_Zw_Is_TooPowerful>这个生物 {Pawn} 太强大了</NzRI_Zw_Is_TooPowerful>
 </LanguageData>

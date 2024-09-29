@@ -11,4 +11,6 @@
     <NzRI_Zw_MvIllness_NoPerson>No one at the target location</NzRI_Zw_MvIllness_NoPerson>
 
     <NzRI_Zw_MvIllness_NoIllness>No one to heal</NzRI_Zw_MvIllness_NoIllness>
+
+    <NzRI_Zw_Is_TooPowerful>This creature {Pawn} is too powerful</NzRI_Zw_Is_TooPowerful>
 </LanguageData>
