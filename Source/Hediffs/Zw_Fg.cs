@@ -26,7 +26,6 @@ namespace NzRimImmortalBizarre
         {
             base.PostMake();
             this.Init();
-            this.Tracker?.injectHediff(this);
         }
         public override void Tick()
         {
@@ -56,6 +55,8 @@ namespace NzRimImmortalBizarre
 #endif
             base.ExposeData();
             Scribe_Deep.Look(ref Tracker, "zwTracker");
+
+            this.Tracker?.injectHediff(this);
         }
 
         // 绘制界面
@@ -133,6 +134,8 @@ namespace NzRimImmortalBizarre
             {
                 Tracker = new Zw_Tracker();
             }
+
+            this.Tracker?.injectHediff(this);
         }
     }
 }

@@ -11,22 +11,7 @@ namespace NzRimImmortalBizarre
     {
         public new CompProperties_Zw_MvIllness Props => (CompProperties_Zw_MvIllness)props;
 
-        public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
-        {
-            if (!base.Valid(target, throwMessages))
-            {
-                return false;
-            }
-            if (target.Pawn == null)
-            {
-                if (throwMessages)
-                {
-                    Messages.Message("AbilityInvalidTarget".Translate(), MessageTypeDefOf.RejectInput);
-                }
-                return false;
-            }
-            return true;
-        }
+        private Pawn Caster => parent.pawn;
 
         // public override bool CanApplyOn(LocalTargetInfo target, LocalTargetInfo dest)
         // {
@@ -82,6 +67,10 @@ namespace NzRimImmortalBizarre
             // 在目标身上添加一个相同的疾病
             worstHealth.pawn = dest.Pawn;
             dest.Pawn.health.AddHediff(worstHealth, worstBodyPart);
+
+            // 产生少量非罡 
+            // TODO 使用其他方式
+            Caster.ChangeFeiGang(17);
         }
 
 

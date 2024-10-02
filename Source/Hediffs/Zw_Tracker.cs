@@ -110,12 +110,30 @@ namespace NzRimImmortalBizarre
 
         public void Tick()
         {
-            // 根据境界修改非罡上限
-            var level = pawn.GetRiEnergyRootLevel();
-            this.fgMax = level * 100;
-            // 根据身体部件修改先天一气上限
-            var xs = pawn.GetXinSuPartCount();
-            this.yqMax = xs * 100;
+#if DEBUG
+            Log.Message("Zw_Tracker.Tick: " + pawn.Name);
+#endif 
+            if (pawn == null)
+            {
+#if DEBUG
+                Log.Warning("pawn is null");
+#endif
+                return;
+            }
+
+            try
+            {
+                // 根据境界修改非罡上限
+                var level = pawn.GetRiEnergyRootLevel() + 1;
+                this.fgMax = level * 100;
+                // 根据身体部件修改先天一气上限
+                // var xs = pawn.GetXinSuPartCount();
+                // this.yqMax = xs * 100;
+            }
+            catch (System.Exception e)
+            {
+                Log.Error("Zw_Tracker.Tick: " + e);
+            }
         }
 
         public void injectHediff(Zw_Fg fgHediff)

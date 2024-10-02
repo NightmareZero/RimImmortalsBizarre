@@ -134,7 +134,7 @@ namespace NzRimImmortalBizarre
         public static int GetXinSuPartCount(this Pawn pawn)
         {
             int count = 0;
-            foreach (Hediff hediff in pawn.health.hediffSet.hediffs)
+            foreach (Hediff hediff in pawn?.health?.hediffSet?.hediffs)
             {
                 hediff.def.tags.ForEach(tag =>
                 {

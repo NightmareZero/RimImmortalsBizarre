@@ -99,8 +99,8 @@
 
     <!-- 李代桃僵 -->
     <AbilityDef ParentName="RI_PsycastBase">
-        <defName>NzRI_Zw_DeceptiveFlattery</defName>
-        <label>deceptive flattery</label>
+        <defName>NzRI_Zw_Scapegoat</defName>
+        <label>scapegoat</label>
         <description>#TODO</description>
         <jobDef>CastAbilityOnThingMelee</jobDef>
         <iconPath>Ability/Base/LG</iconPath>

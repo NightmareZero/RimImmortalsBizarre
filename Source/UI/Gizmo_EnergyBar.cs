@@ -71,7 +71,7 @@ namespace NzRimImmortalBizarre
 			Widgets.DrawWindowBackground(rect);
 
 			// 偏移量
-			float bar1Fix = data.bar2Num == null ? 0 : 25f;
+			float bar1Fix = (data.bar2Num == null || !data.bar2Num.Enabled()) ? 0 : 25f;
 
 			// 画第一栏
 			Rect rect3 = rect2;
@@ -81,7 +81,7 @@ namespace NzRimImmortalBizarre
 			DrawBar(rect3, data.bar1Num);
 
 			// 画第二栏
-			if (data.bar2Num != null)
+			if (data.bar2Num != null && data.bar2Num.Enabled())
 			{
 				Rect rect4 = rect2;
 				rect4.width = barLength;
