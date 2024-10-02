@@ -136,6 +136,10 @@ namespace NzRimImmortalBizarre
             int count = 0;
             foreach (Hediff hediff in pawn?.health?.hediffSet?.hediffs)
             {
+                if (hediff.def.tags == null)
+                {
+                    continue;
+                }
                 hediff.def.tags.ForEach(tag =>
                 {
                     if (tag == TagDefOf.NzRI_XinSuBodyPart.defName)

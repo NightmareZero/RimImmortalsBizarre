@@ -44,9 +44,9 @@
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_FactionFavorability">
                 <onSuccess>11</onSuccess>
-                <onFail>17</onFail>
+                <onFail>-17</onFail>
             </li>
-            <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg2">
                 <change>11</change>
                 <onFail>3</onFail>
             </li>

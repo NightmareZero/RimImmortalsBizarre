@@ -127,8 +127,8 @@ namespace NzRimImmortalBizarre
                 var level = pawn.GetRiEnergyRootLevel() + 1;
                 this.fgMax = level * 100;
                 // 根据身体部件修改先天一气上限
-                // var xs = pawn.GetXinSuPartCount();
-                // this.yqMax = xs * 100;
+                var xs = pawn.GetXinSuPartCount();
+                this.yqMax = xs * 100;
             }
             catch (System.Exception e)
             {
