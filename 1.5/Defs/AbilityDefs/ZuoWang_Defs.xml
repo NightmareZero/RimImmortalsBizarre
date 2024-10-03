@@ -51,7 +51,7 @@
 
     <!-- 异象 -->
     <NzRimImmortalBizarre.ThingList MayRequire="Ludeon.RimWorld.Anomaly">
-        <defName>Phenomenon</defName>
+        <defName>Anomaly</defName>
         <things>
             <li></li>
         </things>

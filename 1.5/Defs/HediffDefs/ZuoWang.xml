@@ -85,5 +85,32 @@
         </stages>
     </HediffDef>
 
+    <!-- 心智残缺(心智被切掉一半) -->
+    <HediffDef>
+        <defName>NzRI_Zw_MentalCutting</defName>
+        <label>MentalCutting</label>
+        <description>Mind cut in half.</description>
+        <defaultLabelColor>(0.6, 0, 0, 1)</defaultLabelColor>
+        <hediffClass>HediffWithComps</hediffClass>
+        <initialSeverity>0.001</initialSeverity>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>300000</disappearsAfterTicks>
+                <showRemainingTime>false</showRemainingTime>
+                <canUseDecimalsShortForm>true</canUseDecimalsShortForm>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <setMax>0.5</setMax>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
 
 </Defs>

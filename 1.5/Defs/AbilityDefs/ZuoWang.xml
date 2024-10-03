@@ -230,7 +230,7 @@
                 <toAnimals>false</toAnimals>
                 <toHuman>true</toHuman>
                 <toMechanoids>false</toMechanoids>
-            </li>     
+            </li>
         </comps>
     </AbilityDef>
 
@@ -269,7 +269,7 @@
             </li> -->
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddYq">
                 <change>-69</change>
-            </li>            
+            </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_Therapy">
                 <canRevive>true</canRevive>
                 <therapyTimes>2</therapyTimes>
@@ -326,10 +326,59 @@
                     <li MayRequire="Ludeon.RimWorld.Ideology">Ideology</li>
                     <li MayRequire="Ludeon.RimWorld.Royalty">Royalty</li>
                     <li MayRequire="Ludeon.RimWorld.Biotech">Biotech</li>
-                    <li MayRequire="Ludeon.RimWorld.Anomaly">Phenomenon</li>
+                    <li MayRequire="Ludeon.RimWorld.Anomaly">Anomaly</li>
                 </thingLists>
             </li>
-           
+
+        </comps>
+    </AbilityDef>
+
+    <!-- 镜中之物 -->
+    <AbilityDef>
+        <defName>NzRI_Zw_ReflectionInMirror</defName>
+        <label>Reflection in a mirror</label>
+        <cooldownTicksRange>120000</cooldownTicksRange>
+        <description>#TODO</description>
+        <iconPath>Ability/Base/LG</iconPath>
+        <!-- <warmupStartSound>ReimplantXenogerm_Cast</warmupStartSound> -->
+        <!-- <warmupEffecter>Implant_Xenogerm</warmupEffecter> -->
+        <aiCanUse>false</aiCanUse>
+        <jobDef>CastAbilityOnThing</jobDef>
+        <targetRequired>False</targetRequired>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <stunTargetWhileCasting>True</stunTargetWhileCasting>
+        <showPsycastEffects>True</showPsycastEffects>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>20</warmupTime>
+            <drawAimPie>False</drawAimPie>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>true</canTargetAnimals>
+                <canTargetHumans>true</canTargetHumans>
+                <canTargetMechs>false</canTargetMechs>
+                <canTargetItems>true</canTargetItems>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+                <rEnergy>-1</rEnergy>
+            </li> -->
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddYq">
+                <change>-89</change>
+            </li>
+            <li Class="NzRimImmortalBizarre.CompProperties_CopyTarget">
+                <allowHuman>true</allowHuman>
+                <allowAnimal>true</allowAnimal>
+                <allowMech>true</allowMech>
+                <allowItem>true</allowItem>
+                <allowBoss>false</allowBoss>
+                <NewPawnHediff>NzRI_Zw_MentalCutting</NewPawnHediff>
+                <copyJunk>false</copyJunk>
+            </li>
         </comps>
     </AbilityDef>
 </Defs>
