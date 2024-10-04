@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <IncidentDef>
-        <defName>XinSuWandersIn</defName>
+        <defName>Nz_XinSuWandersIn</defName>
         <label>a XinSu wanders in</label>
         <category>Misc</category>
         <targetTags>

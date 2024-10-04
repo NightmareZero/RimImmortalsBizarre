@@ -33,7 +33,7 @@ namespace NzRimImmortalBizarre
             // 计算tick触发
             if (this.ageTicks % tickInterval == 0)
             {
-                this.Tracker.Tick();   
+                this.Tracker.Tick();
             }
 
             // TODO do something
@@ -98,6 +98,21 @@ namespace NzRimImmortalBizarre
                     {
                         // 生成非罡
                         Tracker.mustChangeFg(-1000);
+                    }
+                };
+                yield return new Command_Action
+                {
+                    defaultLabel = "来个心素",
+                    defaultDesc = "心素",
+                    icon = ContentFinder<Texture2D>.Get("Ability/Base/LG"),
+                    action = delegate
+                    {
+                        // 创建事件参数
+                        IncidentParms parms = new IncidentParms();
+                        parms.target = Find.CurrentMap; // 设置事件目标为当前地图
+                        // 触发事件，游荡心素、
+                        IncidentDef1Of.Nz_XinSuWandersIn.Worker.TryExecute(parms);
+
                     }
                 };
             }
