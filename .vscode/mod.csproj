@@ -42,6 +42,7 @@
 		<Compile Include="../Source/Abilities/AoJing/*" />
 		<Compile Include="../Source/Abilities/Common/*" />
 		<Compile Include="../Source/Abilities/ZuoWang/*" />
+		<Compile Include="../Source/Incidents/*" />
 		<Compile Include="../Source/Hediffs/*" />
 		<Compile Include="../Source/ModExtension/*" />
 		<Compile Include="../Source/UI/*" />

@@ -206,7 +206,7 @@ namespace NzRimImmortalBizarre
                 return true;
             }
 
-            
+
             return false;
         }
 
@@ -228,6 +228,27 @@ namespace NzRimImmortalBizarre
             }
 
             return null;
+        }
+
+        /// <summary>
+        /// 尝试在地图边缘找到一个可达的入口
+        /// </summary>
+        /// <param name="map">地图</param>
+        /// <param name="cell">入口</param>
+        /// <returns></returns>
+        public static bool TryFindEntryCell(Map map, out IntVec3 cell)
+        {
+            return CellFinder.TryFindRandomEdgeCellWith((IntVec3 c) => map.reachability.CanReachColony(c), map, CellFinder.EdgeRoadChance_Ignore, out cell);
+        }
+
+        /// <summary>
+        /// 尝试找到一个人类派系
+        /// </summary>
+        /// <param name="formerFaction"></param>
+        /// <returns></returns>
+        public static bool TryFindFormerFaction(out Faction formerFaction)
+        {
+            return Find.FactionManager.TryGetRandomNonColonyHumanlikeFaction(out formerFaction, tryMedievalOrBetter: false, allowDefeated: true);
         }
     }
 }

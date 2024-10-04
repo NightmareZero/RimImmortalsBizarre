@@ -72,7 +72,8 @@ namespace NzRimImmortalBizarre
             if (lung != null && lung.Count > 1)
             {
                 BodyPartRecord lungToRemove = lung[0];
-                bodyParts.Remove(lungToRemove);
+                //  替换为部位缺失
+                pawn.health.AddHediff(HediffMaker.MakeHediff(HediffDefOf.MissingBodyPart, pawn, lungToRemove));
             }
 
         }
