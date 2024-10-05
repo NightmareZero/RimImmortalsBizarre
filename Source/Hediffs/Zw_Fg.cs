@@ -34,6 +34,7 @@ namespace NzRimImmortalBizarre
             if (this.ageTicks % tickInterval == 0)
             {
                 this.Tracker.Tick();
+                this.energyBar?.ResetDrawCfg();
             }
 
             // TODO do something
@@ -115,6 +116,42 @@ namespace NzRimImmortalBizarre
 
                     }
                 };
+                if (this.Tracker != null && this.Tracker.bar2Num.Enabled())
+                {
+                    yield return new Command_Action
+                    {
+                        defaultLabel = "来点先天一气",
+                        defaultDesc = "给我整点先天一气",
+                        icon = ContentFinder<Texture2D>.Get("Ability/Base/LG"),
+                        action = delegate
+                        {
+                            // 生成非罡
+                            Tracker.ChangeYq(30);
+                        }
+                    };
+                    yield return new Command_Action
+                    {
+                        defaultLabel = "来一堆先天一气",
+                        defaultDesc = "整满",
+                        icon = ContentFinder<Texture2D>.Get("Ability/Base/LG"),
+                        action = delegate
+                        {
+                            // 生成非罡
+                            Tracker.ChangeYq(1000);
+                        }
+                    };
+                    yield return new Command_Action
+                    {
+                        defaultLabel = "先天一气清除",
+                        defaultDesc = "清空",
+                        icon = ContentFinder<Texture2D>.Get("Ability/Base/LG"),
+                        action = delegate
+                        {
+                            // 生成非罡
+                            Tracker.mustChangeYq(-1000);
+                        }
+                    };
+                }
             }
 
             // 能量条

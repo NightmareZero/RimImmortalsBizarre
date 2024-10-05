@@ -54,13 +54,13 @@ namespace NzRimImmortalBizarre
 			if (data.icon == null)
 			{
 				barLength = 174f;
-				barLineHeight = 20f;
 			}
 
 			// 如果只有图标
 			if (!data.bar1Num.Enabled() && !data.bar2Num.Enabled())
 			{
 				barLength = 60f;
+				barLineHeight = 20f;
 			}
 		}
 
@@ -71,7 +71,7 @@ namespace NzRimImmortalBizarre
 			Widgets.DrawWindowBackground(rect);
 
 			// 偏移量
-			float bar1Fix = (data.bar2Num == null || !data.bar2Num.Enabled()) ? 0 : 25f;
+			float bar1Fix = doubleBar() ? 0 : 15f;
 
 			// 画第一栏
 			Rect rect3 = rect2;
@@ -81,7 +81,7 @@ namespace NzRimImmortalBizarre
 			DrawBar(rect3, data.bar1Num);
 
 			// 画第二栏
-			if (data.bar2Num != null && data.bar2Num.Enabled())
+			if (doubleBar())
 			{
 				Rect rect4 = rect2;
 				rect4.width = barLength;
@@ -101,13 +101,24 @@ namespace NzRimImmortalBizarre
 		}
 		private void DrawBar(Rect rect, BarNum n)
 		{
+			// 计算大小
+			var fontLength = 60f;
+			var titleHeight = doubleBar() ? 20f : 25f;
+			var barHeight = doubleBar() ? 10f : 16f;
 			Text.Font = GameFont.Small;
-			Rect rect1 = new Rect(rect.x, rect.y, 60f, 25f);
-			Rect rect2 = new Rect(rect.x + 60f, rect.y, barLength - 10f, 25f);
-			Rect rect3 = new Rect(rect.x, rect.y + 25f, barLength, barLineHeight);
+
+			// 绘制区域
+			Rect rect1 = new Rect(rect.x, rect.y, fontLength, titleHeight); // 标题
+			Rect rect2 = new Rect(rect.x + fontLength, rect.y, barLength - 10f, titleHeight); // 间隔
+			Rect rect3 = new Rect(rect.x, rect.y + titleHeight, barLength, barHeight); // 进度条
+			// 生成内容
 			Widgets.Label(rect1, n.Label);
 			Widgets.Label(rect2, n.Num.ToString("F0") + " / " + n.Max.ToString("F0"));
 			Widgets.FillableBar(rect3, n.Num / n.Max, n.BarTex, n.EmptyBarTex, doBorder: false);
+		}
+
+		private bool doubleBar() {
+			return data.bar2Num != null && data.bar2Num.Enabled();
 		}
 
 	}

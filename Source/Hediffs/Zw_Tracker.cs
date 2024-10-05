@@ -35,7 +35,7 @@ namespace NzRimImmortalBizarre
         // 暂时关闭第二栏
         public BarNum bar2Num => new BarNum("先天一气", ref yiqi, ref yqMax)
         {
-            BarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.75f, 0.75f, 0.75f)),
+            BarTex = SolidColorMaterials.NewSolidColorTexture(new Color(1.0f, 0.84f, 0.0f)),
             enable = enableSecondBar
         };
 
@@ -84,6 +84,12 @@ namespace NzRimImmortalBizarre
         {
             feigang += value;
             feigang = Mathf.Clamp(feigang, 0, fgMax);
+        }
+
+        public void mustChangeYq(float value)
+        {
+            yiqi += value;
+            yiqi = Mathf.Clamp(yiqi, 0, yqMax);
         }
 
         /// <summary>
