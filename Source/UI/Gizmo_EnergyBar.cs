@@ -109,11 +109,10 @@ namespace NzRimImmortalBizarre
 
 			// 绘制区域
 			Rect rect1 = new Rect(rect.x, rect.y, fontLength, titleHeight); // 标题
-			Rect rect2 = new Rect(rect.x + fontLength, rect.y, barLength - 10f, titleHeight); // 间隔
-			Rect rect3 = new Rect(rect.x, rect.y + titleHeight, barLength, barHeight); // 进度条
-			// 生成内容
 			Widgets.Label(rect1, n.Label);
+			Rect rect2 = new Rect(rect.x + fontLength, rect.y, barLength - 10f, titleHeight); // 间隔
 			Widgets.Label(rect2, n.Num.ToString("F0") + " / " + n.Max.ToString("F0"));
+			Rect rect3 = new Rect(rect.x, rect.y + titleHeight, barLength, barHeight); // 进度条
 			Widgets.FillableBar(rect3, n.Num / n.Max, n.BarTex, n.EmptyBarTex, doBorder: false);
 		}
 

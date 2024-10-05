@@ -10,7 +10,7 @@
         <workerClass>NzRimImmortalBizarre.IncidentWorker_XinSuWandersIn</workerClass>
         <baseChance>1.0</baseChance>
         <populationEffect>IncreaseMedium</populationEffect>
-        <letterLabel>lost {0}</letterLabel>
+        <letterLabel>lost XinSu</letterLabel>
         <letterText>A lost {1} has wandered into the area, {PAWN_pronoun} is called {0}.\n\nCapture {PAWN_objective} before {PAWN_pronoun} causes more trouble.</letterText>
         <letterDef>NeutralEvent</letterDef>
       </IncidentDef>

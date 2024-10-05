@@ -8,4 +8,7 @@
 
     <NzRI_Zw_Scapegoat.label>李代桃僵</NzRI_Zw_Scapegoat.label>
     <NzRI_Zw_Scapegoat.description>消耗少量 &lt;color=#28BD75&gt;非罡&lt;/color&gt;，将一个人身上的负面效果转移到另一个人身上，成功会产出少量 &lt;color=#28BD75&gt;非罡&lt;/color&gt;。</NzRI_Zw_Scapegoat.description>
+
+    <NzRI_Zw_JoinUs.label>迷阵布施</NzRI_Zw_JoinUs.label>
+    <NzRI_Zw_JoinUs.description>消耗些许 &lt;color=#28BD75&gt;非罡&lt;/color&gt;，让目标产生虚假记忆，对方可能会因此加入你，成功会产出少量 &lt;color=#28BD75&gt;非罡&lt;/color&gt;。</NzRI_Zw_JoinUs.description>
 </LanguageData>

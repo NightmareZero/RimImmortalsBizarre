@@ -149,8 +149,8 @@
     <!-- 迷阵布施 -->
     <AbilityDef>
         <defName>NzRI_Zw_JoinUs</defName>
-        <label>fake memory</label>
-        <description>#TODO</description>
+        <label>join us</label>
+        <description>spend a little &lt;color=#28BD75&gt;non-gang&lt;/color&gt;, let the target produce false memories, the other party may join you because of this, and success will produce a small amount of &lt;color=#28BD75&gt;non-gang&lt;/color&gt;.</description>
         <iconPath>Ability/Base/LG</iconPath>
         <cooldownTicksRange>60</cooldownTicksRange>
         <displayOrder>200</displayOrder>
@@ -170,11 +170,14 @@
             <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
             <rEnergy>-1</rEnergy>
           </li> -->
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
+                <change>-99</change>
+            </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_JoinFaction">
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess" />
-            <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
-                <change>-99</change>
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg2">
+                <change>59</change>
             </li>
         </comps>
     </AbilityDef>

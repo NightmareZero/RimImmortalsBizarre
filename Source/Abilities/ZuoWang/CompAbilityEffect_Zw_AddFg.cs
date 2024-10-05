@@ -22,7 +22,7 @@ namespace NzRimImmortalBizarre
             bool enough = Caster.HasEnoughFeiGang(Props.change);
             if (!enough)
             {
-                Messages.Message("NzRI_Zw_ReduceFg_NotEnough".Translate(), MessageTypeDefOf.RejectInput);
+                // Messages.Message("NzRI_Zw_ReduceFg_NotEnough".Translate(), MessageTypeDefOf.RejectInput);
                 return false;
             }
 

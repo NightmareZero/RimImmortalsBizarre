@@ -3,7 +3,7 @@
     <!-- EN: a XinSu wanders in -->
     <XinSuWandersIn.label>迷茫的心素</XinSuWandersIn.label>
     <!-- EN: lost {0} -->
-    <XinSuWandersIn.letterLabel>迷茫的{0}</XinSuWandersIn.letterLabel>
+    <XinSuWandersIn.letterLabel>迷茫的心素</XinSuWandersIn.letterLabel>
     <!-- EN: A lost {1} has wandered into the area, {PAWN_pronoun} is called {0}.\n\nCapture {PAWN_objective} before {PAWN_pronoun} causes more trouble. -->
     <XinSuWandersIn.letterText>一个迷茫的{1}游荡到了这个区域，{PAWN_pronoun}叫{0}。\n\n在他/她造成更大的破坏前拘捕[PAWN_objective]。</XinSuWandersIn.letterText>
 </LanguageData>
