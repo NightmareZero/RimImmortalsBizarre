@@ -67,10 +67,6 @@ namespace NzRimImmortalBizarre
             // 在目标身上添加一个相同的疾病
             worstHealth.pawn = dest.Pawn;
             dest.Pawn.health.AddHediff(worstHealth, worstBodyPart);
-
-            // 产生少量非罡 
-            // TODO 使用其他方式
-            Caster.ChangeFeiGang(17);
         }
 
 

@@ -34,7 +34,7 @@ namespace NzRimImmortalBizarre
         /// </summary>
         /// <param name="pawn"></param>
         /// <returns></returns>
-        public static Zw_Fg GetFeiGang(Pawn pawn)
+        public static Zw_Fg GetFeiGangHediff(Pawn pawn)
         {
             return (Zw_Fg)pawn.health.hediffSet.GetFirstHediffOfDef(XmlOf.NzRI_Zw_Fg);
         }
@@ -46,7 +46,7 @@ namespace NzRimImmortalBizarre
         /// <returns></returns>
         public static bool HasFeiGangHediff(Pawn pawn)
         {
-            return GetFeiGang(pawn) != null;
+            return GetFeiGangHediff(pawn) != null;
         }
 
         /// <summary>

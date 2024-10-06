@@ -12,21 +12,15 @@ namespace NzRimImmortalBizarre
 
         private Pawn Caster => parent.pawn;
 
-        public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
+        public override bool GizmoDisabled(out string reason)
         {
-            if (!base.Valid(target, throwMessages))
+            if (!Caster.HasEnoughFeiGang(Props.change))
             {
-                return false;
+                reason = "NzRI_Zw_ReduceFg_NotEnough".Translate();
+                return true;
             }
 
-            bool enough = Caster.HasEnoughFeiGang(Props.change);
-            if (!enough)
-            {
-                // Messages.Message("NzRI_Zw_ReduceFg_NotEnough".Translate(), MessageTypeDefOf.RejectInput);
-                return false;
-            }
-
-            return true;
+            return base.GizmoDisabled(out reason);
         }
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)

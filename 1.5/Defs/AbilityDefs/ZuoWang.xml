@@ -47,8 +47,7 @@
                 <onFail>-17</onFail>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg2">
-                <change>11</change>
-                <onFail>3</onFail>
+                <change>17</change>
             </li>
         </comps>
     </AbilityDef>
@@ -91,6 +90,9 @@
             <li Class="NzRimImmortalBizarre.CompProperties_DropTargetItem">
 
             </li>
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg2">
+                <change>60</change>
+            </li>
             <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy"> -->
             <!--     <rEnergy>-40</rEnergy> -->
             <!-- </li> -->
@@ -132,7 +134,7 @@
             <!--     <rEnergy>-40</rEnergy> -->
             <!-- </li> -->
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
-                <change>-12</change>
+                <change>-112</change>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess" />
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_MvIllness">
@@ -150,7 +152,7 @@
     <AbilityDef>
         <defName>NzRI_Zw_JoinUs</defName>
         <label>join us</label>
-        <description>spend a little &lt;color=#28BD75&gt;non-gang&lt;/color&gt;, let the target produce false memories, the other party may join you because of this, and success will produce a small amount of &lt;color=#28BD75&gt;non-gang&lt;/color&gt;.</description>
+        <description>spend a little &lt;color=#28BD75&gt;FeiGang&lt;/color&gt;, let the target produce false memories, the other party may join you because of this, and success will produce a small amount of &lt;color=#28BD75&gt;FeiGang&lt;/color&gt;.</description>
         <iconPath>Ability/Base/LG</iconPath>
         <cooldownTicksRange>60</cooldownTicksRange>
         <displayOrder>200</displayOrder>
@@ -287,10 +289,11 @@
         <defName>NzRI_Zw_FictionReality</defName>
         <label>fiction to reality</label>
         <cooldownTicksRange>1200</cooldownTicksRange>
-        <description>#TODO</description>
+        <description>Consume a large amount of &lt; color=#FFD700&gt; Non-Gang&lt; /color&gt; to bring an imagined item to life, but this spell is unstable and doesn't always produce any items, success will yield a large amount of &lt; color=#28BD75&gt; FeiGang&lt; /color&gt;.</description>
         <iconPath>Ability/Base/LG</iconPath>
-        <!-- <warmupStartSound>ReimplantXenogerm_Cast</warmupStartSound> -->
-        <!-- <warmupEffecter>Implant_Xenogerm</warmupEffecter> -->
+        <!-- TODO 声音是皇权的 -->
+        <warmupStartSound>Psycast_Neuroquake_CastStart</warmupStartSound>
+        <warmupSound>Psycast_Neuroquake_CastLoop</warmupSound>
         <aiCanUse>false</aiCanUse>
         <jobDef>CastAbilityOnThing</jobDef>
         <targetRequired>False</targetRequired>
@@ -299,7 +302,7 @@
         <showPsycastEffects>True</showPsycastEffects>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
-            <warmupTime>20</warmupTime>
+            <warmupTime>2</warmupTime>
             <drawAimPie>False</drawAimPie>
             <requireLineOfSight>False</requireLineOfSight>
             <targetParams>
@@ -315,13 +318,13 @@
             <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
                 <rEnergy>-1</rEnergy>
             </li> -->
-            <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
-                <change>99</change>
-            </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddYq">
                 <change>-49</change>
             </li>
-            <li Class="NzRimImmortalBizarre.FictionReality">
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
+                <change>99</change>
+            </li>
+            <!-- <li Class="NzRimImmortalBizarre.FictionReality">
                 <thingLists>
                     <li>Core</li>
                     <li>Immortal</li>
@@ -331,7 +334,7 @@
                     <li MayRequire="Ludeon.RimWorld.Biotech">Biotech</li>
                     <li MayRequire="Ludeon.RimWorld.Anomaly">Anomaly</li>
                 </thingLists>
-            </li>
+            </li> -->
 
         </comps>
     </AbilityDef>

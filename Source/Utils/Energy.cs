@@ -14,7 +14,7 @@ namespace NzRimImmortalBizarre
         /// <returns>是否有足够的非罡(通常是消耗的时候)</returns>
         public static bool ChangeFeiGang(this Pawn pawn, float value)
         {
-            Zw_Fg fg = GetFeiGang(pawn);
+            Zw_Fg fg = GetFeiGangHediff(pawn);
             #if DEBUG
             Log.Message("ChangeFeiGang: " + value);
             #endif
@@ -45,7 +45,7 @@ namespace NzRimImmortalBizarre
         /// <returns></returns>
         public static bool ChangeYiQi(this Pawn pawn, float value)
         {
-            Zw_Fg fg = GetFeiGang(pawn);
+            Zw_Fg fg = GetFeiGangHediff(pawn);
             if (fg == null)
             {
                 return false;
@@ -62,10 +62,10 @@ namespace NzRimImmortalBizarre
         /// <returns></returns>
         public static bool HasEnoughFeiGang(this Pawn pawn, float value)
         {
-            Zw_Fg fg = GetFeiGang(pawn);
+            Zw_Fg fg = GetFeiGangHediff(pawn);
             if (fg == null)
             {
-                return false;
+                return true;
             }
 
             return fg.Tracker.EnoughFg(value);
@@ -79,10 +79,10 @@ namespace NzRimImmortalBizarre
         /// <returns></returns>
         public static bool HasEnoughYiQi(this Pawn pawn, float value)
         {
-            Zw_Fg fg = GetFeiGang(pawn);
+            Zw_Fg fg = GetFeiGangHediff(pawn);
             if (fg == null)
             {
-                return false;
+                return true;
             }
 
             return fg.Tracker.EnoughYq(value);
