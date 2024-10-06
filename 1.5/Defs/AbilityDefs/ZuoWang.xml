@@ -324,7 +324,7 @@
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
                 <change>99</change>
             </li>
-            <!-- <li Class="NzRimImmortalBizarre.FictionReality">
+            <li Class="NzRimImmortalBizarre.FictionReality">
                 <thingLists>
                     <li>Core</li>
                     <li>Immortal</li>
@@ -334,7 +334,7 @@
                     <li MayRequire="Ludeon.RimWorld.Biotech">Biotech</li>
                     <li MayRequire="Ludeon.RimWorld.Anomaly">Anomaly</li>
                 </thingLists>
-            </li> -->
+            </li>
 
         </comps>
     </AbilityDef>
