@@ -14,4 +14,7 @@
 
     <NzRI_Zw_FictionReality.label>化虚为实</NzRI_Zw_FictionReality.label>
     <NzRI_Zw_FictionReality.description>消耗大量 &lt;color=#FFD700&gt;先天一气&lt;/color&gt;，将想象中的物品变为现实，但是这个法术并不稳定，不一定会产生什么物品，成功会产出大量 &lt;color=#28BD75&gt;非罡&lt;/color&gt;。</NzRI_Zw_FictionReality.description>
+
+    <NzRI_Zw_ReflectionInMirror.label>镜中之象</NzRI_Zw_ReflectionInMirror.label>
+    <NzRI_Zw_ReflectionInMirror.description>消耗大量 &lt;color=#FFD700&gt;先天一气&lt;/color&gt;，从虚幻与现实的镜子中取出目标的影子，由于镜子只映照出一半，所以目标会有残缺，会产出大量 &lt;color=#28BD75&gt;非罡&lt;/color&gt;。</NzRI_Zw_ReflectionInMirror.description>
 </LanguageData>

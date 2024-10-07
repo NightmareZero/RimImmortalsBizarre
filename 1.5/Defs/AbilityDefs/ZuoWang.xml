@@ -289,7 +289,7 @@
         <defName>NzRI_Zw_FictionReality</defName>
         <label>fiction to reality</label>
         <cooldownTicksRange>1200</cooldownTicksRange>
-        <description>Consume a large amount of &lt; color=#FFD700&gt; Non-Gang&lt; /color&gt; to bring an imagined item to life, but this spell is unstable and doesn't always produce any items, success will yield a large amount of &lt; color=#28BD75&gt; FeiGang&lt; /color&gt;.</description>
+        <description>Consume a large amount of &lt; color=#FFD700&gt; CongenitalQi&lt; /color&gt; to bring an imagined item to life, but this spell is unstable and doesn't always produce any items, success will yield a large amount of &lt; color=#28BD75&gt; FeiGang&lt; /color&gt;.</description>
         <iconPath>Ability/Base/LG</iconPath>
         <!-- TODO 声音是皇权的 -->
         <warmupStartSound>Psycast_Neuroquake_CastStart</warmupStartSound>
@@ -344,7 +344,7 @@
         <defName>NzRI_Zw_ReflectionInMirror</defName>
         <label>Reflection in a mirror</label>
         <cooldownTicksRange>120000</cooldownTicksRange>
-        <description>#TODO</description>
+        <description>Consume a large amount of &lt; color=#FFD700&gt; CongenitalQi&lt; /color&gt; to take the target's shadow from the mirror of illusion and reality, because the mirror only reflects half, the target will be incomplete, and will produce a large amount of &lt; color=#28BD75&gt; FeiGang&lt; /color&gt;.</description>
         <iconPath>Ability/Base/LG</iconPath>
         <!-- TODO 声音是皇权的 -->
         <warmupStartSound>Psycast_Neuroquake_CastStart</warmupStartSound>
@@ -384,6 +384,9 @@
                 <allowBoss>false</allowBoss>
                 <NewPawnHediff>NzRI_Zw_MentalCutting</NewPawnHediff>
                 <copyJunk>true</copyJunk>
+            </li>
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg2">
+                <change>89</change>
             </li>
         </comps>
     </AbilityDef>
