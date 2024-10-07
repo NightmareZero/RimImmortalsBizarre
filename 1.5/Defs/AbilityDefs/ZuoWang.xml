@@ -149,7 +149,7 @@
     </AbilityDef>
 
     <!-- 迷阵布施 -->
-    <AbilityDef>
+    <AbilityDef ParentName="RI_PsycastBase">
         <defName>NzRI_Zw_JoinUs</defName>
         <label>join us</label>
         <description>spend a little &lt;color=#28BD75&gt;FeiGang&lt;/color&gt;, let the target produce false memories, the other party may join you because of this, and success will produce a small amount of &lt;color=#28BD75&gt;FeiGang&lt;/color&gt;.</description>
@@ -185,7 +185,7 @@
     </AbilityDef>
 
     <!-- 罔天宝诰 -->
-    <AbilityDef>
+    <AbilityDef ParentName="RI_PsycastBase">
         <defName>NzRI_Zw_InvokeDeity</defName>
         <label>Invoke deity</label>
         <cooldownTicksRange>120000</cooldownTicksRange>
@@ -240,7 +240,7 @@
     </AbilityDef>
 
     <!-- 灵丹妙药 -->
-    <AbilityDef ParentName="AbilityTouchBase">
+    <AbilityDef ParentName="RI_PsycastBase">
         <defName>NzRI_Zw_Therapy</defName>
         <label>Miraculous cure</label>
         <description>#TODO</description>
@@ -285,7 +285,7 @@
     </AbilityDef>
 
     <!-- 化虚为实 -->
-    <AbilityDef>
+    <AbilityDef ParentName="RI_PsycastBase">
         <defName>NzRI_Zw_FictionReality</defName>
         <label>fiction to reality</label>
         <cooldownTicksRange>1200</cooldownTicksRange>
@@ -340,39 +340,39 @@
     </AbilityDef>
 
     <!-- 镜中之物 -->
-    <AbilityDef>
+    <AbilityDef ParentName="RI_PsycastBase">
         <defName>NzRI_Zw_ReflectionInMirror</defName>
         <label>Reflection in a mirror</label>
         <cooldownTicksRange>120000</cooldownTicksRange>
         <description>#TODO</description>
         <iconPath>Ability/Base/LG</iconPath>
-        <!-- <warmupStartSound>ReimplantXenogerm_Cast</warmupStartSound> -->
+        <!-- TODO 声音是皇权的 -->
+        <warmupStartSound>Psycast_Neuroquake_CastStart</warmupStartSound>
+        <warmupSound>Psycast_Neuroquake_CastLoop</warmupSound>        
         <!-- <warmupEffecter>Implant_Xenogerm</warmupEffecter> -->
         <aiCanUse>false</aiCanUse>
         <jobDef>CastAbilityOnThing</jobDef>
-        <targetRequired>False</targetRequired>
+        <targetRequired>True</targetRequired>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <stunTargetWhileCasting>True</stunTargetWhileCasting>
         <showPsycastEffects>True</showPsycastEffects>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
-            <warmupTime>20</warmupTime>
-            <drawAimPie>False</drawAimPie>
-            <requireLineOfSight>False</requireLineOfSight>
+            <range>3.9</range>
+            <warmupTime>6</warmupTime>
+            <drawAimPie>True</drawAimPie>
+            <requireLineOfSight>True</requireLineOfSight>
             <targetParams>
-                <canTargetSelf>true</canTargetSelf>
-                <canTargetPawns>true</canTargetPawns>
-                <canTargetBuildings>false</canTargetBuildings>
-                <canTargetAnimals>true</canTargetAnimals>
-                <canTargetHumans>true</canTargetHumans>
-                <canTargetMechs>false</canTargetMechs>
-                <canTargetItems>true</canTargetItems>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetHumans>True</canTargetHumans>
+                <canTargetAnimals>True</canTargetAnimals>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetMechs>False</canTargetMechs>
+                <canTargetItems>True</canTargetItems>
             </targetParams>
         </verbProperties>
         <comps>
-            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
-                <rEnergy>-1</rEnergy>
-            </li> -->
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddYq">
                 <change>-89</change>
             </li>
@@ -383,7 +383,7 @@
                 <allowItem>true</allowItem>
                 <allowBoss>false</allowBoss>
                 <NewPawnHediff>NzRI_Zw_MentalCutting</NewPawnHediff>
-                <copyJunk>false</copyJunk>
+                <copyJunk>true</copyJunk>
             </li>
         </comps>
     </AbilityDef>

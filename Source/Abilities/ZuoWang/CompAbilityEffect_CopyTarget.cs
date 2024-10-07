@@ -18,11 +18,16 @@ namespace NzRimImmortalBizarre
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
+
             var targetPawn = target.Pawn;
             var targetItem = target.Thing;
+#if DEBUG
+            Log.Message("CompAbilityEffect_CopyTarget. Apply. targetPawn: " + targetPawn + " targetItem: " + targetItem);
+#endif
             if (targetPawn != null)
             {
-                if (CopyPawn(targetPawn)) { 
+                if (CopyPawn(targetPawn))
+                {
                     Log.Message("Nz_CopyPawn_Copied".Translate(Caster.LabelShort));
                 }
                 return;
@@ -35,24 +40,26 @@ namespace NzRimImmortalBizarre
                 }
                 return;
             }
-
-
         }
 
         public bool CopyPawn(Pawn targetPawn)
         {
-            Pawn duplicatePawn;
-            if (Maker.TryDuplicatePawn(targetPawn, targetPawn.Position, targetPawn.Map, out duplicatePawn, targetPawn.Faction))
+            Pawn newPawn;
+            if (Maker.TryDuplicatePawn(targetPawn, targetPawn.Position, targetPawn.Map, out newPawn, targetPawn.Faction))
             {
                 // 被复制的角色的状态
-                if (Props.TargetHediff != null) {
-                    var hediff = HediffMaker.MakeHediff(Props.TargetHediff, duplicatePawn);
-                    duplicatePawn.health.AddHediff(hediff);
+                if (Props.TargetHediff != null)
+                {
+                    var hediff = HediffMaker.MakeHediff(Props.TargetHediff, targetPawn);
+                    hediff.Severity = Props.TargetHediff.initialSeverity;
+                    targetPawn.health.AddHediff(hediff);
                 }
                 // 新角色的状态
-                if (Props.NewPawnHediff != null) {
-                    var hediff = HediffMaker.MakeHediff(Props.NewPawnHediff, targetPawn);
-                    targetPawn.health.AddHediff(hediff);
+                if (Props.NewPawnHediff != null)
+                {
+                    var hediff = HediffMaker.MakeHediff(Props.NewPawnHediff, newPawn);
+                    hediff.Severity = Props.NewPawnHediff.initialSeverity;
+                    newPawn.health.AddHediff(hediff);
                 }
                 // 被复制的角色的想法
                 if (Props.TargetMind != null)
@@ -62,12 +69,15 @@ namespace NzRimImmortalBizarre
                 // 新角色的想法
                 if (Props.NewPawnMind != null)
                 {
-                    duplicatePawn.needs.mood.thoughts.memories.TryGainMemory(Props.NewPawnMind);
+                    newPawn.needs.mood.thoughts.memories.TryGainMemory(Props.NewPawnMind);
                 }
 
                 if (Props.copyJunk)
                 {
-                    CopyJunkPawnPatcher.PatchPawn(duplicatePawn);
+#if DEBUG
+                    Log.Message("Nz_CopyPawn_CopiedJunk".Translate(Caster.LabelShort));
+#endif
+                    CopyJunkPawnPatcher.PatchPawn(newPawn);
                 }
 
                 return true;
@@ -79,29 +89,36 @@ namespace NzRimImmortalBizarre
         {
             // 创建一个新的物体实例
             Thing duplicateItem = ThingMaker.MakeThing(targetItem.def, targetItem.Stuff);
-        
             // 复制原始物体的属性
-            duplicateItem.stackCount = 1;
+            duplicateItem.stackCount = targetItem.stackCount;
             duplicateItem.HitPoints = targetItem.HitPoints;
+
 
             // 如果是残次品
             if (Props.copyJunk)
             {
-                duplicateItem.HitPoints = Mathf.RoundToInt(duplicateItem.MaxHitPoints * 0.5f);
+                if (targetItem.stackCount > 1)
+                {
+                    duplicateItem.stackCount = targetItem.stackCount / 2;
+                }
+                else
+                {
+                    duplicateItem.HitPoints = Mathf.RoundToInt(duplicateItem.MaxHitPoints * 0.5f);
+                }
             }
-        
+
             // 尝试将复制的物体放置在目标位置附近
             GenPlace.TryPlaceThing(duplicateItem, targetItem.Position, targetItem.Map, ThingPlaceMode.Near);
-        
+
             return true;
         }
 
         public override bool CanApplyOn(LocalTargetInfo target, LocalTargetInfo dest)
         {
             var targetPawn = target.Pawn;
+
             if (targetPawn != null)
             {
-
                 if (targetPawn.kindDef.isBoss && !Props.allowBoss)
                 {
                     return false;
@@ -128,6 +145,7 @@ namespace NzRimImmortalBizarre
             {
                 return true;
             }
+
 
             return false;
         }
