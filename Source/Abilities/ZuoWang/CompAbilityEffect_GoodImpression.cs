@@ -36,7 +36,7 @@ namespace NzRimImmortalBizarre
                 targetPawn.needs.mood.thoughts.memories.TryGainMemory(Props.onSuccess, Caster);
                 if (targetPawn != null && Caster != targetPawn)
                 {
-                    Caster.interactions?.TryInteractWith(targetPawn, Thought1Def.WordOfJoy);
+                    Caster.interactions?.TryInteractWith(targetPawn, Thought1Def.KindWords);
                 }
             }
             else

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!-- 指甲 -->
-  <AbilityDef>
+  <AbilityDef ParentName="RI_PsycastBase">
     <defName>NzRI_AoJing_FingerNail</defName>
     <label>fingernail</label>
     <description>attach your fingernails to your aura and fire them out, dealing a small amount of damage to the enemy.</description>
@@ -51,7 +51,7 @@
   </ThingDef>
 
   <!-- 手指/脚趾 -->
-  <AbilityDef>
+  <AbilityDef ParentName="RI_PsycastBase">
     <defName>NzRI_AoJing_Finger</defName>
     <label>finger</label>
     <description>sacrifice your finger and spray acidic liquid to damage enemies</description>
@@ -97,7 +97,7 @@
   </AbilityDef>
 
   <!-- 手/脚 -->
-  <AbilityDef>
+  <AbilityDef ParentName="RI_PsycastBase">
     <defName>NzRI_AoJing_Hand</defName>
     <label>hand</label>
     <description>infuse your aura into your palm and fire it out, causing a small explosion.</description>
@@ -165,7 +165,7 @@
   </ThingDef>
 
   <!-- 胳膊/腿 -->
-  <AbilityDef>
+  <AbilityDef ParentName="RI_PsycastBase">
     <defName>NzRI_AoJing_Arm</defName>
     <label>Arm</label>
     <description>use your arm as a medium to cause multiple large explosions at the target location, dealing high damage to enemies within range.</description>

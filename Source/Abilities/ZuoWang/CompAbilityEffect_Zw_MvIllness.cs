@@ -13,16 +13,6 @@ namespace NzRimImmortalBizarre
 
         private Pawn Caster => parent.pawn;
 
-        // public override bool CanApplyOn(LocalTargetInfo target, LocalTargetInfo dest)
-        // {
-        //     if (dest.Pawn == null)
-        //     {
-        //         return false;
-        //     }
-        //     Log.Message("CompAbilityEffect_Zw_MvIllness.CanApplyOn");
-        //     return true;
-        // }
-
         private bool preApply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             if (target == null || target.Pawn == null)

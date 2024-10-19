@@ -34,9 +34,9 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy"> -->
-            <!-- <rEnergy>-40</rEnergy> -->
-            <!-- </li>             -->
+            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy"> 
+                <rEnergy>-30</rEnergy>
+            </li>            
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess" />
             <li Class="NzRimImmortalBizarre.CompProperties_GoodImpression">
                 <onSuccess>NzRI_T_GracefulWords</onSuccess>
@@ -67,7 +67,6 @@
         <statBases>
             <Ability_EntropyGain>0</Ability_EntropyGain>
             <Ability_PsyfocusCost>0</Ability_PsyfocusCost>
-            <Ability_Duration>500</Ability_Duration>
         </statBases>
         <verbProperties>
             <violent>false</violent>
@@ -86,19 +85,19 @@
             </targetParams>
         </verbProperties>
         <comps>
+            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+                <rEnergy>-40</rEnergy>
+            </li>            
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
                 <change>-30</change>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess" />
             <li Class="NzRimImmortalBizarre.CompProperties_DropTargetItem">
-
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg2">
-                <change>60</change>
+                <change>40</change>
             </li>
-            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy"> -->
-            <!--     <rEnergy>-40</rEnergy> -->
-            <!-- </li> -->
+
         </comps>
     </AbilityDef>
 
@@ -133,20 +132,26 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy"> -->
-            <!--     <rEnergy>-40</rEnergy> -->
-            <!-- </li> -->
+            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+                <rEnergy>-100</rEnergy>
+            </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
                 <change>-112</change>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess" />
+            <li Class="NzRimImmortalBizarre.CompProperties_GoodImpression">
+                <onSuccess>NzRI_T_DoWhatForMe</onSuccess>
+                <onFail>NzRI_T_DoWhatForMe</onFail>
+            </li>            
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_MvIllness">
                 <range>9.9</range>
                 <clamorType>Ability</clamorType>
                 <clamorRadius>3</clamorRadius>
                 <stunTicks>300</stunTicks>
             </li>
-
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg2">
+                <change>33</change>
+            </li>
 
         </comps>
     </AbilityDef>
@@ -178,9 +183,9 @@
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
                 <change>-99</change>
             </li>
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess" />
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_JoinFaction">
             </li>
-            <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess" />
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg2">
                 <change>59</change>
             </li>
@@ -194,8 +199,9 @@
         <cooldownTicksRange>120000</cooldownTicksRange>
         <description>#TODO</description>
         <iconPath>Ability/Base/LG</iconPath>
-        <!-- <warmupStartSound>ReimplantXenogerm_Cast</warmupStartSound> -->
-        <!-- <warmupEffecter>Implant_Xenogerm</warmupEffecter> -->
+        <!-- TODO 声音是皇权的 -->
+        <warmupStartSound>Psycast_Neuroquake_CastStart</warmupStartSound>
+        <warmupSound>Psycast_Neuroquake_CastLoop</warmupSound>
         <aiCanUse>false</aiCanUse>
         <jobDef>CastAbilityOnThing</jobDef>
         <targetRequired>False</targetRequired>

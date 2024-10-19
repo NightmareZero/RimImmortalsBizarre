@@ -23,11 +23,17 @@ namespace NzRimImmortalBizarre
         // 麻将牌
         public static HediffDef NzRI_Zw_Mahjong;
 
+        // 讨论特效，亲切
+        public static InteractionDef KindWords;
+
         // 讨论特效，笑脸
         public static InteractionDef WordOfJoy;
 
         // 讨论特效，愤怒
         public static InteractionDef Slight;
+
+        // 讨论特效，侮辱
+        public static InteractionDef Insult;
 
         public static void Init()
         {

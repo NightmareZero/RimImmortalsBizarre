@@ -51,11 +51,13 @@ namespace NzRimImmortalBizarre
                     }
                 }
 
-                // TODO Message
                 if (droped)
                 {
                     Messages.Message("NzRI_Zw_DropTargetItem_Droped".Translate(targetPawn.Name.Named("Pawn")), MessageTypeDefOf.PositiveEvent);
-                    Caster.ChangeFeiGang(17);  // TODO: 先写死
+                    if (targetPawn != null && Caster != targetPawn)
+                    {
+                        Caster.interactions?.TryInteractWith(targetPawn, Thought1Def.WordOfJoy);
+                    }
                 }
                 else
                 {
@@ -66,6 +68,10 @@ namespace NzRimImmortalBizarre
             {
                 Messages.Message("NzRI_Zw_Is_Cheater".Translate(targetPawn.Name.Named("Pawn"), Caster.Name.Named("Caster")), MessageTypeDefOf.RejectInput);
                 targetPawn.needs.mood.thoughts.memories.TryGainMemory(Thought1Def.NzRI_CheatMe, Caster);
+                if (targetPawn != null && Caster != targetPawn)
+                {
+                    Caster.interactions?.TryInteractWith(targetPawn, Thought1Def.Slight);
+                }
             }
             base.Apply(target, dest);
         }
@@ -92,9 +98,9 @@ namespace NzRimImmortalBizarre
             }
         }
 
-        
 
-   
+
+
 
 
     }

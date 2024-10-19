@@ -75,4 +75,20 @@
             </li>
         </stages>
     </ThoughtDef>
+
+    <!-- 好话 -->
+    <ThoughtDef>
+        <defName>NzRI_T_DoWhatForMe</defName>
+        <thoughtClass>Thought_MemorySocial</thoughtClass>
+        <durationDays>60</durationDays>
+        <stackLimit>300</stackLimit>
+        <stackLimitForSameOtherPawn>10</stackLimitForSameOtherPawn>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>what have you done to me! !!!</label>
+                <baseOpinionOffset>-20</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
 </Defs>
