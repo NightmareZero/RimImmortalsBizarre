@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace NzRimImmortalBizarre
 {
-    public class CompProperties_GoodImpression : CompProperties_AbilityEffect
+    public class CompProperties_SetImpression : CompProperties_AbilityEffect
     {
         // 当成功时的思想
         public ThoughtDef onSuccess;
@@ -14,9 +14,9 @@ namespace NzRimImmortalBizarre
         public ThoughtDef onFail;
 
 
-        public CompProperties_GoodImpression()
+        public CompProperties_SetImpression()
         {
-            compClass = typeof(CompAbilityEffect_GoodImpression);
+            compClass = typeof(CompAbilityEffect_SetImpression);
         }
     }
 }

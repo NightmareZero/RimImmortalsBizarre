@@ -38,7 +38,7 @@
                 <rEnergy>-30</rEnergy>
             </li>            
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess" />
-            <li Class="NzRimImmortalBizarre.CompProperties_GoodImpression">
+            <li Class="NzRimImmortalBizarre.CompProperties_SetImpression">
                 <onSuccess>NzRI_T_GracefulWords</onSuccess>
                 <onFail>NzRI_T_NonsenseWords</onFail>
             </li>
@@ -110,6 +110,7 @@
         <iconPath>Ability/Base/LG</iconPath>
         <hostile>false</hostile>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <warmupSound>PsycastCastLoop</warmupSound>
         <warmupMote>Mote_CoagulateStencil</warmupMote>
         <warmupEffecter>Coagulate</warmupEffecter>
         <statBases>
@@ -119,7 +120,7 @@
         </statBases>
         <verbProperties>
             <violent>false</violent>
-            <warmupTime>0.3</warmupTime>
+            <warmupTime>1</warmupTime>
             <range>50</range>
             <requireLineOfSight>False</requireLineOfSight>
             <targetParams>
@@ -141,7 +142,7 @@
                 <change>-112</change>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess" />
-            <li Class="NzRimImmortalBizarre.CompProperties_GoodImpression">
+            <li Class="NzRimImmortalBizarre.CompProperties_SetImpression">
                 <onSuccess>NzRI_T_DoWhatForMe</onSuccess>
                 <onFail>NzRI_T_DoWhatForMe</onFail>
             </li>            
@@ -304,7 +305,7 @@
         <iconPath>Ability/Base/LG</iconPath>
         <!-- TODO 声音是皇权的 -->
         <warmupStartSound>Psycast_Neuroquake_CastStart</warmupStartSound>
-        <warmupSound>Psycast_Neuroquake_CastLoop</warmupSound>
+        <warmupSound>PsycastCastLoop</warmupSound>
         <aiCanUse>false</aiCanUse>
         <jobDef>CastAbilityOnThing</jobDef>
         <targetRequired>False</targetRequired>

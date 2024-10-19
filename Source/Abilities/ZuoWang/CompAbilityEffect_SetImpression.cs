@@ -7,9 +7,9 @@ using NzRimImmortalBizarre;
 namespace NzRimImmortalBizarre
 {
     // CompProperties_AbilitySocialInteraction
-    public class CompAbilityEffect_GoodImpression : CompAbilityEffect
+    public class CompAbilityEffect_SetImpression : CompAbilityEffect
     {
-        public new CompProperties_GoodImpression Props => (CompProperties_GoodImpression)props;
+        public new CompProperties_SetImpression Props => (CompProperties_SetImpression)props;
 
         private Pawn Caster => parent.pawn;
 

@@ -4,6 +4,7 @@ using NzRimImmortalBizarre;
 using System.Collections.Generic;
 using System.Linq;
 using Verse.Noise;
+using Verse.Sound;
 
 namespace NzRimImmortalBizarre
 {
@@ -57,7 +58,10 @@ namespace NzRimImmortalBizarre
             // 在目标身上添加一个相同的疾病
             worstHealth.pawn = dest.Pawn;
             dest.Pawn.health.AddHediff(worstHealth, worstBodyPart);
+
+            // 播放特效
             dest.Pawn.TakeDamage(new DamageInfo(DamageDefOf.Vaporize, 1, 999f, -1f, null));
+            XmlOf.NzRI_HurtSelf.PlayOneShot(new TargetInfo(Caster.Position, Caster.Map));
 
             if (!this.GetCastSuccess())
             {
