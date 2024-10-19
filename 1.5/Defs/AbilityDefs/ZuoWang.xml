@@ -110,6 +110,8 @@
         <iconPath>Ability/Base/LG</iconPath>
         <hostile>false</hostile>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <warmupMote>Mote_CoagulateStencil</warmupMote>
+        <warmupEffecter>Coagulate</warmupEffecter>
         <statBases>
             <Ability_EntropyGain>0</Ability_EntropyGain>
             <Ability_PsyfocusCost>0</Ability_PsyfocusCost>
@@ -132,9 +134,9 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
                 <rEnergy>-100</rEnergy>
-            </li>
+            </li> -->
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
                 <change>-112</change>
             </li>

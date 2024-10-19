@@ -57,6 +57,15 @@ namespace NzRimImmortalBizarre
             // 在目标身上添加一个相同的疾病
             worstHealth.pawn = dest.Pawn;
             dest.Pawn.health.AddHediff(worstHealth, worstBodyPart);
+            dest.Pawn.TakeDamage(new DamageInfo(DamageDefOf.Vaporize, 1, 999f, -1f, null));
+
+            if (!this.GetCastSuccess())
+            {
+                dest.Pawn.mindState.mentalStateHandler
+                    .TryStartMentalState(MentalStateDefOf.Berserk, reason: this.parent.def.label.Translate());
+                return;
+            }
+
         }
 
 
