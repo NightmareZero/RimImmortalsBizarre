@@ -29,20 +29,6 @@ namespace NzRimImmortalBizarre
         // 非罡
         public static HediffDef NzRI_Zw_Fg;
 
-        // 救了我
-        public static ThoughtDef NzRI_SaveMe;
-
-        // 骗了我
-        public static ThoughtDef NzRI_CheatMe;
-
-        // 说话动听
-        public static ThoughtDef NzRI_T_GracefulWords;
-
-        // 说话难听
-        public static ThoughtDef NzRI_T_NonsenseWords;
-
-        // 麻将牌
-        public static HediffDef NzRI_Zw_Mahjong;
 
 
         static XmlOf()

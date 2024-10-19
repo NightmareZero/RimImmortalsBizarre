@@ -46,6 +46,9 @@
                 <onSuccess>11</onSuccess>
                 <onFail>-17</onFail>
             </li>
+            <li Class="CompProperties_AbilitySocialInteraction">
+                <interactionDef>WordOfJoy</interactionDef>
+              </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg2">
                 <change>17</change>
             </li>

@@ -6,6 +6,7 @@ using NzRimImmortalBizarre;
 
 namespace NzRimImmortalBizarre
 {
+    // CompProperties_AbilitySocialInteraction
     public class CompAbilityEffect_GoodImpression : CompAbilityEffect
     {
         public new CompProperties_GoodImpression Props => (CompProperties_GoodImpression)props;
@@ -14,7 +15,7 @@ namespace NzRimImmortalBizarre
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            
+
             propDefault();
             var targetPawn = target.Pawn;
             if (targetPawn == null || targetPawn == Caster)
@@ -33,25 +34,32 @@ namespace NzRimImmortalBizarre
             {
                 // 添加对应的记忆
                 targetPawn.needs.mood.thoughts.memories.TryGainMemory(Props.onSuccess, Caster);
-                // TODO Message
+                if (targetPawn != null && Caster != targetPawn)
+                {
+                    Caster.interactions?.TryInteractWith(targetPawn, Thought1Def.WordOfJoy);
+                }
             }
             else
             {
                 targetPawn.needs.mood.thoughts.memories.TryGainMemory(Props.onFail, Caster);
-                // TODO Message
+                if (targetPawn != null && Caster != targetPawn)
+                {
+                    Caster.interactions?.TryInteractWith(targetPawn, Thought1Def.Slight);
+                }
             }
             base.Apply(target, dest);
         }
 
-        private void propDefault() {
+        private void propDefault()
+        {
             // 一些默认值
             if (Props.onSuccess == null)
             {
-                Props.onSuccess = XmlOf.NzRI_T_GracefulWords;
+                Props.onSuccess = Thought1Def.NzRI_T_GracefulWords;
             }
             if (Props.onFail == null)
             {
-                Props.onFail = XmlOf.NzRI_T_NonsenseWords;
+                Props.onFail = Thought1Def.NzRI_T_NonsenseWords;
             }
 
         }

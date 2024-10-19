@@ -28,7 +28,8 @@ namespace NzRimImmortalBizarre
                 return;
             }
 
-            if (targetPawn.kindDef.isBoss) { 
+            if (targetPawn.kindDef.isBoss)
+            {
                 Messages.Message("NzRI_Zw_Is_TooPowerful".Translate(targetPawn.Name.Named("Pawn")), MessageTypeDefOf.RejectInput);
             }
 
@@ -41,12 +42,16 @@ namespace NzRimImmortalBizarre
                 }
                 // 目标加入本方
                 targetPawn.SetFaction(Caster.Faction);
-                targetPawn.needs.mood.thoughts.memories.TryGainMemory(XmlOf.NzRI_SaveMe, Caster);
+                targetPawn.needs.mood.thoughts.memories.TryGainMemory(Thought1Def.NzRI_SaveMe, Caster);
             }
             else
             {
                 Messages.Message("NzRI_Zw_Is_Cheater".Translate(targetPawn.Name.Named("Pawn"), Caster.Name.Named("Caster")), MessageTypeDefOf.RejectInput);
-                targetPawn.needs.mood.thoughts.memories.TryGainMemory(XmlOf.NzRI_CheatMe, Caster);
+                targetPawn.needs.mood.thoughts.memories.TryGainMemory(Thought1Def.NzRI_CheatMe, Caster);
+                if (targetPawn != null && Caster != targetPawn)
+                {
+                    Caster.interactions?.TryInteractWith(targetPawn, Thought1Def.Slight);
+                }
             }
         }
 

@@ -65,7 +65,7 @@ namespace NzRimImmortalBizarre
             else
             {
                 Messages.Message("NzRI_Zw_Is_Cheater".Translate(targetPawn.Name.Named("Pawn"), Caster.Name.Named("Caster")), MessageTypeDefOf.RejectInput);
-                targetPawn.needs.mood.thoughts.memories.TryGainMemory(XmlOf.NzRI_CheatMe, Caster);
+                targetPawn.needs.mood.thoughts.memories.TryGainMemory(Thought1Def.NzRI_CheatMe, Caster);
             }
             base.Apply(target, dest);
         }
