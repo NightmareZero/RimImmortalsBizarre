@@ -52,6 +52,11 @@
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg2">
                 <change>17</change>
             </li>
+            <li Class="NzRimImmortalBizarre.CompProperties_ProbabilityIncidents">
+                <probability>1</probability>
+                <maxProbability>1000</maxProbability>
+                <incidentDef>Nz_XinSuWandersIn</incidentDef>
+            </li>
         </comps>
     </AbilityDef>
 
@@ -97,7 +102,11 @@
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg2">
                 <change>40</change>
             </li>
-
+            <li Class="NzRimImmortalBizarre.CompProperties_ProbabilityIncidents">
+                <probability>1</probability>
+                <maxProbability>500</maxProbability>
+                <incidentDef>Nz_XinSuWandersIn</incidentDef>
+            </li>
         </comps>
     </AbilityDef>
 
@@ -135,9 +144,9 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
                 <rEnergy>-100</rEnergy>
-            </li> -->
+            </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
                 <change>-112</change>
             </li>
@@ -155,7 +164,11 @@
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg2">
                 <change>33</change>
             </li>
-
+            <li Class="NzRimImmortalBizarre.CompProperties_ProbabilityIncidents">
+                <probability>1</probability>
+                <maxProbability>123</maxProbability>
+                <incidentDef>Nz_XinSuWandersIn</incidentDef>
+            </li>
         </comps>
     </AbilityDef>
 
@@ -180,18 +193,25 @@
             <soundCast>PiercingSpine_Launch</soundCast>
         </verbProperties>
         <comps>
-            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
-            <rEnergy>-1</rEnergy>
-          </li> -->
+            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+            <rEnergy>110</rEnergy>
+          </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
                 <change>-99</change>
             </li>
-            <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess" />
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess" >
+                <min>30</min>
+            </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_JoinFaction">
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg2">
                 <change>59</change>
             </li>
+            <li Class="NzRimImmortalBizarre.CompProperties_ProbabilityIncidents">
+                <probability>1</probability>
+                <maxProbability>79</maxProbability>
+                <incidentDef>Nz_XinSuWandersIn</incidentDef>
+            </li>            
         </comps>
     </AbilityDef>
 
@@ -213,7 +233,7 @@
         <showPsycastEffects>True</showPsycastEffects>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
-            <warmupTime>20</warmupTime>
+            <warmupTime>8</warmupTime>
             <drawAimPie>False</drawAimPie>
             <requireLineOfSight>False</requireLineOfSight>
             <targetParams>
@@ -226,12 +246,12 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
                 <rEnergy>-1</rEnergy>
-            </li>
-            <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
+            </li> -->
+            <!-- <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
                 <change>-699</change>
-            </li>
+            </li> -->
             <li Class="NzRimImmortalBizarre.CompProperties_AreaAddHediff">
                 <hediffDef>
                     <li>NzRI_Zw_Fantasy</li>
@@ -248,6 +268,11 @@
                 <toHuman>true</toHuman>
                 <toMechanoids>false</toMechanoids>
             </li>
+            <li Class="NzRimImmortalBizarre.CompProperties_ProbabilityIncidents">
+                <probability>1</probability>
+                <maxProbability>7</maxProbability>
+                <incidentDef>Nz_XinSuWandersIn</incidentDef>
+            </li> 
         </comps>
     </AbilityDef>
 
@@ -291,7 +316,6 @@
                 <canRevive>true</canRevive>
                 <therapyTimes>2</therapyTimes>
             </li>
-
 
         </comps>
     </AbilityDef>
@@ -347,7 +371,6 @@
                     <li MayRequire="Ludeon.RimWorld.Anomaly">Anomaly</li>
                 </thingLists>
             </li>
-
         </comps>
     </AbilityDef>
 
@@ -399,7 +422,7 @@
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg2">
                 <change>89</change>
-            </li>
+            </li>           
         </comps>
     </AbilityDef>
 </Defs>

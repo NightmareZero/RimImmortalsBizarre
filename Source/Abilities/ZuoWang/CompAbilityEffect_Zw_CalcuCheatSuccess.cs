@@ -44,6 +44,8 @@ namespace NzRimImmortalBizarre
                 return;
             }
 
+            successRate = Mathf.Clamp(successRate, Props.min, Props.max);
+
             // 生成一个 0 - 100 的随机数，如果小于成功率则成功
             Props.cheatSuccess = Rand.Range(0, 100) < successRate;
 #if DEBUG

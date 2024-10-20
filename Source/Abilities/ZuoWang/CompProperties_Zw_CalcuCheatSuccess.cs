@@ -11,6 +11,10 @@ namespace NzRimImmortalBizarre
         // 是否成功
         public bool cheatSuccess = false;
 
+        public int min = 0;
+
+        public int max = 100;
+
         public bool IsCastingSuccess()
         {
             return cheatSuccess;
