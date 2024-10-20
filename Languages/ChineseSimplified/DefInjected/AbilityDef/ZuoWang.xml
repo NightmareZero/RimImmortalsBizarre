@@ -17,4 +17,10 @@
 
     <NzRI_Zw_ReflectionInMirror.label>镜中之象</NzRI_Zw_ReflectionInMirror.label>
     <NzRI_Zw_ReflectionInMirror.description>消耗大量 &lt;color=#FFD700&gt;先天一气&lt;/color&gt;，从虚幻与现实的镜子中取出目标的影子，由于镜子只映照出一半，所以目标会有残缺，会产出大量 &lt;color=#28BD75&gt;非罡&lt;/color&gt;。</NzRI_Zw_ReflectionInMirror.description>
+
+    <NzRI_Zw_InvokeDeity.label>罔天宝诰</NzRI_Zw_InvokeDeity.label>
+    <NzRI_Zw_InvokeDeity.description>消耗大量  &lt;color=#28BD75&gt;非罡&lt;/color&gt;，将司命“斗姥”暂时拉入凡间，你的敌人会因为目睹到司命，陷入到心想事成的幻觉之中，而身体由于失去控制倒地。</NzRI_Zw_InvokeDeity.description>
+
+    <NzRI_Zw_Therapy.label>灵丹妙药</NzRI_Zw_Therapy.label>
+    <NzRI_Zw_Therapy.description>消耗大量 &lt;color=#FFD700&gt;先天一气&lt;/color&gt;，短暂创造出一枚不存于世的活死人肉白骨、几乎治疗一切病痛的丹药，并喂目标服下。</NzRI_Zw_Therapy.description>
 </LanguageData>

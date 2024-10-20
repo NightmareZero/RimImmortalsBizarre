@@ -37,7 +37,7 @@ namespace NzRimImmortalBizarre
             {
                 for (int i = 0; i < Props.therapyTimes; i++)
                 {
-                    targetPawn.health.hediffSet.hediffs.Where(hediff => hediff.def.isBad).RandomElement()?.Heal(1);
+                    HealthUtility.FixWorstHealthCondition(targetPawn);
                 }
             }
         }

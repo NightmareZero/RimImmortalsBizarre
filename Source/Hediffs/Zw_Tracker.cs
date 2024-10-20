@@ -114,7 +114,7 @@ namespace NzRimImmortalBizarre
 
         }
 
-        public void Tick()
+        public void Tick(int ageTicks)
         {
 #if DEBUG
             Log.Message("Zw_Tracker.Tick: " + pawn.Name);
@@ -127,6 +127,7 @@ namespace NzRimImmortalBizarre
                 return;
             }
 
+            // 重新计算非罡上限
             try
             {
                 // 根据境界修改非罡上限
@@ -139,6 +140,25 @@ namespace NzRimImmortalBizarre
             catch (System.Exception e)
             {
                 Log.Error("Zw_Tracker.Tick: " + e);
+            }
+
+            // 每隔12小时
+            if (ageTicks % 30000 == 0)
+            {
+                try
+                {
+                    // 每次tick根据境界生成非罡
+                    var level = pawn.GetRiEnergyRootLevel();
+                    this.ChangeFg(level);
+
+                    // 每次tick根据身体部件生成先天一气
+                    var xs = pawn.GetXinSuPartCount();
+                    this.ChangeYq(xs);
+                }
+                catch (System.Exception e)
+                {
+                    Log.Error("Zw_Tracker.Tick: " + e);
+                }
             }
         }
 

@@ -33,7 +33,7 @@ namespace NzRimImmortalBizarre
             // 计算tick触发
             if (this.ageTicks % tickInterval == 0)
             {
-                this.Tracker.Tick();
+                this.Tracker.Tick(ageTicks);
                 this.energyBar?.ResetDrawCfg();
             }
 

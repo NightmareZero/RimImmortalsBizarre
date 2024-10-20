@@ -220,7 +220,7 @@
         <defName>NzRI_Zw_InvokeDeity</defName>
         <label>Invoke deity</label>
         <cooldownTicksRange>120000</cooldownTicksRange>
-        <description>#TODO</description>
+        <description>Consume a large amount of &lt;color=#28BD75&gt;FeiGang&lt;/color&gt; to temporarily bring the fate "DouLao" into the world, your enemies will fall into the illusion of success because they see the fate, and their bodies will fall to the ground due to loss of control.</description>
         <iconPath>Ability/Base/LG</iconPath>
         <!-- TODO 声音是皇权的 -->
         <warmupStartSound>Psycast_Neuroquake_CastStart</warmupStartSound>
@@ -246,12 +246,12 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
                 <rEnergy>-1</rEnergy>
-            </li> -->
-            <!-- <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
-                <change>-699</change>
-            </li> -->
+            </li>
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
+                <change>-499</change>
+            </li>
             <li Class="NzRimImmortalBizarre.CompProperties_AreaAddHediff">
                 <hediffDef>
                     <li>NzRI_Zw_Fantasy</li>
@@ -314,7 +314,7 @@
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_Therapy">
                 <canRevive>true</canRevive>
-                <therapyTimes>2</therapyTimes>
+                <therapyTimes>3</therapyTimes>
             </li>
 
         </comps>

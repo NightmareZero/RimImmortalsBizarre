@@ -324,7 +324,7 @@
         <rEnergy>-150</rEnergy>
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_Regeneration">
-        <times>2</times>
+        <times>1</times>
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
         <group>offering</group>
