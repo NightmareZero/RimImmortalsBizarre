@@ -21,7 +21,20 @@
     <NzRimImmortalBizarre.ThingList>
         <defName>Core</defName>
         <things>
-            <li></li>
+            <!-- 护盾腰带 -->
+            <li>Apparel_ShieldBelt</li>
+            <!-- 启灵装置 -->
+            <li>PsychicAmplifier</li>
+            <!-- 魔鬼素 -->
+            <li>Luciferium</li>
+            <!-- 心灵抚慰脉冲发生器 -->
+            <li>PsychicSoothePulser</li>
+            <!-- 动物心灵脉冲发生器 -->
+            <li>PsychicAnimalPulser</li>
+            <!-- 人格核心 -->
+            <li>AIPersonaCore</li>
+            <!-- 科技核心 -->
+            <li>TechprofSubpersonaCore</li>
         </things>
     </NzRimImmortalBizarre.ThingList>
 
@@ -37,7 +50,24 @@
     <NzRimImmortalBizarre.ThingList MayRequire="Ludeon.RimWorld.Royalty">
         <defName>Royalty</defName>
         <things>
-            <li></li>
+            <!-- 心灵权杖 -->
+            <li>MeleeWeapon_PsyfocusStaff</li>
+            <!-- 单分子剑 -->
+            <li>MeleeWeapon_MonoSword</li>
+            <!-- 等离子剑 -->
+            <li>MeleeWeapon_PlasmaSword</li>
+            <!-- 骑士装甲 -->
+            <li>Apparel_ArmorCataphract</li>
+            <!-- 肘刃 -->
+            <li>ElbowBlade</li>
+            <!-- 心灵同调装置 -->
+            <li>PsychicHarmonizer</li>
+            <!-- 心灵敏化装置 -->
+            <li>PsychicSensitizer</li>
+            <!-- 护盾核心 -->
+            <li>BroadshieldCore</li>
+            <!-- 便携盾包 -->
+            <li>Apparel_PackBroadshield</li>
         </things>
     </NzRimImmortalBizarre.ThingList>
 
@@ -45,7 +75,20 @@
     <NzRimImmortalBizarre.ThingList MayRequire="Ludeon.RimWorld.Biotech">
         <defName>Biotech</defName>
         <things>
-            <li></li>
+            <!-- 超凡胶囊 -->
+            <li>ArchiteCapsule</li>
+            <!-- 集成头套 -->
+            <li>Apparel_IntegratorHeadset</li>
+            <!-- 远程修复机械体 -->
+            <li>RemoteRepairer</li>
+            <!-- 机控中枢 -->
+            <li>Mechlink</li>
+            <!-- 机械指挥官头盔 -->
+            <li>Apparel_ArmorHelmetMechCommander</li>
+            <!-- 地狱球炮 -->
+            <li>Gun_HellsphereCannon</li>
+            <!-- 高级次元核心 -->
+            <li>SubcoreHigh</li>
         </things>
     </NzRimImmortalBizarre.ThingList>
 
@@ -53,7 +96,14 @@
     <NzRimImmortalBizarre.ThingList MayRequire="Ludeon.RimWorld.Anomaly">
         <defName>Anomaly</defName>
         <things>
-            <li></li>
+            <!-- 超凡食尸鬼复活血清胶囊 -->
+            <li>GhoulResurrectionSerum</li>
+            <!-- 古代心灵。。。 -->
+            <li>ShardAnimalPulser</li>
+            <!-- 死灵背包 -->
+            <li>Shell_Deadlife</li>
+            <!-- 大型扭曲考古科技支撑装置 -->
+            <li>TwistedArchotechSupport_Large</li>
         </things>
     </NzRimImmortalBizarre.ThingList>
 </Defs>
