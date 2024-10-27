@@ -5,6 +5,7 @@ using RimWorld;
 using NzRimImmortalBizarre;
 using System.Linq;
 using System;
+using Verse.Sound;
 
 namespace NzRimImmortalBizarre
 {
@@ -80,6 +81,9 @@ namespace NzRimImmortalBizarre
                     CopyJunkPawnPatcher.PatchPawn(newPawn);
                 }
 
+                FleckMaker.Static(newPawn.Position, parent.pawn.Map, FleckDefOf.PsycastSkipFlashEntry, 0.72f);
+                SoundDefOf.Psycast_Skip_Pulse.PlayOneShot(new TargetInfo(newPawn.Position, Caster.Map));
+
                 return true;
             }
             return false;
@@ -109,6 +113,8 @@ namespace NzRimImmortalBizarre
 
             // 尝试将复制的物体放置在目标位置附近
             GenPlace.TryPlaceThing(duplicateItem, targetItem.Position, targetItem.Map, ThingPlaceMode.Near);
+            FleckMaker.Static(duplicateItem.Position, parent.pawn.Map, FleckDefOf.PsycastSkipFlashEntry, 0.72f);
+            SoundDefOf.Psycast_Skip_Pulse.PlayOneShot(new TargetInfo(duplicateItem.Position, Caster.Map));
 
             return true;
         }
