@@ -53,7 +53,7 @@
                 <change>17</change>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_ProbabilityIncidents">
-                <probability>1</probability>
+                <probability>2</probability>
                 <maxProbability>1000</maxProbability>
                 <incidentDef>Nz_XinSuWandersIn</incidentDef>
             </li>
@@ -103,8 +103,8 @@
                 <change>40</change>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_ProbabilityIncidents">
-                <probability>1</probability>
-                <maxProbability>500</maxProbability>
+                <probability>3</probability>
+                <maxProbability>1000</maxProbability>
                 <incidentDef>Nz_XinSuWandersIn</incidentDef>
             </li>
         </comps>
@@ -165,8 +165,8 @@
                 <change>33</change>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_ProbabilityIncidents">
-                <probability>1</probability>
-                <maxProbability>123</maxProbability>
+                <probability>7</probability>
+                <maxProbability>1000</maxProbability>
                 <incidentDef>Nz_XinSuWandersIn</incidentDef>
             </li>
         </comps>
@@ -208,8 +208,8 @@
                 <change>59</change>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_ProbabilityIncidents">
-                <probability>1</probability>
-                <maxProbability>79</maxProbability>
+                <probability>11</probability>
+                <maxProbability>1000</maxProbability>
                 <incidentDef>Nz_XinSuWandersIn</incidentDef>
             </li>            
         </comps>
@@ -310,7 +310,7 @@
                 <rEnergy>-30</rEnergy>
             </li> -->
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddYq">
-                <change>-69</change>
+                <change>-49</change>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_Therapy">
                 <canRevive>true</canRevive>
@@ -409,7 +409,7 @@
         </verbProperties>
         <comps>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddYq">
-                <change>-89</change>
+                <change>-49</change>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_CopyTarget">
                 <allowHuman>true</allowHuman>
