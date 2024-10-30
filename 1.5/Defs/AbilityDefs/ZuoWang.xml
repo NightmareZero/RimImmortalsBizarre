@@ -148,7 +148,7 @@
                 <rEnergy>-100</rEnergy>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
-                <change>-112</change>
+                <change>-72</change>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess" />
             <li Class="NzRimImmortalBizarre.CompProperties_SetImpression">
@@ -270,7 +270,7 @@
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_ProbabilityIncidents">
                 <probability>1</probability>
-                <maxProbability>7</maxProbability>
+                <maxProbability>3</maxProbability>
                 <incidentDef>Nz_XinSuWandersIn</incidentDef>
             </li> 
         </comps>
