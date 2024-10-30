@@ -142,8 +142,8 @@ namespace NzRimImmortalBizarre
                 Log.Error("Zw_Tracker.Tick: " + e);
             }
 
-            // 每隔12小时
-            if (ageTicks % 30000 == 0)
+            // 每隔8小时
+            if (ageTicks % 20000 == 0)
             {
                 try
                 {
