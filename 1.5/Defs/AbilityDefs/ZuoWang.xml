@@ -9,7 +9,7 @@
             in the Strengthening foundation Realm\n\n&lt;/color&gt;Qi cost40\n\nUse spiritual energy
             to enter the target's body from both hands, instantly healing a bandaged wound.</description>
         <jobDef>CastAbilityOnThingMelee</jobDef>
-        <iconPath>Ability/Base/LG</iconPath>
+        <iconPath>Ability/Zw1</iconPath>
         <hostile>false</hostile>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <statBases>
@@ -66,7 +66,7 @@
         <label>Counterfeit trade</label>
         <description>#TODO</description>
         <jobDef>CastAbilityOnThingMelee</jobDef>
-        <iconPath>Ability/Base/LG</iconPath>
+        <iconPath>Ability/Zw2</iconPath>
         <hostile>false</hostile>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <statBases>
@@ -116,7 +116,7 @@
         <label>scapegoat</label>
         <description>#TODO</description>
         <jobDef>CastAbilityOnThingMelee</jobDef>
-        <iconPath>Ability/Base/LG</iconPath>
+        <iconPath>Ability/Zw3</iconPath>
         <hostile>false</hostile>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <warmupSound>PsycastCastLoop</warmupSound>
@@ -177,7 +177,7 @@
         <defName>NzRI_Zw_JoinUs</defName>
         <label>join us</label>
         <description>spend a little &lt;color=#28BD75&gt;FeiGang&lt;/color&gt;, let the target produce false memories, the other party may join you because of this, and success will produce a small amount of &lt;color=#28BD75&gt;FeiGang&lt;/color&gt;.</description>
-        <iconPath>Ability/Base/LG</iconPath>
+        <iconPath>Ability/Zw4</iconPath>
         <cooldownTicksRange>60</cooldownTicksRange>
         <displayOrder>200</displayOrder>
         <aiCanUse>true</aiCanUse>
@@ -221,7 +221,7 @@
         <label>Invoke deity</label>
         <cooldownTicksRange>120000</cooldownTicksRange>
         <description>Consume a large amount of &lt;color=#28BD75&gt;FeiGang&lt;/color&gt; to temporarily bring the fate "DouLao" into the world, your enemies will fall into the illusion of success because they see the fate, and their bodies will fall to the ground due to loss of control.</description>
-        <iconPath>Ability/Base/LG</iconPath>
+        <iconPath>Ability/Zw5</iconPath>
         <!-- TODO 声音是皇权的 -->
         <warmupStartSound>Psycast_Neuroquake_CastStart</warmupStartSound>
         <warmupSound>Psycast_Neuroquake_CastLoop</warmupSound>
@@ -281,7 +281,7 @@
         <defName>NzRI_Zw_Therapy</defName>
         <label>Miraculous cure</label>
         <description>#TODO</description>
-        <iconPath>Ability/Base/LG</iconPath>
+        <iconPath>Ability/Zwx3</iconPath>
         <stunTargetWhileCasting>true</stunTargetWhileCasting>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
@@ -306,9 +306,9 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
-                <rEnergy>-30</rEnergy>
-            </li> -->
+            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+                <rEnergy>-299</rEnergy>
+            </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddYq">
                 <change>-49</change>
             </li>
@@ -326,7 +326,7 @@
         <label>fiction to reality</label>
         <cooldownTicksRange>1200</cooldownTicksRange>
         <description>Consume a large amount of &lt; color=#FFD700&gt; CongenitalQi&lt; /color&gt; to bring an imagined item to life, but this spell is unstable and doesn't always produce any items, success will yield a large amount of &lt; color=#28BD75&gt; FeiGang&lt; /color&gt;.</description>
-        <iconPath>Ability/Base/LG</iconPath>
+        <iconPath>Ability/Zwx1</iconPath>
         <!-- TODO 声音是皇权的 -->
         <warmupStartSound>Psycast_Neuroquake_CastStart</warmupStartSound>
         <warmupSound>PsycastCastLoop</warmupSound>
@@ -351,9 +351,9 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
-                <rEnergy>-1</rEnergy>
-            </li> -->
+            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+                <rEnergy>-299</rEnergy>
+            </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddYq">
                 <change>-49</change>
             </li>
@@ -380,7 +380,7 @@
         <label>Reflection in a mirror</label>
         <cooldownTicksRange>120000</cooldownTicksRange>
         <description>Consume a large amount of &lt; color=#FFD700&gt; CongenitalQi&lt; /color&gt; to take the target's shadow from the mirror of illusion and reality, because the mirror only reflects half, the target will be incomplete, and will produce a large amount of &lt; color=#28BD75&gt; FeiGang&lt; /color&gt;.</description>
-        <iconPath>Ability/Base/LG</iconPath>
+        <iconPath>Ability/Zwx2</iconPath>
         <!-- TODO 声音是皇权的 -->
         <warmupStartSound>Psycast_Neuroquake_CastStart</warmupStartSound>
         <warmupSound>Psycast_Neuroquake_CastLoop</warmupSound>        
@@ -408,6 +408,9 @@
             </targetParams>
         </verbProperties>
         <comps>
+            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+                <rEnergy>-299</rEnergy>
+            </li>            
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddYq">
                 <change>-49</change>
             </li>
