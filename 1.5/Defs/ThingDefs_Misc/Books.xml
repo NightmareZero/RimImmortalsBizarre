@@ -29,4 +29,34 @@
 			</li>
 		</comps>
 	</ThingDef>
+
+	<ThingDef ParentName="RI_BookBase">
+		<defName>NzRI_BookZuowang</defName>
+		<label>Strange masks.</label>
+		<description>A strangely patterned mask that, the moment you see it, you can't help but want to wear it</description>
+		<graphicData>
+			<texPath>Things/Item/Books/ZuoWangMask</texPath>
+		</graphicData>
+		<comps>
+			<li Class="WhoXiuXian.CompProperties_BookStudiable">
+				<route>NzRI_ZuoWang</route>
+				<cost>13</cost>
+				<canCopy>true</canCopy>
+				<abilities>
+					<li>NzRI_Zw_GracefulWords</li>
+					<li>NzRI_Zw_Counterfeit</li>
+					<li>NzRI_Zw_Scapegoat</li>
+					<li>NzRI_Zw_JoinUs</li>
+					<li>NzRI_Zw_InvokeDeity</li>
+					<li>NzRI_Zw_Therapy</li>
+					<li>NzRI_Zw_FictionReality</li>
+					<li>NzRI_Zw_ReflectionInMirror</li>
+				</abilities>
+				<researchProjectDef>RI_InitialApproach</researchProjectDef>
+				<completedLetterTitle>The moment you put on {PARENT_label}, you are horrified to discover that it has fused with your face, transforming into the likeness of your own face.</completedLetterTitle>
+				<completedLetterText>After putting on {PARENT_label}, {STUDIER_labelShort} found that they seemed to possess some strange abilities.</completedLetterText>
+				<completedLetterDef>PositiveEvent</completedLetterDef>
+			</li>
+		</comps>
+	</ThingDef>
 </Defs>

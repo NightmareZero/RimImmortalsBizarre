@@ -51,4 +51,61 @@
             </li>
         </routeLevels>
     </WhoXiuXian.RI_RouteDef>
+
+    <WhoXiuXian.RI_RouteDef>
+        <defName>NzRI_ZuoWang</defName>
+        <label>zuo wang</label>
+        <description>...</description>
+        <routeLevels>
+            <li>
+                <level>1</level>
+                <abilities>
+                    <li>NzRI_Zw_GracefulWords</li>
+                    
+                </abilities>
+            </li>
+            <li>
+                <level>3</level>
+                <abilities>
+                    <li>NzRI_Zw_Counterfeit</li>
+                </abilities>
+            </li>
+            <li>
+                <level>4</level>
+                <abilities>
+                    <li>NzRI_Zw_JoinUs</li>
+                </abilities>
+            </li>
+            <li>
+                <level>5</level>
+                <abilities>
+                    <li>NzRI_Zw_FictionReality</li>
+                </abilities>
+            </li>
+            <li>
+                <level>6</level>
+                <abilities>
+                    <li>NzRI_Zw_Scapegoat</li>
+                </abilities>
+            </li>
+            <li>
+                <level>7</level>
+                <abilities>
+                    <li>NzRI_Zw_Therapy</li>
+                </abilities>
+            </li>
+            <li>
+                <level>8</level>
+                <abilities>
+                    <li>NzRI_Zw_ReflectionInMirror</li>
+                </abilities>
+            </li>
+            <li>
+                <level>9</level>
+                <abilities>
+                    <li>NzRI_Zw_InvokeDeity</li>
+                </abilities>
+            </li>                             
+        </routeLevels>
+    </WhoXiuXian.RI_RouteDef>
 </Defs>
