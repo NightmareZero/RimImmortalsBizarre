@@ -23,8 +23,8 @@
 					<li>NzRI_AoJing_Ascend</li>
 				</abilities>
 				<researchProjectDef>RI_InitialApproach</researchProjectDef>
-				<completedLetterTitle>{PARENT_label} The book couldn't withstand the test of time and has shattered.</completedLetterTitle>
-				<completedLetterText>After reading {PARENT_label}, the cultivator{STUDIER_labelShort} takes the AoJing approach as his cultivation direction!</completedLetterText>
+				<completedLetterTitle>Put on the {PARENT_label}</completedLetterTitle>
+				<completedLetterText>The moment {STUDIER_labelShort} puts on {PARENT_label}, he is horrified to find that it blends in with his face and takes on the appearance of his own face. {STUDIER_labelShort} realizes that he seems to have some strange abilities.</completedLetterText>
 				<completedLetterDef>PositiveEvent</completedLetterDef>
 			</li>
 		</comps>

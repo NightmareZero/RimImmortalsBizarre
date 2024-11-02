@@ -7,6 +7,6 @@
 
     <NzRI_BookZuowang.label>奇异的面具</NzRI_BookZuowang.label>
     <NzRI_BookZuowang.description>一只奇异图案的面具，一看到它，你就忍不住想戴上它</NzRI_BookZuowang.description>
-    <NzRI_BookZuowang.comps.CompBookStudiable.completedLetterTitle>当你戴上{PARENT_label}的瞬间，你惊恐地发现它与你的脸融为一体，变成了你自己脸的模样。</NzRI_BookZuowang.comps.CompBookStudiable.completedLetterTitle>
-    <NzRI_BookZuowang.comps.CompBookStudiable.completedLetterText>戴上{PARENT_label}后，{STUDIER_labelShort}发现自己似乎拥有了一些奇异的能力。</NzRI_BookZuowang.comps.CompBookStudiable.completedLetterText>
+    <NzRI_BookZuowang.comps.CompBookStudiable.completedLetterTitle>戴上 {PARENT_label}</NzRI_BookZuowang.comps.CompBookStudiable.completedLetterTitle>
+    <NzRI_BookZuowang.comps.CompBookStudiable.completedLetterText>当 {STUDIER_labelShort} 戴上{PARENT_label}的瞬间，惊恐地发现它和自己的脸融为一体，并且变成了自己脸的模样。{STUDIER_labelShort}发现自己似乎拥有了一些奇异的能力。</NzRI_BookZuowang.comps.CompBookStudiable.completedLetterText>
 </LanguageData>
