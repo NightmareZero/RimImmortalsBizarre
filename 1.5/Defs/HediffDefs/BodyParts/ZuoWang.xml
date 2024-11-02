@@ -5,7 +5,7 @@
         <defName>NzRI_XinSu_Eye</defName>
         <label>xinsu's eye</label>
         <labelNoun>a xinsu's eye</labelNoun>
-        <description>#TODO</description>
+        <description>The eye taken from Xinsu seems to have some special power, but it may also cause confusion</description>
         <!-- <descriptionHyperlinks><ThingDef>BionicEye</ThingDef></descriptionHyperlinks> -->
         <spawnThingOnRemoved>NzRI_XinSu_Eye</spawnThingOnRemoved> 
         <addedPartProps>

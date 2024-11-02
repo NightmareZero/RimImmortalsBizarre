@@ -11,7 +11,7 @@
         <isBad>false</isBad>
     </HediffDef>
 
-    <!-- 他是不是可能在骗我 -->
+    <!-- 麻将牌 -->
     <HediffDef>
         <defName>NzRI_Zw_Mahjong</defName>
         <label>Mahjong tiles</label>

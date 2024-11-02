@@ -9,7 +9,7 @@
         <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
         <stages>
             <li>
-                <label>save me</label>
+                <label>saved my life</label>
                 <baseOpinionOffset>33</baseOpinionOffset>
             </li>
         </stages>
@@ -38,7 +38,8 @@
         <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
         <stages>
             <li>
-                <label>This person speaks very eloquently.</label>
+                <label>speaks eloquently.</label>
+                <description>It's a pleasure to listen to this person speak.</description>
                 <baseOpinionOffset>10</baseOpinionOffset>
             </li>
         </stages>
@@ -53,7 +54,9 @@
         <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
         <stages>
             <li>
-                <label>This person is talking nonsense.</label>
+                <label>talking nonsense.</label>
+                <description>Listening to this person talk is frustrating and confusing.</description>
+
                 <baseOpinionOffset>-7</baseOpinionOffset>
             </li>
         </stages>
@@ -76,7 +79,6 @@
         </stages>
     </ThoughtDef>
 
-    <!-- 好话 -->
     <ThoughtDef>
         <defName>NzRI_T_DoWhatForMe</defName>
         <thoughtClass>Thought_MemorySocial</thoughtClass>
@@ -86,7 +88,8 @@
         <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
         <stages>
             <li>
-                <label>what have you done to me! !!!</label>
+                <label>wtf</label>
+                <description>what have you done to me! !!!</description>
                 <baseOpinionOffset>-20</baseOpinionOffset>
             </li>
         </stages>
