@@ -44,7 +44,7 @@
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_FactionFavorability">
                 <onSuccess>11</onSuccess>
-                <onFail>-17</onFail>
+                <onFail>-7</onFail>
             </li>
             <li Class="CompProperties_AbilitySocialInteraction">
                 <interactionDef>WordOfJoy</interactionDef>
