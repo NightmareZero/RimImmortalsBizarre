@@ -28,6 +28,11 @@ namespace NzRimImmortalBizarre
 
             // 调用计算和设置成功结果的方法
             SetCheatSuccess(target.Pawn);
+            if (Props.cheatSuccess) { 
+                Messages.Message("Zw_CalcuCheatSuccess_Success".Translate(Caster.LabelShort, target.Pawn.LabelShort), MessageTypeDefOf.PositiveEvent);
+            } else {
+                Messages.Message("Zw_CalcuCheatSuccess_Fail".Translate(Caster.LabelShort, target.Pawn.LabelShort), MessageTypeDefOf.NegativeEvent);
+            }
             return;
         }
 

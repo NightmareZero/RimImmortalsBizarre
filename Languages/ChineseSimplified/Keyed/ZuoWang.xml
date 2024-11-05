@@ -21,4 +21,8 @@
     <NzRI_Zw_FictionReality_NoPlace>没有地方可以放置</NzRI_Zw_FictionReality_NoPlace>
 
     <NzRI_Zw_FictionReality_Success>一个新的 {Thing} 出现了</NzRI_Zw_FictionReality_Success>
+
+    <Zw_CalcuCheatSuccess_Success>你的谎言成功了</Zw_CalcuCheatSuccess_Success>
+
+    <Zw_CalcuCheatSuccess_Fail>对方识破了你，很显然你的言辞(社交)不足以骗过他(智力)</Zw_CalcuCheatSuccess_Fail>
 </LanguageData>
