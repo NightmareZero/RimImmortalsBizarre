@@ -15,23 +15,9 @@ namespace NzRimImmortalBizarre
         public static bool ChangeFeiGang(this Pawn pawn, float value)
         {
             Zw_Fg fg = GetFeiGangHediff(pawn);
-            #if DEBUG
+#if DEBUG
             Log.Message("ChangeFeiGang: " + value);
-            #endif
-            if (fg == null)
-            {
-                #if DEBUG
-                Log.Warning("Pawn " + pawn.Name + " has no FeiGang hediff, creating one.");
-                #endif
-                // 生成一个非罡状态
-                fg = HediffMaker.MakeHediff(XmlOf.NzRI_Zw_Fg, pawn) as Zw_Fg;
-                if (value < 0) // 如果是消耗，此时已经判断消耗失败了
-                {
-                    return false;
-                }
-            }
-
-            
+#endif
 
             return fg.Tracker.ChangeFg(value);
         }
@@ -45,12 +31,10 @@ namespace NzRimImmortalBizarre
         /// <returns></returns>
         public static bool ChangeYiQi(this Pawn pawn, float value)
         {
-            Zw_Fg fg = GetFeiGangHediff(pawn);
-            if (fg == null)
-            {
-                return false;
-            }
-
+            Zw_Fg fg = AssertGetFeiGangHediff(pawn);
+#if DEBUG
+            Log.Message("ChangeYiQi: " + value);
+#endif            
             return fg.Tracker.ChangeYq(value);
         }
 
@@ -62,10 +46,15 @@ namespace NzRimImmortalBizarre
         /// <returns></returns>
         public static bool HasEnoughFeiGang(this Pawn pawn, float value)
         {
+            if (value >= 0)
+            {
+                return true;
+            }
+
             Zw_Fg fg = GetFeiGangHediff(pawn);
             if (fg == null)
             {
-                return true;
+                return false;
             }
 
             return fg.Tracker.EnoughFg(value);
@@ -79,10 +68,15 @@ namespace NzRimImmortalBizarre
         /// <returns></returns>
         public static bool HasEnoughYiQi(this Pawn pawn, float value)
         {
+            if (value >= 0)
+            {
+                return true;
+            }
+
             Zw_Fg fg = GetFeiGangHediff(pawn);
             if (fg == null)
             {
-                return true;
+                return false;
             }
 
             return fg.Tracker.EnoughYq(value);

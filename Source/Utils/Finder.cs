@@ -40,6 +40,24 @@ namespace NzRimImmortalBizarre
         }
 
         /// <summary>
+        /// 获取非罡Hediff, 如果没有则创建一个
+        /// </summary>
+        /// <param name="pawn"></param>
+        /// <returns></returns>
+        public static Zw_Fg AssertGetFeiGangHediff(Pawn pawn)
+        {
+            var fg = GetFeiGangHediff(pawn);
+            if (fg == null)
+            {
+                Log.Error("Pawn " + pawn.Name + " has no FeiGang hediff. Creating one.");
+                 // 生成一个非罡状态
+                fg = HediffMaker.MakeHediff(XmlOf.NzRI_Zw_Fg, pawn) as Zw_Fg;
+                pawn.health.AddHediff(fg);
+            }
+            return fg;
+        }
+
+        /// <summary>
         /// 是否有非罡状态
         /// </summary>
         /// <param name="pawn"></param>
