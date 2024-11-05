@@ -34,10 +34,12 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy"> 
+            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
                 <rEnergy>-30</rEnergy>
-            </li>            
-            <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess" />
+            </li>
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess">
+                <min>20</min>
+            </li>
             <li Class="NzRimImmortalBizarre.CompProperties_SetImpression">
                 <onSuccess>NzRI_T_GracefulWords</onSuccess>
                 <onFail>NzRI_T_NonsenseWords</onFail>
@@ -48,7 +50,7 @@
             </li>
             <li Class="CompProperties_AbilitySocialInteraction">
                 <interactionDef>WordOfJoy</interactionDef>
-              </li>
+            </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg2">
                 <change>17</change>
             </li>
@@ -92,11 +94,13 @@
         <comps>
             <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
                 <rEnergy>-40</rEnergy>
-            </li>            
+            </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
                 <change>-30</change>
             </li>
-            <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess" />
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess">
+                <min>20</min>
+            </li>
             <li Class="NzRimImmortalBizarre.CompProperties_DropTargetItem">
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg2">
@@ -150,11 +154,13 @@
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
                 <change>-72</change>
             </li>
-            <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess" />
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess">
+                <min>30</min>
+            </li>
             <li Class="NzRimImmortalBizarre.CompProperties_SetImpression">
                 <onSuccess>NzRI_T_DoWhatForMe</onSuccess>
                 <onFail>NzRI_T_DoWhatForMe</onFail>
-            </li>            
+            </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_MvIllness">
                 <range>9.9</range>
                 <clamorType>Ability</clamorType>
@@ -176,7 +182,9 @@
     <AbilityDef ParentName="RI_PsycastBase">
         <defName>NzRI_Zw_JoinUs</defName>
         <label>join us</label>
-        <description>spend a little &lt;color=#28BD75&gt;FeiGang&lt;/color&gt;, let the target produce false memories, the other party may join you because of this, and success will produce a small amount of &lt;color=#28BD75&gt;FeiGang&lt;/color&gt;.</description>
+        <description>spend a little &lt;color=#28BD75&gt;FeiGang&lt;/color&gt;, let the target
+            produce false memories, the other party may join you because of this, and success will
+            produce a small amount of &lt;color=#28BD75&gt;FeiGang&lt;/color&gt;.</description>
         <iconPath>Ability/Zw4</iconPath>
         <cooldownTicksRange>60</cooldownTicksRange>
         <displayOrder>200</displayOrder>
@@ -194,12 +202,12 @@
         </verbProperties>
         <comps>
             <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
-            <rEnergy>110</rEnergy>
-          </li>
+                <rEnergy>110</rEnergy>
+            </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg">
                 <change>-99</change>
             </li>
-            <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess" >
+            <li Class="NzRimImmortalBizarre.CompProperties_Zw_CalcuCheatSuccess">
                 <min>30</min>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_JoinFaction">
@@ -211,7 +219,7 @@
                 <probability>11</probability>
                 <maxProbability>1000</maxProbability>
                 <incidentDef>Nz_XinSuWandersIn</incidentDef>
-            </li>            
+            </li>
         </comps>
     </AbilityDef>
 
@@ -220,7 +228,10 @@
         <defName>NzRI_Zw_InvokeDeity</defName>
         <label>Invoke deity</label>
         <cooldownTicksRange>120000</cooldownTicksRange>
-        <description>Consume a large amount of &lt;color=#28BD75&gt;FeiGang&lt;/color&gt; to temporarily bring the fate "DouLao" into the world, your enemies will fall into the illusion of success because they see the fate, and their bodies will fall to the ground due to loss of control.</description>
+        <description>Consume a large amount of &lt;color=#28BD75&gt;FeiGang&lt;/color&gt; to
+            temporarily bring the fate "DouLao" into the world, your enemies will fall into the
+            illusion of success because they see the fate, and their bodies will fall to the ground
+            due to loss of control.</description>
         <iconPath>Ability/Zw5</iconPath>
         <!-- TODO 声音是皇权的 -->
         <warmupStartSound>Psycast_Neuroquake_CastStart</warmupStartSound>
@@ -272,7 +283,7 @@
                 <probability>1</probability>
                 <maxProbability>3</maxProbability>
                 <incidentDef>Nz_XinSuWandersIn</incidentDef>
-            </li> 
+            </li>
         </comps>
     </AbilityDef>
 
@@ -325,7 +336,10 @@
         <defName>NzRI_Zw_FictionReality</defName>
         <label>fiction to reality</label>
         <cooldownTicksRange>1200</cooldownTicksRange>
-        <description>Consume a large amount of &lt; color=#FFD700&gt; CongenitalQi&lt; /color&gt; to bring an imagined item to life, but this spell is unstable and doesn't always produce any items, success will yield a large amount of &lt; color=#28BD75&gt; FeiGang&lt; /color&gt;.</description>
+        <description>Consume a large amount of &lt; color=#FFD700&gt; CongenitalQi&lt; /color&gt; to
+            bring an imagined item to life, but this spell is unstable and doesn't always produce
+            any items, success will yield a large amount of &lt; color=#28BD75&gt; FeiGang&lt;
+            /color&gt;.</description>
         <iconPath>Ability/Zwx1</iconPath>
         <!-- TODO 声音是皇权的 -->
         <warmupStartSound>Psycast_Neuroquake_CastStart</warmupStartSound>
@@ -379,11 +393,14 @@
         <defName>NzRI_Zw_ReflectionInMirror</defName>
         <label>Reflection in a mirror</label>
         <cooldownTicksRange>120000</cooldownTicksRange>
-        <description>Consume a large amount of &lt; color=#FFD700&gt; CongenitalQi&lt; /color&gt; to take the target's shadow from the mirror of illusion and reality, because the mirror only reflects half, the target will be incomplete, and will produce a large amount of &lt; color=#28BD75&gt; FeiGang&lt; /color&gt;.</description>
+        <description>Consume a large amount of &lt; color=#FFD700&gt; CongenitalQi&lt; /color&gt; to
+            take the target's shadow from the mirror of illusion and reality, because the mirror
+            only reflects half, the target will be incomplete, and will produce a large amount of
+            &lt; color=#28BD75&gt; FeiGang&lt; /color&gt;.</description>
         <iconPath>Ability/Zwx2</iconPath>
         <!-- TODO 声音是皇权的 -->
         <warmupStartSound>Psycast_Neuroquake_CastStart</warmupStartSound>
-        <warmupSound>Psycast_Neuroquake_CastLoop</warmupSound>        
+        <warmupSound>Psycast_Neuroquake_CastLoop</warmupSound>
         <!-- <warmupEffecter>Implant_Xenogerm</warmupEffecter> -->
         <aiCanUse>false</aiCanUse>
         <jobDef>CastAbilityOnThing</jobDef>
@@ -410,7 +427,7 @@
         <comps>
             <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
                 <rEnergy>-299</rEnergy>
-            </li>            
+            </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddYq">
                 <change>-49</change>
             </li>
@@ -425,7 +442,7 @@
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Zw_AddFg2">
                 <change>89</change>
-            </li>           
+            </li>
         </comps>
     </AbilityDef>
 </Defs>
