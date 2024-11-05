@@ -49,7 +49,7 @@ namespace NzRimImmortalBizarre
             var fg = GetFeiGangHediff(pawn);
             if (fg == null)
             {
-                Log.Error("Pawn " + pawn.Name + " has no FeiGang hediff. Creating one.");
+                Log.Message("Pawn " + pawn.Name + " has no FeiGang hediff. Creating one.");
                  // 生成一个非罡状态
                 fg = HediffMaker.MakeHediff(XmlOf.NzRI_Zw_Fg, pawn) as Zw_Fg;
                 pawn.health.AddHediff(fg);

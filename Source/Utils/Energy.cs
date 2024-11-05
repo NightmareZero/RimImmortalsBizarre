@@ -14,7 +14,7 @@ namespace NzRimImmortalBizarre
         /// <returns>是否有足够的非罡(通常是消耗的时候)</returns>
         public static bool ChangeFeiGang(this Pawn pawn, float value)
         {
-            Zw_Fg fg = GetFeiGangHediff(pawn);
+            Zw_Fg fg = AssertGetFeiGangHediff(pawn);
 #if DEBUG
             Log.Message("ChangeFeiGang: " + value);
 #endif

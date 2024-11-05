@@ -15,12 +15,12 @@ namespace NzRimImmortalBizarre
         // 非罡
         private float feigang;
         // 非罡最大值
-        private float fgMax = 1000f;
+        private float fgMax = 100f;
 
         // 先天一气
         private float yiqi;
         // 先天一气最大值
-        private float yqMax = 1000f;
+        private float yqMax = 0f;
 
         public Zw_Tracker()
         {

@@ -4,7 +4,7 @@
     <ThingDef ParentName="NzRI_BodyPartBionicBase">
         <defName>NzRI_XinSu_Eye</defName>
         <label>xinsu's eye</label>
-        <description>#TODO</description>
+        <description>The eyes taken from Shinsu seemed to reflect a view that was not of this world</description>
         <descriptionHyperlinks>
             <RecipeDef>InstallBionicEye</RecipeDef>
         </descriptionHyperlinks>
