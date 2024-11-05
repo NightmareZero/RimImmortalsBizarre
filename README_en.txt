@@ -29,8 +29,17 @@ At the same time, they also specialize in healing spells for repairing their wou
 
 [h3] Zuowang Dao [/h3]
 
-working
-Zuowang Dao is a faction that specializes in deception, with most of their spells focusing on tricking the senses of their opponents, and using this to gain access to a resource known as "non-Gang", which can be used to unleash more powerful spells.
+testing...
+Zuowang Dao is a faction that specializes in deception, with most of their spells focusing on tricking the senses of their opponents, and using this to gain access to a resource known as "FeiGang", which can be used to unleash more powerful spells.
+
+[u] graceful words [/u]: Subtle compliments that make the heart grow fonder, success will generate a small amount of FeiGang.
+
+[u] counterfeit trade [/u]: Consume a small amount of FeiGang and transform into the target's coveted treasure, which the target will use their own items in exchange for
+
+[u] scapegoat [/u]: Consume a small amount of FeiGang to transfer negative effects from one person to another
+
+[u] reflection in a mirror  [/u]: Consume a large amount of CongenitalQi to take the target's shadow from the mirror of illusion and reality, 
+        because the mirror only reflects half, the target will be incomplete, and will produce a large amount of FeiGang.
 
 [h3] Zhengde Temple [/h3]
 
@@ -45,3 +54,6 @@ working
 [b]Code: [/b] [url]https://github.com/NightmareZero/RimImmortalsBizarre.git[/url]
 
 The English parts of this mod are all machine translated, if anyone would like to fix the errors and omissions, you can send me a private message or just go to Github and submit it.
+
+[b]Special Thanks:[/b] 
+路过的御宅: Helped test out a lot of bugs, effectively improving the quality of the mod!

@@ -5,9 +5,7 @@
     <AbilityDef ParentName="RI_PsycastBase">
         <defName>NzRI_Zw_GracefulWords</defName>
         <label>graceful words</label>
-        <description>&lt;color=#28BD75&gt;This technique is learned by the ElixirsStrengthen method
-            in the Strengthening foundation Realm\n\n&lt;/color&gt;Qi cost40\n\nUse spiritual energy
-            to enter the target's body from both hands, instantly healing a bandaged wound.</description>
+        <description>Subtle compliments that make the heart grow fonder, success will generate a small amount of &lt;color=#28BD75&gt;FeiGang&lt;/color&gt;.</description>
         <jobDef>CastAbilityOnThingMelee</jobDef>
         <iconPath>Ability/Zw1</iconPath>
         <hostile>false</hostile>
@@ -66,7 +64,7 @@
     <AbilityDef ParentName="RI_PsycastBase">
         <defName>NzRI_Zw_Counterfeit</defName>
         <label>Counterfeit trade</label>
-        <description>#TODO</description>
+        <description>Consume a small amount of &lt;color=#28BD75&gt;FeiGang&lt;/color&gt; and transform into the target's coveted treasure, which the target will use their own items in exchange for, and success will yield a small amount of &lt;color=#28BD75&gt;FeiGang&lt;/color&gt;.</description>
         <jobDef>CastAbilityOnThingMelee</jobDef>
         <iconPath>Ability/Zw2</iconPath>
         <hostile>false</hostile>
@@ -118,7 +116,7 @@
     <AbilityDef ParentName="RI_PsycastBase">
         <defName>NzRI_Zw_Scapegoat</defName>
         <label>scapegoat</label>
-        <description>#TODO</description>
+        <description>Consume a small amount of &lt;color=#28BD75&gt;FeiGang&lt;/color&gt; to transfer negative effects from one person to another, success yields a small amount of &lt;color=#28BD75&gt;FeiGang&lt;/color&gt;.</description>
         <jobDef>CastAbilityOnThingMelee</jobDef>
         <iconPath>Ability/Zw3</iconPath>
         <hostile>false</hostile>
@@ -336,9 +334,9 @@
         <defName>NzRI_Zw_FictionReality</defName>
         <label>fiction to reality</label>
         <cooldownTicksRange>1200</cooldownTicksRange>
-        <description>Consume a large amount of &lt; color=#FFD700&gt; CongenitalQi&lt; /color&gt; to
+        <description>Consume a large amount of &lt;color=#FFD700&gt;CongenitalQi&lt;/color&gt; to
             bring an imagined item to life, but this spell is unstable and doesn't always produce
-            any items, success will yield a large amount of &lt; color=#28BD75&gt; FeiGang&lt;
+            any items, success will yield a large amount of &lt;color=#28BD75&gt;FeiGang&lt;
             /color&gt;.</description>
         <iconPath>Ability/Zwx1</iconPath>
         <!-- TODO 声音是皇权的 -->
@@ -393,10 +391,10 @@
         <defName>NzRI_Zw_ReflectionInMirror</defName>
         <label>Reflection in a mirror</label>
         <cooldownTicksRange>120000</cooldownTicksRange>
-        <description>Consume a large amount of &lt; color=#FFD700&gt; CongenitalQi&lt; /color&gt; to
+        <description>Consume a large amount of &lt;color=#FFD700&gt;CongenitalQi&lt;/color&gt; to
             take the target's shadow from the mirror of illusion and reality, because the mirror
             only reflects half, the target will be incomplete, and will produce a large amount of
-            &lt; color=#28BD75&gt; FeiGang&lt; /color&gt;.</description>
+            &lt;color=#28BD75&gt;FeiGang&lt;/color&gt;.</description>
         <iconPath>Ability/Zwx2</iconPath>
         <!-- TODO 声音是皇权的 -->
         <warmupStartSound>Psycast_Neuroquake_CastStart</warmupStartSound>
