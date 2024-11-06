@@ -34,9 +34,10 @@ namespace NzRimImmortalBizarre
                 // 一段时间后触发事件 Nz_XinSuWandersIn
                 IncidentParms parms = new IncidentParms();
                 parms.target = Find.CurrentMap;
-                // 设置事件触发时间，10秒到180秒后
-                int delayTicks = Rand.Range(600, 10800);
-                Find.Storyteller.incidentQueue.Add(Props.incidentDef, Find.TickManager.TicksGame + delayTicks, parms);
+                IncidentDef1Of.Nz_XinSuWandersIn.Worker.TryExecute(parms);
+                // // 设置事件触发时间，10秒到180秒后
+                // int delayTicks = Rand.Range(600, 10800);
+                // Find.Storyteller.incidentQueue.Add(Props.incidentDef, Find.TickManager.TicksGame + delayTicks, parms);
             }
         }
     }

@@ -8,7 +8,8 @@ using System;
 
 namespace NzRimImmortalBizarre
 {
-    public static class MathUtil { 
+    public static class MathUtil
+    {
         private static Random random = new Random();
 
         /// <summary>
@@ -23,9 +24,15 @@ namespace NzRimImmortalBizarre
             {
                 return false;
             }
-
+            var val = random.NextDouble();
             double probability = (double)numerator / denominator;
-            return random.NextDouble() <= probability;
+            var success = val <= probability;
+
+#if DEBUG
+            Log.Message($"Probability: {numerator}/{denominator}, {val}, {success}");
+
+#endif
+            return success;
         }
     }
 }
