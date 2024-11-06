@@ -53,7 +53,7 @@
                 <change>17</change>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_ProbabilityIncidents">
-                <probability>2</probability>
+                <probability>6</probability>
                 <maxProbability>1000</maxProbability>
                 <incidentDef>Nz_XinSuWandersIn</incidentDef>
             </li>
@@ -105,7 +105,7 @@
                 <change>40</change>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_ProbabilityIncidents">
-                <probability>3</probability>
+                <probability>9</probability>
                 <maxProbability>1000</maxProbability>
                 <incidentDef>Nz_XinSuWandersIn</incidentDef>
             </li>
@@ -169,7 +169,7 @@
                 <change>33</change>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_ProbabilityIncidents">
-                <probability>7</probability>
+                <probability>21</probability>
                 <maxProbability>1000</maxProbability>
                 <incidentDef>Nz_XinSuWandersIn</incidentDef>
             </li>
@@ -214,7 +214,7 @@
                 <change>59</change>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_ProbabilityIncidents">
-                <probability>11</probability>
+                <probability>28</probability>
                 <maxProbability>1000</maxProbability>
                 <incidentDef>Nz_XinSuWandersIn</incidentDef>
             </li>
@@ -279,7 +279,7 @@
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_ProbabilityIncidents">
                 <probability>1</probability>
-                <maxProbability>3</maxProbability>
+                <maxProbability>2</maxProbability>
                 <incidentDef>Nz_XinSuWandersIn</incidentDef>
             </li>
         </comps>
