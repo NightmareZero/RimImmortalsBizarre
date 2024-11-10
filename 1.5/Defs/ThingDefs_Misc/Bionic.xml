@@ -15,6 +15,7 @@
 
     <!-- 仿生体基础 -->
     <ThingDef Name="NzRI_BodyPartBionicBase" ParentName="BodyPartBase" Abstract="True">
+        <defName>NzRI_BodyPartBionicBase</defName>
         <techLevel>Spacer</techLevel>
         <thingCategories>
             <li>BodyPartsBionic</li>
