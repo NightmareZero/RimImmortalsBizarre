@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Verse.Noise;
 using Verse.Sound;
+using System;
 
 namespace NzRimImmortalBizarre
 {
@@ -37,39 +38,70 @@ namespace NzRimImmortalBizarre
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            if (!preApply(target, dest))
+            try
             {
-                return;
-            }
+                if (!preApply(target, dest))
+                {
+                    return;
+                }
 #if DEBUG
-            Log.Message("CompAbilityEffect_Zw_MvIllness.Apply: " + target.Pawn.Name + " to " + dest.Pawn.Name);
+                Log.Message("CompAbilityEffect_Zw_MvIllness.Apply: " + target.Pawn.Name + " to " + dest.Pawn.Name);
 #endif
 
-            // 获得一处待治愈的
-            var get = Utils.TryGetWorstHealthCondition(target.Pawn, out Hediff worstHealth, out var worstBodyPart);
-            if (!get)
-            {
-                Messages.Message("NzRI_Zw_MvIllness_NoIllness".Translate(), MessageTypeDefOf.RejectInput);
-                return;
-            }
+                // 获得一处待治愈的
+#if DEBUG
+                Log.Message("CompAbilityEffect_Zw_MvIllness.Apply: Trying to get worst health condition");
+#endif
+                var get = Utils.TryGetWorstHealthCondition(target.Pawn, out Hediff worstHealth, out var worstBodyPart);
+                if (!get)
+                {
+                    Messages.Message("NzRI_Zw_MvIllness_NoIllness".Translate(), MessageTypeDefOf.RejectInput);
+                    return;
+                }
 
-            // 移除原来的疾病
-            HealthUtility.Cure(worstHealth);
-            // 在目标身上添加一个相同的疾病
-            worstHealth.pawn = dest.Pawn;
-            dest.Pawn.health.AddHediff(worstHealth, worstBodyPart);
+                if (worstHealth != null)
+                {
+                    // 移除原来的疾病
+#if DEBUG
+                    Log.Message("CompAbilityEffect_Zw_MvIllness.Apply: Curing worst health condition:" + worstHealth.def.label.Translate());
+#endif
+                    HealthUtility.Cure(worstHealth);
 
-            // 播放特效
-            dest.Pawn.TakeDamage(new DamageInfo(DamageDefOf.Vaporize, 1, 999f, -1f, null));
-            XmlOf.NzRI_HurtSelf.PlayOneShot(new TargetInfo(Caster.Position, Caster.Map));
+                    // 在目标身上添加一个相同的疾病
+                    worstHealth.pawn = dest.Pawn;
+                    dest.Pawn.health.AddHediff(worstHealth, worstBodyPart);
+                }
+                else { 
+                    // 修复身体部位
+#if DEBUG
+                    Log.Message("CompAbilityEffect_Zw_MvIllness.Apply: Fixing body part:" + worstBodyPart.def.label.Translate());
+#endif
+                    target.Pawn.health.RestorePart(worstBodyPart);
 
-            if (!this.GetCastSuccess())
-            {
-                dest.Pawn.mindState.mentalStateHandler
+                    Utils.RemoveBodyPart(dest.Pawn, worstBodyPart);
+                }
+
+
+                // 播放特效
+                dest.Pawn.TakeDamage(new DamageInfo(DamageDefOf.Vaporize, 1, 999f, -1f, null));
+                XmlOf.NzRI_HurtSelf.PlayOneShot(new TargetInfo(Caster.Position, Caster.Map));
+
+                if (!this.GetCastSuccess())
+                {
+#if DEBUG
+                    Log.Message("CompAbilityEffect_Zw_MvIllness.Apply: Cast failed, starting mental state");
+#endif
+                    dest.Pawn.mindState.mentalStateHandler
                     .TryStartMentalState(MentalStateDefOf.Berserk, reason: this.parent.def.label.Translate());
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error("NullReferenceException in CompAbilityEffect_Zw_MvIllness.Apply: " + ex.Message);
+                Log.Error("Stack Trace: " + ex.StackTrace);
                 return;
             }
-
         }
 
 

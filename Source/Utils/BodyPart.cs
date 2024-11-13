@@ -43,6 +43,27 @@ namespace NzRimImmortalBizarre
         }
 
         /// <summary>
+        /// 移除Pawn的身体部位
+        /// </summary>
+        /// <param name="pawn"></param>
+        /// <param name="part"></param>
+        public static void RemoveBodyPart(Pawn pawn, BodyPartRecord part)
+        {
+            if (pawn == null || part == null)
+            {
+                return;
+            }
+
+            // 创建一个表示身体部位缺失的 Hediff
+            Hediff_MissingPart missingPart = (Hediff_MissingPart)HediffMaker.MakeHediff(HediffDefOf.MissingBodyPart, pawn, part);
+            missingPart.lastInjury = HediffDefOf.SurgicalCut;
+            missingPart.IsFresh = true;
+
+            // 添加到 Pawn 的健康状态中
+            pawn.health.AddHediff(missingPart, part);
+        }
+
+        /// <summary>
         /// 判断Pawn是否有可受伤的身体部位
         /// </summary>
         /// <param name="pawn">目标Pawn</param>
