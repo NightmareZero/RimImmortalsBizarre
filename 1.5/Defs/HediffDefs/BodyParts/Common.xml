@@ -3,4 +3,7 @@
     <NzRimImmortalBizarre.TagDef>
         <defName>NzRI_XinSuBodyPart</defName>
     </NzRimImmortalBizarre.TagDef>
+    <NzRimImmortalBizarre.TagDef>
+        <defName>NzRI_ZhengDeBodyPart</defName>
+    </NzRimImmortalBizarre.TagDef>
 </Defs>
