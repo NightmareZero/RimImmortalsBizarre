@@ -98,8 +98,7 @@ namespace NzRimImmortalBizarre
             }
             catch (Exception ex)
             {
-                Log.Error("NullReferenceException in CompAbilityEffect_Zw_MvIllness.Apply: " + ex.Message);
-                Log.Error("Stack Trace: " + ex.StackTrace);
+                ex.PrintExceptionWithStackTrace();
                 return;
             }
         }
