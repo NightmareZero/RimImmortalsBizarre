@@ -51,20 +51,22 @@ namespace NzRimImmortalBizarre
             if (pawn == null)
             {
                 Log.Error("NzRimImmortalBizarre.CopyJunkPawnPatcher.GetRemovableBodyPartRecord: pawn is null");
-
+                return;
             }
 
             if (bodyPartDef == null)
             {
                 Log.Error("NzRimImmortalBizarre.CopyJunkPawnPatcher.GetRemovableBodyPartRecord: bodyPartDef is null");
-
+                return;
             }
 
             BodyPartRecord bodyPartRecord = pawn.health.hediffSet.GetNotMissingParts().FirstOrDefault(x => x.def == bodyPartDef);
             if (bodyPartRecord == null)
             {
-                Log.Error("NzRimImmortalBizarre.CopyJunkPawnPatcher.GetRemovableBodyPartRecord: bodyPartRecord is null");
-
+#if DEBUG
+                Log.Warning("NzRimImmortalBizarre.CopyJunkPawnPatcher.GetRemovableBodyPartRecord: bodyPartRecord is null");
+#endif
+                return;
             }
 
             // 如果有大于1个，移除一个

@@ -418,7 +418,7 @@
                 <canTargetHumans>True</canTargetHumans>
                 <canTargetAnimals>True</canTargetAnimals>
                 <canTargetBuildings>False</canTargetBuildings>
-                <canTargetMechs>False</canTargetMechs>
+                <canTargetMechs>True</canTargetMechs>
                 <canTargetItems>True</canTargetItems>
             </targetParams>
         </verbProperties>

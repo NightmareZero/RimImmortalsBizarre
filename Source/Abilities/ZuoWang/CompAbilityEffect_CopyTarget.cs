@@ -25,7 +25,9 @@ namespace NzRimImmortalBizarre
 #if DEBUG
             Log.Message("CompAbilityEffect_CopyTarget. Apply. targetPawn: " + targetPawn + " targetItem: " + targetItem);
 #endif
-            if (targetPawn != null)
+            try
+            {
+                if (targetPawn != null)
             {
                 if (CopyPawn(targetPawn))
                 {
@@ -41,6 +43,13 @@ namespace NzRimImmortalBizarre
                 }
                 return;
             }
+            }
+            catch (System.Exception e) 
+            {
+                e.PrintExceptionWithStackTrace();
+                
+            }
+            
         }
 
         public bool CopyPawn(Pawn targetPawn)
