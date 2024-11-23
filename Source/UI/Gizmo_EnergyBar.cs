@@ -67,6 +67,9 @@ namespace NzRimImmortalBizarre
 		public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)
 		{
 			Rect rect = new Rect(topLeft.x, topLeft.y, GetWidth(maxWidth), 75f);
+
+			try {
+			
 			Rect rect2 = rect.ContractedBy(2f);
 			Widgets.DrawWindowBackground(rect);
 
@@ -98,6 +101,11 @@ namespace NzRimImmortalBizarre
 
 			}
 			return new GizmoResult(GizmoState.Clear);
+
+			} catch (Exception e) {
+				e.PrintExceptionWithStackTrace();
+				return new GizmoResult(GizmoState.Clear);
+			}
 		}
 		private void DrawBar(Rect rect, BarNum n)
 		{
