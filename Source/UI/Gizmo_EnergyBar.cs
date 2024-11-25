@@ -25,8 +25,6 @@ namespace NzRimImmortalBizarre
 				// 如果没有数据, 或者数据不完整, 则不显示
 				if (data == null) return false;
 				if (data.bar1Num == null && data.bar2Num == null && data.icon == null) return false;
-				if (data.bar1Num != null && !data.bar1Num.Enabled()) return false;
-				if (data.bar2Num != null && !data.bar2Num.Enabled()) return false;
 
 				// 如果设置了不显示, 则不显示
 				return data.Visible;
