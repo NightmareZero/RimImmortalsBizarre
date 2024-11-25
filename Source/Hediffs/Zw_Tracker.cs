@@ -22,6 +22,8 @@ namespace NzRimImmortalBizarre
         // 先天一气最大值
         private float yqMax = 0f;
 
+        private bool showEnergyBar = true;
+
         public Zw_Tracker()
         {
             this.init();
@@ -42,7 +44,9 @@ namespace NzRimImmortalBizarre
         // 暂时关闭图标
         public Texture2D icon => null;
 
-        public bool Visible => enableGizmo();
+        public bool Visible { get => visible && enableGizmo(); set => this.visible = value; }
+
+        private bool visible = true;
 
         public void ExposeData()
         {

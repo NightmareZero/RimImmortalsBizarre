@@ -24,7 +24,7 @@ namespace NzRimImmortalBizarre
         Texture2D icon { get; }
 
         // 是否显示
-        bool Visible { get; }
+        bool Visible { get; set; }
     }
 
 

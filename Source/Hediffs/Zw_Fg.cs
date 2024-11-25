@@ -161,7 +161,10 @@ namespace NzRimImmortalBizarre
                 {
                     energyBar = new Gizmo_EnergyBar(Tracker);
                 }
-                yield return energyBar;
+                if (this.Tracker.Visible)
+                {
+                    yield return energyBar;
+                }
             }
 
             // 返回基类的Gizmos

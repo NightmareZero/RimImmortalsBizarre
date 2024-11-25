@@ -24,7 +24,9 @@ namespace NzRimImmortalBizarre
 			{
 				// 如果没有数据, 或者数据不完整, 则不显示
 				if (data == null) return false;
-				if (!data.bar1Num.Enabled() && !data.bar2Num.Enabled() && data.icon == null) return false;
+				if (data.bar1Num == null && data.bar2Num == null && data.icon == null) return false;
+				if (data.bar1Num != null && !data.bar1Num.Enabled()) return false;
+				if (data.bar2Num != null && !data.bar2Num.Enabled()) return false;
 
 				// 如果设置了不显示, 则不显示
 				return data.Visible;
@@ -68,42 +70,46 @@ namespace NzRimImmortalBizarre
 		{
 			Rect rect = new Rect(topLeft.x, topLeft.y, GetWidth(maxWidth), 75f);
 
-			try {
-			
-			Rect rect2 = rect.ContractedBy(2f);
-			Widgets.DrawWindowBackground(rect);
-
-			// 偏移量
-			float bar1Fix = doubleBar() ? 0 : 15f;
-
-			// 画第一栏
-			Rect rect3 = rect2;
-			rect3.width = barLength;
-			rect3.height = rect.height / 2f;
-			rect3.yMin = rect2.y + bar1Fix;
-			DrawBar(rect3, data.bar1Num);
-
-			// 画第二栏
-			if (doubleBar())
+			try
 			{
-				Rect rect4 = rect2;
-				rect4.width = barLength;
-				rect4.yMin = rect2.y + rect2.height / 2f;
-				DrawBar(rect4, data.bar2Num);
-			}
 
-			// 画图标
-			if (data.icon != null)
+				Rect rect2 = rect.ContractedBy(2f);
+				Widgets.DrawWindowBackground(rect);
+
+				// 偏移量
+				float bar1Fix = doubleBar() ? 0 : 15f;
+
+				// 画第一栏
+				Rect rect3 = rect2;
+				rect3.width = barLength;
+				rect3.height = rect.height / 2f;
+				rect3.yMin = rect2.y + bar1Fix;
+				DrawBar(rect3, data.bar1Num);
+
+				// 画第二栏
+				if (doubleBar())
+				{
+					Rect rect4 = rect2;
+					rect4.width = barLength;
+					rect4.yMin = rect2.y + rect2.height / 2f;
+					DrawBar(rect4, data.bar2Num);
+				}
+
+				// 画图标
+				if (data.icon != null)
+				{
+					Rect rect5 = new Rect(rect2.x + 125, rect2.y + 8, 50, 60);
+					GUI.DrawTexture(rect5, data.icon);
+					Text.Anchor = TextAnchor.UpperLeft;
+
+				}
+				return new GizmoResult(GizmoState.Clear);
+
+			}
+			catch (Exception e)
 			{
-				Rect rect5 = new Rect(rect2.x + 125, rect2.y + 8, 50, 60);
-				GUI.DrawTexture(rect5, data.icon);
-				Text.Anchor = TextAnchor.UpperLeft;
-
-			}
-			return new GizmoResult(GizmoState.Clear);
-
-			} catch (Exception e) {
 				e.PrintExceptionWithStackTrace();
+				this.data.Visible = false;
 				return new GizmoResult(GizmoState.Clear);
 			}
 		}
@@ -124,7 +130,8 @@ namespace NzRimImmortalBizarre
 			Widgets.FillableBar(rect3, n.Num / n.Max, n.BarTex, n.EmptyBarTex, doBorder: false);
 		}
 
-		private bool doubleBar() {
+		private bool doubleBar()
+		{
 			return data.bar2Num != null && data.bar2Num.Enabled();
 		}
 
