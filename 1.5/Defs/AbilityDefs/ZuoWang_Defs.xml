@@ -13,7 +13,31 @@
     <NzRimImmortalBizarre.ThingList MayRequire="RI.RimImmortal.Forge">
         <defName>Forge</defName>
         <things>
-            <li></li>
+            <!-- 蚩尤怒炎戟【一品】 -->
+            <li>RI_Weapon_ChiYouFlameHalberd</li>
+            <!-- 盘龙通天棍【一品】 -->
+            <li>RI_Weapon_DragonPatternStick</li>
+            <!-- 琉璃珍珠伞【一品】 -->
+            <li>RI_Weapon_GlassPearlUmbrella</li>
+            <!-- 破军剑【一品】 -->
+            <li>RI_Weapon_PojunSword</li>
+            <!-- 斩仙剑【一品】 -->
+            <li>RI_Weapon_SlayinglmmortalSword</li>
+            <!-- 雷霆连珠铳【一品】 -->
+            <li>RI_Weapon_ThunderMinigun</li>
+            <!-- 霜华弓【一品】 -->
+            <li>RI_Weapon_WhiteApeBow</li>
+            <!-- 金钵【一品】 -->
+            <li>RI_Talisman_GoldenBowl</li>
+            <!-- 捆仙绳【一品】 -->
+            <li>RI_Talisman_ImmortalBindingRope</li>
+            <!-- 紫金葫芦【一品】 -->
+            <li>RI_Talisman_PurpleGoldenGourd</li>
+            <!-- 三王玲珑塔【一品】 -->
+            <li>RI_Talisman_ThreeKingTower</li>
+            <!-- 白玉瓶【一品】 -->
+            <li>RI_Talisman_WhiteJadeVase</li>
+
         </things>
     </NzRimImmortalBizarre.ThingList>
 
@@ -42,7 +66,6 @@
     <NzRimImmortalBizarre.ThingList MayRequire="Ludeon.RimWorld.Ideology">
         <defName>Ideology</defName>
         <things>
-            <li></li>
         </things>
     </NzRimImmortalBizarre.ThingList>
 
