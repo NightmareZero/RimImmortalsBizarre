@@ -4,5 +4,6 @@
 # /*/Assemblies
 /*/Assemblies/*.pdb
 /*/Assemblies/*.dll
+/tmp
 # /.vscode
 # /Source
