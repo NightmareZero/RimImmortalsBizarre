@@ -11,9 +11,9 @@
 		<altitudeLayer>MoteOverhead</altitudeLayer>
 		<drawOffscreen>true</drawOffscreen>
 		<mote>
-			<fadeInTime>0.5</fadeInTime>
-			<solidTime>2.3</solidTime>
-			<fadeOutTime>1.0</fadeOutTime>
+			<fadeInTime>0.1</fadeInTime>
+			<solidTime>1.5</solidTime>
+			<fadeOutTime>0.5</fadeOutTime>
 		</mote>
 	</ThingDef>
 </Defs>
