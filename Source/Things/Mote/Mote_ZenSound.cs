@@ -8,17 +8,34 @@ using System.Linq;
 namespace NzRimImmortalBizarre
 {
     public class Mote_ZenSound : Mote
-    { 
+    {
         // MoteThrown
         // MoteAttached
+        private int range { get; set; } = 5;
 
-        private void invoke() { 
+        private void invoke()
+        {
             if (this.isFinished)
             {
                 return;
             }
 
-            // TODO
+            // 获取Mote所在的Cell
+            Utils.ApplyPawnInAffectedArea(this.Map, this.Position, this.range, invokeEveryPawn);
+            // SoundDefOf.ZenSound.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map, false));
+        }
+
+        private void invokeEveryPawn(Pawn pawn)
+        {
+            // 解除Pawn的所有MentalState
+            if (pawn.InMentalState)
+            {
+                pawn.MentalState.RecoverFromState();
+            }
+
+            // 给Pawn添加一个Hediff
+            Hediff hediff = HediffMaker.MakeHediff(Thought1Def.NzRI_Zd_ZenSound, pawn);
+            pawn.health.AddHediff(hediff);
         }
 
 
@@ -52,7 +69,9 @@ namespace NzRimImmortalBizarre
                 catch (System.Exception e)
                 {
                     e.PrintExceptionWithStackTrace();
-                } finally {
+                }
+                finally
+                {
                     // 标记为已完成
                     this.isFinished = true;
                     this.Destroy();

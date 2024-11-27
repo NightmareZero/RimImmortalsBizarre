@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using WhoXiuXian;
 using Core;
 using System.Linq;
+using System;
 
 namespace NzRimImmortalBizarre
 {
@@ -50,7 +51,7 @@ namespace NzRimImmortalBizarre
             if (fg == null)
             {
                 Log.Message("Pawn " + pawn.Name + " has no FeiGang hediff. Creating one.");
-                 // 生成一个非罡状态
+                // 生成一个非罡状态
                 fg = HediffMaker.MakeHediff(XmlOf.NzRI_Zw_Fg, pawn) as Zw_Fg;
                 pawn.health.AddHediff(fg);
             }
@@ -90,6 +91,52 @@ namespace NzRimImmortalBizarre
         }
 
         /// <summary>
+        /// 在影响区域内获取所有Pawn
+        /// </summary>
+        /// <param name="map">所在地图</param>
+        /// <param name="center">中心格</param>
+        /// <param name="radius">范围</param>
+        /// <returns></returns>
+        public static List<Pawn> GetPawnsInAffectedArea(Map map, IntVec3 center, float radius)
+        {
+            return GenRadial.RadialCellsAround(center, radius, true)
+                .Where(cell => cell.InBounds(map)) // 检查 cell 是否在地图边界内
+                .SelectMany(cell => cell.GetThingList(map).OfType<Pawn>())
+                .ToList();
+        }
+
+        /// <summary>
+        /// 在影响区域内获取所有Pawn, 并且对其执行action
+        /// </summary>
+        /// <param name="map">所在地图</param>
+        /// <param name="center">中心格</param>
+        /// <param name="radius">范围</param>
+        /// <param name="action">对Pawn的操作</param>
+        /// <returns></returns>
+        public static int ApplyPawnInAffectedArea(Map map, IntVec3 center, float radius, System.Action<Pawn> action)
+        {
+            var count = 0;
+            GenRadial.RadialCellsAround(center, radius, true)
+                .Where(cell => cell.InBounds(map)) // 检查 cell 是否在地图边界内
+                .SelectMany(cell => cell.GetThingList(map).OfType<Pawn>())
+                .All(pawn =>
+                {
+                    try
+                    {
+                        action(pawn);
+                        count++;
+                    }
+                    catch (Exception ex)
+                    {
+                        ex.PrintExceptionWithStackTrace();
+                    }
+                    return true;
+                });
+                
+            return count;
+        }
+
+        /// <summary>
         /// 在影响区域内获取所有Pawn, 并且对其执行action
         /// </summary>
         /// <param name="map"></param>
@@ -105,7 +152,14 @@ namespace NzRimImmortalBizarre
                 {
                     if (thing is Pawn pawn)
                     {
-                        action(pawn);
+                        try
+                        {
+                            action(pawn);
+                        }
+                        catch (Exception ex)
+                        {
+                            ex.PrintExceptionWithStackTrace();
+                        }
                         count++;
                     }
                 }

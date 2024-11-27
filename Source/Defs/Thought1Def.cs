@@ -35,6 +35,10 @@ namespace NzRimImmortalBizarre
         // 讨论特效，侮辱
         public static InteractionDef Insult;
 
+
+        // 正德 禅音
+        public static HediffDef NzRI_Zd_ZenSound;
+
         public static void Init()
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(Thought1Def));
