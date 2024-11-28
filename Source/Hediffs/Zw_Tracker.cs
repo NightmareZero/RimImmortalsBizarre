@@ -150,11 +150,11 @@ namespace NzRimImmortalBizarre
                 try
                 {
                     // 每次tick根据境界生成非罡
-                    var level = pawn.GetRiEnergyRootLevel();
+                    int level = pawn.GetRiEnergyRootLevel();
                     this.ChangeFg(level);
 
                     // 每次tick根据身体部件生成先天一气
-                    var xs = pawn.GetXinSuPartCount();
+                    int xs = pawn.GetXinSuPartCount();
                     this.ChangeYq(xs);
                 }
                 catch (System.Exception e)
