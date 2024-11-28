@@ -57,7 +57,8 @@ namespace NzRimImmortalBizarre
 			}
 
 			// 如果只有图标
-			if (!data.bar1Num.Enabled() && !data.bar2Num.Enabled())
+			if ((data.bar1Num == null || !data.bar1Num.Enabled()) &&
+			(data.bar2Num == null || !data.bar2Num.Enabled()))
 			{
 				barLength = 60f;
 				barLineHeight = 20f;
