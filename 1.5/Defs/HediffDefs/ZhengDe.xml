@@ -7,6 +7,7 @@
         <!-- 听到了禅音 -->
         <description>Heard the sound of Zen</description>
         <isBad>false</isBad>
+        <hediffClass>HediffWithComps</hediffClass>
         <comps>
             <li Class="HediffCompProperties_Disappears">
                 <disappearsAfterTicks>18000</disappearsAfterTicks>
