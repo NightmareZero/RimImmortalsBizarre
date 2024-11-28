@@ -22,8 +22,6 @@ namespace NzRimImmortalBizarre
         // 先天一气最大值
         private float yqMax = 0f;
 
-        private bool showEnergyBar = true;
-
         public Zw_Tracker()
         {
             this.init();
