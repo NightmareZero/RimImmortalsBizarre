@@ -78,7 +78,7 @@ namespace NzRimImmortalBizarre
             // 获取所有不缺失的身体部件
             var notMissingParts = pawn.health.hediffSet.GetNotMissingParts();
 
-            // 找到受伤害最小的符合要求的部件
+            // 找到符合要求的部件
             BodyPartRecord targetPart = notMissingParts
                 .Where(part => bodyPartDefs.Contains(part.def))
                 .First();

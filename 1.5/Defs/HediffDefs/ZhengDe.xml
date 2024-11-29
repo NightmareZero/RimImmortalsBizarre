@@ -17,4 +17,14 @@
         </comps>
         <stages></stages>
     </HediffDef>
+
+    <HediffDef>
+        <defName>NzRI_Zd_EatMeat</defName>
+        <!-- 食肉 -->
+        <label>eat meat</label>
+        <!-- 进食了特殊的血肉 -->
+        <description>Ate special flesh</description>
+        <isBad>false</isBad>
+        <stages></stages>
+    </HediffDef>
 </Defs>
