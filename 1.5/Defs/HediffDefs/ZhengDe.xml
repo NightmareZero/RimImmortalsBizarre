@@ -15,7 +15,28 @@
                 <canUseDecimalsShortForm>true</canUseDecimalsShortForm>
             </li>
         </comps>
-        <stages></stages>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Sight</capacity>
+                        <offset>0.25</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.10</offset>
+                    </li>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>0.10</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>0.2</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
     </HediffDef>
 
     <HediffDef>
@@ -25,6 +46,14 @@
         <!-- 进食了特殊的血肉 -->
         <description>Ate special flesh</description>
         <isBad>false</isBad>
+        <hediffClass>HediffWithComps</hediffClass>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>18000</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+                <canUseDecimalsShortForm>true</canUseDecimalsShortForm>
+            </li>
+        </comps>
         <stages></stages>
     </HediffDef>
 </Defs>
