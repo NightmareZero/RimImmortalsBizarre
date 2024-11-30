@@ -5,8 +5,10 @@
         <defName>NzRI_Zw_ZenSound</defName>
         <label>zen sound</label>
         <!-- 发出一声蕴含禅意的声音，令人幡然醒悟。\n解除迷茫和狂暴状态，同时略微增加意识和操作 -->
+        <!-- 这个技能会让你更接近 “明心” 路线 -->
         <description>Emit a sound containing Zen meaning, making people suddenly realize. Removes
-            confusion and berserk state, and slightly increases consciousness and manipulation.</description>
+            confusion and berserk state, and slightly increases consciousness and manipulation.\n\n
+            this skill will make you closer to the "Insight" route</description>
         <iconPath>Ability/AoJing4</iconPath>
         <cooldownTicksRange>1000</cooldownTicksRange>
         <aiCanUse>true</aiCanUse>
@@ -24,9 +26,9 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
-                <rEnergy>-10</rEnergy>
-            </li> -->
+            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+                <rEnergy>0</rEnergy>
+            </li>
             <li Class="NzRimImmortalBizarre.CompProperties_ZenSound">
             </li>
             <!-- <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeExplosion">
@@ -50,7 +52,63 @@
     </AbilityDef>
 
 
+  <AbilityDef ParentName="AbilityTouchBase">
     <!-- 布施 -->
+    <defName>NzRI_Zd_Almsgiving</defName>
+    <label>almsgiving</label>
+    <!-- 效仿佛祖，割肉饲鹰\n 补充目标的饱腹和休息，同时增强目标的愈合速度 -->
+    <!-- 这个技能会让你更接近 “舍身” 路线 -->
+    <description>Imitate the ancestors, cut meat to feed the eagle\n
+        Supplement the target's fullness and rest, while enhancing the target's healing speed.\n\n
+        this skill will make you closer to the "Sacrifice" route</description>
+    <iconPath>Ability/AoJing4</iconPath>
+    <stunTargetWhileCasting>true</stunTargetWhileCasting>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <warmupMote>Mote_CoagulateStencil</warmupMote>
+    <warmupEffecter>Coagulate</warmupEffecter>
+    <!-- <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound> -->
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <displayOrder>400</displayOrder>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <range>-1</range>
+      <warmupTime>1</warmupTime>
+      <targetParams>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetMechs>false</canTargetMechs>
+        <!-- <canTargetBloodfeeders>true</canTargetBloodfeeders> -->
+      </targetParams>
+    </verbProperties>
+    <statBases>
+      <Ability_Duration>800</Ability_Duration>
+    </statBases>
+    <comps>
+      <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+        <rEnergy>-40</rEnergy>
+      </li> -->
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>NzRI_Zd_Feed</hediffDef>
+        <psychic>False</psychic>
+        <replaceExisting>True</replaceExisting>
+      </li>
+      <li Class="NzRimImmortalBizarre.CompProperties_Feed">
+      </li>      
+      <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
+        <group>offering</group>
+        <level>4</level>
+        <damageMin>1</damageMin>
+        <damageMax>3</damageMax>
+      </li>
+    </comps>
+  </AbilityDef>
+
     <!-- 悟禅 -->
     <!-- 如来 -->
 </Defs>

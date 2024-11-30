@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
     <HediffDef>
-        <defName>NzRI_Zd_ZenSound</defName>
         <!-- 禅音 -->
-        <label>zen sound</label>
+        <defName>NzRI_Zd_ZenSound</defName>
         <!-- 听到了禅音 -->
+        <label>zen sound</label>
         <description>Heard the sound of Zen</description>
         <isBad>false</isBad>
         <hediffClass>HediffWithComps</hediffClass>
@@ -40,11 +40,11 @@
     </HediffDef>
 
     <HediffDef>
-        <defName>NzRI_Zd_EatMeat</defName>
-        <!-- 食肉 -->
-        <label>eat meat</label>
-        <!-- 进食了特殊的血肉 -->
-        <description>Ate special flesh</description>
+        <!-- 布施Hediff --> 
+        <defName>NzRI_Zd_Feed</defName>
+        <!-- 接受了喂养 -->
+        <label>feed</label>
+        <description>Accepted feeding</description>
         <isBad>false</isBad>
         <hediffClass>HediffWithComps</hediffClass>
         <comps>
@@ -55,5 +55,16 @@
             </li>
         </comps>
         <stages></stages>
+    </HediffDef>
+
+    <HediffDef>
+        <!-- 修行 -->
+        <defName>NzRI_Zd_Meditation</defName>
+        <label>meditation</label>
+        <!-- 当前的修行进度 -->
+        <description>Current meditation progress</description>
+        <isBad>false</isBad>
+        <hediffClass>NzRimImmortalBizarre.Zd_Zen</hediffClass>
+        <!-- <hediffClass>HediffWithComps</hediffClass> -->
     </HediffDef>
 </Defs>
