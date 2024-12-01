@@ -14,6 +14,8 @@ namespace NzRimImmortalBizarre
 
         public static SoundDef NzRI_HurtSelf;
 
+        public static SoundDef NzRI_FeedMeat;
+
         public static HediffDef Burn;
 
         public static SoundDef Explosion_GiantBomb;

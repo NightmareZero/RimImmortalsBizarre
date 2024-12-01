@@ -27,6 +27,9 @@ namespace NzRimImmortalBizarre
 
         private void invokeEveryPawn(Pawn pawn)
         {
+#if DEBUG
+            Log.Message("Mote_ZenSound.invokeEveryPawn: " + pawn.Name);
+#endif
             // 解除Pawn的所有MentalState
             if (pawn.InMentalState)
             {
@@ -43,6 +46,9 @@ namespace NzRimImmortalBizarre
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
+#if DEBUG
+            Log.Message("Mote_ZenSound.SpawnSetup");
+#endif            
 
             // 初始化后续逻辑
             this.isFinished = false; // 标记为未完成

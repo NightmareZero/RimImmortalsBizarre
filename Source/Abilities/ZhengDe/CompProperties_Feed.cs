@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace NzRimImmortalBizarre
 {
-    public class CompProperties_Feed : AbilityCompProperties { 
+    public class CompProperties_Feed : CompProperties_AbilityEffect { 
 
         public CompProperties_Feed()
         {

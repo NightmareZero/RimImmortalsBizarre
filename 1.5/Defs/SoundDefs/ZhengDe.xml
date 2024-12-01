@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
+
     <SoundDef>
-        <defName>NzRI_HurtSelf</defName>
+        <defName>NzRI_FeedMeat</defName>
         <context>MapOnly</context>
         <maxSimultaneous>1</maxSimultaneous>
         <priorityMode>PrioritizeNearest</priorityMode>
@@ -9,12 +10,11 @@
             <li>
                 <grains>
                     <li Class="AudioGrain_Folder">
-                        <clipFolderPath>HurtSelf</clipFolderPath>
+                        <clipFolderPath>Abilities/FeedMeat</clipFolderPath>
                     </li>
                 </grains>
                 <volumeRange>40</volumeRange>
             </li>
         </subSounds>
     </SoundDef>
-
 </Defs>

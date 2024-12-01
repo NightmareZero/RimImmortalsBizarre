@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace NzRimImmortalBizarre
 {
-    public class CompAbilityEffect_ZenSound : CompProperties_AbilityEffect { 
+    public class CompAbilityEffect_ZenSound : CompAbilityEffect { 
 
     }
 }

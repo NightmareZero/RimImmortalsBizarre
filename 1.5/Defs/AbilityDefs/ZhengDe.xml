@@ -26,10 +26,13 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
-                <rEnergy>0</rEnergy>
-            </li>
+            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+                <rEnergy>10</rEnergy>
+            </li> -->
             <li Class="NzRimImmortalBizarre.CompProperties_ZenSound">
+            </li>
+            <li Class="NzRimImmortalBizarre.CompProperties_PlaceMote">
+              <moteDef>NzRI_Zw_Mote_ZenSound</moteDef>
             </li>
             <!-- <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeExplosion">
                 <skillRoute>1</skillRoute>
@@ -98,10 +101,13 @@
         <psychic>False</psychic>
         <replaceExisting>True</replaceExisting>
       </li>
+      <li Class="NzRimImmortalBizarre.CompProperties_AbilityPlaySound">
+        <soundDef>NzRI_FeedMeat</soundDef>
+      </li>      
       <li Class="NzRimImmortalBizarre.CompProperties_Feed">
       </li>      
       <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
-        <group>offering</group>
+        <group>projectile</group>
         <level>4</level>
         <damageMin>1</damageMin>
         <damageMax>3</damageMax>
