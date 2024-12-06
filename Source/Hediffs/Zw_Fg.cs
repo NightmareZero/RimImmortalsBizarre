@@ -37,16 +37,6 @@ namespace NzRimImmortalBizarre
                 this.energyBar?.ResetDrawCfg();
             }
 
-            // TODO do something
-
-            // var energyRoot = pawn?.health?.hediffSet?.GetFirstHediff<Hediff_RI_EnergyRoot>();
-            // if (energyRoot == null)
-            // {
-            //     Log.Error("NzRI_ReduceFg_EnergyRootNotExist" + pawn.Name);
-            //     return;
-            // }
-
-            // energyRoot.energy.ChangeEnergy(-1);
         }
 
         public override void ExposeData()

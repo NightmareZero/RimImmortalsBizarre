@@ -33,7 +33,7 @@ namespace NzRimImmortalBizarre
                     _fruitionCache = hediff as Zd_Fruition;
                 }
             }
-            // 对果位进行处理
+            // TODO 对果位进行处理
           
         }
     }

@@ -80,15 +80,4 @@
         </comps>
         <stages></stages>
     </HediffDef>
-
-    <HediffDef>
-        <!-- 修行 -->
-        <defName>NzRI_Zd_Meditation</defName>
-        <label>meditation</label>
-        <!-- 当前的修行进度 -->
-        <description>Current meditation progress</description>
-        <isBad>false</isBad>
-        <hediffClass>NzRimImmortalBizarre.Zd_Zen</hediffClass>
-        <!-- <hediffClass>HediffWithComps</hediffClass> -->
-    </HediffDef>
 </Defs>
