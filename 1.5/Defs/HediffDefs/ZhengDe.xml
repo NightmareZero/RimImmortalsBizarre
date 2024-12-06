@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
+    <!-- 正德 果位(修行进度) -->
+    <HediffDef>
+        <defName>NzRI_Zd_Fruition</defName>
+        <label>Fruition</label>
+        <!-- <hediffClass>NzRimImmortalBizarre.Zw_Fg</hediffClass> -->
+        <description></description>
+        <isBad>false</isBad>
+        <minSeverity>0</minSeverity>
+        <maxSeverity>3000</maxSeverity>
+        <isBad>false</isBad>
+    </HediffDef>
+
+    <!-- 正德 修行中 -->
+    <HediffDef>
+        <defName>NzRI_Zd_Cultivation</defName>
+        <label>Cultivation</label>
+        <!-- <hediffClass>NzRimImmortalBizarre.Zw_Fg</hediffClass> -->
+        <description></description>
+        <isBad>false</isBad>
+        <minSeverity>0</minSeverity>
+        <maxSeverity>3000</maxSeverity>
+        <isBad>false</isBad>
+    </HediffDef>
+
     <HediffDef>
         <!-- 禅音 -->
         <defName>NzRI_Zd_ZenSound</defName>

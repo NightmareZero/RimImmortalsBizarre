@@ -17,7 +17,7 @@ namespace NzRimImmortalBizarre
         /// <returns></returns>
         public static Hediff GetAscendHediff(Pawn pawn)
         {
-            return pawn.health.hediffSet.GetFirstHediffOfDef(XmlOf.NzRI_AoJing_Ascend);
+            return pawn.health?.hediffSet?.GetFirstHediffOfDef(XmlOf.NzRI_AoJing_Ascend);
         }
 
         /// <summary>
@@ -37,7 +37,17 @@ namespace NzRimImmortalBizarre
         /// <returns></returns>
         public static Zw_Fg GetFeiGangHediff(Pawn pawn)
         {
-            return (Zw_Fg)pawn.health.hediffSet.GetFirstHediffOfDef(XmlOf.NzRI_Zw_Fg);
+            return (Zw_Fg)pawn.health?.hediffSet?.GetFirstHediffOfDef(XmlOf.NzRI_Zw_Fg);
+        }
+
+        /// <summary>
+        /// 获取果位Hediff
+        /// </summary>
+        /// <param name="pawn"></param>
+        /// <returns></returns>
+        public static Zd_Fruition GetFruitionHediff(Pawn pawn)
+        {
+            return (Zd_Fruition)pawn.health?.hediffSet?.GetFirstHediffOfDef(XmlOf.NzRI_Zd_Fruition);
         }
 
         /// <summary>

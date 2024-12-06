@@ -31,6 +31,9 @@ namespace NzRimImmortalBizarre
         // 非罡
         public static HediffDef NzRI_Zw_Fg;
 
+        // 果位
+        public static HediffDef NzRI_Zd_Fruition;
+
 
 
         static XmlOf()
