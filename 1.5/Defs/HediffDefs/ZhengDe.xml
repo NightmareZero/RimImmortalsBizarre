@@ -12,12 +12,21 @@
     </HediffDef>
 
     <!-- 正德 修行中 -->
+    <!--  ParentName="RI_InternalpelletHediff_Base" -->
     <HediffDef>
         <defName>NzRI_Zd_Cultivation</defName>
         <label>Cultivation</label>
-        <!-- <hediffClass>NzRimImmortalBizarre.Zw_Fg</hediffClass> -->
         <description>#TODO</description>
+        <defaultLabelColor>(0.39,0.68,0.96)</defaultLabelColor>
+        <scenarioCanAdd>false</scenarioCanAdd>
         <isBad>false</isBad>
+        <hediffClass>NzRimImmortalBizarre.Zd_Cultivation</hediffClass>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+            <li>
+                <compClass>NzRimImmortalBizarre.Comp_SwitchDoCultivation</compClass>
+            </li>
+        </comps>
         <minSeverity>0</minSeverity>
         <maxSeverity>3000</maxSeverity>
     </HediffDef>
@@ -62,7 +71,7 @@
     </HediffDef>
 
     <HediffDef>
-        <!-- 布施Hediff --> 
+        <!-- 布施Hediff -->
         <defName>NzRI_Zd_Feed</defName>
         <!-- 接受了喂养 -->
         <label>feed</label>

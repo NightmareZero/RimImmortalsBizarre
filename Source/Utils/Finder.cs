@@ -11,6 +11,17 @@ namespace NzRimImmortalBizarre
     public static partial class Utils
     {
         /// <summary>
+        /// 尝试获取灵根
+        /// (如果没有则返回null)
+        /// </summary>
+        /// <param name="pawn"></param>
+        /// <returns></returns>
+        public static Hediff_RI_EnergyRoot TryGetEnergyRoot(this Pawn pawn)
+        {
+            return pawn?.health?.hediffSet?.GetFirstHediffOfDef(RI_DefOf.Hediff_RI_EnergyRoot) as Hediff_RI_EnergyRoot;
+        }
+
+        /// <summary>
         /// 获取登阶Hediff
         /// </summary>
         /// <param name="pawn"></param>
@@ -41,16 +52,6 @@ namespace NzRimImmortalBizarre
         }
 
         /// <summary>
-        /// 获取果位Hediff
-        /// </summary>
-        /// <param name="pawn"></param>
-        /// <returns></returns>
-        public static Zd_Fruition GetFruitionHediff(Pawn pawn)
-        {
-            return (Zd_Fruition)pawn.health?.hediffSet?.GetFirstHediffOfDef(XmlOf.NzRI_Zd_Fruition);
-        }
-
-        /// <summary>
         /// 获取非罡Hediff, 如果没有则创建一个
         /// </summary>
         /// <param name="pawn"></param>
@@ -76,6 +77,34 @@ namespace NzRimImmortalBizarre
         public static bool HasFeiGangHediff(Pawn pawn)
         {
             return GetFeiGangHediff(pawn) != null;
+        }
+
+        /// <summary>
+        /// 获取果位Hediff, 如果没有则创建一个
+        /// </summary>
+        /// <param name="pawn"></param>
+        /// <returns></returns>
+        public static Zd_Fruition AssertGetFruitionHediff(Pawn pawn)
+        {
+            var fruition = GetFruitionHediff(pawn);
+            if (fruition == null)
+            {
+                Log.Message("Pawn " + pawn.Name + " has no Fruition hediff. Creating one.");
+                // 生成一个果位状态
+                fruition = HediffMaker.MakeHediff(XmlOf.NzRI_Zd_Fruition, pawn) as Zd_Fruition;
+                pawn.health.AddHediff(fruition);
+            }
+            return fruition;
+        }
+
+        /// <summary>
+        /// 获取果位Hediff
+        /// </summary>
+        /// <param name="pawn"></param>
+        /// <returns></returns>
+        public static Zd_Fruition GetFruitionHediff(Pawn pawn)
+        {
+            return (Zd_Fruition)pawn.health?.hediffSet?.GetFirstHediffOfDef(XmlOf.NzRI_Zd_Fruition);
         }
 
         /// <summary>
