@@ -5,11 +5,10 @@
         <defName>NzRI_Zd_Fruition</defName>
         <label>Fruition</label>
         <!-- <hediffClass>NzRimImmortalBizarre.Zw_Fg</hediffClass> -->
-        <description></description>
+        <description>#TODO</description>
         <isBad>false</isBad>
         <minSeverity>0</minSeverity>
         <maxSeverity>3000</maxSeverity>
-        <isBad>false</isBad>
     </HediffDef>
 
     <!-- 正德 修行中 -->
@@ -17,11 +16,10 @@
         <defName>NzRI_Zd_Cultivation</defName>
         <label>Cultivation</label>
         <!-- <hediffClass>NzRimImmortalBizarre.Zw_Fg</hediffClass> -->
-        <description></description>
+        <description>#TODO</description>
         <isBad>false</isBad>
         <minSeverity>0</minSeverity>
         <maxSeverity>3000</maxSeverity>
-        <isBad>false</isBad>
     </HediffDef>
 
     <HediffDef>
