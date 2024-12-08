@@ -34,6 +34,9 @@ namespace NzRimImmortalBizarre
         // 果位
         public static HediffDef NzRI_Zd_Fruition;
 
+        // 正德寺 突破Job
+        public static JobDef Job_Zd_LevelUp;
+
 
 
         static XmlOf()

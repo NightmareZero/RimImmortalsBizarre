@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
     <Zd_Cultivation_LostEnergyRoot>{pawnName} lost energy root，Cultivation stopped</Zd_Cultivation_LostEnergyRoot>
+
+    <!-- 精进 "克己" 之法 -->
+    <Zd_Fruition_LevelUp>breakthrough the "Self-restraint" method</Zd_Fruition_LevelUp>
+
+    <!-- 精进 "明心" 之法 -->
+    <Zd_Fruition_LevelUp_BuddhaNature>breakthrough the "Enlightenment" method</Zd_Fruition_LevelUp_BuddhaNature>
+
+    <!-- 精进 "舍身" 之法 -->
+    <Zd_Fruition_LevelUp_SelfSacrifice>breakthrough the "Sacrifice" method</Zd_Fruition_LevelUp_SelfSacrifice>
 </LanguageData>

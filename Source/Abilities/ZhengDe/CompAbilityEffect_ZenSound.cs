@@ -12,15 +12,18 @@ namespace NzRimImmortalBizarre
 
         public Pawn caster => parent.pawn;
 
-        public Zd_Fruition zdFruitionCache = null;
+        public Zd_Fruition _zdFruitionCache = null;
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         { 
             base.Apply(target, dest);
-            if (zdFruitionCache == null)
+            if (_zdFruitionCache == null)
             {
-                zdFruitionCache = Utils.GetFruitionHediff(caster);
+                _zdFruitionCache = Utils.AssertGetFruitionHediff(caster);
             }
+
+            // 添加佛性
+            _zdFruitionCache.Tracker.addBuddhaNature();
             
             
         }

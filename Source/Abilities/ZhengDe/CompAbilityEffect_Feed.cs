@@ -11,9 +11,19 @@ namespace NzRimImmortalBizarre
     {
         public new CompProperties_Feed Props => (CompProperties_Feed)props;
 
+        public Pawn caster => parent.pawn;
+
+        public Zd_Fruition _zdFruitionCache = null;
+
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
+            if (_zdFruitionCache == null)
+            {
+                _zdFruitionCache = Utils.AssertGetFruitionHediff(caster);
+            }
+
+
             Pawn pawn = target.Pawn;
             if (pawn != null)
             {
@@ -41,6 +51,11 @@ namespace NzRimImmortalBizarre
                     }
                 }
             }
+
+            // 添加舍身
+            _zdFruitionCache.Tracker.addSelfSacrifice();
+
+
         }
     }
 }

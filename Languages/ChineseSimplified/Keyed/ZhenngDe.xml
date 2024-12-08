@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
     <Zd_Cultivation_LostEnergyRoot>{pawnName} 失去灵根，修行停止</Zd_Cultivation_LostEnergyRoot>
+
+    <!-- 精进 "克己" 之法 -->
+    <Zd_Fruition_LevelUp>精进 "克己" 之法</Zd_Fruition_LevelUp>
+    <Zd_Fruition_LevelUp_Desc>克己之法，不求法门神通，专注修持自身</Zd_Fruition_LevelUp_Desc>
+
+    <!-- 精进 "明心" 之法 -->
+    <Zd_Fruition_LevelUp_BuddhaNature>精进 "明心" 之法</Zd_Fruition_LevelUp_BuddhaNature>
+    <Zd_Fruition_LevelUp_BuddhaNature_Desc>明心之法，主旨为向众生阐明佛理，普渡众生</Zd_Fruition_LevelUp_BuddhaNature_Desc>
+
+    <!-- 精进 "舍身" 之法 -->
+    <Zd_Fruition_LevelUp_SelfSacrifice>精进 "舍身" 之法</Zd_Fruition_LevelUp_SelfSacrifice>
+    <Zd_Fruition_LevelUp_SelfSacrifice_Desc>舍身之法，以身殉道，为众生解难</Zd_Fruition_LevelUp_SelfSacrifice_Desc>
 </LanguageData>

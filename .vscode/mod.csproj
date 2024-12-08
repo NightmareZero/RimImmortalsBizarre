@@ -46,6 +46,7 @@
 		<Compile Include="../Source/Things/Mote/*" />
 		<Compile Include="../Source/Incidents/*" />
 		<Compile Include="../Source/Hediffs/*" />
+		<Compile Include="../Source/Jobs/*" />
 		<Compile Include="../Source/Hediffs/Comps/*" />
 		<Compile Include="../Source/ModExtension/*" />
 		<Compile Include="../Source/UI/*" />
