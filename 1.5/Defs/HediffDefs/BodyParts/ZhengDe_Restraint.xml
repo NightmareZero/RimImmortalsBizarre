@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <!-- 克己相关身体部件 -->
+
+    <!-- 虔诚心 -->
+
+    <!-- 笃行腿 -->
+    <!-- 移动速度 -->
+
+    <!-- 行思腿 -->
+    <!-- 研究速度 -->
+
+    <!-- 匠心臂 -->
+    <!-- 加手工 -->
+
+    <!-- 勤工臂 -->
+    <!-- 工作效率 -->
+    <HediffDef ParentName="ZdBodyPartBase">
+        <defName>Zd_DiligenceArm</defName>
+        <label>diligence arm</label>
+        <labelNoun>an diligence arm</labelNoun>
+        <description>An installed diligence arm. It's strong enough to crush a thick hardwood branch
+            in its hand, and precise enough to write a sonnet on a grain of rice. It looks and feels
+            like natural flesh, but it's harder to damage than plasteel. Even if it is harmed, it
+            repairs itself over time. Its internal workings are a mystery to all human minds.</description>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>fist</label>
+                        <capacities>
+                            <li>Blunt</li>
+                        </capacities>
+                        <power>21</power>
+                        <cooldownTime>2</cooldownTime>
+                        <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+                        <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <statFactors>
+                    <!-- 全局工作速度 -->
+                    <WorkSpeedGlobal>1.3</WorkSpeedGlobal>
+                    <!-- 种植速度 -->
+                    <PlantWorkSpeed>2.0</PlantWorkSpeed>
+                    <!-- 挖掘速度 -->
+                    <MiningSpeed>2.0</MiningSpeed>
+                </statFactors>
+                <statOffsets>
+                </statOffsets>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.50</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+</Defs>
