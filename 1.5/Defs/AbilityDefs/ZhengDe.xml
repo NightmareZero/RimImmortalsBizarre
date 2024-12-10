@@ -8,7 +8,7 @@
         <!-- 这个技能会让你更接近 “明心” 路线 -->
         <description>Emit a sound containing Zen meaning, making people suddenly realize. Removes
             confusion and berserk state, and slightly increases consciousness and manipulation.\n\n
-            this skill will make you closer to the "Insight" route</description>
+            this skill will make you closer to the "Enlightenment" route</description>
         <iconPath>Ability/AoJing4</iconPath>
         <cooldownTicksRange>1000</cooldownTicksRange>
         <aiCanUse>true</aiCanUse>

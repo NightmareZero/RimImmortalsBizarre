@@ -16,22 +16,18 @@ namespace NzRimImmortalBizarre
     {
         public Zd_Tracker Tracker;
         public string wayLevelUp = "";
+        public bool Removed { get; private set; } = false;
+
         public override void PostMake()
         {
             base.PostMake();
             this.Init();
         }
 
-        public override void Tick()
+        public override void PostRemoved()
         {
-            base.Tick();
-            // 计算tick触发
-            // if (this.ageTicks % tickInterval == 0)
-            // {
-            //     this.Tracker.Tick(ageTicks);
-            //     this.energyBar?.ResetDrawCfg();
-            // }
-
+            base.PostRemoved();
+            this.Removed = true;
         }
 
         public override void ExposeData()
@@ -39,7 +35,7 @@ namespace NzRimImmortalBizarre
             base.ExposeData();
             Scribe_Deep.Look(ref Tracker, "zwTracker");
 
-            this.Tracker?.injectHediff(this);
+            this.Init();
         }
 
         public override IEnumerable<Gizmo> GetGizmos()
@@ -114,18 +110,18 @@ namespace NzRimImmortalBizarre
         {
             Job job = JobMaker.MakeJob(XmlOf.Job_Zd_LevelUp, pawn);
             pawn.jobs.StartJob(
-                newJob: job, 
-                lastJobEndCondition: JobCondition.InterruptForced, 
-                jobGiver: null, 
-                resumeCurJobAfterwards: false, 
-                cancelBusyStances: true, 
-                thinkTree: null, 
-                tag: null, 
-                fromQueue: false, 
-                canReturnCurJobToPool: false, 
-                keepCarryingThingOverride: false, 
-                continueSleeping: false, 
-                addToJobsThisTick: true, 
+                newJob: job,
+                lastJobEndCondition: JobCondition.InterruptForced,
+                jobGiver: null,
+                resumeCurJobAfterwards: false,
+                cancelBusyStances: true,
+                thinkTree: null,
+                tag: null,
+                fromQueue: false,
+                canReturnCurJobToPool: false,
+                keepCarryingThingOverride: false,
+                continueSleeping: false,
+                addToJobsThisTick: true,
                 preToilReservationsCanFail: false
             );
         }
@@ -139,6 +135,7 @@ namespace NzRimImmortalBizarre
             {
                 this.Tracker = new Zd_Tracker();
             }
+            this.Tracker.injectHediff(this);
         }
     }
 }

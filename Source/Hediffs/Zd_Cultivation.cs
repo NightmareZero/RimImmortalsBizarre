@@ -62,9 +62,10 @@ namespace NzRimImmortalBizarre
             _isInitialized = true;
 
             // 初始化 果位 Hediff
-            if (_fruitionCache == null)
+            if (_fruitionCache == null || _fruitionCache.Removed)
             {
                 _fruitionCache = Utils.AssertGetFruitionHediff(pawn);
+                _rootEnergyCache = null;
             }
             // 初始化 灵根 Hediff
             if (_rootEnergyCache == null)
