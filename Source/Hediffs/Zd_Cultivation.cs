@@ -31,6 +31,12 @@ namespace NzRimImmortalBizarre
                 return;
             }
 
+            // 检查是否已经被移除
+            if (_fruitionCache.Removed) { 
+                pawn.health.RemoveHediff(this);
+                return;
+            }
+
             if (_rootEnergyCache == null)
             {
                 // 移除本 Hediff
@@ -62,10 +68,9 @@ namespace NzRimImmortalBizarre
             _isInitialized = true;
 
             // 初始化 果位 Hediff
-            if (_fruitionCache == null || _fruitionCache.Removed)
+            if (_fruitionCache == null)
             {
                 _fruitionCache = Utils.AssertGetFruitionHediff(pawn);
-                _rootEnergyCache = null;
             }
             // 初始化 灵根 Hediff
             if (_rootEnergyCache == null)
