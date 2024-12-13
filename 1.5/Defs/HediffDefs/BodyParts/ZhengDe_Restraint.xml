@@ -30,10 +30,7 @@
         <defName>Zd_DiligenceArm</defName>
         <label>diligence arm</label>
         <labelNoun>an diligence arm</labelNoun>
-        <description>An installed diligence arm. It's strong enough to crush a thick hardwood branch
-            in its hand, and precise enough to write a sonnet on a grain of rice. It looks and feels
-            like natural flesh, but it's harder to damage than plasteel. Even if it is harmed, it
-            repairs itself over time. Its internal workings are a mystery to all human minds.</description>
+        <description>#</description>
         <tags>
           <li>NzRI_ZhengDe_BodyPart</li>
           <li>NzRI_ZhengDe_Restraint</li>
@@ -60,9 +57,9 @@
                     <!-- 全局工作速度 -->
                     <WorkSpeedGlobal>1.3</WorkSpeedGlobal>
                     <!-- 种植速度 -->
-                    <PlantWorkSpeed>2.0</PlantWorkSpeed>
+                    <PlantWorkSpeed>3</PlantWorkSpeed>
                     <!-- 挖掘速度 -->
-                    <MiningSpeed>2.0</MiningSpeed>
+                    <MiningSpeed>3</MiningSpeed>
                 </statFactors>
                 <statOffsets>
                 </statOffsets>
