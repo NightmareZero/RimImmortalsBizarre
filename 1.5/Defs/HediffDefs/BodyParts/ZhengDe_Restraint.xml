@@ -34,6 +34,10 @@
             in its hand, and precise enough to write a sonnet on a grain of rice. It looks and feels
             like natural flesh, but it's harder to damage than plasteel. Even if it is harmed, it
             repairs itself over time. Its internal workings are a mystery to all human minds.</description>
+        <tags>
+          <li>NzRI_ZhengDe_BodyPart</li>
+          <li>NzRI_ZhengDe_Restraint</li>
+        </tags>            
         <comps>
             <li Class="HediffCompProperties_VerbGiver">
                 <tools>
