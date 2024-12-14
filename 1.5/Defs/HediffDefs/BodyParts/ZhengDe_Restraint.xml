@@ -6,7 +6,7 @@
     <!-- 特效：脑后光环 -->
 
     <!-- 慧眼 -->
-    <!-- 夜视，技能，移除隐形 -->
+    <!-- 夜视，技能，移除隐形，若有DLC，顺便移除黑暗灵能隐形 -->
 
     <!-- 辩才舌 -->
     <!-- 交易、传教相关系数 -->
@@ -26,6 +26,57 @@
     <!-- 加质量偏移(见手工大师) -->
     <!-- 心如工画师，能画诸世间。五蕴悉从生，无法而不造。 -->
     <!-- 我们的心如同画师，能够绘制出世间万象，而修行正是要描绘出内心的清净与智慧。 -->
+    <HediffDef ParentName="ZdBodyPartBase">
+        <defName>Zd_CraftsmanshipArm</defName>
+        <label>craftsmanship arm</label>
+        <labelNoun>an craftsmanship arm</labelNoun>
+        <description>Our mind is like a painter, capable of painting all the images of the world, and the practice of meditation is precisely to paint the purity and wisdom of the heart.</description>
+        <tags>
+            <li>NzRI_ZhengDe_BodyPart</li>
+            <li>NzRI_ZhengDe_Restraint</li>
+        </tags>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>fist</label>
+                        <capacities>
+                            <li>Blunt</li>
+                        </capacities>
+                        <power>23</power>
+                        <cooldownTime>1.8</cooldownTime>
+                        <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+                        <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+                    </li>
+                </tools>
+            </li>
+            <!-- 制造质量偏移 -->
+            <li Class="HediffCompProperties_VerbGiver">
+                <offset>1</offset>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <statFactors>
+                    <!-- 普通工作速度 -->
+                    <GeneralLaborSpeed>2.1</GeneralLaborSpeed>
+                    <!-- 建造速度 -->
+                    <ConstructionSpeed>2.0</ConstructionSpeed>
+                </statFactors>
+                <statOffsets>
+                </statOffsets>
+            </li>
+        </stages>
+        <aptitudes>
+            <Crafting>8</Crafting>
+            <Artistic>8</Artistic>
+        </aptitudes>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.50</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
 
     <!-- 勤工臂 -->
     <!-- 全局工作效率，操作 -->
@@ -34,11 +85,12 @@
         <defName>Zd_DiligenceArm</defName>
         <label>diligence arm</label>
         <labelNoun>an diligence arm</labelNoun>
-        <description>Cultivation is not something that can be accomplished overnight, but requires continuous cultivation with a diligent heart.</description>
+        <description>Cultivation is not something that can be accomplished overnight, but requires
+            continuous cultivation with a diligent heart.\n\nIncrease in mining and farming skills and efficiency</description>
         <tags>
-          <li>NzRI_ZhengDe_BodyPart</li>
-          <li>NzRI_ZhengDe_Restraint</li>
-        </tags>            
+            <li>NzRI_ZhengDe_BodyPart</li>
+            <li>NzRI_ZhengDe_Restraint</li>
+        </tags>
         <comps>
             <li Class="HediffCompProperties_VerbGiver">
                 <tools>
@@ -69,6 +121,10 @@
                 </statOffsets>
             </li>
         </stages>
+        <aptitudes>
+            <Plants>6</Plants>
+            <Mining>6</Mining>
+        </aptitudes>
         <addedPartProps>
             <solid>true</solid>
             <partEfficiency>1.50</partEfficiency>

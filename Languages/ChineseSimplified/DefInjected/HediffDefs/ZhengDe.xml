@@ -2,5 +2,10 @@
 <LanguageData>
     <Zd_DiligenceArm.label>勤工臂</Zd_DiligenceArm.label>
     <Zd_DiligenceArm.labelNoun>勤工臂</Zd_DiligenceArm.labelNoun>
-    <Zd_DiligenceArm.description>修行非一蹴而就之事，需以勤劳之心，持续不断地耕耘。</Zd_DiligenceArm.description>
+    <Zd_DiligenceArm.description>修行非一蹴而就之事，需以勤劳之心，持续不断地耕耘。\n\n增加采矿和务农技能和效率</Zd_DiligenceArm.description>
+
+    <Zd_CraftsmanshipArm.label>匠心臂</Zd_CraftsmanshipArm.label>
+    <Zd_CraftsmanshipArm.labelNoun>匠心臂</Zd_CraftsmanshipArm.labelNoun>
+    <Zd_CraftsmanshipArm.description>"心如工画师，能画诸世间。五蕴悉从生，无法而不造。"\n我们的心如同画师，能够绘制出世间万象，而修行正是要描绘出内心的清净与智慧。\n\n增加艺术和手工效率</Zd_CraftsmanshipArm.description>
+
 </LanguageData>
