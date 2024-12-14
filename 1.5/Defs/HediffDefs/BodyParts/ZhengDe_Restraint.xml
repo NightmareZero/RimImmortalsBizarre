@@ -15,7 +15,8 @@
     <!-- 免疫食物中毒，毒素hediff免疫，成瘾免疫 -->
 
     <!-- 笃行腿 -->
-    <!-- 移动速度 -->
+    <!-- 不可阻挡 -->
+    <!-- “欲速则不达。”修行如同攀登高峰，需一步一个脚印，稳健前行。若贪图捷径，往往会导致根基不稳 -->
 
     <!-- 般若腿 -->
     <!-- 辨识智慧、辨识才智 -->
@@ -23,14 +24,17 @@
 
     <!-- 匠心臂 -->
     <!-- 加质量偏移(见手工大师) -->
+    <!-- 心如工画师，能画诸世间。五蕴悉从生，无法而不造。 -->
+    <!-- 我们的心如同画师，能够绘制出世间万象，而修行正是要描绘出内心的清净与智慧。 -->
 
     <!-- 勤工臂 -->
     <!-- 全局工作效率，操作 -->
+    <!-- 修行非一蹴而就之事，需以勤劳之心，持续不断地耕耘。 -->
     <HediffDef ParentName="ZdBodyPartBase">
         <defName>Zd_DiligenceArm</defName>
         <label>diligence arm</label>
         <labelNoun>an diligence arm</labelNoun>
-        <description>#</description>
+        <description>Cultivation is not something that can be accomplished overnight, but requires continuous cultivation with a diligent heart.</description>
         <tags>
           <li>NzRI_ZhengDe_BodyPart</li>
           <li>NzRI_ZhengDe_Restraint</li>
