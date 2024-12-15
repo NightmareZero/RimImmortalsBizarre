@@ -14,6 +14,34 @@ namespace NzRimImmortalBizarre
     // Core.Hediff_RI_EnergyRoot
     public class Zw_Fg : HediffWithComps
     {
+        public override string Label
+        {
+            get
+            {
+                var doGet = true;
+                if (this.Tracker == null || !doGet) { 
+                    return "Label_FeiGang".Translate();
+                }
+
+                try
+                {
+                    var labelStr = "Label_FeiGang".Translate() + this.Tracker.getFgStr();
+                    if (this.Tracker.getYqStr() != "")
+                    {
+                        labelStr += " " + "Label_InnateQi".Translate() + this.Tracker.getYqStr();
+                    }
+                    return  labelStr;
+                }
+                catch (Exception e)
+                {
+                    Log.Error("Zw_Fg Label Error: " + e.Message);
+                    doGet = false;
+                    return "Label_FeiGang".Translate();
+                }
+
+            }
+        }
+
 
         public Zw_Tracker Tracker;
         private int tickInterval = 600;

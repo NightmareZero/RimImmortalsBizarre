@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using RimWorld;
 using UnityEngine;
@@ -27,6 +28,20 @@ namespace NzRimImmortalBizarre
             this.init();
         }
 
+        public String getFgStr()
+        {
+            return "(" + feigang + "/" + fgMax + ")";
+        }
+
+        public String getYqStr()
+        {
+            if (yqMax == 0)
+            {
+                return "";
+            }
+            return "(" + yiqi + "/" + yqMax + ")";
+        }
+
         public BarNum bar1Num => new BarNum("非罡", ref feigang, ref fgMax)
         {
             BarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.75f, 0.75f, 0.75f)),
@@ -44,7 +59,7 @@ namespace NzRimImmortalBizarre
 
         public bool Visible { get => visible && enableGizmo(); set => this.visible = value; }
 
-        private bool visible = true;
+        private bool visible = false;
 
         public void ExposeData()
         {
