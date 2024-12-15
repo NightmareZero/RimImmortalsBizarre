@@ -13,6 +13,8 @@ using Verse.Noise;
 using Verse.Grammar;
 using RimWorld;
 using RimWorld.Planet;
+using HarmonyLib;
+using System.Reflection;
 
 // *Uncomment for Harmony*
 // using System.Reflection;
@@ -44,8 +46,8 @@ namespace NzRimImmortalBizarre
             Log.Message("RimImmortalsBizarre loaded successfully!");
 
             // *Uncomment for Harmony*
-            // Harmony harmony = new Harmony("Template");
-            // harmony.PatchAll( Assembly.GetExecutingAssembly() );
+            Harmony harmony = new Harmony("NzRimImmortalBizarre");
+            harmony.PatchAll( Assembly.GetExecutingAssembly() );
         }
     }
 

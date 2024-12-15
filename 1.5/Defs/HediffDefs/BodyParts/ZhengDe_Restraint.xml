@@ -51,8 +51,8 @@
                 </tools>
             </li>
             <!-- 制造质量偏移 -->
-            <li Class="HediffCompProperties_VerbGiver">
-                <offset>1</offset>
+            <li Class="NzRimImmortalBizarre.Comp_ProductionQualityOffset">
+                <offset>2</offset>
             </li>
         </comps>
         <stages>
