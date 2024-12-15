@@ -19,8 +19,38 @@
     <!-- “欲速则不达。”修行如同攀登高峰，需一步一个脚印，稳健前行。若贪图捷径，往往会导致根基不稳 -->
 
     <!-- 般若腿 -->
-    <!-- 辨识智慧、辨识才智 -->
-    <!-- 研究速度 -->
+    <!-- 般若的含义是辨识智慧、辨识才智 -->
+    <!-- 影响研究速度 -->
+    <HediffDef ParentName="ZdBodyPartBase">
+        <defName>Zd_PrajnaLeg</defName>
+        <label>prajna leg</label>
+        <labelNoun>an prajna leg</labelNoun>
+        <description>The meaning of prajna is to recognize wisdom and intelligence, which affects research speed.</description> 
+        <tags>
+            <li>NzRI_ZhengDe_BodyPart</li>
+            <li>NzRI_ZhengDe_Restraint</li>
+        </tags>
+        <stages>
+            <li>
+                <statFactors>
+                    <!-- 普通工作速度 -->
+                    <ResearchSpeed>2.0</ResearchSpeed>
+                    <!-- 破解速度 -->
+                    <HackingSpeed>2.0</HackingSpeed>
+                </statFactors>
+                <statOffsets>
+                </statOffsets>
+            </li>
+        </stages>
+        <aptitudes>
+            <Intellectual>8</Intellectual>
+        </aptitudes>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.50</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
 
     <!-- 匠心臂 -->
     <!-- 加质量偏移(见手工大师) -->
