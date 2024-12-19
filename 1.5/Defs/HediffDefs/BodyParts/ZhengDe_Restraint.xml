@@ -13,10 +13,75 @@
 
     <!-- 斋藏胃 -->
     <!-- 免疫食物中毒，毒素hediff免疫，成瘾免疫 -->
+    <!-- 一切有为法，如梦幻泡影，如露亦如电，应作如是观 -->
+    <HediffDef ParentName="ZdBodyPartBase">
+        <defName>Zd_AsceticismStomach</defName>
+        <label>asceticism stomach</label>
+        <labelNoun>an asceticism leg</labelNoun>
+        <description>All material things are like dreams and bubbles, like dew and lightning, and
+            should be viewed as such.</description>
+        <defaultInstallPart>Stomach</defaultInstallPart>
+        <tags>
+            <li>NzRI_ZhengDe_BodyPart</li>
+            <li>NzRI_ZhengDe_Restraint</li>
+        </tags>
+        <stages>
+            <li>
+                <!-- 食物中毒几率 -->
+                <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+                <statFactors>
+                    <!-- 毒素抵抗 -->
+                    <ToxicResistance>1.0</ToxicResistance>
+                </statFactors>
+                <makeImmuneTo>
+                    <!-- 免疫原版成瘾品 -->
+                    <li>GutWorms</li>
+                    <li>AlcoholAddiction</li>
+                    <li>AmbrosiaAddiction</li>
+                    <li>GoJuiceAddiction</li>
+                    <li>LuciferiumAddiction</li>
+                    <li>PsychiteAddiction</li>
+                    <li>SmokeleafAddiction</li>
+                    <li>WakeUpAddiction</li>
+                </makeImmuneTo>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.50</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
 
     <!-- 笃行腿 -->
     <!-- 不可阻挡 -->
     <!-- “欲速则不达。”修行如同攀登高峰，需一步一个脚印，稳健前行。若贪图捷径，往往会导致根基不稳 -->
+    <HediffDef ParentName="ZdBodyPartBase">
+        <defName>Zd_DevoteLeg</defName>
+        <label>devote leg</label>
+        <labelNoun>an devote leg</labelNoun>
+        <description>"If you want to go fast, you can't go fast enough." Cultivation was like
+            climbing a peak, one step at a time was needed to move forward steadily. If one is
+            greedy for shortcuts, it often leads to unstable foundations.</description>
+        <defaultInstallPart>Leg</defaultInstallPart>
+        <tags>
+            <li>NzRI_ZhengDe_BodyPart</li>
+            <li>NzRI_ZhengDe_Restraint</li>
+        </tags>
+        <stages>
+            <li>
+                <statFactors>
+                    <!-- 不可阻挡 -->
+                    <StaggerDurationFactor>0</StaggerDurationFactor>
+                </statFactors>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.50</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
 
     <!-- 般若腿 -->
     <!-- 般若的含义是辨识智慧、辨识才智 -->
@@ -25,7 +90,9 @@
         <defName>Zd_PrajnaLeg</defName>
         <label>prajna leg</label>
         <labelNoun>an prajna leg</labelNoun>
-        <description>The meaning of prajna is to recognize wisdom and intelligence, which affects research speed.</description> 
+        <description>The meaning of prajna is to recognize wisdom and intelligence, which affects
+            research speed.</description>
+        <defaultInstallPart>Leg</defaultInstallPart>
         <tags>
             <li>NzRI_ZhengDe_BodyPart</li>
             <li>NzRI_ZhengDe_Restraint</li>
@@ -60,7 +127,9 @@
         <defName>Zd_CraftsmanshipArm</defName>
         <label>craftsmanship arm</label>
         <labelNoun>an craftsmanship arm</labelNoun>
-        <description>Our mind is like a painter, capable of painting all the images of the world, and the practice of meditation is precisely to paint the purity and wisdom of the heart.</description>
+        <description>Our mind is like a painter, capable of painting all the images of the world,
+            and the practice of meditation is precisely to paint the purity and wisdom of the heart.</description>
+        <defaultInstallPart>Shoulder</defaultInstallPart>
         <tags>
             <li>NzRI_ZhengDe_BodyPart</li>
             <li>NzRI_ZhengDe_Restraint</li>
@@ -116,7 +185,9 @@
         <label>diligence arm</label>
         <labelNoun>an diligence arm</labelNoun>
         <description>Cultivation is not something that can be accomplished overnight, but requires
-            continuous cultivation with a diligent heart.\n\nIncrease in mining and farming skills and efficiency</description>
+            continuous cultivation with a diligent heart.\n\nIncrease in mining and farming skills
+            and efficiency</description>
+        <defaultInstallPart>Shoulder</defaultInstallPart>
         <tags>
             <li>NzRI_ZhengDe_BodyPart</li>
             <li>NzRI_ZhengDe_Restraint</li>

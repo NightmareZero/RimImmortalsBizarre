@@ -12,4 +12,12 @@
     <Zd_PrajnaLeg.labelNoun>般若腿</Zd_PrajnaLeg.labelNoun>
     <Zd_PrajnaLeg.description>般若的含义是辨识智慧、辨识才智\n影响研究速度</Zd_PrajnaLeg.description>
 
+    <Zd_DevoteLeg.label>笃行腿</Zd_DevoteLeg.label>
+    <Zd_DevoteLeg.labelNoun>笃行腿</Zd_DevoteLeg.labelNoun>
+    <Zd_DevoteLeg.description>"欲速则不达。"\n修行如同攀登高峰，需一步一个脚印，稳健前行。若贪图捷径，往往会导致根基不稳</Zd_DevoteLeg.description>
+
+    <Zd_AsceticismStomach.label>斋藏胃</Zd_AsceticismStomach.label>
+    <Zd_AsceticismStomach.labelNoun>斋藏胃</Zd_AsceticismStomach.labelNoun>
+    <Zd_AsceticismStomach.description>一切有为法，如梦幻泡影，如露亦如电，应作如是观</Zd_AsceticismStomach.description>
+
 </LanguageData>
