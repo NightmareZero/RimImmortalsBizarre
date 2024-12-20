@@ -20,21 +20,20 @@
             <li>NzRI_ZhengDe_Restraint</li>
             <li>NzRI_ZhengDe_Enlightenment</li>
         </tags>
+        <abilities>
+            <!-- <li></li> -->
+        </abilities>
         <stages>
             <li>
                 <statFactors>
-                    <!-- 想办法当DLC存在时不生效 -->
-                    <ShootingAccuracyFactor_Long>1.5</ShootingAccuracyFactor_Long>
-                    <ShootingAccuracyFactor_Medium>2.0</ShootingAccuracyFactor_Medium>
-                    <MeleeHitChance>1.5</MeleeHitChance>
-                    <!-- 文化DLC -->
-                    <ShootingAccuracyOutdoorsDarkOffset MayRequire="Ludeon.RimWorld.Ideology">0.5</ShootingAccuracyOutdoorsDarkOffset>
-                    <ShootingAccuracyIndoorsDarkOffset MayRequire="Ludeon.RimWorld.Ideology">0.5</ShootingAccuracyIndoorsDarkOffset>
-                    <MeleeHitChanceOutdoorsDarkOffset MayRequire="Ludeon.RimWorld.Ideology">0.25</MeleeHitChanceOutdoorsDarkOffset>
-                    <MeleeHitChanceIndoorsDarkOffset MayRequire="Ludeon.RimWorld.Ideology">0.25</MeleeHitChanceIndoorsDarkOffset>
+                    <ShootingAccuracyFactor_Long>1.2</ShootingAccuracyFactor_Long>
+                    <ShootingAccuracyFactor_Medium>1.5</ShootingAccuracyFactor_Medium>
+                    <MeleeHitChance>1.2</MeleeHitChance>
                 </statFactors>
             </li>
         </stages>
+        <!-- TODO Patch System.Boolean RimWorld.StatPart_Glow::ActiveFor(Verse.Thing) -->
+        <!-- TODO 不受黑暗影响 -->
         <aptitudes>
             <Social>8</Social>
         </aptitudes>
