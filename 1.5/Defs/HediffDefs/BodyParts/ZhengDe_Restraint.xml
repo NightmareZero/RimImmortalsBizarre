@@ -23,6 +23,7 @@
         <stages>
             <li>
                 <statFactors>
+                    <!-- 想办法当DLC存在时不生效 -->
                     <ShootingAccuracyFactor_Long>1.5</ShootingAccuracyFactor_Long>
                     <ShootingAccuracyFactor_Medium>2.0</ShootingAccuracyFactor_Medium>
                     <MeleeHitChance>1.5</MeleeHitChance>
