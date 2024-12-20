@@ -10,6 +10,36 @@
 
     <!-- 辩才舌 -->
     <!-- 交易、传教相关系数 -->
+    <!-- “菩提本无树，明镜亦非台” -->
+    <HediffDef ParentName="ZdBodyPartBase">
+        <defName>Zd_EloquenceTongue</defName>
+        <label>eloquence tongue</label>
+        <labelNoun>an asceticism leg</labelNoun>
+        <description>"Bodhi is not a tree, Mirror has no stand"</description>
+        <defaultInstallPart>Tongue</defaultInstallPart>
+        <tags>
+            <li>NzRI_ZhengDe_BodyPart</li>
+            <li>NzRI_ZhengDe_Restraint</li>
+        </tags>
+        <stages>
+            <li>
+                <statFactors>
+                    <ArrestSuccessChance>2.0</ArrestSuccessChance>
+                    <NegotiationAbility>2.0</NegotiationAbility>
+                    <SocialImpact>2.0</SocialImpact>
+                    <TradePriceImprovement>2.0</TradePriceImprovement>
+                </statFactors>
+            </li>
+        </stages>
+        <aptitudes>
+            <Social>8</Social>
+        </aptitudes>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.50</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
 
     <!-- 斋藏胃 -->
     <!-- 免疫食物中毒，毒素hediff免疫，成瘾免疫 -->
