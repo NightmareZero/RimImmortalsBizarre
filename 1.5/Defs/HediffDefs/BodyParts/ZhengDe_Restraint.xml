@@ -7,6 +7,42 @@
 
     <!-- 慧眼 -->
     <!-- 夜视，技能，移除隐形，若有DLC，顺便移除黑暗灵能隐形 -->
+    <!-- 得慧眼，不见众生，尽灭一异相 -->
+    <HediffDef ParentName="ZdBodyPartBase">
+        <defName>Zd_KeenEyes</defName>
+        <label>keen eyes</label>
+        <labelNoun>an keen eyes</labelNoun>
+        <description>"With discerning eyes, do not see all beings, extinguish all different
+            appearances."</description>
+        <defaultInstallPart>Eye</defaultInstallPart>
+        <tags>
+            <li>NzRI_ZhengDe_BodyPart</li>
+            <li>NzRI_ZhengDe_Restraint</li>
+            <li>NzRI_ZhengDe_Enlightenment</li>
+        </tags>
+        <stages>
+            <li>
+                <statFactors>
+                    <ShootingAccuracyFactor_Long>1.5</ShootingAccuracyFactor_Long>
+                    <ShootingAccuracyFactor_Medium>2.0</ShootingAccuracyFactor_Medium>
+                    <MeleeHitChance>1.5</MeleeHitChance>
+                    <!-- 文化DLC -->
+                    <ShootingAccuracyOutdoorsDarkOffset MayRequire="Ludeon.RimWorld.Ideology">0.5</ShootingAccuracyOutdoorsDarkOffset>
+                    <ShootingAccuracyIndoorsDarkOffset MayRequire="Ludeon.RimWorld.Ideology">0.5</ShootingAccuracyIndoorsDarkOffset>
+                    <MeleeHitChanceOutdoorsDarkOffset MayRequire="Ludeon.RimWorld.Ideology">0.25</MeleeHitChanceOutdoorsDarkOffset>
+                    <MeleeHitChanceIndoorsDarkOffset MayRequire="Ludeon.RimWorld.Ideology">0.25</MeleeHitChanceIndoorsDarkOffset>
+                </statFactors>
+            </li>
+        </stages>
+        <aptitudes>
+            <Social>8</Social>
+        </aptitudes>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.50</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
 
     <!-- 辩才舌 -->
     <!-- 交易、传教相关系数 -->

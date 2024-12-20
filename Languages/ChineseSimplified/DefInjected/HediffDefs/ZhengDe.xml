@@ -24,4 +24,8 @@
     <Zd_EloquenceTongue.labelNoun>辩才舌</Zd_EloquenceTongue.labelNoun>
     <Zd_EloquenceTongue.description>"菩提本无树，明镜亦非台"</Zd_EloquenceTongue.description>
 
+    <Zd_KeenEyes.label>慧眼</Zd_KeenEyes.label>
+    <Zd_KeenEyes.labelNoun>慧眼</Zd_KeenEyes.labelNoun>
+    <Zd_KeenEyes.description>“得慧眼，不见众生，尽灭一异相。”\n\n增加射击和瞄准效率</Zd_KeenEyes.description>
+
 </LanguageData>
