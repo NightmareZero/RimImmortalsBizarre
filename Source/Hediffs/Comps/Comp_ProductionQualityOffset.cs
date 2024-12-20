@@ -51,26 +51,34 @@ namespace NzRimImmortalBizarre
     {
         public static void Postfix(ref QualityCategory __result, Pawn pawn, SkillDef relevantSkill)
         {
-            // 尝试从缓存中获取 HediffComp_ProductionQualityOffset
-            if (CacheHediff.productionQualityOffsetCache.TryGetValue(pawn, out var comp))
+            try
             {
-                if (comp == null) return;
+                // 尝试从缓存中获取 HediffComp_ProductionQualityOffset
+                if (CacheHediff.productionQualityOffsetCache.TryGetValue(pawn, out var comp))
+                {
+                    if (comp == null) return;
+                }
+                else
+                {
+                    // 缓存中没有，遍历 HediffSet 获取 Comp_ProductionQualityOffset
+                    var hediffWithComp = pawn.health.hediffSet.hediffs
+                        .OfType<HediffWithComps>()
+                        .FirstOrDefault(h => h.TryGetComp<HediffComp_ProductionQualityOffset>() != null);
+
+                    comp = hediffWithComp?.TryGetComp<HediffComp_ProductionQualityOffset>();
+                    // 缓存
+                    CacheHediff.productionQualityOffsetCache[pawn] = comp;
+                    if (comp == null) return;
+                }
+
+                // 根据 offset 调整质量
+                __result = (QualityCategory)Mathf.Clamp((int)__result + comp.offset, (int)QualityCategory.Awful, (int)QualityCategory.Legendary);
             }
-            else
+            catch (Exception e)
             {
-                // 缓存中没有，遍历 HediffSet 获取 Comp_ProductionQualityOffset
-                var hediffWithComp = pawn.health.hediffSet.hediffs
-                    .OfType<HediffWithComps>()
-                    .FirstOrDefault(h => h.TryGetComp<HediffComp_ProductionQualityOffset>() != null);
-
-                comp = hediffWithComp?.TryGetComp<HediffComp_ProductionQualityOffset>();
-                // 缓存
-                CacheHediff.productionQualityOffsetCache[pawn] = comp;
-                if (comp == null) return;
+                Log.Error($"NzRimImmortalBizarre: HarmonyPatchProductionQualityOffset error: {e}");
             }
-
-            // 根据 offset 调整质量
-            __result = (QualityCategory)Mathf.Clamp((int)__result + comp.offset, (int)QualityCategory.Awful, (int)QualityCategory.Legendary);
         }
+
     }
 }
