@@ -14,6 +14,42 @@ namespace NzRimImmortalBizarre
 {
     public class Zd_Fruition : Hediff
     {
+        // 显示修行进度(形容词)和偏向
+        //  public override string Label
+        // {
+        //     get
+        //     {
+        //         var doGet = true;
+        //         if (this.Tracker == null || !doGet) { 
+        //             return "Label_FeiGang".Translate();
+        //         }
+
+        //         try
+        //         {
+        //             var labelStr = "Label_FeiGang".Translate() + this.Tracker.getFgStr();
+        //             if (this.Tracker.getYqStr() != "")
+        //             {
+        //                 labelStr += " " + "Label_InnateQi".Translate() + this.Tracker.getYqStr();
+        //             }
+        //             return  labelStr;
+        //         }
+        //         catch (Exception e)
+        //         {
+        //             Log.Error("Zw_Fg Label Error: " + e.Message);
+        //             doGet = false;
+        //             return "Label_FeiGang".Translate();
+        //         }
+
+        //     }
+        // }
+
+        // 显示修行进度(数值)
+        // public override string Description 
+        // { 
+
+        // }
+
+        
         public Zd_Tracker Tracker;
         public string wayLevelUp = "";
         public bool Removed { get; private set; } = false;
