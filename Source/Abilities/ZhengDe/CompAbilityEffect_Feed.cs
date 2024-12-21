@@ -18,23 +18,18 @@ namespace NzRimImmortalBizarre
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
-            if (_zdFruitionCache == null)
-            {
-                _zdFruitionCache = Utils.AssertGetFruitionHediff(caster);
-            }
-
 
             Pawn pawn = target.Pawn;
             if (pawn != null)
             {
                 // 补满饥饿
-                if (pawn.needs.food != null)
+                if (pawn.needs?.food != null)
                 {
                     pawn.needs.food.CurLevel = pawn.needs.food.MaxLevel;
                 }
 
                 // 补满睡眠
-                if (pawn.needs.rest != null)
+                if (pawn.needs?.rest != null)
                 {
                     pawn.needs.rest.CurLevel = pawn.needs.rest.MaxLevel;
                 }
@@ -42,18 +37,32 @@ namespace NzRimImmortalBizarre
                 // 将目标的成瘾品需求补满
                 if (pawn.story != null)
                 {
-                    foreach (var hediff in pawn.health.hediffSet.hediffs)
+                    if (pawn.health?.hediffSet?.hediffs != null)
                     {
-                        if (hediff.def.IsAddiction)
+                        foreach (var hediff in pawn.health.hediffSet.hediffs)
                         {
-                            hediff.Severity = 0;
+                            if (hediff.def.IsAddiction)
+                            {
+                                hediff.Severity = 0;
+                            }
                         }
                     }
                 }
             }
 
-            // 添加舍身
-            _zdFruitionCache.Tracker.addSelfSacrifice();
+            try
+            {
+                _zdFruitionCache = Utils.AssertGetFruitionHediff(caster);
+                if (_zdFruitionCache == null)
+                {
+                    // 添加舍身
+                    _zdFruitionCache.Tracker.addSelfSacrifice();
+                }
+            }
+            catch (System.Exception e)
+            {
+                Log.Error("Error in CompAbilityEffect_Feed.Apply, add Sacrifice: " + e);
+            }
 
 
         }

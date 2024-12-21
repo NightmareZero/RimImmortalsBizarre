@@ -105,12 +105,14 @@ namespace NzRimImmortalBizarre
 
         public void injectHediff(Zd_Fruition fgHediff)
         {
+            this.parent = fgHediff;
+            this.pawn = fgHediff.pawn;
             if (!checkEnergyRoot())
             {
                 return;
             }
-            this.parent = fgHediff;
-            this.pawn = fgHediff.pawn;
+            // TODO: 
+            
         }
 
         private bool checkEnergyRoot()

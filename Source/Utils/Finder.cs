@@ -18,7 +18,12 @@ namespace NzRimImmortalBizarre
         /// <returns></returns>
         public static Hediff_RI_EnergyRoot TryGetEnergyRoot(this Pawn pawn)
         {
-            return pawn?.health?.hediffSet?.GetFirstHediffOfDef(RI_DefOf.Hediff_RI_EnergyRoot) as Hediff_RI_EnergyRoot;
+            var hediff = pawn?.health?.hediffSet?.GetFirstHediffOfDef(RI_DefOf.Hediff_RI_EnergyRoot);
+            if (hediff == null)
+            {
+                return null;
+            }
+            return hediff as Hediff_RI_EnergyRoot;
         }
 
         /// <summary>
@@ -89,10 +94,22 @@ namespace NzRimImmortalBizarre
             var fruition = GetFruitionHediff(pawn);
             if (fruition == null)
             {
+#if DEBUG
                 Log.Message("Pawn " + pawn.Name + " has no Fruition hediff. Creating one.");
+#endif
                 // 生成一个果位状态
                 fruition = HediffMaker.MakeHediff(XmlOf.NzRI_Zd_Fruition, pawn) as Zd_Fruition;
-                pawn.health.AddHediff(fruition);
+                if (fruition != null)
+                {
+                    pawn.health.AddHediff(fruition);
+#if DEBUG
+                    Log.Message("Fruition hediff created for " + pawn.Name);
+#endif
+                }
+                else
+                {
+                    Log.Error("Failed to create Fruition hediff for " + pawn.Name);
+                }
             }
             return fruition;
         }
@@ -171,7 +188,7 @@ namespace NzRimImmortalBizarre
                     }
                     return true;
                 });
-                
+
             return count;
         }
 

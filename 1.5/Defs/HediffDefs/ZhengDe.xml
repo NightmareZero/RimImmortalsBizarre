@@ -4,7 +4,7 @@
     <HediffDef>
         <defName>NzRI_Zd_Fruition</defName>
         <label>Fruition</label>
-        <!-- <hediffClass>NzRimImmortalBizarre.Zw_Fg</hediffClass> -->
+        <hediffClass>NzRimImmortalBizarre.Zd_Fruition</hediffClass>
         <description>#TODO</description>
         <isBad>false</isBad>
     </HediffDef>
