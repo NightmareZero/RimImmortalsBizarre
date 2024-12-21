@@ -13,8 +13,6 @@ namespace NzRimImmortalBizarre
 
         public Pawn caster => parent.pawn;
 
-        public Zd_Fruition _zdFruitionCache = null;
-
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
@@ -49,22 +47,6 @@ namespace NzRimImmortalBizarre
                     }
                 }
             }
-
-            try
-            {
-                _zdFruitionCache = Utils.AssertGetFruitionHediff(caster);
-                if (_zdFruitionCache == null)
-                {
-                    // 添加舍身
-                    _zdFruitionCache.Tracker.addSelfSacrifice();
-                }
-            }
-            catch (System.Exception e)
-            {
-                Log.Error("Error in CompAbilityEffect_Feed.Apply, add Sacrifice: " + e);
-            }
-
-
         }
     }
 }

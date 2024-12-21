@@ -1,40 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-    <!-- 禅音 -->
-    <AbilityDef ParentName="RI_PsycastBase">
-        <defName>NzRI_Zw_ZenSound</defName>
-        <label>zen sound</label>
-        <!-- 发出一声蕴含禅意的声音，令人幡然醒悟。\n解除迷茫和狂暴状态，同时略微增加意识和操作 -->
-        <!-- 这个技能会让你更接近 “明心” 路线 -->
-        <description>Emit a sound containing Zen meaning, making people suddenly realize. Removes
-            confusion and berserk state, and slightly increases consciousness and manipulation.\n\n
-            this skill will make you closer to the "Enlightenment" route</description>
-        <iconPath>Ability/AoJing4</iconPath>
-        <cooldownTicksRange>1000</cooldownTicksRange>
-        <aiCanUse>true</aiCanUse>
-        <displayOrder>300</displayOrder>
-        <!-- <category>Sanguophage</category> -->
-        <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
-        <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
-        <verbProperties>
-            <verbClass>Verb_CastAbility</verbClass>
-            <range>19.9</range>
-            <warmupTime>0.5</warmupTime>
-            <soundCast>RocketswarmLauncher_Fire</soundCast>
-            <targetParams>
-                <canTargetLocations>true</canTargetLocations>
-            </targetParams>
-        </verbProperties>
-        <comps>
-            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+  <!-- 禅音 -->
+  <AbilityDef ParentName="RI_PsycastBase">
+    <defName>NzRI_Zw_ZenSound</defName>
+    <label>zen sound</label>
+    <!-- 发出一声蕴含禅意的声音，令人幡然醒悟。\n解除迷茫和狂暴状态，同时略微增加意识和操作 -->
+    <!-- 这个技能会让你更接近 “明心” 路线 -->
+    <description>Emit a sound containing Zen meaning, making people suddenly realize. Removes
+      confusion and berserk state, and slightly increases consciousness and manipulation.\n\n
+      this skill will make you closer to the "Enlightenment" route</description>
+    <iconPath>Ability/AoJing4</iconPath>
+    <cooldownTicksRange>1000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <displayOrder>300</displayOrder>
+    <!-- <category>Sanguophage</category> -->
+    <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+    <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>19.9</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>RocketswarmLauncher_Fire</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
                 <rEnergy>10</rEnergy>
             </li> -->
-            <li Class="NzRimImmortalBizarre.CompProperties_ZenSound">
-            </li>
-            <li Class="NzRimImmortalBizarre.CompProperties_PlaceMote">
-              <moteDef>NzRI_Zw_Mote_ZenSound</moteDef>
-            </li>
-            <!-- <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeExplosion">
+      <li Class="NzRimImmortalBizarre.CompProperties_ZenSound">
+      </li>
+      <li Class="NzRimImmortalBizarre.CompProperties_PlaceMote">
+        <moteDef>NzRI_Zw_Mote_ZenSound</moteDef>
+      </li>
+      <li Class="NzRimImmortalBizarre.CompProperties_AddFruition">
+        <buddha>true</buddha>
+      </li>
+      <!-- <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeExplosion">
                 <skillRoute>1</skillRoute>
                 <targetRange>6.9</targetRange>
                 <explosionRange>5.9</explosionRange>
@@ -50,9 +53,9 @@
 
                 <effecterDef>ArrowSpray_Directional</effecterDef>
             </li> -->
-            
-        </comps>
-    </AbilityDef>
+
+    </comps>
+  </AbilityDef>
 
 
   <AbilityDef ParentName="AbilityTouchBase">
@@ -62,8 +65,8 @@
     <!-- 效仿佛祖，割肉饲鹰\n 补充目标的饱腹和休息，同时增强目标的愈合速度 -->
     <!-- 这个技能会让你更接近 “舍身” 路线 -->
     <description>Imitate the ancestors, cut meat to feed the eagle\n
-        Supplement the target's fullness and rest, while enhancing the target's healing speed.\n\n
-        this skill will make you closer to the "Sacrifice" route</description>
+      Supplement the target's fullness and rest, while enhancing the target's healing speed.\n\n
+      this skill will make you closer to the "Sacrifice" route</description>
     <iconPath>Ability/AoJing4</iconPath>
     <stunTargetWhileCasting>true</stunTargetWhileCasting>
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -103,9 +106,12 @@
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_AbilityPlaySound">
         <soundDef>NzRI_FeedMeat</soundDef>
-      </li>      
+      </li>
       <li Class="NzRimImmortalBizarre.CompProperties_Feed">
-      </li>      
+      </li>
+      <li Class="NzRimImmortalBizarre.CompProperties_AddFruition">
+        <sacrifice>true</sacrifice>
+      </li>
       <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
         <group>projectile</group>
         <level>4</level>
@@ -115,9 +121,9 @@
     </comps>
   </AbilityDef>
 
-    <!-- 悟禅 -->
-    <!-- 修炼状态，降低移速 -->
+  <!-- 悟禅 -->
+  <!-- 修炼状态，降低移速 -->
 
-    <!-- 如来 -->
-    <!-- 短时间化身五智如来，持续时间内，体型增大，普攻带范围伤害，承伤 0%，不可阻挡，心灵敏感度0% -->
+  <!-- 如来 -->
+  <!-- 短时间化身五智如来，持续时间内，体型增大，普攻带范围伤害，承伤 0%，不可阻挡，心灵敏感度0% -->
 </Defs>

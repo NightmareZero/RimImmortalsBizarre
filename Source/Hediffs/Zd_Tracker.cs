@@ -112,7 +112,7 @@ namespace NzRimImmortalBizarre
                 return;
             }
             // TODO: 
-            
+
         }
 
         private bool checkEnergyRoot()
