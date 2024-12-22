@@ -14,42 +14,84 @@ namespace NzRimImmortalBizarre
 {
     public class Zd_Fruition : Hediff
     {
+        bool doGetLabel = true;
         // 显示修行进度(形容词)和偏向
-        //  public override string Label
-        // {
-        //     get
-        //     {
-        //         var doGet = true;
-        //         if (this.Tracker == null || !doGet) { 
-        //             return "Label_FeiGang".Translate();
-        //         }
+        public override string Label
+        {
+            get
+            {
 
-        //         try
-        //         {
-        //             var labelStr = "Label_FeiGang".Translate() + this.Tracker.getFgStr();
-        //             if (this.Tracker.getYqStr() != "")
-        //             {
-        //                 labelStr += " " + "Label_InnateQi".Translate() + this.Tracker.getYqStr();
-        //             }
-        //             return  labelStr;
-        //         }
-        //         catch (Exception e)
-        //         {
-        //             Log.Error("Zw_Fg Label Error: " + e.Message);
-        //             doGet = false;
-        //             return "Label_FeiGang".Translate();
-        //         }
+                if (this.Tracker == null || !doGetLabel)
+                {
+                    return "Zd_Fruition_Label".Translate();
+                }
 
-        //     }
-        // }
+                try
+                {
+                    var labelStr = "Zd_Fruition_Label".Translate();
+                    var status = "Zd_Fruition_Label_Pre".Translate();
+                    List<string> statusList = new List<string>();
 
+                    if (this.Tracker.canLevelUp(Zd_Tracker.WayFruition))
+                    {
+                        statusList.Add("Zd_Fruition_Restraint".Translate());
+                    }
+                    if (this.Tracker.canLevelUp(Zd_Tracker.WaySelfSacrifice))
+                    {
+                        statusList.Add("Zd_Fruition_SelfSacrifice".Translate());
+                    }
+                    if (this.Tracker.canLevelUp(Zd_Tracker.WayBuddhaNature))
+                    {
+                        statusList.Add("Zd_Fruition_BuddhaNature".Translate());
+                    }
+
+                    if (statusList.Count > 0)
+                    {
+                        status = string.Join(", ", statusList);
+                    }
+
+                    return labelStr + " (" + status + ")";
+                }
+                catch (Exception e)
+                {
+                    Log.Error("Zd_Fruition Label Error: " + e.Message);
+                    doGetLabel = false;
+                    return "Zd_Fruition_Label".Translate();
+                }
+
+            }
+        }
+
+        bool doGetDesc = true;
         // 显示修行进度(数值)
-        // public override string Description 
-        // { 
+        public override string Description
+        {
+            get
+            {
+                if (this.Tracker == null || !doGetDesc)
+                {
+                    return "Zd_Fruition_Desc".Translate();
+                }
 
-        // }
+                try
+                {
+                    var descStr = "Zd_Fruition_Desc".Translate();
 
-        
+                    descStr += "\n" + "Zd_Fruition_Restraint".Translate() + ": " + this.Tracker.Fruition;
+                    descStr += "\n" + "Zd_Fruition_SelfSacrifice".Translate() + ": " + this.Tracker.SelfSacrifice;
+                    descStr += "\n" + "Zd_Fruition_BuddhaNature".Translate() + ": " + this.Tracker.BuddhaNature;
+                    return descStr;
+                }
+                catch (Exception e)
+                {
+                    Log.Error("Zd_Fruition Desc Error: " + e.Message);
+                    doGetDesc = false;
+                    return "Zd_Fruition_Desc".Translate();
+                }
+            }
+        }
+
+
         public Zd_Tracker Tracker;
         public string wayLevelUp = "";
         public bool Removed { get; private set; } = false;
@@ -97,7 +139,7 @@ namespace NzRimImmortalBizarre
 
             if (this.Tracker != null)
             {
-                if (this.Tracker.canLevelUp(Zd_Tracker.Fruition))
+                if (this.Tracker.canLevelUp(Zd_Tracker.WayFruition))
                 {
                     yield return new Command_Action
                     {
@@ -105,13 +147,13 @@ namespace NzRimImmortalBizarre
                         defaultDesc = "Zd_Fruition_LevelUp_Desc".Translate(),
                         action = () =>
                         {
-                            wayLevelUp = Zd_Tracker.Fruition;
+                            wayLevelUp = Zd_Tracker.WayFruition;
                             // TODO 弹出确认提示
                             goToLevelUp();
                         }
                     };
                 }
-                if (this.Tracker.canLevelUp(Zd_Tracker.SelfSacrifice))
+                if (this.Tracker.canLevelUp(Zd_Tracker.WaySelfSacrifice))
                 {
                     yield return new Command_Action
                     {
@@ -119,13 +161,13 @@ namespace NzRimImmortalBizarre
                         defaultDesc = "Zd_Fruition_LevelUp_SelfSacrifice_Desc".Translate(),
                         action = () =>
                         {
-                            wayLevelUp = Zd_Tracker.SelfSacrifice;
+                            wayLevelUp = Zd_Tracker.WaySelfSacrifice;
                             // TODO 弹出确认提示
                             goToLevelUp();
                         }
                     };
                 }
-                if (this.Tracker.canLevelUp(Zd_Tracker.BuddhaNature))
+                if (this.Tracker.canLevelUp(Zd_Tracker.WayBuddhaNature))
                 {
                     yield return new Command_Action
                     {
@@ -133,7 +175,7 @@ namespace NzRimImmortalBizarre
                         defaultDesc = "Zd_Fruition_LevelUp_BuddhaNature_Desc".Translate(),
                         action = () =>
                         {
-                            wayLevelUp = Zd_Tracker.BuddhaNature;
+                            wayLevelUp = Zd_Tracker.WayBuddhaNature;
                             // TODO 弹出确认提示
                             goToLevelUp();
                         }

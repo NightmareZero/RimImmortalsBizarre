@@ -10,21 +10,24 @@ namespace NzRimImmortalBizarre
     public class Zd_Tracker : IExposable
     {
 
-        public const string Fruition = "fruition";
-        public const string BuddhaNature = "buddhaNature";
-        public const string SelfSacrifice = "selfSacrifice";
+        public const string WayFruition = "fruition";
+        public const string WayBuddhaNature = "buddhaNature";
+        public const string WaySelfSacrifice = "selfSacrifice";
 
         private Pawn pawn;
         private Zd_Fruition parent;
 
         // 修行进度
         private float fruition = 0f;
+        public float Fruition => fruition;
 
         // 佛性
         private float buddhaNature = 0f;
+        public float BuddhaNature => buddhaNature;
 
         // 舍身
         private float selfSacrifice = 0f;
+        public float SelfSacrifice => selfSacrifice;
 
         /// <summary>
         /// 刷新修行进度(当完成一次进阶时)
@@ -50,11 +53,11 @@ namespace NzRimImmortalBizarre
 
             switch (type)
             {
-                case Fruition:
+                case WayFruition:
                     return this.fruition >= 99;
-                case BuddhaNature:
+                case WayBuddhaNature:
                     return this.buddhaNature >= 50;
-                case SelfSacrifice:
+                case WaySelfSacrifice:
                     return this.selfSacrifice >= 50;
                 default:
                     return false;

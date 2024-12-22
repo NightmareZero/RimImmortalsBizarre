@@ -13,4 +13,14 @@
     <!-- 精进 "舍身" 之法 -->
     <Zd_Fruition_LevelUp_SelfSacrifice>精进 "舍身" 之法</Zd_Fruition_LevelUp_SelfSacrifice>
     <Zd_Fruition_LevelUp_SelfSacrifice_Desc>舍身之法，以身殉道，为众生解难</Zd_Fruition_LevelUp_SelfSacrifice_Desc>
+
+    <!-- Hediff Label -->
+    <Zd_Fruition_Label>果位</Zd_Fruition_Label>
+    <Zd_Fruition_Label_Pre>修行</Zd_Fruition_Label_Pre>
+    <Zd_Fruition_Restraint>克己</Zd_Fruition_Restraint>
+    <Zd_Fruition_BuddhaNature>明心</Zd_Fruition_BuddhaNature>
+    <Zd_Fruition_SelfSacrifice>舍身</Zd_Fruition_SelfSacrifice>
+
+    <!-- Hediff Desc -->
+    <Zd_Fruition_Desc>修行之路</Zd_Fruition_Desc>
 </LanguageData>

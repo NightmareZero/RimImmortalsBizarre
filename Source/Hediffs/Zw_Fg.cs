@@ -14,12 +14,13 @@ namespace NzRimImmortalBizarre
     // Core.Hediff_RI_EnergyRoot
     public class Zw_Fg : HediffWithComps
     {
+        bool doGetLabel = true;
         public override string Label
         {
             get
             {
-                var doGet = true;
-                if (this.Tracker == null || !doGet) { 
+                if (this.Tracker == null || !doGetLabel)
+                {
                     return "Label_FeiGang".Translate();
                 }
 
@@ -30,12 +31,12 @@ namespace NzRimImmortalBizarre
                     {
                         labelStr += " " + "Label_InnateQi".Translate() + this.Tracker.getYqStr();
                     }
-                    return  labelStr;
+                    return labelStr;
                 }
                 catch (Exception e)
                 {
                     Log.Error("Zw_Fg Label Error: " + e.Message);
-                    doGet = false;
+                    doGetLabel = false;
                     return "Label_FeiGang".Translate();
                 }
 

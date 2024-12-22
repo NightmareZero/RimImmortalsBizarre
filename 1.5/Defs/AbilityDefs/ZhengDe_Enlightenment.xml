@@ -1,3 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
+    <AbilityDef ParentName="RI_PsycastBase">
+    <defName>NzRI_Zd_DebunkingMyths</defName>
+    <label>debunking myths</label>
+    <description>the keen eye can see through all falsehoods.\n\nRemove invisible effect</description>
+    <iconPath>Ability/AoJing4</iconPath>
+    <cooldownTicksRange>1000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <displayOrder>300</displayOrder>
+    <!-- <category>Sanguophage</category> -->
+    <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+    <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>19.9</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>RocketswarmLauncher_Fire</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+        <rEnergy>-50</rEnergy>
+      </li>       -->
+      <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeExplosion">
+        <skillRoute>1</skillRoute>
+        <targetRange>6.9</targetRange>
+        <explosionRange>5.9</explosionRange>
+        <filthDef>NzRI_BloodGuts</filthDef>
+        <damageTypes>
+          <li>AcidBurn</li>
+          <li>Blunt</li>
+          <li>Bomb</li>
+          <li>Cut</li>
+        </damageTypes>
+        <damageTimes>5</damageTimes>
+        <damage>49</damage>
+
+        <effecterDef>ArrowSpray_Directional</effecterDef>
+      </li>
+     
+    </comps>
+  </AbilityDef>
 </Defs>
