@@ -22,6 +22,17 @@ using System.Reflection;
 
 namespace NzRimImmortalBizarre
 {
+    [StaticConstructorOnStartup]
+    public static class Start
+    {
+        static Start()
+        {
+            Log.Message("RimImmortalsBizarre loaded successfully!");
+
+            Harmony harmony = new Harmony("NzRimImmortalBizarre");
+            harmony.PatchAll(Assembly.GetExecutingAssembly());
+        }
+    }
     [DefOf]
     public class TemplateDefOf
     {
@@ -30,7 +41,7 @@ namespace NzRimImmortalBizarre
 
     public class MyMapComponent : MapComponent
     {
-        public MyMapComponent(Map map) : base(map){}
+        public MyMapComponent(Map map) : base(map) { }
         public override void FinalizeInit()
         {
             // Messages.Message("Success", null, MessageTypeDefOf.PositiveEvent);
@@ -38,18 +49,7 @@ namespace NzRimImmortalBizarre
         }
     }
 
-    [StaticConstructorOnStartup]
-    public static class Start
-    {
-        static Start()
-        {
-            Log.Message("RimImmortalsBizarre loaded successfully!");
 
-            // *Uncomment for Harmony*
-            Harmony harmony = new Harmony("NzRimImmortalBizarre");
-            harmony.PatchAll( Assembly.GetExecutingAssembly() );
-        }
-    }
 
     // *Uncomment for Harmony*
     // [HarmonyPatch(typeof(LetterStack), "ReceiveLetter")]
