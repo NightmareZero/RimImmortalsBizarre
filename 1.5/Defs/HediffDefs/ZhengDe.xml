@@ -83,4 +83,52 @@
         </comps>
         <stages></stages>
     </HediffDef>
+
+    <!-- 慧眼 -->
+    <HediffDef>
+        <defName>NzRI_Zd_KeenEyes</defName>
+        <label>keen eye</label>
+        <description>Opened the keen eye</description>
+        <isBad>false</isBad>
+        <hediffClass>HediffWithComps</hediffClass>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>7500</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+                <canUseDecimalsShortForm>true</canUseDecimalsShortForm>
+            </li>
+            <li Class="HediffCompProperties_GiveHediffsInRange">
+                <range>9.9</range>
+                <!-- <mote>Mote_WorkCommand</mote> -->
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>true</canTargetAnimals>
+                    <canTargetMechs>true</canTargetMechs>
+                    <canTargetHumans>true</canTargetHumans>
+                    <onlyTargetColonists>false</onlyTargetColonists>
+                </targetingParameters>
+                <hediff>NzRI_Zd_RecognizeTruth</hediff>
+            </li>
+        </comps>
+    </HediffDef>
+    <!-- 识真 -->
+    <HediffDef>
+        <defName>NzRI_Zd_RecognizeTruth</defName>
+        <label>recognize truth</label>
+        <description>Recognize the truth</description>
+        <isBad>false</isBad>
+        <hediffClass>HediffWithComps</hediffClass>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+            <li Class="Comp_StashHediff">
+                <hediffs>
+                    <li>HoraxianInvisibility</li>
+                    <li>PsychicInvisibility</li>
+                </hediffs>
+                <addBack>true</addBack>
+            </li>
+        </comps>
+    </HediffDef>
 </Defs>
