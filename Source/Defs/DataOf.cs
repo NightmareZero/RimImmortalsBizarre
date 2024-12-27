@@ -9,17 +9,21 @@ namespace NzRimImmortalBizarre
     
     public static class DataOf
     {
-        // 定义一个包含所有DefPartHurtLevel类型的数组
+        // 所有损伤清单 DefPartHurtLevel
         public static List<DefPartHurtLevel> allDefPartHurts => DefDatabase<DefPartHurtLevel>.AllDefsListForReading;
         public static Dictionary<string, DefPartHurtLevel> allDefPartHurtsDict = new Dictionary<string, DefPartHurtLevel>();
 
-        // 定义一个包含所有伤害类型的数组
+        // 所有的伤害类型 DamageDef
         public static List<DamageDef> allDamageDefs => DefDatabase<DamageDef>.AllDefsListForReading;
         public static Dictionary<string, DamageDef> allDamageDefsDict = new Dictionary<string, DamageDef>();
 
-        // 所有的ThingList
+        // 所有的物品清单 ThingList
         public static List<ThingList> allThingLists => DefDatabase<ThingList>.AllDefsListForReading;
         public static Dictionary<string, List<ThingDef>> thingListCache = new Dictionary<string, List<ThingDef>>();
+
+        // 所有的修行仿生体 DefCultivationBodyPartList
+        public static List<DefCultivationBodyPartList> allDefCultivationBodyPartLists => DefDatabase<DefCultivationBodyPartList>.AllDefsListForReading;
+        public static Dictionary<string, DefCultivationBodyPartList> allDefCultivationBodyPartListsDict = new Dictionary<string, DefCultivationBodyPartList>();
 
         public static void Init() { }
 
@@ -84,7 +88,11 @@ namespace NzRimImmortalBizarre
                 allDamageDefsDict.Add(def.defName, def);
             }
 
-
+            // 所有的修行仿生体
+            foreach (var def in allDefCultivationBodyPartLists)
+            {
+                allDefCultivationBodyPartListsDict.Add(def.defName, def);
+            }
 
         }
     }

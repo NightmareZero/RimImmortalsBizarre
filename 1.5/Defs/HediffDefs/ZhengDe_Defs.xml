@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <!-- 正德寺 克己线 -->
+    <NzRimImmortalBizarre.DefCultivationBodyPartList>
+        <defName>Zd_Line_Restraint</defName>
+        <minLowCount>3</minLowCount>
+        <tags>
+            <li>NzRI_ZhengDe_BodyPart</li>
+            <li>NzRI_ZhengDe_Restraint</li>
+        </tags>
+        <low>
+            <li>Zd_DiligenceArm</li>
+            <li>Zd_CraftsmanshipArm</li>
+            <li>Zd_PrajnaLeg</li>
+            <li>Zd_DevoteLeg</li>
+            <li>Zd_AsceticismStomach</li>
+        </low>
+        <high>
+            <li>Zd_EloquenceTongue</li>
+            <li>Zd_KeenEyes</li>
+        </high>
+    </NzRimImmortalBizarre.DefCultivationBodyPartList>
+
+    <!-- 正德寺 明心线 -->
+    <!-- 正德寺 舍身线 -->
+</Defs>
