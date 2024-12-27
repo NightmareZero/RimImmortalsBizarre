@@ -13,9 +13,27 @@ namespace NzRimImmortalBizarre
         public List<TagDef> tags;
 
         // 低阶仿生体
-        public List<Hediff> low;
+        public List<HediffDef> low;
 
         // 高阶仿生体
-        public List<Hediff> high;
+        public List<HediffDef> high;
+
+        public List<string> TagNames
+        {
+            get
+            {
+                if (_tagNamesCache == null)
+                {
+                    _tagNamesCache = new List<string>();
+                    foreach (var tag in tags)
+                    {
+                        _tagNamesCache.Add(tag.defName);
+                    }
+                }
+                return _tagNamesCache;
+            }
+        }
+
+        private List<string> _tagNamesCache = null;
     }
 }

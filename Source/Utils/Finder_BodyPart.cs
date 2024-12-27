@@ -128,6 +128,39 @@ namespace NzRimImmortalBizarre
             }
             return pawn.health.hediffSet.PainTotal;
         }
+
+        /// <summary>
+        /// 获取Pawn身上带有指定标签的Hediff数量
+        /// </summary>
+        /// <param name="pawn"></param>
+        /// <param name="tags"></param>
+        /// <returns></returns>
+        public static int CountHediffByTags(this Pawn pawn, params string[] tags)
+        { 
+            if (pawn?.health?.hediffSet?.hediffs == null || tags == null || tags.Length == 0)
+            {
+            return 0;
+            }
+
+            return pawn.health.hediffSet.hediffs.Count(hediff => hediff.def.tags.Any(t => tags.Contains(t)));
+        }
+
+        /// <summary>
+        /// 获取Pawn身上带有指定标签的Hediff列表
+        /// </summary>
+        /// <param name="pawn"></param>
+        /// <param name="tags"></param>
+        /// <returns></returns>
+        public static List<Hediff> GetHediffByTags(this Pawn pawn, params string[] tags)
+        {
+            if (pawn?.health?.hediffSet?.hediffs == null || tags == null || tags.Length == 0)
+            {
+            return null;
+            }
+
+            return pawn.health.hediffSet.hediffs.Where(hediff => hediff.def.tags.Any(t => tags.Contains(t))).ToList();
+        }
+
     }
 
 }
