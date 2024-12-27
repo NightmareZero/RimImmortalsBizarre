@@ -22,5 +22,31 @@
     </NzRimImmortalBizarre.DefCultivationBodyPartList>
 
     <!-- 正德寺 明心线 -->
+    <NzRimImmortalBizarre.DefCultivationBodyPartList>
+        <defName>Zd_Line_Enlightenment</defName>
+        <minLowCount>3</minLowCount>
+        <tags>
+            <li>NzRI_ZhengDe_BodyPart</li>
+            <li>NzRI_ZhengDe_Enlightenment</li>
+        </tags>
+        <low>
+            <li>Zd_KeenEyes</li>
+        </low>
+        <high>
+        </high>
+    </NzRimImmortalBizarre.DefCultivationBodyPartList>
+
     <!-- 正德寺 舍身线 -->
+    <NzRimImmortalBizarre.DefCultivationBodyPartList>
+        <defName>Zd_Line_Sacrifice</defName>
+        <minLowCount>3</minLowCount>
+        <tags>
+            <li>NzRI_ZhengDe_BodyPart</li>
+            <li>NzRI_ZhengDe_Sacrifice</li>
+        </tags>
+        <low>
+        </low>
+        <high>
+        </high>
+    </NzRimImmortalBizarre.DefCultivationBodyPartList>
 </Defs>
