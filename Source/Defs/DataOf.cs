@@ -22,8 +22,9 @@ namespace NzRimImmortalBizarre
         public static Dictionary<string, List<ThingDef>> thingListCache = new Dictionary<string, List<ThingDef>>();
 
         // 所有的修行仿生体 DefCultivationBodyPartList
-        public static List<DefCultivationBodyPartList> allDefCultivationBodyPartLists => DefDatabase<DefCultivationBodyPartList>.AllDefsListForReading;
-        public static Dictionary<string, DefCultivationBodyPartList> allDefCultivationBodyPartListsDict = new Dictionary<string, DefCultivationBodyPartList>();
+        public static List<DefZdCultivationLine> DefCultivationLines => DefDatabase<DefZdCultivationLine>.AllDefsListForReading;
+        public static Dictionary<string, DefZdCultivationLine> DefCultivationLineDict = new Dictionary<string, DefZdCultivationLine>();
+        public static Dictionary<string, DefZdCultivationLine> DefCultivationLineDictByLine = new Dictionary<string, DefZdCultivationLine>();
 
         public static void Init() { }
 
@@ -89,9 +90,10 @@ namespace NzRimImmortalBizarre
             }
 
             // 所有的修行仿生体
-            foreach (var def in allDefCultivationBodyPartLists)
+            foreach (var def in DefCultivationLines)
             {
-                allDefCultivationBodyPartListsDict.Add(def.defName, def);
+                DefCultivationLineDict.Add(def.defName, def);
+                DefCultivationLineDictByLine.Add(def.lineName, def);
             }
 
         }

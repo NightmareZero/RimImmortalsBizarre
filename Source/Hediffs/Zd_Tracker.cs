@@ -10,9 +10,9 @@ namespace NzRimImmortalBizarre
     public class Zd_Tracker : IExposable
     {
 
-        public const string WayFruition = "fruition";
-        public const string WayBuddhaNature = "buddhaNature";
-        public const string WaySelfSacrifice = "selfSacrifice";
+        public const string WayFruition = "Restraint";
+        public const string WayEnlightenment = "Enlightenment";
+        public const string WaySacrifice = "Sacrifice";
 
         private Pawn pawn;
         private Zd_Fruition parent;
@@ -55,9 +55,9 @@ namespace NzRimImmortalBizarre
             {
                 case WayFruition:
                     return this.fruition >= 99;
-                case WayBuddhaNature:
+                case WayEnlightenment:
                     return this.buddhaNature >= 50;
-                case WaySelfSacrifice:
+                case WaySacrifice:
                     return this.selfSacrifice >= 50;
                 default:
                     return false;

@@ -36,11 +36,11 @@ namespace NzRimImmortalBizarre
                     {
                         statusList.Add("Zd_Fruition_Restraint".Translate());
                     }
-                    if (this.Tracker.canLevelUp(Zd_Tracker.WaySelfSacrifice))
+                    if (this.Tracker.canLevelUp(Zd_Tracker.WaySacrifice))
                     {
                         statusList.Add("Zd_Fruition_SelfSacrifice".Translate());
                     }
-                    if (this.Tracker.canLevelUp(Zd_Tracker.WayBuddhaNature))
+                    if (this.Tracker.canLevelUp(Zd_Tracker.WayEnlightenment))
                     {
                         statusList.Add("Zd_Fruition_BuddhaNature".Translate());
                     }
@@ -153,7 +153,7 @@ namespace NzRimImmortalBizarre
                         }
                     };
                 }
-                if (this.Tracker.canLevelUp(Zd_Tracker.WaySelfSacrifice))
+                if (this.Tracker.canLevelUp(Zd_Tracker.WaySacrifice))
                 {
                     yield return new Command_Action
                     {
@@ -161,13 +161,13 @@ namespace NzRimImmortalBizarre
                         defaultDesc = "Zd_Fruition_LevelUp_SelfSacrifice_Desc".Translate(),
                         action = () =>
                         {
-                            wayLevelUp = Zd_Tracker.WaySelfSacrifice;
+                            wayLevelUp = Zd_Tracker.WaySacrifice;
                             // TODO 弹出确认提示
                             goToLevelUp();
                         }
                     };
                 }
-                if (this.Tracker.canLevelUp(Zd_Tracker.WayBuddhaNature))
+                if (this.Tracker.canLevelUp(Zd_Tracker.WayEnlightenment))
                 {
                     yield return new Command_Action
                     {
@@ -175,7 +175,7 @@ namespace NzRimImmortalBizarre
                         defaultDesc = "Zd_Fruition_LevelUp_BuddhaNature_Desc".Translate(),
                         action = () =>
                         {
-                            wayLevelUp = Zd_Tracker.WayBuddhaNature;
+                            wayLevelUp = Zd_Tracker.WayEnlightenment;
                             // TODO 弹出确认提示
                             goToLevelUp();
                         }

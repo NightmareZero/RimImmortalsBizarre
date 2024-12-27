@@ -4,8 +4,10 @@ using Verse;
 
 namespace NzRimImmortalBizarre
 { 
-    public class DefCultivationBodyPartList : Def
+    public class DefZdCultivationLine : Def
     {
+        // 修行线名称
+        public string lineName;
         // 获得高阶需要的低阶仿生体最小数量
         public int minLowCount;
 

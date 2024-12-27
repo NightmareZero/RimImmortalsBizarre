@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
     <!-- 正德寺 克己线 -->
-    <NzRimImmortalBizarre.DefCultivationBodyPartList>
+    <NzRimImmortalBizarre.DefZdCultivationLine>
         <defName>Zd_Line_Restraint</defName>
+        <lineName>Restraint</lineName>
         <minLowCount>3</minLowCount>
         <tags>
             <li>NzRI_ZhengDe_BodyPart</li>
@@ -19,11 +20,12 @@
             <li>Zd_EloquenceTongue</li>
             <li>Zd_KeenEyes</li>
         </high>
-    </NzRimImmortalBizarre.DefCultivationBodyPartList>
+    </NzRimImmortalBizarre.DefZdCultivationLine>
 
     <!-- 正德寺 明心线 -->
-    <NzRimImmortalBizarre.DefCultivationBodyPartList>
+    <NzRimImmortalBizarre.DefZdCultivationLine>
         <defName>Zd_Line_Enlightenment</defName>
+        <lineName>Enlightenment</lineName>
         <minLowCount>3</minLowCount>
         <tags>
             <li>NzRI_ZhengDe_BodyPart</li>
@@ -34,11 +36,12 @@
         </low>
         <high>
         </high>
-    </NzRimImmortalBizarre.DefCultivationBodyPartList>
+    </NzRimImmortalBizarre.DefZdCultivationLine>
 
     <!-- 正德寺 舍身线 -->
-    <NzRimImmortalBizarre.DefCultivationBodyPartList>
+    <NzRimImmortalBizarre.DefZdCultivationLine>
         <defName>Zd_Line_Sacrifice</defName>
+        <lineName>Sacrifice</lineName>
         <minLowCount>3</minLowCount>
         <tags>
             <li>NzRI_ZhengDe_BodyPart</li>
@@ -48,5 +51,5 @@
         </low>
         <high>
         </high>
-    </NzRimImmortalBizarre.DefCultivationBodyPartList>
+    </NzRimImmortalBizarre.DefZdCultivationLine>
 </Defs>

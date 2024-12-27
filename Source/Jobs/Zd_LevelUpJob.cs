@@ -48,12 +48,43 @@ namespace NzRimImmortalBizarre
                 if (!this.pawn.CurJob.playerForced)
                 {
                     // 只有在动作没有被打断的情况下才执行
-                    // 在这里添加你的逻辑
+                    Pawn actor = doJob.actor;
+                    applyLevelUp(actor);
                     Log.Message("Job completed successfully.");
                 }
             });
 
             yield return doJob;
+        }
+
+        private void applyLevelUp(Pawn pawn)
+        {
+            Zd_Fruition fruition = Utils.GetFruitionHediff(pawn);
+            if (fruition == null)
+            {
+                // TODO Message输出
+                Log.Error("Fruition hediff not found.");
+                return;
+            }
+
+            DefZdCultivationLine lineDef = DataOf.DefCultivationLineDict[fruition.wayLevelUp];
+            if (lineDef == null)
+            {
+                // TODO Message输出
+                Log.Error("Cultivation line not found.");
+                #if DEBUG
+                Log.Error($"WayLevelUp: {fruition.wayLevelUp} All: {string.Join(", ", DataOf.DefCultivationLineDict.Keys.ToList())}");
+                #endif
+                return;
+            }
+
+            bool ok = ZdLevelUpUtil.LevelUpAndAddBodyPart(pawn, lineDef,out Hediff addedHediff, out BodyPartDef bodyPart);
+            if (!ok)
+            {
+                // TODO Message输出
+                Log.Error("Level up failed.");
+                return;
+            }
         }
     }
 }

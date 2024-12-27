@@ -15,7 +15,7 @@ namespace NzRimImmortalBizarre
     public static class ZdLevelUpUtil
     {
 
-        public static bool LevelUpAndAddBodyPart(Pawn pawn, DefCultivationBodyPartList bodyPartList,
+        public static bool LevelUpAndAddBodyPart(Pawn pawn, DefZdCultivationLine bodyPartList,
         out Hediff addedHediff, out BodyPartDef bodyPart)
         {
             try
