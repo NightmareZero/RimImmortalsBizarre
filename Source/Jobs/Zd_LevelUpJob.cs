@@ -71,7 +71,8 @@ namespace NzRimImmortalBizarre
                 return;
             }
 
-            if (DataOf.DefCultivationLineDictByLine.ContainsKey(fruition.wayLevelUp) == false)
+            DefZdCultivationLine lineDef = DataOf.DefCultivationLineDictByLine.TryGetValue(fruition.wayLevelUp);
+            if (lineDef == null)
             {
                 // TODO Message输出
                 Log.Error($"Cultivation line {fruition.wayLevelUp} not found.");
@@ -80,7 +81,7 @@ namespace NzRimImmortalBizarre
 #endif
                 return;
             }
-            DefZdCultivationLine lineDef = DataOf.DefCultivationLineDict[fruition.wayLevelUp];
+            
 
 
             bool ok = ZdLevelUpUtil.LevelUpAndAddBodyPart(pawn, lineDef, out Hediff addedHediff, out BodyPartRecord bodyPart);
