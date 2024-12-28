@@ -22,6 +22,9 @@ namespace NzRimImmortalBizarre
             {
                 // 根据标签，获取Pawn所有的仿生体
                 List<Hediff> bodyParts = pawn.GetHediffByTags(bodyPartList.TagNames.ToArray());
+                #if DEBUG
+                Log.Message($"pawn {pawn.Name} got bodyParts count {bodyParts.Count}");
+                #endif
 
                 // 可以添加的仿生体
                 List<HediffDef> canAddHediffDefs = new List<HediffDef>();
@@ -38,6 +41,9 @@ namespace NzRimImmortalBizarre
 
                 // 将已有的仿生体排除
                 canAddHediffDefs = canAddHediffDefs.Except(bodyParts.Select(x => x.def)).ToList();
+                #if DEBUG
+                Log.Message($"pawn {pawn.Name} canAddHediffDefs count {canAddHediffDefs.Count}");
+                #endif
 
                 while (canAddHediffDefs.Count > 0)
                 {
@@ -49,8 +55,14 @@ namespace NzRimImmortalBizarre
                     {
                         // 跳过, 尝试下一个
                         canAddHediffDefs.Remove(hediffDef);
+                        #if DEBUG
+                        Log.Message($"pawn {pawn.Name} can not use bodyPartDef {hediffDef.defaultInstallPart.defName}");
+                        #endif
                         continue;
                     }
+                    #if DEBUG
+                    Log.Message($"pawn {pawn.Name} can use bodyPartDef {hediffDef.defaultInstallPart.defName}");
+                    #endif
                     addedHediff = HediffMaker.MakeHediff(hediffDef, pawn,installOnBodyPart);
                     // 添加仿生体
                     pawn.health.AddHediff(addedHediff);
