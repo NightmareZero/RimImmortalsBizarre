@@ -122,7 +122,7 @@
         <hediffClass>HediffWithComps</hediffClass>
         <comps>
             <li Class="HediffCompProperties_DisappearsOnDeath" />
-            <li Class="Comp_StashHediff">
+            <li Class="NzRimImmortalBizarre.Comp_StashHediff">
                 <hediffs>
                     <li>HoraxianInvisibility</li>
                     <li>PsychicInvisibility</li>

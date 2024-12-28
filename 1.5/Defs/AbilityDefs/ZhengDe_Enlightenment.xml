@@ -24,14 +24,12 @@
       <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
         <rEnergy>-50</rEnergy>
       </li>       -->
-      <comps>
-        <li Class="CompProperties_AbilityGiveHediff">
-          <compClass>CompAbilityEffect_GiveHediff</compClass>
-          <hediffDef>NzRI_Zd_KeenEyes</hediffDef>
-          <onlyApplyToSelf>True</onlyApplyToSelf>
-          <replaceExisting>true</replaceExisting>
-        </li>
-      </comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>NzRI_Zd_KeenEyes</hediffDef>
+        <onlyApplyToSelf>True</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
 
     </comps>
   </AbilityDef>

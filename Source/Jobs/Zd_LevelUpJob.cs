@@ -78,7 +78,7 @@ namespace NzRimImmortalBizarre
                 return;
             }
 
-            bool ok = ZdLevelUpUtil.LevelUpAndAddBodyPart(pawn, lineDef,out Hediff addedHediff, out BodyPartDef bodyPart);
+            bool ok = ZdLevelUpUtil.LevelUpAndAddBodyPart(pawn, lineDef,out Hediff addedHediff, out BodyPartRecord bodyPart);
             if (!ok)
             {
                 // TODO Message输出
