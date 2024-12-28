@@ -49,6 +49,18 @@ namespace NzRimImmortalBizarre
         }
     }
 
+    public class NzRimImmortalBizarreGameComponent : GameComponent
+    {
+        public NzRimImmortalBizarreGameComponent(Game game)
+        {
+        }
+        public override void LoadedGame()
+        {
+            base.LoadedGame();
+            Caches.Clear();
+        }
+    }
+
 
 
     // *Uncomment for Harmony*

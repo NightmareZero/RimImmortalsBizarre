@@ -121,7 +121,12 @@ namespace NzRimImmortalBizarre
         /// <returns></returns>
         public static Zd_Fruition GetFruitionHediff(Pawn pawn)
         {
-            return (Zd_Fruition)pawn.health?.hediffSet?.GetFirstHediffOfDef(XmlOf.NzRI_Zd_Fruition);
+            var hediff = pawn.health?.hediffSet?.GetFirstHediffOfDef(XmlOf.NzRI_Zd_Fruition);
+            if (hediff == null)
+            {
+                return null;
+            }
+            return (Zd_Fruition)hediff;
         }
 
         /// <summary>

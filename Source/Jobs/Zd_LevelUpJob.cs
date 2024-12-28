@@ -18,7 +18,7 @@ namespace NzRimImmortalBizarre
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
-            throw new NotImplementedException();
+            return pawn.Reserve(base.TargetLocA, job, 1, -1, null, errorOnFailed);
         }
 
         protected override IEnumerable<Toil> MakeNewToils()
@@ -28,17 +28,17 @@ namespace NzRimImmortalBizarre
 
             // 创建一个新的 Toil
             Toil doJob = new Toil();
+            // 初始化动作
             doJob.initAction = () =>
             {
-                // 初始化动作
                 Pawn actor = doJob.actor;
                 // 你可以在这里添加初始化逻辑
+                // TODO Message输出
             };
             doJob.tickAction = () =>
             {
-                // 每个 tick 执行的动作
                 Pawn actor = doJob.actor;
-                // 你可以在这里添加每个 tick 的逻辑
+                // 每个 tick 执行的动作
             };
             doJob.defaultCompleteMode = ToilCompleteMode.Delay;
             doJob.defaultDuration = JobDuration;
@@ -49,7 +49,11 @@ namespace NzRimImmortalBizarre
                 {
                     // 只有在动作没有被打断的情况下才执行
                     Pawn actor = doJob.actor;
-                    applyLevelUp(actor);
+                    try {
+                        applyLevelUp(actor);
+                    } catch (Exception e) {
+                        e.PrintExceptionWithStackTrace();
+                    }
                     Log.Message("Job completed successfully.");
                 }
             });
@@ -67,18 +71,19 @@ namespace NzRimImmortalBizarre
                 return;
             }
 
-            DefZdCultivationLine lineDef = DataOf.DefCultivationLineDict[fruition.wayLevelUp];
-            if (lineDef == null)
+            if (DataOf.DefCultivationLineDictByLine.ContainsKey(fruition.wayLevelUp) == false)
             {
                 // TODO Message输出
-                Log.Error("Cultivation line not found.");
-                #if DEBUG
+                Log.Error($"Cultivation line {fruition.wayLevelUp} not found.");
+#if DEBUG
                 Log.Error($"WayLevelUp: {fruition.wayLevelUp} All: {string.Join(", ", DataOf.DefCultivationLineDict.Keys.ToList())}");
-                #endif
+#endif
                 return;
             }
+            DefZdCultivationLine lineDef = DataOf.DefCultivationLineDict[fruition.wayLevelUp];
 
-            bool ok = ZdLevelUpUtil.LevelUpAndAddBodyPart(pawn, lineDef,out Hediff addedHediff, out BodyPartRecord bodyPart);
+
+            bool ok = ZdLevelUpUtil.LevelUpAndAddBodyPart(pawn, lineDef, out Hediff addedHediff, out BodyPartRecord bodyPart);
             if (!ok)
             {
                 // TODO Message输出
@@ -86,5 +91,56 @@ namespace NzRimImmortalBizarre
                 return;
             }
         }
+
+        /*
+        1. GetReport：
+           - 返回当前任务的报告字符串，通常用于显示在用户界面上。子类可以重写此方法以提供自定义的报告字符串。
+
+        2. TryMakePreToilReservations：
+           - 尝试为任务的目标预留资源。子类必须实现此方法，以确保任务所需的资源在任务开始前已被预留。
+
+        3. MakeNewToils：
+           - 创建并返回一个 Toil 的集合，这些 Toil 定义了任务的具体步骤。子类必须实现此方法，以定义任务的具体行为。
+
+        4. SetInitialPosture：
+           - 设置角色的初始姿势。默认情况下，角色站立。子类可以重写此方法以设置不同的初始姿势。
+
+        5. ExposeData：
+           - 用于保存和加载任务的状态。子类可以重写此方法以保存和加载自定义数据。
+
+        6. CanBeginNowWhileLyingDown：
+           - 指示任务是否可以在角色躺下时开始。默认返回 false。子类可以重写此方法以允许任务在角色躺下时开始。
+
+        7. TaleParameters：
+           - 返回一个对象数组，包含与任务相关的故事参数。子类可以重写此方法以提供自定义的故事参数。
+
+        8. Notify_Starting：
+           - 在任务开始时调用。子类可以重写此方法以在任务开始时执行自定义逻辑。
+
+        9. Notify_PatherArrived：
+           - 在角色到达路径目标时调用。子类可以重写此方法以在角色到达目标时执行自定义逻辑。
+
+        10. Notify_PatherFailed：
+            - 在路径查找失败时调用。子类可以重写此方法以在路径查找失败时执行自定义逻辑。
+
+        11. Notify_StanceChanged：
+            - 在角色姿势改变时调用。子类可以重写此方法以在角色姿势改变时执行自定义逻辑。
+
+        12. Notify_DamageTaken：
+            - 在角色受到伤害时调用。子类可以重写此方法以在角色受到伤害时执行自定义逻辑。
+
+        13. ModifyCarriedThingDrawPos：
+            - 修改角色携带物品的绘制位置。子类可以重写此方法以自定义物品的绘制位置。
+
+        14. DesiredSocialMode：
+            - 返回任务所需的社交模式。子类可以重写此方法以指定任务的社交模式。
+
+        15. IsContinuation：
+            - 指示给定的任务是否是当前任务的延续。子类可以重写此方法以自定义任务的延续逻辑。
+
+        16. IsSameJobAs：
+            - 指示给定的任务是否与当前任务相同。子类可以重写此方法以自定义任务的相同性逻辑。
+        
+        */
     }
 }

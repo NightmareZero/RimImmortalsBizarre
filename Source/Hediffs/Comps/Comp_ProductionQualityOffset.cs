@@ -33,13 +33,13 @@ namespace NzRimImmortalBizarre
         public override void CompPostPostRemoved()
         {
             base.CompPostPostRemoved();
-            CacheHediff.productionQualityOffsetCache.Remove(parent.pawn);
+            Caches.productionQualityOffsetCache.Remove(parent.pawn);
         }
 
         public override void CompPostMake()
         {
             base.CompPostMake();
-            CacheHediff.productionQualityOffsetCache[parent.pawn] = this;
+            Caches.productionQualityOffsetCache[parent.pawn] = this;
         }
     }
 
@@ -54,7 +54,7 @@ namespace NzRimImmortalBizarre
             try
             {
                 // 尝试从缓存中获取 HediffComp_ProductionQualityOffset
-                if (CacheHediff.productionQualityOffsetCache.TryGetValue(pawn, out var comp))
+                if (Caches.productionQualityOffsetCache.TryGetValue(pawn, out var comp))
                 {
                     if (comp == null) return;
                 }
@@ -67,7 +67,7 @@ namespace NzRimImmortalBizarre
 
                     comp = hediffWithComp?.TryGetComp<HediffComp_ProductionQualityOffset>();
                     // 缓存
-                    CacheHediff.productionQualityOffsetCache[pawn] = comp;
+                    Caches.productionQualityOffsetCache[pawn] = comp;
                     if (comp == null) return;
                 }
 

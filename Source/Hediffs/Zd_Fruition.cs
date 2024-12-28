@@ -95,6 +95,7 @@ namespace NzRimImmortalBizarre
         public Zd_Tracker Tracker;
         public string wayLevelUp = "";
         public bool Removed { get; private set; } = false;
+        private bool needsInit = false;
 
         public override void PostMake()
         {
@@ -113,7 +114,17 @@ namespace NzRimImmortalBizarre
             base.ExposeData();
             Scribe_Deep.Look(ref Tracker, "zwTracker");
 
-            this.Init();
+            needsInit = true;
+        }
+
+        public override void Tick()
+        {
+            base.Tick();
+            if (needsInit)
+            {
+                needsInit = false;
+                this.Init();
+            }
         }
 
         public override IEnumerable<Gizmo> GetGizmos()
