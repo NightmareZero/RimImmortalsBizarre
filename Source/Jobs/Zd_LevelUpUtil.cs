@@ -16,7 +16,7 @@ namespace NzRimImmortalBizarre
     {
 
         public static bool LevelUpAndAddBodyPart(Pawn pawn, DefZdCultivationLine bodyPartList,
-        out Hediff addedHediff, out BodyPartDef bodyPart)
+        out Hediff addedHediff, out BodyPartRecord installOnBodyPart)
         {
             try
             {
@@ -44,14 +44,14 @@ namespace NzRimImmortalBizarre
                     // 随机获取一个可以添加的仿生体
                     HediffDef hediffDef = canAddHediffDefs.RandomElement();
                     // 检查对应的部位是否都被占用了
-                    if (!isHediffBodyPartCanUse(pawn, hediffDef.defaultInstallPart))
+
+                    if (!isHediffBodyPartCanUse(pawn, hediffDef.defaultInstallPart, out installOnBodyPart))
                     {
                         // 跳过, 尝试下一个
                         canAddHediffDefs.Remove(hediffDef);
                         continue;
                     }
-                    bodyPart = hediffDef.defaultInstallPart;
-                    addedHediff = HediffMaker.MakeHediff(hediffDef, pawn);
+                    addedHediff = HediffMaker.MakeHediff(hediffDef, pawn,installOnBodyPart);
                     // 添加仿生体
                     pawn.health.AddHediff(addedHediff);
                     return true;
@@ -62,7 +62,7 @@ namespace NzRimImmortalBizarre
             {
                 e.PrintExceptionWithStackTrace();
             }
-            bodyPart = null;
+            installOnBodyPart = null;
             addedHediff = null;
             return false;
         }
@@ -77,8 +77,9 @@ namespace NzRimImmortalBizarre
         /// <param name="pawn"></param>
         /// <param name="bodyPartDef"></param>
         /// <returns></returns>
-        public static bool isHediffBodyPartCanUse(Pawn pawn, BodyPartDef bodyPartDef)
+        public static bool isHediffBodyPartCanUse(Pawn pawn, BodyPartDef bodyPartDef,out BodyPartRecord gotBodyPart)
         {
+            gotBodyPart = null;
             if (pawn?.health?.hediffSet == null)
             {
                 Log.Error($"pawn {pawn.Name} health hediffSet is null");
@@ -94,6 +95,7 @@ namespace NzRimImmortalBizarre
                     #if DEBUG
                     Log.Message($"pawn {pawn.Name} got missing bodyPartDef {bodyPartDef.defName}");
                     #endif
+                    gotBodyPart = part.Part;
                     return true;
                 }
             }
@@ -129,6 +131,7 @@ namespace NzRimImmortalBizarre
                     #if DEBUG
                     Log.Message($"pawn {pawn.Name} found bodyPartDef {bodyPartDef.defName} is not used");
                     #endif
+                    gotBodyPart = bodyPart;
                     return true;
                 }
             }
