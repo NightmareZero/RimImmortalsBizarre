@@ -40,6 +40,14 @@ namespace NzRimImmortalBizarre
 #if DEBUG
                 Log.Message($"pawn {pawn.Name} canAddHediffDefs count {canAddHediffDefs.Count}");
 #endif
+                if (canAddHediffDefs.Count == 0)
+                {
+                    // 没有可以添加的仿生体
+                    // TODO Message输出
+                    installOnBodyPart = null;
+                    addedHediff = null;
+                    return false;
+                }
 
                 while (canAddHediffDefs.Count > 0)
                 {

@@ -88,9 +88,15 @@ namespace NzRimImmortalBizarre
             if (!ok)
             {
                 // TODO Message输出
-                Log.Error("Level up failed.");
+                Log.Message("Level up failed.");
                 return;
             }
+            #if DEBUG
+            #else
+            fruition.wayLevelUp = null;
+            fruition.Tracker.resetAfterLevelUp();
+            #endif            
+            // TODO Message输出, 突破成功
         }
 
         /*

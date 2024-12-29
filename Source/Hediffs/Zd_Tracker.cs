@@ -32,7 +32,7 @@ namespace NzRimImmortalBizarre
         /// <summary>
         /// 刷新修行进度(当完成一次进阶时)
         /// </summary>
-        public void resetAtLevelUp()
+        public void resetAfterLevelUp()
         {
             if (!checkEnergyRoot())
             {
