@@ -22,28 +22,24 @@ namespace NzRimImmortalBizarre
             {
                 // 根据标签，获取Pawn所有的仿生体
                 List<Hediff> bodyParts = pawn.GetHediffByTags(bodyPartList.TagNames.ToArray());
-                #if DEBUG
-                Log.Message($"pawn {pawn.Name} got bodyParts count {bodyParts.Count}");
-                #endif
+#if DEBUG
+                Log.Message($"pawn {pawn.Name} got installed bodyParts count {bodyParts.Count}");
+#endif
 
                 // 可以添加的仿生体
                 List<HediffDef> canAddHediffDefs = new List<HediffDef>();
+                canAddHediffDefs.AddRange(bodyPartList.low);
                 if (bodyParts.Count >= bodyPartList.minLowCount)
                 {
                     // 低级部位数量达到要求
                     canAddHediffDefs.AddRange(bodyPartList.high);
                 }
-                else
-                {
-                    // 低级部位数量未达到要求
-                    canAddHediffDefs.AddRange(bodyPartList.low);
-                }
 
                 // 将已有的仿生体排除
                 canAddHediffDefs = canAddHediffDefs.Except(bodyParts.Select(x => x.def)).ToList();
-                #if DEBUG
+#if DEBUG
                 Log.Message($"pawn {pawn.Name} canAddHediffDefs count {canAddHediffDefs.Count}");
-                #endif
+#endif
 
                 while (canAddHediffDefs.Count > 0)
                 {
@@ -55,15 +51,15 @@ namespace NzRimImmortalBizarre
                     {
                         // 跳过, 尝试下一个
                         canAddHediffDefs.Remove(hediffDef);
-                        #if DEBUG
+#if DEBUG
                         Log.Message($"pawn {pawn.Name} can not use bodyPartDef {hediffDef.defaultInstallPart.defName}");
-                        #endif
+#endif
                         continue;
                     }
-                    #if DEBUG
+#if DEBUG
                     Log.Message($"pawn {pawn.Name} can use bodyPartDef {hediffDef.defaultInstallPart.defName}");
-                    #endif
-                    addedHediff = HediffMaker.MakeHediff(hediffDef, pawn,installOnBodyPart);
+#endif
+                    addedHediff = HediffMaker.MakeHediff(hediffDef, pawn, installOnBodyPart);
                     // 添加仿生体
                     pawn.health.AddHediff(addedHediff);
                     return true;
@@ -87,9 +83,9 @@ namespace NzRimImmortalBizarre
         /// 3. 返回false
         /// </summary>
         /// <param name="pawn"></param>
-        /// <param name="bodyPartDef"></param>
+        /// <param name="willInstallbodyPartDef"></param>
         /// <returns></returns>
-        public static bool isHediffBodyPartCanUse(Pawn pawn, BodyPartDef bodyPartDef,out BodyPartRecord gotBodyPart)
+        public static bool isHediffBodyPartCanUse(Pawn pawn, BodyPartDef willInstallbodyPartDef, out BodyPartRecord gotBodyPart)
         {
             gotBodyPart = null;
             if (pawn?.health?.hediffSet == null)
@@ -98,57 +94,62 @@ namespace NzRimImmortalBizarre
                 return false;
             }
 
-            // 如果是一个缺失部位, 则返回true
+            // 检查是否有缺失的目标部位
             var missingPart = pawn.health.hediffSet.GetMissingPartsCommonAncestors();
             foreach (var part in missingPart)
             {
-                if (bodyPartDef.defName == part.Part.def.defName)
+                if (willInstallbodyPartDef.defName == part.Part.def.defName)
                 {
-                    #if DEBUG
-                    Log.Message($"pawn {pawn.Name} got missing bodyPartDef {bodyPartDef.defName}");
-                    #endif
+#if DEBUG
+                    Log.Message($"pawn {pawn.Name} got missing bodyPartDef {willInstallbodyPartDef.defName}");
+#endif
                     gotBodyPart = part.Part;
                     return true;
                 }
             }
 
-            #if DEBUG
-            Log.Message($"pawn {pawn.Name} not found missing bodyPartDef {bodyPartDef.defName}");
-            #endif
+#if DEBUG
+            Log.Message($"pawn {pawn.Name} not found missing bodyPartDef {willInstallbodyPartDef.defName}");
+#endif
 
-            // 如果所有的该部位都已经占用, 则返回false
+            // 获取所有未缺失的目标部位
             var allParts = pawn.health.hediffSet.GetNotMissingParts();
             List<BodyPartRecord> bodyPartRecords = new List<BodyPartRecord>();
             foreach (var part in allParts)
             {
-                if (part.def.defName == bodyPartDef.defName)
+                if (part.def.defName == willInstallbodyPartDef.defName)
                 {
                     bodyPartRecords.Add(part);
                 }
             }
+
             // 如果没有找到该部位, 则返回false
             if (bodyPartRecords.Count == 0)
             {
-                #if DEBUG
-                Log.Message($"pawn {pawn.Name} not found bodyPartDef {bodyPartDef.defName}");
-                #endif
+#if DEBUG
+                Log.Message($"pawn {pawn.Name} not found bodyPartDef {willInstallbodyPartDef.defName}");
+#endif
                 return false;
             }
-            // 对现有的Hediff进行匹配
+
+            // 检查是否有未安装仿生体的目标部位
             foreach (var bodyPart in bodyPartRecords)
-            { 
-                Hediff hediff = pawn.health.hediffSet.GetFirstHediffMatchingPart<Hediff_AddedPart>(bodyPart);
-                if (hediff == null)
+            {
+                bool hasBionicPart = pawn.health.hediffSet.hediffs
+                    .OfType<Hediff_AddedPart>()
+                    .Any(hediff => hediff.Part == bodyPart);
+
+                if (!hasBionicPart)
                 {
-                    #if DEBUG
-                    Log.Message($"pawn {pawn.Name} found bodyPartDef {bodyPartDef.defName} is not used");
-                    #endif
+#if DEBUG
+                    Log.Message($"pawn {pawn.Name} found willInstallbodyPartDef {willInstallbodyPartDef.defName} is not used");
+#endif
                     gotBodyPart = bodyPart;
                     return true;
                 }
             }
-            return false;
 
+            return false;
         }
     }
 }
