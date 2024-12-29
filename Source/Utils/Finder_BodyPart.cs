@@ -153,12 +153,17 @@ namespace NzRimImmortalBizarre
         /// <returns></returns>
         public static List<Hediff> GetHediffByTags(this Pawn pawn, params string[] tags)
         {
+            #if DEBUG
+            Log.Message($"GetHediffByTags: {string.Join(", ", tags)}");
+            #endif
             if (pawn?.health?.hediffSet?.hediffs == null || tags == null || tags.Length == 0)
             {
             return null;
             }
 
-            return pawn.health.hediffSet.hediffs.Where(hediff => hediff.def.tags.Any(t => tags.Contains(t))).ToList();
+            return pawn.health.hediffSet.hediffs
+            .Where(hediff => hediff.def?.tags!=null)
+            .Where(hediff => hediff.def.tags.Any(t => tags.Contains(t))).ToList();
         }
 
     }

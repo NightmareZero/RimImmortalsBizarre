@@ -21,9 +21,11 @@ namespace NzRimImmortalBizarre
         public static List<ThingList> allThingLists => DefDatabase<ThingList>.AllDefsListForReading;
         public static Dictionary<string, List<ThingDef>> thingListCache = new Dictionary<string, List<ThingDef>>();
 
-        // 所有的修行仿生体 DefCultivationBodyPartList
+        // 正德寺修行路线
         public static List<DefZdCultivationLine> DefCultivationLines => DefDatabase<DefZdCultivationLine>.AllDefsListForReading;
+        // 正德寺修行路线 DefName=> DefZdCultivationLine
         public static Dictionary<string, DefZdCultivationLine> DefCultivationLineDict = new Dictionary<string, DefZdCultivationLine>();
+        // 正德寺修行路线 LineName=> DefZdCultivationLine
         public static Dictionary<string, DefZdCultivationLine> DefCultivationLineDictByLine = new Dictionary<string, DefZdCultivationLine>();
 
         public static void Init() { }
