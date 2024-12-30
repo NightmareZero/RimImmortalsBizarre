@@ -15,24 +15,53 @@ namespace NzRimImmortalBizarre
     public static class ZdLevelUpUtil
     {
 
-        public static bool LevelUpAndAddBodyPart(Pawn pawn, DefZdCultivationLine bodyPartList,
+        /// <summary>
+        /// 突破并添加仿生体
+        /// 其余见 @see PreCreateBodyPart
+        /// </summary>
+        /// <param name="pawn"></param>
+        /// <param name="cultivationLine"></param>
+        /// <param name="addedHediff"></param>
+        /// <param name="installOnBodyPart"></param>
+        /// <returns></returns>
+        public static bool LevelUpAndAddBodyPart(Pawn pawn, DefZdCultivationLine cultivationLine,
         out Hediff addedHediff, out BodyPartRecord installOnBodyPart)
+        {
+            bool ok = PreCreateBodyPart(pawn, cultivationLine, out addedHediff, out installOnBodyPart);
+            if (ok)
+            {
+                pawn.health.AddHediff(addedHediff, installOnBodyPart);
+            }
+            return ok;
+        }
+
+        /// <summary>
+        /// 预创建一个仿生体和对应的部位
+        /// 找到一个可以添加的仿生体，和其对应的部位
+        /// </summary>
+        /// <param name="pawn">目标</param>
+        /// <param name="cultivationLine">突破路线</param>
+        /// <param name="targetHediff">输出: 创建好的Hediff</param>
+        /// <param name="targetBodyPart">输出: 找到的BodyPart</param>
+        /// <returns></returns>
+        public static bool PreCreateBodyPart(Pawn pawn, DefZdCultivationLine cultivationLine,
+        out Hediff targetHediff, out BodyPartRecord targetBodyPart)
         {
             try
             {
                 // 根据标签，获取Pawn所有的仿生体
-                List<Hediff> bodyParts = pawn.GetHediffByTags(bodyPartList.TagNames.ToArray());
+                List<Hediff> bodyParts = pawn.GetHediffByTags(cultivationLine.TagNames.ToArray());
 #if DEBUG
                 Log.Message($"pawn {pawn.Name} got installed bodyParts count {bodyParts.Count}");
 #endif
 
                 // 可以添加的仿生体
                 List<HediffDef> canAddHediffDefs = new List<HediffDef>();
-                canAddHediffDefs.AddRange(bodyPartList.low);
-                if (bodyParts.Count >= bodyPartList.minLowCount)
+                canAddHediffDefs.AddRange(cultivationLine.low);
+                if (bodyParts.Count >= cultivationLine.minLowCount)
                 {
                     // 低级部位数量达到要求
-                    canAddHediffDefs.AddRange(bodyPartList.high);
+                    canAddHediffDefs.AddRange(cultivationLine.high);
                 }
 
                 // 将已有的仿生体排除
@@ -44,8 +73,8 @@ namespace NzRimImmortalBizarre
                 {
                     // 没有可以添加的仿生体
                     // TODO Message输出
-                    installOnBodyPart = null;
-                    addedHediff = null;
+                    targetBodyPart = null;
+                    targetHediff = null;
                     return false;
                 }
 
@@ -55,7 +84,7 @@ namespace NzRimImmortalBizarre
                     HediffDef hediffDef = canAddHediffDefs.RandomElement();
                     // 检查对应的部位是否都被占用了
 
-                    if (!isHediffBodyPartCanUse(pawn, hediffDef.defaultInstallPart, out installOnBodyPart))
+                    if (!isHediffBodyPartCanUse(pawn, hediffDef.defaultInstallPart, out targetBodyPart))
                     {
                         // 跳过, 尝试下一个
                         canAddHediffDefs.Remove(hediffDef);
@@ -67,9 +96,8 @@ namespace NzRimImmortalBizarre
 #if DEBUG
                     Log.Message($"pawn {pawn.Name} can use bodyPartDef {hediffDef.defaultInstallPart.defName}");
 #endif
-                    addedHediff = HediffMaker.MakeHediff(hediffDef, pawn, installOnBodyPart);
-                    // 添加仿生体
-                    pawn.health.AddHediff(addedHediff);
+                    targetHediff = HediffMaker.MakeHediff(hediffDef, pawn, targetBodyPart);
+                    // 此处不添加仿生体，只是预创建
                     return true;
                 }
 
@@ -78,8 +106,8 @@ namespace NzRimImmortalBizarre
             {
                 e.PrintExceptionWithStackTrace();
             }
-            installOnBodyPart = null;
-            addedHediff = null;
+            targetBodyPart = null;
+            targetHediff = null;
             return false;
         }
 

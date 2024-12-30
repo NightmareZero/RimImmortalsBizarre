@@ -26,6 +26,29 @@ namespace NzRimImmortalBizarre
             // 设置目标
             this.FailOnDespawnedOrNull(TargetIndex.A);
 
+            this.AddFinishAction((JobCondition condition) =>
+            {
+                if (condition == JobCondition.Succeeded)
+                {
+                    // 只有在动作没有被打断的情况下才执行
+                    Pawn actor = this.pawn;
+                    try
+                    {
+                        applyLevelUp(actor);
+                    }
+                    catch (Exception e)
+                    {
+                        e.PrintExceptionWithStackTrace();
+                    }
+                    Log.Message("Job completed successfully.");
+                }
+                else
+                {
+                    // TODO 走火入魔吧 添加仙路那个Hediff
+                }
+
+            });
+
             // 创建一个新的 Toil
             Toil doJob = new Toil();
             // 初始化动作
@@ -44,24 +67,8 @@ namespace NzRimImmortalBizarre
             doJob.defaultDuration = JobDuration;
             // 添加进度条
             doJob.WithProgressBar(TargetIndex.A, () => (float)doJob.actor.jobs.curDriver.ticksLeftThisToil / JobDuration, false);
-            doJob.AddFinishAction(() =>
-            {
-                // 动作完成后执行的逻辑
-                if (!this.pawn.CurJob.playerForced)
-                {
-                    // 只有在动作没有被打断的情况下才执行
-                    Pawn actor = doJob.actor;
-                    try
-                    {
-                        applyLevelUp(actor);
-                    }
-                    catch (Exception e)
-                    {
-                        e.PrintExceptionWithStackTrace();
-                    }
-                    Log.Message("Job completed successfully.");
-                }
-            });
+            // doJob.PlaySoundAtEnd
+            // doJob.PlaySoundAtStart
 
             yield return doJob;
         }
@@ -86,8 +93,6 @@ namespace NzRimImmortalBizarre
 #endif
                 return;
             }
-
-
 
             bool ok = ZdLevelUpUtil.LevelUpAndAddBodyPart(pawn, lineDef, out Hediff addedHediff, out BodyPartRecord bodyPart);
             if (!ok)
