@@ -42,6 +42,8 @@ namespace NzRimImmortalBizarre
             };
             doJob.defaultCompleteMode = ToilCompleteMode.Delay;
             doJob.defaultDuration = JobDuration;
+            // 添加进度条
+            doJob.WithProgressBar(TargetIndex.A, () => (float)doJob.actor.jobs.curDriver.ticksLeftThisToil / JobDuration, false);
             doJob.AddFinishAction(() =>
             {
                 // 动作完成后执行的逻辑
@@ -49,9 +51,12 @@ namespace NzRimImmortalBizarre
                 {
                     // 只有在动作没有被打断的情况下才执行
                     Pawn actor = doJob.actor;
-                    try {
+                    try
+                    {
                         applyLevelUp(actor);
-                    } catch (Exception e) {
+                    }
+                    catch (Exception e)
+                    {
                         e.PrintExceptionWithStackTrace();
                     }
                     Log.Message("Job completed successfully.");
@@ -81,7 +86,7 @@ namespace NzRimImmortalBizarre
 #endif
                 return;
             }
-            
+
 
 
             bool ok = ZdLevelUpUtil.LevelUpAndAddBodyPart(pawn, lineDef, out Hediff addedHediff, out BodyPartRecord bodyPart);
@@ -91,11 +96,11 @@ namespace NzRimImmortalBizarre
                 Log.Message("Level up failed.");
                 return;
             }
-            #if DEBUG
-            #else
+#if DEBUG
+#else
             fruition.wayLevelUp = null;
             fruition.Tracker.resetAfterLevelUp();
-            #endif            
+#endif
             // TODO Message输出, 突破成功
         }
 
