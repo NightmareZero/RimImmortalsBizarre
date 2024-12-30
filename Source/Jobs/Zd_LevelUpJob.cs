@@ -16,8 +16,18 @@ namespace NzRimImmortalBizarre
     {
         private const int JobDuration = 400; // 400 ticks = 6.67 seconds
 
+        private Hediff addHediff;
+        private BodyPartRecord addBodyPart;
+
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
+            // 预留资源
+            if (!this.prepareLevelUp(this.pawn))
+            {
+                return false;
+            }
+
+            // 原版预留资源
             return pawn.Reserve(base.TargetLocA, job, 1, -1, null, errorOnFailed);
         }
 
@@ -73,14 +83,14 @@ namespace NzRimImmortalBizarre
             yield return doJob;
         }
 
-        private void applyLevelUp(Pawn pawn)
+        private bool prepareLevelUp(Pawn pawn)
         {
             Zd_Fruition fruition = Utils.GetFruitionHediff(pawn);
             if (fruition == null)
             {
                 // TODO Message输出
                 Log.Error("Fruition hediff not found.");
-                return;
+                return false;
             }
 
             DefZdCultivationLine lineDef = DataOf.DefCultivationLineDictByLine.TryGetValue(fruition.wayLevelUp);
@@ -91,22 +101,43 @@ namespace NzRimImmortalBizarre
 #if DEBUG
                 Log.Error($"WayLevelUp: {fruition.wayLevelUp} All: {string.Join(", ", DataOf.DefCultivationLineDict.Keys.ToList())}");
 #endif
-                return;
+                return false;
             }
 
-            bool ok = ZdLevelUpUtil.LevelUpAndAddBodyPart(pawn, lineDef, out Hediff addedHediff, out BodyPartRecord bodyPart);
-            if (!ok)
+            bool got = ZdLevelUpUtil.PreCreateBodyPart(pawn, lineDef, out Hediff addedHediff, out BodyPartRecord bodyPart);
+            if (!got)
             {
                 // TODO Message输出
-                Log.Message("Level up failed.");
-                return;
+                Log.Error("Pre create body part failed.");
+                return false;
             }
+
+            this.addHediff = addedHediff;
+            this.addBodyPart = bodyPart;
+
+            return true;
+        }
+
+
+        private void applyLevelUp(Pawn pawn)
+        {
+
+            // 添加预创建好的Hediff
+            pawn.health.AddHediff(this.addHediff, this.addBodyPart);
 #if DEBUG
 #else
             fruition.wayLevelUp = null;
             fruition.Tracker.resetAfterLevelUp();
 #endif
             // TODO Message输出, 突破成功
+        }
+
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Values.Look(ref this.addHediff, "addHediff");
+            Scribe_Values.Look(ref this.addBodyPart, "addBodyPart");
         }
 
         /*
