@@ -12,12 +12,12 @@ using WhoXiuXian.Abilities;
 
 namespace NzRimImmortalBizarre
 {
-    public class Comp_ProductionQualityOffset : HediffCompProperties
+    public class CompProperties_ProductionQualityOffset : HediffCompProperties
     { 
         // 质量偏移
         public int offset = 0;
 
-        public Comp_ProductionQualityOffset()
+        public CompProperties_ProductionQualityOffset()
         {
             compClass = typeof(HediffComp_ProductionQualityOffset);
         }
@@ -26,7 +26,7 @@ namespace NzRimImmortalBizarre
 
     public class HediffComp_ProductionQualityOffset : HediffComp
     {
-        public Comp_ProductionQualityOffset Props => (Comp_ProductionQualityOffset)props;
+        public CompProperties_ProductionQualityOffset Props => (CompProperties_ProductionQualityOffset)props;
 
         public int offset => Props.offset;
 

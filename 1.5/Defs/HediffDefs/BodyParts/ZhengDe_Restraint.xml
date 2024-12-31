@@ -216,7 +216,7 @@
                 </tools>
             </li>
             <!-- 制造质量偏移 -->
-            <li Class="NzRimImmortalBizarre.Comp_ProductionQualityOffset">
+            <li Class="NzRimImmortalBizarre.CompProperties_ProductionQualityOffset">
                 <offset>2</offset>
             </li>
         </comps>
