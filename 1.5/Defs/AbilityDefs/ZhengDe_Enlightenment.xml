@@ -33,4 +33,43 @@
 
     </comps>
   </AbilityDef>
+
+  <!-- 梵界 -->
+  <!-- 盾包 -->
+  <!-- 技能：轻踏地面，撑起一片领域，保护其他信众 -->
+  <AbilityDef ParentName="RI_PsycastBase">
+    <defName>NzRI_Zd_BulletShield</defName>
+    <label>brahma world</label>
+    <description>Lightly tread on the ground, create a realm, and protect other believers.</description>
+    <!-- TODO -->
+    <iconPath>UI/Abilities/BulletShield</iconPath>
+    <writeCombatLog>True</writeCombatLog>
+    <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <statBases>
+      <Ability_EffectRadius>4.9</Ability_EffectRadius>
+      <Ability_Duration>19</Ability_Duration>
+    </statBases>
+    <verbProperties>
+      <warmupTime>1</warmupTime>
+      <range>24.9</range>
+      <targetParams>
+        <canTargetPawns>False</canTargetPawns>
+        <canTargetLocations>True</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <!-- 生成指定物体 -->
+      <li Class="CompProperties_AbilitySpawn">
+        <!-- TODO -->
+        <thingDef>NzRI_Zd_BulletShield</thingDef>
+      </li>
+      <!-- TODO -->
+      <!-- 播放特效 -->
+      <li Class="CompProperties_AbilityFleckOnTarget">
+        <fleckDef>BulletShieldAreaEffect</fleckDef>
+        <sound>Psycast_Skip_Exit</sound>
+      </li>
+    </comps>
+  </AbilityDef>
 </Defs>
