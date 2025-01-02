@@ -40,7 +40,7 @@
             <betterThanNatural>true</betterThanNatural>
         </addedPartProps>
         <abilities>
-            <li></li>
+            <li>NzRI_Zd_BulletShield</li>
         </abilities>
     </HediffDef>
 </Defs>
