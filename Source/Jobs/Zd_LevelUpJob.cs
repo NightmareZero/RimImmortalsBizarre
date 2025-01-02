@@ -121,6 +121,14 @@ namespace NzRimImmortalBizarre
 
         private void applyLevelUp(Pawn pawn)
         {
+            Zd_Fruition fruition = Utils.GetFruitionHediff(pawn);
+            if (fruition == null)
+            {
+                // TODO Message输出
+                Log.Error("Fruition hediff not found.");
+                return;
+            }
+
 
             // 添加预创建好的Hediff
             pawn.health.AddHediff(this.addHediff, this.addBodyPart);

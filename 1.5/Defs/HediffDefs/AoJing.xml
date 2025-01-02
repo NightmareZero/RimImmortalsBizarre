@@ -66,6 +66,7 @@
 				<statFactors>
 					<InjuryHealingFactor>1.5</InjuryHealingFactor>
 					<IncomingDamageFactor>0.9</IncomingDamageFactor>
+					<NzRI_AoJingPowerMultiplier>1.25</NzRI_AoJingPowerMultiplier>
 					
 				</statFactors>
 			</li>
@@ -77,6 +78,7 @@
 				<statFactors>
 					<InjuryHealingFactor>3</InjuryHealingFactor>
 					<IncomingDamageFactor>0.8</IncomingDamageFactor>
+					<NzRI_AoJingPowerMultiplier>1.5</NzRI_AoJingPowerMultiplier>
 				</statFactors>
 			</li>
 			<li>
@@ -87,6 +89,7 @@
 				<statFactors>
 					<InjuryHealingFactor>5</InjuryHealingFactor>
 					<IncomingDamageFactor>0.7</IncomingDamageFactor>
+					<NzRI_AoJingPowerMultiplier>1.75</NzRI_AoJingPowerMultiplier>
 				</statFactors>
 			</li>
 			<li>
@@ -97,6 +100,7 @@
 				<statFactors>
 					<InjuryHealingFactor>7</InjuryHealingFactor>
 					<IncomingDamageFactor>0.6</IncomingDamageFactor>
+					<NzRI_AoJingPowerMultiplier>2.0</NzRI_AoJingPowerMultiplier>
 				</statFactors>
 			</li>
 			<li>
@@ -107,6 +111,7 @@
 				<statFactors>
 					<InjuryHealingFactor>9</InjuryHealingFactor>
 					<IncomingDamageFactor>0.5</IncomingDamageFactor>
+					<NzRI_AoJingPowerMultiplier>2.5</NzRI_AoJingPowerMultiplier>
 				</statFactors>
 			</li>
 		</stages>

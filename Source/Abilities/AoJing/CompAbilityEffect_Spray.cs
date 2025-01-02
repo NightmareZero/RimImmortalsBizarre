@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace NzRimImmortalBizarre
 {
-    public class CompAbilityEffect_Spray : CompAbilityEffect, DamagePatcher
+    public class CompAbilityEffect_Spray : CompAbilityEffect
     {
         // CompAbilityEffect_SprayLiquid
         private List<Pair<IntVec3, float>> tmpCellDots = new List<Pair<IntVec3, float>>();
@@ -16,14 +16,16 @@ namespace NzRimImmortalBizarre
 
         private Pawn Pawn => parent.pawn;
 
+
+        // TODO 读取参数修正伤害
         private float damageMultiplier = 1f;
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            Patcher.DoDamagePatch(this,this);
 
             foreach (IntVec3 item in AffectedCells(target))
             {
+                // TODO 想办法修正伤害
                 ((Projectile)GenSpawn.Spawn(Props.projectileDef, Pawn.Position, Pawn.Map)).Launch(Pawn, Pawn.DrawPos, item, item, ProjectileHitFlags.IntendedTarget);
             }
 
@@ -115,21 +117,6 @@ namespace NzRimImmortalBizarre
             }
         
             return tmpCells;
-        }
-
-        public int PatchType()
-        {
-            return Props.skillRoute;
-        }
-
-        public void SetDamageMultiplier(float multiplier)
-        {
-            damageMultiplier = multiplier;
-        }
-
-        public void SetArmorPenetrationMultiplier(float penetration)
-        {
-            
         }
 
     }

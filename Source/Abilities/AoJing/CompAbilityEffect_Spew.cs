@@ -6,22 +6,18 @@ using RimWorld;
 namespace NzRimImmortalBizarre
 {
     // CompAbilityEffect_FireSpew
-    public class CompAbilityEffect_AJ_Spew : CompAbilityEffect_Spew, DamagePatcher
+    public class CompAbilityEffect_AJ_Spew : CompAbilityEffect_Spew
     {
         private new CompProperties_AJ_AbilitySpew Props => (CompProperties_AJ_AbilitySpew)props;
 
         private Pawn Caster => parent.pawn;
 
-        private float damageMultiplier = 1f;
-
-        private float armorPenetrationMultiplier = 1f;
-
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            Patcher.DoDamagePatch(this,this);
 
-            var damage = Props.damAmount * damageMultiplier;
-            var armorPenetration = 1f * armorPenetrationMultiplier;
+            var damage = Props.damAmount * Caster.GetStatValue(StatDefOf1.NzRI_AoJingPowerMultiplier);
+            var armorPenetration = 1f * Caster.GetStatValue(StatDefOf1.NzRI_AoJingPowerMultiplier);
+
             List<IntVec3> affected = base.AffectedCells(target);
             GenExplosion.DoExplosion(target.Cell, parent.pawn.MapHeld, 0f, Props.damageType, Caster,
              postExplosionSpawnThingDef: Props.filthDef, damAmount: (int)damage, armorPenetration: armorPenetration, explosionSound: null, weapon: null,
@@ -62,21 +58,6 @@ namespace NzRimImmortalBizarre
                     ticksAwayFromCast = 17
                 };
             }
-        }
-
-        public int PatchType()
-        {
-            return Props.skillRoute;
-        }
-
-        public void SetDamageMultiplier(float multiplier)
-        {
-            damageMultiplier = multiplier;
-        }
-
-        public void SetArmorPenetrationMultiplier(float penetration)
-        {
-            armorPenetrationMultiplier = penetration;
         }
     }
 }

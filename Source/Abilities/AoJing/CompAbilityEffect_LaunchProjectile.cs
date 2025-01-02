@@ -5,16 +5,16 @@ using RimWorld;
 namespace NzRimImmortalBizarre
 {
 
-    public class CompAbilityEffect_LaunchProjectile : CompAbilityEffect, DamagePatcher
+    public class CompAbilityEffect_LaunchProjectile : CompAbilityEffect
     {
         public new CompProperties_AbilityLaunchProjectile Props => (CompProperties_AbilityLaunchProjectile)props;
 
+        // TODO 修改技能伤害
         private float damageMultiplier = 1f;
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
-            Patcher.DoDamagePatch(this,this);
             LaunchProjectile(target);
         }
 
@@ -24,6 +24,7 @@ namespace NzRimImmortalBizarre
             {
                 Pawn pawn = parent.pawn;
                 Projectile projectile = (Projectile)GenSpawn.Spawn(Props.projectileDef, pawn.Position, pawn.Map);
+                // TODO 修改技能伤害
                 
                 projectile.Launch(pawn, pawn.DrawPos, target, target, ProjectileHitFlags.IntendedTarget);
             }
@@ -34,19 +35,5 @@ namespace NzRimImmortalBizarre
             return target.Pawn != null;
         }
 
-        public int PatchType()
-        {
-            return Props.skillRoute;
-        }
-
-        public void SetDamageMultiplier(float multiplier)
-        {
-            damageMultiplier = multiplier;
-        }
-
-        public void SetArmorPenetrationMultiplier(float penetration)
-        {
-            
-        }
     }
 }
