@@ -72,4 +72,46 @@
       </li>
     </comps>
   </AbilityDef>
+
+  <!-- 圆光腿 -->
+  <AbilityDef ParentName="RI_PsycastBase">
+    <defName>Zd_DivineLightKick</defName>
+    <label>divine light kick</label>
+    <!-- 踢出一道蕴含力量的光弧，造成伤害并击晕范围内的敌人 -->
+    <description>Kick out a light arc containing power, causing damage and stunning enemies in the area.</description>
+    <iconPath>Ability/AoJing2</iconPath>
+    <cooldownTicksRange>120</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <ai_IsIncendiary>true</ai_IsIncendiary>
+    <sendMessageOnCooldownComplete>false</sendMessageOnCooldownComplete>
+    <!-- <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound> -->
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>13.9</range>
+      <warmupTime>1</warmupTime>
+      <soundCast>FireSpew_Resolve</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <statBases>
+      <Ability_Duration>60</Ability_Duration>
+    </statBases>
+    <comps>
+      <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+        <rEnergy>-5</rEnergy>
+      </li> -->
+      <li Class="NzRimImmortalBizarre.CompProperties_DivineLightKick">
+        <skillRoute>1</skillRoute>
+        <range>13.9</range>
+        <damAmount>35</damAmount>
+        <lineWidthEnd>9</lineWidthEnd>
+        <!-- <filthDef>NzRI_Filth_AcidMucus</filthDef> -->
+        <damageType>Blunt</damageType>
+        <!-- TODO 修改为专有特效 -->
+        <effecterDef>Acid_Spew</effecterDef>
+        <canHitFilledCells>true</canHitFilledCells>
+      </li>
+    </comps>
+  </AbilityDef>
 </Defs>

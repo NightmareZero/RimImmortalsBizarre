@@ -77,7 +77,7 @@
       <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
         <rEnergy>-5</rEnergy>
       </li>
-      <li Class="NzRimImmortalBizarre.CompProperties_AbilitySpew">
+      <li Class="NzRimImmortalBizarre.CompProperties_AJ_AbilitySpew">
         <skillRoute>1</skillRoute>
         <range>13.9</range>
         <damAmount>35</damAmount>

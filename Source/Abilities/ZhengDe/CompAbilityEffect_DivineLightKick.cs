@@ -5,10 +5,9 @@ using RimWorld;
 
 namespace NzRimImmortalBizarre
 {
-    // CompAbilityEffect_FireSpew
-    public class CompAbilityEffect_AJ_Spew : CompAbilityEffect_Spew, DamagePatcher
+    public class CompAbilityEffect_DivineLightKick : CompAbilityEffect_Spew
     {
-        private new CompProperties_AJ_AbilitySpew Props => (CompProperties_AJ_AbilitySpew)props;
+        private new CompProperties_DivineLightKick Props => (CompProperties_DivineLightKick)props;
 
         private Pawn Caster => parent.pawn;
 
@@ -18,10 +17,10 @@ namespace NzRimImmortalBizarre
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            Patcher.DoDamagePatch(this,this);
-
+            // TODO 修改作用方式，这个还是用的原来的
             var damage = Props.damAmount * damageMultiplier;
             var armorPenetration = 1f * armorPenetrationMultiplier;
+
             List<IntVec3> affected = base.AffectedCells(target);
             GenExplosion.DoExplosion(target.Cell, parent.pawn.MapHeld, 0f, Props.damageType, Caster,
              postExplosionSpawnThingDef: Props.filthDef, damAmount: (int)damage, armorPenetration: armorPenetration, explosionSound: null, weapon: null,
@@ -62,21 +61,6 @@ namespace NzRimImmortalBizarre
                     ticksAwayFromCast = 17
                 };
             }
-        }
-
-        public int PatchType()
-        {
-            return Props.skillRoute;
-        }
-
-        public void SetDamageMultiplier(float multiplier)
-        {
-            damageMultiplier = multiplier;
-        }
-
-        public void SetArmorPenetrationMultiplier(float penetration)
-        {
-            armorPenetrationMultiplier = penetration;
         }
     }
 }

@@ -19,6 +19,26 @@
 
     <!-- 圆光腿 -->
     <!-- 踢出流光,大扇形切割伤害,stuck, -->
+    <HediffDef ParentName="ZdBodyPartBase">
+        <defName>Zd_DivineLightLeg</defName>
+        <label>divine light</label>
+        <labelNoun>an divine light</labelNoun>
+        <description>#</description>
+        <!-- TODO -->
+        <defaultInstallPart>Leg</defaultInstallPart>
+        <tags>
+            <li>NzRI_ZhengDe_BodyPart</li>
+            <li>NzRI_ZhengDe_Enlightenment</li>
+        </tags>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.50</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <abilities>
+            <!-- <li>NzRI_Zd_BulletShield</li> -->
+        </abilities>
+    </HediffDef>
 
     <!-- 莲花腿 -->
     <!-- 花开见佛，步步生莲，撑起一片保护性的领域\n "轻踏坤舆展妙场，护持信众意悠长。佛心化作遮灾域，不见兵戈入此疆" -->
