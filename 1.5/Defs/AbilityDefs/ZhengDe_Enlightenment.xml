@@ -78,7 +78,8 @@
     <defName>Zd_DivineLightKick</defName>
     <label>divine light kick</label>
     <!-- 踢出一道蕴含力量的光弧，造成伤害并击晕范围内的敌人 -->
-    <description>Kick out a light arc containing power, causing damage and stunning enemies in the area.</description>
+    <description>Kick out a light arc containing power, causing damage and stunning enemies in the
+      area.</description>
     <iconPath>Ability/AoJing2</iconPath>
     <cooldownTicksRange>120</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
@@ -111,6 +112,77 @@
         <stunTime>6</stunTime>
         <canHitFilledCells>true</canHitFilledCells>
       </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- 慈悲掌 -->
+  <!-- ParentName="AbilityTouchBase" -->
+  <AbilityDef ParentName="RI_PsycastBase">
+    <defName>Zd_MercyHit</defName>
+    <label>mercy hit</label>
+    <!-- 使用巧劲攻击对方，尝试打晕目标 -->
+    <description>Use skill to attack the opponent, trying to stun the target.</description>
+    <iconPath>Ability/AoJing2</iconPath>
+    <cooldownTicksRange>120</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <ai_IsIncendiary>true</ai_IsIncendiary>
+    <sendMessageOnCooldownComplete>false</sendMessageOnCooldownComplete>
+    <!-- <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound> -->
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <range>-1</range>
+      <warmupTime>0.5</warmupTime>
+      <!-- <soundCast>FireSpew_Resolve</soundCast> -->
+      <targetParams>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetMechs>false</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+    <statBases>
+      <Ability_Duration>600</Ability_Duration>
+    </statBases>
+    <comps>
+      <!-- TODO -->
+      <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+        <rEnergy>-5</rEnergy>
+      </li> -->
+
+    </comps>
+  </AbilityDef>
+
+  <!-- 撼山拳 -->
+  <!-- ParentName="AbilityTouchBase" -->
+  <AbilityDef ParentName="RI_PsycastBase">
+    <defName>Zd_ShakeMountainFist</defName>
+    <label>shake mountain fist</label>
+    <!-- 蓄力并打出重如山岳的一拳，对敌人造成大量伤害 -->
+    <description>Charge and hit a punch as heavy as a mountain, causing a lot of damage to the
+      enemy.</description>
+    <iconPath>Ability/AoJing2</iconPath>
+    <cooldownTicksRange>120</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <ai_IsIncendiary>true</ai_IsIncendiary>
+    <sendMessageOnCooldownComplete>false</sendMessageOnCooldownComplete>
+    <!-- <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound> -->
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <range>-1</range>
+      <warmupTime>2</warmupTime>
+      <!-- <soundCast>FireSpew_Resolve</soundCast> -->
+      <targetParams>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetMechs>false</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+    <statBases>
+      <Ability_Duration>600</Ability_Duration>
+    </statBases>
+    <comps>
+      <!-- TODO -->
+      <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+        <rEnergy>-5</rEnergy>
+      </li> -->
+
     </comps>
   </AbilityDef>
 </Defs>

@@ -5,11 +5,51 @@
     <!-- 菩提心 -->
     <!-- 特效：脑后光环佛珠 -->
 
-    <!-- 怒目 -->
-    <!-- 范围火焰加爆炸 -->
-
     <!-- 梵鸣肺 -->
-    <!-- 范围降低视力听力操作 -->
+    <!-- 狮子吼 范围降低视力听力操作 -->
+    <HediffDef ParentName="ZdBodyPartBase">
+        <defName>Zd_ThunderLung</defName>
+        <label>thunder lung</label>
+        <labelNoun>an thunder lung</labelNoun>
+        <!-- TODO -->
+        <description>#</description>
+        <defaultInstallPart>Lung</defaultInstallPart>
+        <tags>
+            <li>NzRI_ZhengDe_BodyPart</li>
+            <li>NzRI_ZhengDe_Enlightenment</li>
+        </tags>
+        <abilities>
+            <!-- <li>NzRI_Zd_DebunkingMyths</li> -->
+        </abilities>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.50</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+
+    <!-- 怒目 -->
+    <!-- 范围火焰\EMP加爆炸 -->
+    <HediffDef ParentName="ZdBodyPartBase">
+        <defName>Zd_GlaringEye</defName>
+        <label>glaring eye</label>
+        <labelNoun>an glaring eye</labelNoun>
+        <!-- TODO -->
+        <description>#</description>
+        <defaultInstallPart>Eye</defaultInstallPart>
+        <tags>
+            <li>NzRI_ZhengDe_BodyPart</li>
+            <li>NzRI_ZhengDe_Enlightenment</li>
+        </tags>
+        <abilities>
+            <!-- <li>NzRI_Zd_DebunkingMyths</li> -->
+        </abilities>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.50</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
 
     <!-- 无动臂 -->
     <!-- 触摸目标，添加减伤hediff，套盾 -->
@@ -64,9 +104,8 @@
             <li>NzRI_ZhengDe_Restraint</li>
         </tags>
         <abilities>
-            <!-- <li>Zd_DivineLightKick</li> -->
-            <!-- 1技：高伤害直拳 -->
-            <!-- 2技：打晕 -->
+            <li>Zd_ShakeMountainFist</li>
+            <li>Zd_MercyHit</li>
         </abilities>
         <comps>
             <li Class="HediffCompProperties_VerbGiver">
