@@ -185,4 +185,39 @@
 
     </comps>
   </AbilityDef>
+
+  <!-- 抚顶 -->
+  <!-- ParentName="AbilityTouchBase" -->
+  <AbilityDef ParentName="RI_PsycastBase">
+    <defName>Zd_TouchingHead</defName>
+    <label>touch head</label>
+    <!-- 抚摸对方的头部，使用法力庇护对方 -->
+    <description>Touch the opponent head, use Qi to protect the opponent.</description>
+    <iconPath>Ability/AoJing2</iconPath>
+    <cooldownTicksRange>120</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <ai_IsIncendiary>true</ai_IsIncendiary>
+    <sendMessageOnCooldownComplete>false</sendMessageOnCooldownComplete>
+    <!-- <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound> -->
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <range>-1</range>
+      <warmupTime>2</warmupTime>
+      <!-- <soundCast>FireSpew_Resolve</soundCast> -->
+      <targetParams>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetMechs>false</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+    <statBases>
+      <Ability_Duration>600</Ability_Duration>
+    </statBases>
+    <comps>
+      <!-- TODO -->
+      <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+        <rEnergy>-5</rEnergy>
+      </li> -->
+
+    </comps>
+  </AbilityDef>
 </Defs>

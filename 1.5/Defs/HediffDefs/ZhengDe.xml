@@ -131,4 +131,20 @@
             </li>
         </comps>
     </HediffDef>
+    <!-- 禁锢 -->
+    <HediffDef>
+        <defName>NzRI_Zd_Imprisonment</defName>
+        <label>imprisonment</label>
+        <description>#</description>
+        <isBad>true</isBad>
+        <hediffClass>HediffWithComps</hediffClass>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>3600</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+                <canUseDecimalsShortForm>true</canUseDecimalsShortForm>
+            </li>
+        </comps>
+    </HediffDef>
 </Defs>

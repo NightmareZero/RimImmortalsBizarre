@@ -65,7 +65,8 @@
             <li>NzRI_ZhengDe_Restraint</li>
         </tags>
         <abilities>
-            <!-- <li>Zd_DivineLightKick</li> -->
+            <!-- TODO -->
+            <li>Zd_TouchingHead</li>
         </abilities>
         <comps>
             <li Class="HediffCompProperties_VerbGiver">
