@@ -13,12 +13,87 @@
 
     <!-- 无动臂 -->
     <!-- 触摸目标，添加减伤hediff，套盾 -->
+    <HediffDef ParentName="ZdBodyPartBase">
+        <defName>Zd_UnshakeableArm</defName>
+        <label>unshakeable arm</label>
+        <labelNoun>an unshakeable arm</labelNoun>
+        <!-- 不动如山，拳重如山 -->
+        <description>#</description>
+        <defaultInstallPart>Shoulder</defaultInstallPart>
+        <tags>
+            <li>NzRI_ZhengDe_BodyPart</li>
+            <li>NzRI_ZhengDe_Restraint</li>
+        </tags>
+        <abilities>
+            <!-- <li>Zd_DivineLightKick</li> -->
+        </abilities>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>fist</label>
+                        <capacities>
+                            <li>Blunt</li>
+                        </capacities>
+                        <power>81</power>
+                        <armorPenetration>2.0</armorPenetration>
+                        <cooldownTime>2.75</cooldownTime>
+                        <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+                        <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.50</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
 
     <!-- 金刚臂 -->
     <!-- 打晕，击倒 -->
+    <HediffDef ParentName="ZdBodyPartBase">
+        <defName>Zd_VajraArm</defName>
+        <label>vajra arm</label>
+        <labelNoun>an vajra arm</labelNoun>
+        <description>#</description>
+        <defaultInstallPart>Shoulder</defaultInstallPart>
+        <tags>
+            <li>NzRI_ZhengDe_BodyPart</li>
+            <li>NzRI_ZhengDe_Restraint</li>
+        </tags>
+        <abilities>
+            <!-- <li>Zd_DivineLightKick</li> -->
+            <!-- 1技：高伤害直拳 -->
+            <!-- 2技：打晕 -->
+        </abilities>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>fist</label>
+                        <capacities>
+                            <li>Blunt</li>
+                        </capacities>
+                        <power>31</power>
+                        <armorPenetration>1.5</armorPenetration>
+                        <cooldownTime>0.75</cooldownTime>
+                        <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+                        <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.50</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
 
     <!-- 圆光腿 -->
-    <!-- 踢出流光,大扇形切割伤害,stuck, -->
+    <!-- 踢出流光,大扇形切割低伤害,stuck, -->
     <HediffDef ParentName="ZdBodyPartBase">
         <defName>Zd_DivineLightLeg</defName>
         <label>divine light</label>
@@ -36,7 +111,7 @@
             <betterThanNatural>true</betterThanNatural>
         </addedPartProps>
         <abilities>
-            <!-- <li>NzRI_Zd_BulletShield</li> -->
+            <li>Zd_DivineLightKick</li>
         </abilities>
     </HediffDef>
 
@@ -47,8 +122,11 @@
         <defName>Zd_LotusLeg</defName>
         <label>lotus leg</label>
         <labelNoun>an lotus leg</labelNoun>
-        <description>Flowers bloom to see the Buddha, lotus blossoms with each step, creating a protective field. 
-"Lightly stepping on the Kunyu to display a wonderful scene, protecting the long-lasting intentions of the believers. The Buddha's heart turns into a disaster-shielding area, where no weapons can enter this territory."</description>
+        <description>Flowers bloom to see the Buddha, lotus blossoms with each step, creating a
+            protective field.
+            "Lightly stepping on the Kunyu to display a wonderful scene, protecting the long-lasting
+            intentions of the believers. The Buddha's heart turns into a disaster-shielding area,
+            where no weapons can enter this territory."</description>
         <defaultInstallPart>Leg</defaultInstallPart>
         <tags>
             <li>NzRI_ZhengDe_BodyPart</li>

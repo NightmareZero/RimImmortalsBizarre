@@ -38,7 +38,6 @@
         <buddha>true</buddha>
       </li>
       <!-- <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeExplosion">
-                <skillRoute>1</skillRoute>
                 <targetRange>6.9</targetRange>
                 <explosionRange>5.9</explosionRange>
                 <filthDef>NzRI_BloodGuts</filthDef>

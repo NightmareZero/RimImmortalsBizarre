@@ -102,14 +102,13 @@
         <rEnergy>-5</rEnergy>
       </li> -->
       <li Class="NzRimImmortalBizarre.CompProperties_DivineLightKick">
-        <skillRoute>1</skillRoute>
         <range>13.9</range>
         <damAmount>35</damAmount>
         <lineWidthEnd>9</lineWidthEnd>
-        <!-- <filthDef>NzRI_Filth_AcidMucus</filthDef> -->
         <damageType>Blunt</damageType>
         <!-- TODO 修改为专有特效 -->
         <effecterDef>Acid_Spew</effecterDef>
+        <stunTime>6</stunTime>
         <canHitFilledCells>true</canHitFilledCells>
       </li>
     </comps>

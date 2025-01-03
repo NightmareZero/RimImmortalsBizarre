@@ -11,19 +11,14 @@ namespace NzRimImmortalBizarre
 
         private Pawn Caster => parent.pawn;
 
-        private float damageMultiplier = 1f;
-
-        private float armorPenetrationMultiplier = 1f;
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            // TODO 修改作用方式，这个还是用的原来的
-            var damage = Props.damAmount * damageMultiplier;
-            var armorPenetration = 1f * armorPenetrationMultiplier;
+            var armorPenetration = 1f ;
 
             List<IntVec3> affected = base.AffectedCells(target);
             GenExplosion.DoExplosion(target.Cell, parent.pawn.MapHeld, 0f, Props.damageType, Caster,
-             postExplosionSpawnThingDef: Props.filthDef, damAmount: (int)damage, armorPenetration: armorPenetration, explosionSound: null, weapon: null,
+             postExplosionSpawnThingDef: Props.filthDef, damAmount: Props.damAmount, armorPenetration: armorPenetration, explosionSound: null, weapon: null,
               projectile: null, intendedTarget: null, postExplosionSpawnChance: 1f, postExplosionSpawnThingCount: 1, postExplosionGasType: null,
                applyDamageToExplosionCellsNeighbors: false, preExplosionSpawnThingDef: null, preExplosionSpawnChance: 0f, preExplosionSpawnThingCount: 1,
                 chanceToStartFire: 0f, damageFalloff: false, direction: null, ignoredThings: null, affectedAngle: null, doVisualEffects: false,
@@ -35,9 +30,8 @@ namespace NzRimImmortalBizarre
             {
                 if (p != Caster && p.Faction != Caster.Faction)
                 {
-                    // 附加一个30秒的剧痛Hediff
-                    Hediff hediff = HediffMaker.MakeHediff(XmlOf.NzRI_AoJing_Agony, p);
-                    p.health.AddHediff(hediff);
+                    // 让目标Stun 5秒
+                    p.stances.stunner.StunFor(Props.stunTime.SecondsToTicks(), Caster, false);
                 }
             });
 
