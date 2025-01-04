@@ -9,6 +9,8 @@ namespace NzRimImmortalBizarre
     {
         public float stunTime = 6;
 
+        public bool stunBoss = false;
+
         public CompProperties_DivineLightKick()
         {
             compClass = typeof(CompAbilityEffect_DivineLightKick);

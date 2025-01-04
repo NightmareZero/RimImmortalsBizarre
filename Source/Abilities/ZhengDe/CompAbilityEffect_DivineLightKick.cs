@@ -31,7 +31,11 @@ namespace NzRimImmortalBizarre
             {
                 if (p != Caster)
                 {
-
+                    // 对Boss无效
+                    if (p.kindDef.isBoss && !Props.stunBoss)
+                    {
+                        return;
+                    }
                     // 让目标Stun 5秒
                     p.stances.stunner.StunFor(Props.stunTime.SecondsToTicks(), Caster, false);
                 }
