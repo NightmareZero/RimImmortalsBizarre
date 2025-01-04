@@ -17,9 +17,6 @@ namespace NzRimImmortalBizarre
         private Pawn Pawn => parent.pawn;
 
 
-        // TODO 读取参数修正伤害
-        private float damageMultiplier = 1f;
-
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
 

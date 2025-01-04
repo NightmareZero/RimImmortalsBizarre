@@ -25,11 +25,13 @@ namespace NzRimImmortalBizarre
                  propagationSpeed: 0.6f, excludeRadius: 0f, doSoundEffects: false, postExplosionSpawnThingDefWater: null, screenShakeFactor: 1f,
                   flammabilityChanceCurve: parent.verb.verbProps.flammabilityAttachFireChanceCurve, overrideCells: affected);
 
-            // 在影响区域内获取所有Pawn, 并且对非自己的Pawn附加一个30秒的剧痛Hediff
+
+            // 在影响区域内获取所有Pawn, Stun一段时间
             var pawnNum = Utils.ApplyPawnInAffectedArea(Caster.Map, affected, delegate (Pawn p)
             {
-                if (p != Caster && p.Faction != Caster.Faction)
+                if (p != Caster)
                 {
+
                     // 让目标Stun 5秒
                     p.stances.stunner.StunFor(Props.stunTime.SecondsToTicks(), Caster, false);
                 }

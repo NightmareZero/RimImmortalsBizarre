@@ -9,9 +9,6 @@ namespace NzRimImmortalBizarre
     {
         public new CompProperties_AbilityLaunchProjectile Props => (CompProperties_AbilityLaunchProjectile)props;
 
-        // TODO 修改技能伤害
-        private float damageMultiplier = 1f;
-
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);

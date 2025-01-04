@@ -104,8 +104,8 @@
       </li> -->
       <li Class="NzRimImmortalBizarre.CompProperties_DivineLightKick">
         <range>13.9</range>
-        <damAmount>35</damAmount>
-        <lineWidthEnd>9</lineWidthEnd>
+        <damAmount>7</damAmount>
+        <lineWidthEnd>11</lineWidthEnd>
         <damageType>Blunt</damageType>
         <!-- TODO 修改为专有特效 -->
         <effecterDef>Acid_Spew</effecterDef>
