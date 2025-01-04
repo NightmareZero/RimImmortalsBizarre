@@ -90,15 +90,13 @@
         <!-- <canTargetBloodfeeders>true</canTargetBloodfeeders> -->
       </targetParams>
     </verbProperties>
-    <statBases>
-      <Ability_Duration>800</Ability_Duration>
-    </statBases>
     <comps>
       <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
         <rEnergy>-40</rEnergy>
       </li> -->
       <li Class="CompProperties_AbilityGiveHediff">
         <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <durationSecondsOverride>1500</durationSecondsOverride>
         <hediffDef>NzRI_Zd_Feed</hediffDef>
         <psychic>False</psychic>
         <replaceExisting>True</replaceExisting>

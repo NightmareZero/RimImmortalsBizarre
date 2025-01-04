@@ -11,13 +11,15 @@
     <!-- <category>Sanguophage</category> -->
     <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
     <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
+    <targetRequired>False</targetRequired>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
-      <range>19.9</range>
       <warmupTime>0.5</warmupTime>
+      <!-- TODO -->
       <soundCast>RocketswarmLauncher_Fire</soundCast>
+      <range>-1</range>
       <targetParams>
-        <canTargetLocations>true</canTargetLocations>
+        <canTargetSelf>true</canTargetSelf>
       </targetParams>
     </verbProperties>
     <comps>
@@ -26,8 +28,9 @@
       </li>       -->
       <li Class="CompProperties_AbilityGiveHediff">
         <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <durationSecondsOverride>85</durationSecondsOverride>
         <hediffDef>NzRI_Zd_KeenEyes</hediffDef>
-        <onlyApplyToSelf>True</onlyApplyToSelf>
+        <psychic>False</psychic>
         <replaceExisting>true</replaceExisting>
       </li>
 

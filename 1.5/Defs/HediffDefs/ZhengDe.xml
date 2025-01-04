@@ -94,7 +94,7 @@
         <comps>
             <li Class="HediffCompProperties_DisappearsOnDeath" />
             <li Class="HediffCompProperties_Disappears">
-                <disappearsAfterTicks>7500</disappearsAfterTicks>
+                <disappearsAfterTicks>5000</disappearsAfterTicks>
                 <showRemainingTime>true</showRemainingTime>
                 <canUseDecimalsShortForm>true</canUseDecimalsShortForm>
             </li>
@@ -122,6 +122,11 @@
         <hediffClass>HediffWithComps</hediffClass>
         <comps>
             <li Class="HediffCompProperties_DisappearsOnDeath" />
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>7500</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+                <canUseDecimalsShortForm>true</canUseDecimalsShortForm>
+            </li>
             <li Class="NzRimImmortalBizarre.Comp_StashHediff">
                 <hediffs>
                     <li>HoraxianInvisibility</li>
