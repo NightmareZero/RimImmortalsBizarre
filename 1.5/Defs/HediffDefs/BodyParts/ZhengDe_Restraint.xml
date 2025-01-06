@@ -26,6 +26,7 @@
         <stages>
             <li>
                 <statFactors>
+                    <NzRI_ZhengDePowerMultiplier>1.1</NzRI_ZhengDePowerMultiplier>
                     <ShootingAccuracyFactor_Long>1.2</ShootingAccuracyFactor_Long>
                     <ShootingAccuracyFactor_Medium>1.5</ShootingAccuracyFactor_Medium>
                     <MeleeHitChance>1.2</MeleeHitChance>
@@ -60,6 +61,7 @@
         <stages>
             <li>
                 <statFactors>
+                    <NzRI_ZhengDePowerMultiplier>1.1</NzRI_ZhengDePowerMultiplier>
                     <ArrestSuccessChance>2.0</ArrestSuccessChance>
                     <NegotiationAbility>2.0</NegotiationAbility>
                     <SocialImpact>2.0</SocialImpact>
@@ -96,6 +98,7 @@
                 <!-- 食物中毒几率 -->
                 <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
                 <statFactors>
+                    <NzRI_ZhengDePowerMultiplier>1.1</NzRI_ZhengDePowerMultiplier>
                     <!-- 毒素抵抗 -->
                     <ToxicResistance>1.0</ToxicResistance>
                 </statFactors>
@@ -137,6 +140,7 @@
         <stages>
             <li>
                 <statFactors>
+                    <NzRI_ZhengDePowerMultiplier>1.1</NzRI_ZhengDePowerMultiplier>
                     <!-- 不可阻挡 -->
                     <StaggerDurationFactor>0</StaggerDurationFactor>
                 </statFactors>
@@ -166,6 +170,7 @@
         <stages>
             <li>
                 <statFactors>
+                    <NzRI_ZhengDePowerMultiplier>1.1</NzRI_ZhengDePowerMultiplier>
                     <!-- 普通工作速度 -->
                     <ResearchSpeed>2.0</ResearchSpeed>
                     <!-- 破解速度 -->
@@ -223,6 +228,7 @@
         <stages>
             <li>
                 <statFactors>
+                    <NzRI_ZhengDePowerMultiplier>1.1</NzRI_ZhengDePowerMultiplier>
                     <!-- 普通工作速度 -->
                     <GeneralLaborSpeed>2.1</GeneralLaborSpeed>
                     <!-- 建造速度 -->
@@ -277,6 +283,7 @@
         <stages>
             <li>
                 <statFactors>
+                    <NzRI_ZhengDePowerMultiplier>1.1</NzRI_ZhengDePowerMultiplier>
                     <!-- 全局工作速度 -->
                     <WorkSpeedGlobal>1.3</WorkSpeedGlobal>
                     <!-- 种植速度 -->
