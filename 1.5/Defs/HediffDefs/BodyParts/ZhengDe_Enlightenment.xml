@@ -138,8 +138,9 @@
         <defName>Zd_DivineLightLeg</defName>
         <label>divine light</label>
         <labelNoun>an divine light</labelNoun>
-        <description>#</description>
-        <!-- TODO -->
+        <!-- 踢出一道流光，惩戒命中的目标，被击中的目标会被注入一道法力，这道法力会干扰目标的身体动作 -->
+        <description>Kick out a stream of light, punish the target hit, and inject qi into the target
+            hit, which will interfere with the target's body movements.</description>
         <defaultInstallPart>Leg</defaultInstallPart>
         <tags>
             <li>NzRI_ZhengDe_BodyPart</li>
