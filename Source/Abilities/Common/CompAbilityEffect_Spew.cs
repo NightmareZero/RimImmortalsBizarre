@@ -29,6 +29,15 @@ namespace NzRimImmortalBizarre
             }
         }
 
+        public float GetDamMultiplier(Pawn caster)
+        {
+            if (caster != null && Props.damMultiplierStat != null)
+            {
+                return caster.GetStatValue(Props.damMultiplierStat);
+            }
+            return 1f;
+        }
+
         public override void DrawEffectPreview(LocalTargetInfo target)
         {
             GenDraw.DrawFieldEdges(AffectedCells(target));

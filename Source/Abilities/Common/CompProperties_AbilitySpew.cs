@@ -19,6 +19,8 @@ namespace NzRimImmortalBizarre
 
         public EffecterDef effecterDef;
 
+        public StatDef damMultiplierStat;
+
         public bool canHitFilledCells;
 
         // public CompProperties_AbilitySpew()

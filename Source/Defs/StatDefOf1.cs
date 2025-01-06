@@ -8,7 +8,11 @@ namespace NzRimImmortalBizarre
     [DefOf]
     public static partial class StatDefOf1
     {
+        // 袄景教技能威力系数
         public static StatDef NzRI_AoJingPowerMultiplier;
+
+        // 正德寺技能威力系数
+        public static StatDef NzRI_ZhengDePowerMultiplier;
 
         public static void Init()
         {

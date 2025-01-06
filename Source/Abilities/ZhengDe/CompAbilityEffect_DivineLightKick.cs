@@ -14,11 +14,12 @@ namespace NzRimImmortalBizarre
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            var armorPenetration = 1f ;
+            var armorPenetration = 1f * this.GetDamMultiplier(Caster);
+            var damAmount = (int)(Props.damAmount * this.GetDamMultiplier(Caster));
 
             List<IntVec3> affected = base.AffectedCells(target);
             GenExplosion.DoExplosion(target.Cell, parent.pawn.MapHeld, 0f, Props.damageType, Caster,
-             postExplosionSpawnThingDef: Props.filthDef, damAmount: Props.damAmount, armorPenetration: armorPenetration, explosionSound: null, weapon: null,
+             postExplosionSpawnThingDef: Props.filthDef, damAmount: damAmount, armorPenetration: armorPenetration, explosionSound: null, weapon: null,
               projectile: null, intendedTarget: null, postExplosionSpawnChance: 1f, postExplosionSpawnThingCount: 1, postExplosionGasType: null,
                applyDamageToExplosionCellsNeighbors: false, preExplosionSpawnThingDef: null, preExplosionSpawnChance: 0f, preExplosionSpawnThingCount: 1,
                 chanceToStartFire: 0f, damageFalloff: false, direction: null, ignoredThings: null, affectedAngle: null, doVisualEffects: false,
