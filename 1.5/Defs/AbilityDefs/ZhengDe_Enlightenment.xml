@@ -149,6 +149,17 @@
       <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
         <rEnergy>-5</rEnergy>
       </li> -->
+      <li Class="NzRimImmortalBizarre.CompProperties_Hit">
+        <damageAmountBase>2</damageAmountBase>
+      </li>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <durationSecondsOverride>127</durationSecondsOverride>
+        <hediffDef>NzRI_Zd_Imprisonment</hediffDef>
+        <psychic>False</psychic>
+        <replaceExisting>true</replaceExisting>
+      </li>
+
 
     </comps>
   </AbilityDef>
@@ -174,7 +185,6 @@
       <!-- <soundCast>FireSpew_Resolve</soundCast> -->
       <targetParams>
         <canTargetLocations>false</canTargetLocations>
-        <canTargetMechs>false</canTargetMechs>
       </targetParams>
     </verbProperties>
     <statBases>
@@ -185,6 +195,13 @@
       <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
         <rEnergy>-5</rEnergy>
       </li> -->
+      <li Class="NzRimImmortalBizarre.CompProperties_Hit">
+        <damageDef>Blunt</damageDef>
+        <damageAmountBase>202</damageAmountBase>
+        <armorPenetrationBase>2</armorPenetrationBase>
+        <damageMultiplierStat>NzRI_ZhengDePowerMultiplier</damageMultiplierStat>
+        <stunTicks>60</stunTicks>
+      </li>
 
     </comps>
   </AbilityDef>
@@ -201,7 +218,6 @@
     <aiCanUse>true</aiCanUse>
     <ai_IsIncendiary>true</ai_IsIncendiary>
     <sendMessageOnCooldownComplete>false</sendMessageOnCooldownComplete>
-    <!-- <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound> -->
     <verbProperties>
       <verbClass>Verb_CastAbilityTouch</verbClass>
       <range>-1</range>
@@ -220,6 +236,13 @@
       <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
         <rEnergy>-5</rEnergy>
       </li> -->
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <durationSecondsOverride>300</durationSecondsOverride>
+        <hediffDef>NzRI_Zd_Unshakeable</hediffDef>
+        <psychic>False</psychic>
+        <replaceExisting>true</replaceExisting>
+      </li>
 
     </comps>
   </AbilityDef>

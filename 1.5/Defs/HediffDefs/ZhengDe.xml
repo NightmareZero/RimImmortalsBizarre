@@ -82,6 +82,7 @@
             </li>
         </comps>
         <stages></stages>
+        <!-- TODO 增强一些 -->
     </HediffDef>
 
     <!-- 慧眼 -->
@@ -146,10 +147,42 @@
         <comps>
             <li Class="HediffCompProperties_DisappearsOnDeath" />
             <li Class="HediffCompProperties_Disappears">
-                <disappearsAfterTicks>3600</disappearsAfterTicks>
+                <disappearsAfterTicks>7200</disappearsAfterTicks>
                 <showRemainingTime>true</showRemainingTime>
                 <canUseDecimalsShortForm>true</canUseDecimalsShortForm>
             </li>
         </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <setMax>0.1</setMax>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- 不动如山 -->
+    <HediffDef>
+        <!-- Zd_TouchingHead Hediff -->
+        <defName>NzRI_Zd_Unshakeable</defName>
+        <label>unshakeable</label>
+        <!-- 佛法护佑，似有神庇，邪祟难侵 -->
+        <!-- TODO 添加护盾贴图 -->
+        <description>Buddhist protection, as if there is a divine shelter, evil spirits are
+            difficult to invade</description>
+        <isBad>false</isBad>
+        <hediffClass>HediffWithComps</hediffClass>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>18000</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+                <canUseDecimalsShortForm>true</canUseDecimalsShortForm>
+            </li>
+        </comps>
+        <stages></stages>
     </HediffDef>
 </Defs>
