@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
+  <!-- 狮子吼 -->
+  <AbilityDef ParentName="RI_PsycastBase">
+    <defName>NzRI_Zd_LionRoar</defName>
+    <label>lion's roar</label>
+    <description></description>
+    <iconPath>Ability/AoJing1</iconPath>
+    <cooldownTicksRange>2500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <displayOrder>300</displayOrder>
+    <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+    <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>22.9</range>
+      <warmupTime>0.5</warmupTime>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+        <rEnergy>-15</rEnergy>
+      </li> -->
+      <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeExplosion">
+        <deviationRange>1</deviationRange>
+        <explosionRange>4</explosionRange>
+        <damageTypes>
+          <li>Bomb</li>
+        </damageTypes>
+        <damage>21</damage>
+        <!-- TODO -->
+        <!-- <effecterDef></effecterDef> -->
+        <!-- TODO 替换声音(复制近战专家吼叫) -->
+        <!-- <explosionSound></explosionSound> -->
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- 慧眼 -->
   <AbilityDef ParentName="RI_PsycastBase">
     <defName>NzRI_Zd_DebunkingMyths</defName>
     <label>debunking myths</label>

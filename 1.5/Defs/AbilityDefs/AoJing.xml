@@ -187,7 +187,7 @@
         <rEnergy>-50</rEnergy>
       </li>      
       <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeExplosion">
-        <targetRange>6.9</targetRange>
+        <deviationRange>6.9</deviationRange>
         <explosionRange>5.9</explosionRange>
         <filthDef>NzRI_BloodGuts</filthDef>
         <damageTypes>
@@ -198,7 +198,8 @@
         </damageTypes>
         <damageTimes>5</damageTimes>
         <damage>49</damage>
-
+        <damageFactorStat>NzRI_AoJingPowerMultiplier</damageFactorStat>
+        <armorPenetrationFactorStat>NzRI_AoJingPowerMultiplier</armorPenetrationFactorStat>
         <effecterDef>ArrowSpray_Directional</effecterDef>
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">

@@ -24,6 +24,7 @@
             </shaderParameters>
         </graphicData>
         <comps>
+            <!-- 依赖DLC Royalty -->
             <li Class="CompProperties_ProjectileInterceptor">
                 <radius>4.9</radius>
                 <interceptGroundProjectiles>true</interceptGroundProjectiles>

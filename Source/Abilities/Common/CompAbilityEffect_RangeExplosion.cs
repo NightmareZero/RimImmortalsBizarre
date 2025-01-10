@@ -3,6 +3,7 @@ using RimWorld;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Verse.Sound;
 
 namespace NzRimImmortalBizarre
 {
@@ -18,18 +19,30 @@ namespace NzRimImmortalBizarre
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             // 读取Stat
-            var damageMultiplier = Caster.GetStatValue(StatDefOf1.NzRI_AoJingPowerMultiplier);
-            var damage = Props.damage * damageMultiplier;
-            var armorPenetration = 1f * damageMultiplier;
+            var damage = Props.damage;
+            if (Props.damageFactorStat != null)
+            {
+                damage *= (int)Caster.GetStatValue(Props.damageFactorStat);
+            }
+            var armorPenetration = Props.armorPenetration;
+            if (Props.armorPenetrationFactorStat != null)
+            {
+                armorPenetration *= Caster.GetStatValue(Props.armorPenetrationFactorStat);
+            }
+
+            if (Props.damageTypes.NullOrEmpty())
+            {
+                Props.damageTypes = new List<DamageDef> { DamageDefOf.Bomb };
+                return;
+            }
             
             for (int i = 0; i < Props.damageTimes; i++)
             {
                 var targetCell = TargetAffectedCells(target).RandomElement();
                 var explosionCells = GetRangeCells(targetCell, Props.explosionRange);
 
-
                 GenExplosion.DoExplosion(target.Cell, parent.pawn.MapHeld, Props.explosionRange, Props.damageTypes.RandomElement(), Caster,
-                    postExplosionSpawnThingDef: Props.filthDef, damAmount: (int)damage, armorPenetration: armorPenetration, explosionSound: XmlOf.Explosion_GiantBomb, weapon: null,
+                    postExplosionSpawnThingDef: Props.filthDef, damAmount: damage, armorPenetration: armorPenetration, explosionSound: Props.explosionSound, weapon: null,
                     projectile: null, intendedTarget: null, postExplosionSpawnChance: 1f, postExplosionSpawnThingCount: 1, postExplosionGasType: null,
                     applyDamageToExplosionCellsNeighbors: false, preExplosionSpawnThingDef: null, preExplosionSpawnChance: 0f, preExplosionSpawnThingCount: 1,
                     chanceToStartFire: 0f, damageFalloff: false, direction: null, ignoredThings: null, affectedAngle: null, doVisualEffects: true,
@@ -73,7 +86,7 @@ namespace NzRimImmortalBizarre
                 return new List<IntVec3>();
             }
 
-            float targetRange = Props.targetRange; // 获取 targetRange 的值
+            float targetRange = Props.deviationRange; // 获取 targetRange 的值
             IntVec3 targetCell = target.Cell; // 获取目标位置
 
             return GetRangeCells(targetCell, targetRange);
