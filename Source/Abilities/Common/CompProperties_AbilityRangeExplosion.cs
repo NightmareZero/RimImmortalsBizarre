@@ -19,7 +19,10 @@ namespace NzRimImmortalBizarre
         public ThingDef filthDef;
 
         // 伤害类型(多种)
-        public List<DamageDef> damageTypes;
+        public List<DamageDef> damageTypes = new List<DamageDef>() ;
+
+        // 伤害类型
+        public DamageDef damageType;
 
         // 伤害次数
         public int damageTimes = 1;
@@ -41,6 +44,12 @@ namespace NzRimImmortalBizarre
 
         // 爆炸后音效
         public SoundDef explosionSound = XmlOf.Explosion_GiantBomb;
+
+        // 给受到影响的人添加hediff
+        public HediffDef addHediffDef;
+
+        // 给受到影响的人添加hediff
+        public List<HediffDef> addHediffDefs = new List<HediffDef>();
 
         public CompProperties_AbilityRangeExplosion()
         {

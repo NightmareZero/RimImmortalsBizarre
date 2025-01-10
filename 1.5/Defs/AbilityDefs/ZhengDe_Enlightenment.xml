@@ -26,10 +26,14 @@
       <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeExplosion">
         <deviationRange>1</deviationRange>
         <explosionRange>4</explosionRange>
-        <damageTypes>
-          <li>Bomb</li>
-        </damageTypes>
+        <damageType>Bomb</damageType>
         <damage>21</damage>
+        <addHediffDefs>
+          <!-- 武器脱手 操作清零 3秒 -->
+          <li>NzRI_Zd_WeaponDrop</li>
+          <!-- 头晕耳鸣 降低视力听力操作 一小时 -->
+          <li>NzRI_Zd_Dizzy</li>
+        </addHediffDefs>
         <!-- TODO -->
         <!-- <effecterDef></effecterDef> -->
         <!-- TODO 替换声音(复制近战专家吼叫) -->

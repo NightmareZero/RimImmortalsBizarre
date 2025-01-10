@@ -81,7 +81,8 @@
                 <canUseDecimalsShortForm>true</canUseDecimalsShortForm>
             </li>
         </comps>
-        <stages></stages>
+        <stages>
+        </stages>
         <!-- TODO 增强一些 -->
     </HediffDef>
 
@@ -184,5 +185,74 @@
             </li>
         </comps>
         <stages></stages>
+    </HediffDef>
+
+    <!-- 头晕耳鸣 -->
+    <HediffDef>
+        <defName>NzRI_Zd_Dizzy</defName>
+        <label>dizzy</label>
+        <!-- 被巨大的声音震得头晕耳鸣 -->
+        <description>Shocked by the huge sound, dizzy and ringing in the ears</description>
+        <isBad>false</isBad>
+        <hediffClass>HediffWithComps</hediffClass>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>5000</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+                <canUseDecimalsShortForm>true</canUseDecimalsShortForm>
+            </li>
+        </comps>
+        <stages>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <!-- 将视力最大值设置为 0.5 -->
+                        <capacity>Sight</capacity>
+                        <setMax>0.5</setMax>
+                    </li>
+                    <li>
+                        <!-- 将听力最大值设置为 0.5 -->
+                        <capacity>Hearing</capacity>
+                        <setMax>0.5</setMax>
+                    </li>
+                    <li>
+                        <!-- 将操作最大值设置为 0.5 -->
+                        <capacity>Manipulation</capacity>
+                        <setMax>0.5</setMax> 
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+        </stages>
+    </HediffDef>
+
+    <!-- 兵器脱手 -->
+    <HediffDef>
+        <defName>NzRI_Zd_WeaponDrop</defName>
+        <label>weapon drop</label>
+        <!-- 几乎无法握住兵器 -->
+        <description>Almost unable to hold the weapon</description>
+        <isBad>false</isBad>
+        <hediffClass>HediffWithComps</hediffClass>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>120</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+                <canUseDecimalsShortForm>true</canUseDecimalsShortForm>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <setMax>0</setMax>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
     </HediffDef>
 </Defs>

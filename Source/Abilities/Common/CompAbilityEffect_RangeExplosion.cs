@@ -9,37 +9,38 @@ namespace NzRimImmortalBizarre
 {
     public class CompAbilityEffect_RangeExplosion : CompAbilityEffect
     {
-
-
         private new CompProperties_AbilityRangeExplosion Props => (CompProperties_AbilityRangeExplosion)props;
 
         private Pawn Caster => parent.pawn;
 
-
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            // 读取Stat
-            var damage = Props.damage;
-            if (Props.damageFactorStat != null)
-            {
-                damage *= (int)Caster.GetStatValue(Props.damageFactorStat);
-            }
-            var armorPenetration = Props.armorPenetration;
-            if (Props.armorPenetrationFactorStat != null)
-            {
-                armorPenetration *= Caster.GetStatValue(Props.armorPenetrationFactorStat);
-            }
+            // 计算伤害和穿甲
+            CalculateDamageAndArmorPenetration(out int damage, out float armorPenetration);
 
-            if (Props.damageTypes.NullOrEmpty())
-            {
-                Props.damageTypes = new List<DamageDef> { DamageDefOf.Bomb };
-                return;
-            }
-            
+            // 处理伤害类型和hediff
+            HandleDamageTypesAndHediffs();
+
+            var effectedPawn = new HashSet<Pawn>();
+
             for (int i = 0; i < Props.damageTimes; i++)
             {
                 var targetCell = TargetAffectedCells(target).RandomElement();
                 var explosionCells = GetRangeCells(targetCell, Props.explosionRange);
+
+                // 如果需要添加hediff
+                if (Props.addHediffDef != null)
+                {
+                    // 获得范围内的pawn
+                    foreach (var cell in explosionCells)
+                    {
+                        var pawn = cell.GetFirstPawn(Caster.Map);
+                        if (pawn != null)
+                        {
+                            effectedPawn.Add(pawn);
+                        }
+                    }
+                }
 
                 GenExplosion.DoExplosion(target.Cell, parent.pawn.MapHeld, Props.explosionRange, Props.damageTypes.RandomElement(), Caster,
                     postExplosionSpawnThingDef: Props.filthDef, damAmount: damage, armorPenetration: armorPenetration, explosionSound: Props.explosionSound, weapon: null,
@@ -50,7 +51,59 @@ namespace NzRimImmortalBizarre
                     flammabilityChanceCurve: parent.verb.verbProps.flammabilityAttachFireChanceCurve, overrideCells: explosionCells);
             }
 
+            // 添加hediff
+            if (Props.addHediffDef != null)
+            {
+                foreach (var pawn in effectedPawn)
+                {
+                    Props.addHediffDefs.ForEach(hediffDef =>
+                    {
+                        pawn.health.AddHediff(hediffDef);
+                    });
+                }
+            }
+
             base.Apply(target, dest);
+        }
+
+        /// <summary>
+        /// 计算伤害和穿甲
+        /// </summary>
+        /// <param name="damage"></param>
+        /// <param name="armorPenetration"></param>
+        private void CalculateDamageAndArmorPenetration(out int damage, out float armorPenetration)
+        {
+            damage = Props.damage;
+            armorPenetration = Props.armorPenetration;
+            if (Props.damageFactorStat != null)
+            {
+                damage *= (int)Caster.GetStatValue(Props.damageFactorStat);
+            }
+            if (Props.armorPenetrationFactorStat != null)
+            {
+                armorPenetration *= Caster.GetStatValue(Props.armorPenetrationFactorStat);
+            }
+        }
+
+        /// <summary>
+        /// 处理伤害类型和hediff
+        /// </summary>
+        private void HandleDamageTypesAndHediffs()
+        {
+            // 合并伤害
+            if (Props.damageType != null)
+            {
+                Props.damageTypes.Add(Props.damageType);
+            }
+            // 合并Hediff
+            if (Props.addHediffDef != null)
+            {
+                Props.addHediffDefs.Add(Props.addHediffDef);
+            }
+            if (Props.damageTypes.Count == 0)
+            {
+                Props.damageTypes.Add(DamageDefOf.Bomb);
+            }
         }
 
         public override IEnumerable<PreCastAction> GetPreCastActions()
