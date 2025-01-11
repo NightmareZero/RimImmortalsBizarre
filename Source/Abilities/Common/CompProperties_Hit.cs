@@ -19,6 +19,8 @@ namespace NzRimImmortalBizarre
         public StatDef damageMultiplierStat;
         // 穿甲放大
         public StatDef armorPenetrationMultiplierStat;
+        // 打击部位
+        public BodyPartDef hitPart = null;
         // 声音
         public SoundDef soundHitPawn = SoundDefOf.Pawn_Melee_Punch_HitPawn;
         // 击晕时间

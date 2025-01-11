@@ -175,6 +175,7 @@
     <aiCanUse>true</aiCanUse>
     <ai_IsIncendiary>true</ai_IsIncendiary>
     <sendMessageOnCooldownComplete>false</sendMessageOnCooldownComplete>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
     <!-- <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound> -->
     <verbProperties>
       <verbClass>Verb_CastAbilityTouch</verbClass>
@@ -195,7 +196,8 @@
         <rEnergy>-5</rEnergy>
       </li> -->
       <li Class="NzRimImmortalBizarre.CompProperties_Hit">
-        <damageAmountBase>2</damageAmountBase>
+        <damageAmountBase>1</damageAmountBase>
+        <hitPart>Head</hitPart>
       </li>
       <li Class="CompProperties_AbilityGiveHediff">
         <compClass>CompAbilityEffect_GiveHediff</compClass>
@@ -222,6 +224,7 @@
     <aiCanUse>true</aiCanUse>
     <ai_IsIncendiary>true</ai_IsIncendiary>
     <sendMessageOnCooldownComplete>false</sendMessageOnCooldownComplete>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
     <!-- <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound> -->
     <verbProperties>
       <verbClass>Verb_CastAbilityTouch</verbClass>
@@ -246,6 +249,7 @@
         <armorPenetrationBase>2</armorPenetrationBase>
         <damageMultiplierStat>NzRI_ZhengDePowerMultiplier</damageMultiplierStat>
         <stunTicks>60</stunTicks>
+        <hitPart>Body</hitPart>
       </li>
 
     </comps>

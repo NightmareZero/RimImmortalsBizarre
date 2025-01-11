@@ -31,15 +31,24 @@ namespace NzRimImmortalBizarre
                 damArmorPenetration = Mathf.RoundToInt(damArmorPenetration * parent.pawn.GetStatValue(Props.armorPenetrationMultiplierStat));
             }
 
-            // 造成伤害
-            DamageInfo damageInfo = new DamageInfo(Props.damageDef, damAmount, damArmorPenetration, -1, this.parent.pawn, null, null, DamageInfo.SourceCategory.ThingOrUnknown, target.Thing);
-            target.Pawn.TakeDamage(damageInfo);
-
             // 击晕
             if (Props.stunTicks > 0)
             {
                 target.Pawn.stances.stunner.StunFor(Props.stunTicks, parent.pawn);
             }
+
+            // 击打部位
+            BodyPartRecord hitPartRcord = null;
+            if (Props.hitPart != null)
+            {
+                hitPartRcord = target.Pawn.health.hediffSet.GetNotMissingParts().FirstOrDefault(x => x.def == Props.hitPart);
+            }
+
+
+            // 造成伤害
+            DamageInfo damageInfo = new DamageInfo(Props.damageDef, damAmount, damArmorPenetration, -1, this.parent.pawn, hitPartRcord, null, DamageInfo.SourceCategory.ThingOrUnknown, target.Thing);
+            target.Pawn.TakeDamage(damageInfo);
+
 
             // 播放打击音效
             if (Props.soundHitPawn != null)

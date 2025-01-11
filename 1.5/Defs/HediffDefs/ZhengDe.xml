@@ -184,6 +184,7 @@
                 <canUseDecimalsShortForm>true</canUseDecimalsShortForm>
             </li>
         </comps>
+        <!-- TODO -->
         <stages></stages>
     </HediffDef>
 
