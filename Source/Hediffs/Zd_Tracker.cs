@@ -42,7 +42,6 @@ namespace NzRimImmortalBizarre
             this.buddhaNature = Mathf.Clamp(this.buddhaNature - 49, 0, 100);
             this.selfSacrifice = Mathf.Clamp(this.selfSacrifice - 49, 0, 100);
         }
-
         /// <summary>
         /// 可以进阶
         /// </summary>

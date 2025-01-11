@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
+    <NzRI_Zw_ZenSound.label>禅音</NzRI_Zw_ZenSound.label>
+    <NzRI_Zw_ZenSound.description>发出一声蕴含禅意的声音，令人幡然醒悟。解除迷茫和狂暴状态，同时略微增加意识和操作。\n这会让你更接近 “明心” 路线</NzRI_Zw_ZenSound.description>
+
+    <NzRI_Zd_Almsgiving.label>布施</NzRI_Zd_Almsgiving.label>
+    <NzRI_Zd_Almsgiving.description>效仿佛祖，割肉饲鹰\n 补充目标的饱腹和休息，同时增强目标的愈合速度\n这会让你更接近 “舍身” 路线</NzRI_Zd_Almsgiving.description>
+
     <Zd_DivineLightKick.label>圆光腿</Zd_DivineLightKick.label>
     <Zd_DivineLightKick.description>踢出一道光芒，造成少量伤害，并震慑目标一段时间。</Zd_DivineLightKick.description>
+
+    <NzRI_Zd_BulletShield.label>梵界</NzRI_Zd_BulletShield.label>
+    <NzRI_Zd_BulletShield.description>轻踏地面，撑起一片领域，保护范围内的其他人。</NzRI_Zd_BulletShield.description>
+
+    <NzRI_Zd_DebunkingMyths.label>慧眼</NzRI_Zd_DebunkingMyths.label>
+    <NzRI_Zd_DebunkingMyths.description>慧眼眼光能看穿一切虚假\n移除范围内的隐形状态</NzRI_Zd_DebunkingMyths.description>
 </LanguageData>

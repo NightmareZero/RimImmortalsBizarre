@@ -204,7 +204,6 @@
             </li>
         </comps>
         <stages>
-        <stages>
             <li>
                 <capMods>
                     <li>
@@ -224,7 +223,6 @@
                     </li>
                 </capMods>
             </li>
-        </stages>
         </stages>
     </HediffDef>
 

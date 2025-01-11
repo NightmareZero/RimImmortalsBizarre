@@ -56,7 +56,8 @@
 [b]源码：[/b] [url]https://github.com/NightmareZero/RimImmortalsBizarre.git[/url]
 
 这个Mod的英文部分都是机翻的，如果有人愿意对其中的错误和疏漏进行修正，可以私信我或者直接去Github提交
-另外除了封面是Ai生成的，其他的基本用的都是Rimworld自带的图标，如果有人觉得太丑，也可以去Github提交，我可以添加你为Mod的合作者
+
+现在图标和部分特效由“堂丸”提供，感谢这只企鹅吧
 
 [b]特别鸣谢：[/b] 
 路过的御宅： 协助测试出了大量Bug，有效提升了Mod质量

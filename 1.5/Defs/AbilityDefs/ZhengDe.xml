@@ -5,10 +5,10 @@
     <defName>NzRI_Zw_ZenSound</defName>
     <label>zen sound</label>
     <!-- 发出一声蕴含禅意的声音，令人幡然醒悟。\n解除迷茫和狂暴状态，同时略微增加意识和操作 -->
-    <!-- 这个技能会让你更接近 “明心” 路线 -->
+    <!-- 这会让你更接近 “明心” 路线 -->
     <description>Emit a sound containing Zen meaning, making people suddenly realize. Removes
       confusion and berserk state, and slightly increases consciousness and manipulation.\n\n
-      this skill will make you closer to the "Enlightenment" route</description>
+      it will make you closer to the "Enlightenment" route</description>
     <iconPath>Ability/AoJing4</iconPath>
     <cooldownTicksRange>1000</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
@@ -62,10 +62,10 @@
     <defName>NzRI_Zd_Almsgiving</defName>
     <label>almsgiving</label>
     <!-- 效仿佛祖，割肉饲鹰\n 补充目标的饱腹和休息，同时增强目标的愈合速度 -->
-    <!-- 这个技能会让你更接近 “舍身” 路线 -->
+    <!-- 这个会让你更接近 “舍身” 路线 -->
     <description>Imitate the ancestors, cut meat to feed the eagle\n
       Supplement the target's fullness and rest, while enhancing the target's healing speed.\n\n
-      this skill will make you closer to the "Sacrifice" route</description>
+      it will make you closer to the "Sacrifice" route</description>
     <iconPath>Ability/AoJing4</iconPath>
     <stunTargetWhileCasting>true</stunTargetWhileCasting>
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>

@@ -12,7 +12,8 @@
             <!-- 可能依赖DLC -->
             <texPath>Things/Ethereal/PsychicShieldRipples</texPath>
             <shaderType>NzRI_Zd_BulletShield</shaderType>
-            <color>(255, 223, 186)</color>
+            <!-- <color>(255, 223, 186)</color> -->
+            <color>(255, 215, 0)</color>
             <drawSize>9.9</drawSize>
             <shaderParameters>
                 <_PulseInterval>0.5</_PulseInterval>
@@ -30,7 +31,7 @@
                 <interceptGroundProjectiles>true</interceptGroundProjectiles>
                 <interceptNonHostileProjectiles>false</interceptNonHostileProjectiles>
                 <interceptOutgoingProjectiles>false</interceptOutgoingProjectiles>
-                <color>(0.4, 0.4, 0.4)</color>
+                <color>(1.0, 0.84, 0.0)</color>
                 <minAlpha>0.2</minAlpha>
                 <interceptEffect>Interceptor_BlockedProjectilePsychic</interceptEffect>
             </li>

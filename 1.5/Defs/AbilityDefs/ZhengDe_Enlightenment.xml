@@ -4,7 +4,9 @@
   <AbilityDef ParentName="RI_PsycastBase">
     <defName>NzRI_Zd_LionRoar</defName>
     <label>lion's roar</label>
-    <description></description>
+    <!-- 发出一声洪亮的吼叫，震慑对方，让对方瑟瑟发抖，甚至无法握住自己的武器 -->
+    <description>Make a loud roar, intimidate the opponent, make the opponent tremble, and even
+      unable to hold their own weapon.</description>
     <iconPath>Ability/AoJing1</iconPath>
     <cooldownTicksRange>2500</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
@@ -86,7 +88,7 @@
   <AbilityDef ParentName="RI_PsycastBase">
     <defName>NzRI_Zd_BulletShield</defName>
     <label>brahma world</label>
-    <description>Lightly tread on the ground, create a realm, and protect other believers.</description>
+    <description>Lightly tread on the ground, create a realm, and protect others.</description>
     <!-- TODO -->
     <iconPath>UI/Abilities/BulletShield</iconPath>
     <writeCombatLog>True</writeCombatLog>
