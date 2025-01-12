@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace NzRimImmortalBizarre
 {
 
-    
+
     public class CompProperties_AbilityRangeExplosion : CompProperties_AbilityEffect
     {
 
@@ -18,11 +18,14 @@ namespace NzRimImmortalBizarre
         // 遗留地板类型
         public ThingDef filthDef;
 
-        // 伤害类型(多种)
-        public List<DamageDef> damageTypes = new List<DamageDef>() ;
+        // 伤害类型(多种) 不为空时优先使用
+        public List<DamageDef> damageTypes = new List<DamageDef>();
 
         // 伤害类型
         public DamageDef damageType;
+
+        // 伤害类型获取顺序 0. 随机 1. 顺序
+        public int damageTypeOrder = 0;
 
         // 伤害次数
         public int damageTimes = 1;
@@ -45,15 +48,63 @@ namespace NzRimImmortalBizarre
         // 爆炸后音效
         public SoundDef explosionSound = XmlOf.Explosion_GiantBomb;
 
+        // 给受到影响的人添加hediff 不为空时优先使用
+        public List<HediffDef> addHediffDefs = new List<HediffDef>();
+
         // 给受到影响的人添加hediff
         public HediffDef addHediffDef;
 
-        // 给受到影响的人添加hediff
-        public List<HediffDef> addHediffDefs = new List<HediffDef>();
 
         public CompProperties_AbilityRangeExplosion()
         {
             compClass = typeof(CompAbilityEffect_RangeExplosion);
         }
+
+        /// <summary>
+        /// 获取伤害类型
+        /// </summary>
+        public List<DamageDef> GetDamageTypes()
+        {
+            if (damageTypes.Count == 0 && damageType != null)
+            {
+                damageTypes.Add(damageType);
+            }
+
+            if (damageTypes.Count == 0)
+            {
+                damageTypes.Add(DamageDefOf.Bomb);
+            }
+            return damageTypes;
+        }
+
+        /// <summary>
+        /// 获取Hediff类型
+        /// </summary>
+        public List<HediffDef> GetHediffDefs()
+        {
+            if (addHediffDefs.Count == 0 && addHediffDef != null)
+            {
+                addHediffDefs.Add(addHediffDef);
+            }
+            return addHediffDefs;
+        }
+
+        /// <summary>
+        /// 按照顺序获取伤害类型
+        /// </summary>
+        /// <returns></returns>
+        public DamageDef GetOrderedDamageType()
+        {
+            if (damageTypeOrder == 0)
+            {
+                _damageTypeIndex = Rand.Range(0, damageTypes.Count);
+            }
+            else
+            {
+                _damageTypeIndex = (_damageTypeIndex + 1) % damageTypes.Count;
+            }
+            return GetDamageTypes()[_damageTypeIndex];
+        }
+        private int _damageTypeIndex = 0;
     }
 }

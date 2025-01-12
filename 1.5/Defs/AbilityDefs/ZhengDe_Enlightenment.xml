@@ -1,5 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
+  <!-- 怒视 -->
+  <AbilityDef ParentName="RI_PsycastBase">
+    <defName>NzRI_Zd_StareAngrily</defName>
+    <label>stare angrily</label>
+    <!-- 愤怒的注释目标，造成火与电伤害。 “怒目金刚瞋目视，恶刹妖魔皆胆裂。” -->
+    <description>Angry comment on the target, causing fire and electric damage. "The angry eyes of
+      the Vajra, the evil temple demons are all frightened."</description>
+    <iconPath>Ability/AoJing1</iconPath>
+    <cooldownTicksRange>2500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <displayOrder>300</displayOrder>
+    <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+    <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>22.9</range>
+      <warmupTime>0.5</warmupTime>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+        <rEnergy>-15</rEnergy>
+      </li> -->
+      <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeExplosion">
+        <deviationRange>1</deviationRange>
+        <explosionRange>5</explosionRange>
+        <damage>13</damage>
+        <damageTimes>3</damageTimes>
+        <damageTypeOrder>1</damageTypeOrder>
+        <damageTypes>
+          <li>Flame</li>
+          <li>EMP</li>
+          <li>Bomb</li>
+        </damageTypes>
+        <!-- TODO -->
+        <!-- <effecterDef></effecterDef> -->
+        <!-- TODO 替换声音 -->
+        <!-- <explosionSound></explosionSound> -->
+      </li>
+    </comps>
+  </AbilityDef>
+
   <!-- 狮子吼 -->
   <AbilityDef ParentName="RI_PsycastBase">
     <defName>NzRI_Zd_LionRoar</defName>
@@ -30,6 +74,7 @@
         <explosionRange>4</explosionRange>
         <damageType>Bomb</damageType>
         <damage>21</damage>
+        <explosionSound>Explosion_Smoke</explosionSound>
         <addHediffDefs>
           <!-- 武器脱手 操作清零 3秒 -->
           <li>NzRI_Zd_WeaponDrop</li>
