@@ -118,8 +118,44 @@
     </comps>
   </AbilityDef>
 
-  <!-- 悟禅 -->
+  <!-- 参禅 -->
   <!-- 修炼状态，降低移速 -->
+  <AbilityDef  ParentName="RI_PsycastBase">
+		<defName>NzRI_Zd_ZenMeditation</defName>
+		<label>zen meditation</label>
+    <!-- 在行走坐卧中，参悟禅理，降低移动速度，但是修行进度会随时间上升 -->
+		<description>Contemplate the Zen principles while walking, sitting, and lying down, reduce movement speed, but the progress of practice will increase over time</description>
+		<iconPath>Ability/InternalPellet/RI_Ability_InternalFunction</iconPath>
+		<targetRequired>False</targetRequired>
+		<canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+		<hostile>false</hostile>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<statBases>
+			<Ability_EffectRadius>10</Ability_EffectRadius>
+		</statBases>
+		<verbProperties>
+			<violent>false</violent>
+			<warmupTime>0</warmupTime>
+			<range>0</range>
+			<requireLineOfSight>False</requireLineOfSight>
+			<targetParams>
+				<canTargetSelf>True</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>NzRI_Zd_Cultivation</hediffDef>
+        <durationSecondsOverride>300</durationSecondsOverride>
+				<psychic>False</psychic>
+				<replaceExisting>True</replaceExisting>
+				<onlyApplyToSelf>True</onlyApplyToSelf>
+			</li>
+			<li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+				<rEnergy>10</rEnergy>
+			</li>
+		</comps>
+	</AbilityDef>
 
   <!-- 如来 -->
   <!-- 短时间化身五智如来，持续时间内，体型增大，普攻带范围伤害，承伤 0%，不可阻挡，心灵敏感度0% -->

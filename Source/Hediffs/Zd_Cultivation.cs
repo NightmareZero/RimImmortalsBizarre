@@ -20,7 +20,6 @@ namespace NzRimImmortalBizarre
 
         private bool _isInitialized = false;
         private Zd_Fruition _fruitionCache; // 不保存
-        private Hediff_RI_EnergyRoot _rootEnergyCache; // 不保存
         public override void Tick()
         {
             onceInit();
@@ -37,7 +36,8 @@ namespace NzRimImmortalBizarre
                 return;
             }
 
-            if (_rootEnergyCache == null)
+            var eRoot = pawn.GetRIRoot();
+            if (eRoot == null)
             {
                 // 移除本 Hediff
                 pawn.health.RemoveHediff(this);
@@ -46,7 +46,7 @@ namespace NzRimImmortalBizarre
             }
 
             // 检查是否有足够的灵气
-            if (_rootEnergyCache.energy.Energy < trueTickCost)
+            if (eRoot.energy.Energy < trueTickCost)
             {
                 // 移除本 Hediff
                 pawn.health.RemoveHediff(this);
@@ -71,11 +71,6 @@ namespace NzRimImmortalBizarre
             if (_fruitionCache == null)
             {
                 _fruitionCache = Utils.AssertGetFruitionHediff(pawn);
-            }
-            // 初始化 灵根 Hediff
-            if (_rootEnergyCache == null)
-            {
-                _rootEnergyCache = Utils.TryGetEnergyRoot(pawn);
             }
         }
     }
