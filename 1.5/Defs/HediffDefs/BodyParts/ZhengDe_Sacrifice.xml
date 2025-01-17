@@ -8,22 +8,178 @@
 
     <!-- 猩红眼 -->
     <!-- 战栗注视，降低操作移动 -->
+    <HediffDef ParentName="ZdBodyPartBase">
+        <defName>Zd_CrimsonEyes</defName>
+        <label>crimson eyes</label>
+        <labelNoun>an crimson eyes</labelNoun>
+        <description>#</description>
+        <defaultInstallPart>Eye</defaultInstallPart>
+        <tags>
+            <li>NzRI_ZhengDe_BodyPart</li>
+            <li>NzRI_ZhengDe_Sacrifice</li>
+        </tags>
+        <abilities>
+            <!-- <li>NzRI_Zd_DebunkingMyths</li> -->
+        </abilities>
+        <stages>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.50</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
 
     <!-- 怪异舌 -->
     <!-- 恐怖嘶吼，小范围错乱 -->
+    <HediffDef ParentName="ZdBodyPartBase">
+        <defName>Zd_StrangeTongue</defName>
+        <label>strange tongue</label>
+        <labelNoun>an strange tongue</labelNoun>
+        <!-- TODO -->
+        <description>#</description>
+        <defaultInstallPart>Tongue</defaultInstallPart>
+        <tags>
+            <li>NzRI_ZhengDe_BodyPart</li>
+            <li>NzRI_ZhengDe_Sacrifice</li>
+        </tags>
+        <abilities>
+            <!-- <li>Zd_TouchingHead</li> -->
+        </abilities>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.50</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
 
     <!-- 增生肝 -->
     <!-- 吐出血肉野兽 -->
+    <!-- TODO -->
 
     <!-- 脓疮臂 -->
     <!-- 扇形喷射算液+恶心 -->
+    <HediffDef ParentName="ZdBodyPartBase">
+        <defName>Zd_AbscessArm</defName>
+        <label>abscess arm</label>
+        <labelNoun>an abscess arm</labelNoun>
+        <description>#</description>
+        <defaultInstallPart>Shoulder</defaultInstallPart>
+        <tags>
+            <li>NzRI_ZhengDe_BodyPart</li>
+            <li>NzRI_ZhengDe_Sacrifice</li>
+        </tags>
+        <abilities>
+            <!-- <li>Zd_TouchingHead</li> -->
+        </abilities>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>fist</label>
+                        <capacities>
+                            <li>AcidBurn</li>
+                        </capacities>
+                        <power>61</power>
+                        <armorPenetration>2.0</armorPenetration>
+                        <cooldownTime>1.25</cooldownTime>
+                        <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+                        <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.50</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
 
-    <!-- 扭曲臂 -->
+    <!-- 盘卷臂 -->
     <!-- 范围stuck -->
+    <HediffDef ParentName="ZdBodyPartBase">
+        <defName>Zd_CoiledArm</defName>
+        <label>coiled arms</label>
+        <labelNoun>an vajra arm</labelNoun>
+        <description>#</description>
+        <defaultInstallPart>Shoulder</defaultInstallPart>
+        <tags>
+            <li>NzRI_ZhengDe_BodyPart</li>
+            <li>NzRI_ZhengDe_Sacrifice</li>
+        </tags>
+        <abilities>
+            <!-- <li>Zd_ShakeMountainFist</li> -->
+            <!-- <li>Zd_MercyHit</li> -->
+        </abilities>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>fist</label>
+                        <capacities>
+                            <li>Blunt</li>
+                        </capacities>
+                        <power>42</power>
+                        <armorPenetration>1.5</armorPenetration>
+                        <cooldownTime>0.75</cooldownTime>
+                        <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+                        <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.50</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
 
     <!-- 扭结腿 -->
     <!-- 拉拽 -->
+    <HediffDef ParentName="ZdBodyPartBase">
+        <defName>Zd_TwistedLeg</defName>
+        <label>twisted leg</label>
+        <labelNoun>an twisted leg</labelNoun>
+        <!-- 这条腿扭结错乱，几乎没有骨骼，如触须一般，缺格外坚韧灵活 -->
+        <description>One of the legs is twisted and disordered, almost boneless, like tentacles, but
+            it is particularly tough and flexible.</description>
+        <defaultInstallPart>Leg</defaultInstallPart>
+        <tags>
+            <li>NzRI_ZhengDe_BodyPart</li>
+            <li>NzRI_ZhengDe_Sacrifice</li>
+        </tags>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.50</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <abilities>
+            <!-- <li>Zd_DivineLightKick</li> -->
+        </abilities>
+    </HediffDef>
 
     <!-- 枯败腿 -->
     <!-- 周围切腿 -->
+    <HediffDef ParentName="ZdBodyPartBase">
+        <defName>Zd_WitheredLeg</defName>
+        <label>withered leg</label>
+        <labelNoun>an withered leg</labelNoun>
+        <!-- 这条腿黑瘦枯干，却格外结实有力 -->
+        <description>One of the legs is withered, but it is particularly strong and powerful.</description>
+        <defaultInstallPart>Leg</defaultInstallPart>
+        <tags>
+            <li>NzRI_ZhengDe_BodyPart</li>
+            <li>NzRI_ZhengDe_Sacrifice</li>
+        </tags>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.50</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <abilities>
+            <!-- <li>NzRI_Zd_BulletShield</li> -->
+        </abilities>
+    </HediffDef>
 </Defs>

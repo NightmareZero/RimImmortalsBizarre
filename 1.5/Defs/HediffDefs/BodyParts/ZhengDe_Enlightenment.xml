@@ -63,7 +63,7 @@
         <defaultInstallPart>Shoulder</defaultInstallPart>
         <tags>
             <li>NzRI_ZhengDe_BodyPart</li>
-            <li>NzRI_ZhengDe_Restraint</li>
+            <li>NzRI_ZhengDe_Enlightenment</li>
         </tags>
         <abilities>
             <li>Zd_TouchingHead</li>
@@ -102,7 +102,7 @@
         <defaultInstallPart>Shoulder</defaultInstallPart>
         <tags>
             <li>NzRI_ZhengDe_BodyPart</li>
-            <li>NzRI_ZhengDe_Restraint</li>
+            <li>NzRI_ZhengDe_Enlightenment</li>
         </tags>
         <abilities>
             <li>Zd_ShakeMountainFist</li>
