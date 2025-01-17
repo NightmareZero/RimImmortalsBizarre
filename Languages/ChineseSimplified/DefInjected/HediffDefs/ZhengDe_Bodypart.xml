@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+    <Zd_DiligenceArm.label>勤工臂</Zd_DiligenceArm.label>
+    <Zd_DiligenceArm.labelNoun>勤工臂</Zd_DiligenceArm.labelNoun>
+    <Zd_DiligenceArm.description>修行非一蹴而就之事，需以勤劳之心，持续不断地耕耘。\n\n增加采矿和务农技能和效率</Zd_DiligenceArm.description>
+
+    <Zd_CraftsmanshipArm.label>匠心臂</Zd_CraftsmanshipArm.label>
+    <Zd_CraftsmanshipArm.labelNoun>匠心臂</Zd_CraftsmanshipArm.labelNoun>
+    <Zd_CraftsmanshipArm.description>"心如工画师，能画诸世间。五蕴悉从生，无法而不造。"\n我们的心如同画师，能够绘制出世间万象，而修行正是要描绘出内心的清净与智慧。\n\n增加艺术和手工效率</Zd_CraftsmanshipArm.description>
+
+    <Zd_PrajnaLeg.label>般若腿</Zd_PrajnaLeg.label>
+    <Zd_PrajnaLeg.labelNoun>般若腿</Zd_PrajnaLeg.labelNoun>
+    <Zd_PrajnaLeg.description>般若的含义是辨识智慧、辨识才智\n影响研究速度</Zd_PrajnaLeg.description>
+
+    <Zd_DevoteLeg.label>笃行腿</Zd_DevoteLeg.label>
+    <Zd_DevoteLeg.labelNoun>笃行腿</Zd_DevoteLeg.labelNoun>
+    <Zd_DevoteLeg.description>"欲速则不达。"\n修行如同攀登高峰，需一步一个脚印，稳健前行。若贪图捷径，往往会导致根基不稳</Zd_DevoteLeg.description>
+
+    <Zd_AsceticismStomach.label>斋藏胃</Zd_AsceticismStomach.label>
+    <Zd_AsceticismStomach.labelNoun>斋藏胃</Zd_AsceticismStomach.labelNoun>
+    <Zd_AsceticismStomach.description>一切有为法，如梦幻泡影，如露亦如电，应作如是观</Zd_AsceticismStomach.description>
+
+    <Zd_EloquenceTongue.label>辩才舌</Zd_EloquenceTongue.label>
+    <Zd_EloquenceTongue.labelNoun>辩才舌</Zd_EloquenceTongue.labelNoun>
+    <Zd_EloquenceTongue.description>"菩提本无树，明镜亦非台"</Zd_EloquenceTongue.description>
+
+    <Zd_KeenEyes.label>慧眼</Zd_KeenEyes.label>
+    <Zd_KeenEyes.labelNoun>慧眼</Zd_KeenEyes.labelNoun>
+    <Zd_KeenEyes.description>“得慧眼，不见众生，尽灭一异相。”\n\n增加射击和瞄准效率</Zd_KeenEyes.description>
+
+</LanguageData>

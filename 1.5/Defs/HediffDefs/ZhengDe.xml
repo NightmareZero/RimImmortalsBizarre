@@ -5,7 +5,7 @@
         <defName>NzRI_Zd_Fruition</defName>
         <label>Fruition</label>
         <hediffClass>NzRimImmortalBizarre.Zd_Fruition</hediffClass>
-        <description>#TODO</description>
+        <description>#</description>
         <isBad>false</isBad>
     </HediffDef>
 
@@ -28,11 +28,11 @@
     </HediffDef>
 
     <HediffDef>
-        <!-- 禅音 -->
         <defName>NzRI_Zd_ZenSound</defName>
-        <!-- 听到了禅音 -->
+        <!-- 禅音 -->
         <label>zen sound</label>
-        <description>Heard the sound of Zen</description>
+        <!-- 听到了禅音, 感到内心平静 -->
+        <description>Heard the sound of Zen, felt calm inside</description>
         <isBad>false</isBad>
         <hediffClass>HediffWithComps</hediffClass>
         <comps>
@@ -142,7 +142,8 @@
     <HediffDef>
         <defName>NzRI_Zd_Imprisonment</defName>
         <label>imprisonment</label>
-        <description>#</description>
+        <!-- 受到禁锢 -->
+        <description>Imprisoned</description>
         <isBad>true</isBad>
         <hediffClass>HediffWithComps</hediffClass>
         <comps>

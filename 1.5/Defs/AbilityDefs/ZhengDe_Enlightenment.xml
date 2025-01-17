@@ -211,7 +211,7 @@
   <!-- 慈悲掌 -->
   <!-- ParentName="AbilityTouchBase" -->
   <AbilityDef ParentName="RI_PsycastBase">
-    <defName>Zd_MercyHit</defName>
+    <defName>NzRI_Zd_MercyHit</defName>
     <label>mercy hit</label>
     <!-- 使用巧劲攻击对方，尝试打晕目标 -->
     <description>Use skill to attack the opponent, trying to stun the target.</description>
@@ -259,7 +259,7 @@
   <!-- 撼山拳 -->
   <!-- ParentName="AbilityTouchBase" -->
   <AbilityDef ParentName="RI_PsycastBase">
-    <defName>Zd_ShakeMountainFist</defName>
+    <defName>NzRI_Zd_ShakeMountainFist</defName>
     <label>shake mountain fist</label>
     <!-- 蓄力并打出重如山岳的一拳，对敌人造成大量伤害 -->
     <description>Charge and hit a punch as heavy as a mountain, causing a lot of damage to the
@@ -303,7 +303,7 @@
   <!-- 抚顶 -->
   <!-- ParentName="AbilityTouchBase" -->
   <AbilityDef ParentName="RI_PsycastBase">
-    <defName>Zd_TouchingHead</defName>
+    <defName>NzRI_Zd_TouchingHead</defName>
     <label>touch head</label>
     <!-- 抚摸对方的头部，使用法力庇护对方 -->
     <description>Touch the opponent head, use Qi to protect the opponent.</description>

@@ -14,4 +14,21 @@
 
     <NzRI_Zd_DebunkingMyths.label>慧眼</NzRI_Zd_DebunkingMyths.label>
     <NzRI_Zd_DebunkingMyths.description>慧眼眼光能看穿一切虚假\n移除范围内的隐形状态</NzRI_Zd_DebunkingMyths.description>
+
+    <NzRI_Zd_StareAngrily.label>怒视</NzRI_Zd_StareAngrily.label>
+    <NzRI_Zd_StareAngrily.description>愤怒的注释目标，造成火与电伤害。 “怒目金刚瞋目视，恶刹妖魔皆胆裂。” </NzRI_Zd_StareAngrily.description>
+
+    <NzRI_Zd_LionRoar.label>狮子吼</NzRI_Zd_LionRoar.label>
+    <NzRI_Zd_LionRoar.description>发出一声洪亮的吼叫，震慑对方，让对方瑟瑟发抖，甚至无法握住自己的武器</NzRI_Zd_LionRoar.description>
+
+    <NzRI_Zd_MercyHit.label>慈悲掌</NzRI_Zd_MercyHit.label>
+    <NzRI_Zd_MercyHit.description>使用巧劲攻击对方，尝试打晕目标</NzRI_Zd_MercyHit.description>
+
+    <NzRI_Zd_ShakeMountainFist.label>撼山拳</NzRI_Zd_ShakeMountainFist.label>
+    <NzRI_Zd_ShakeMountainFist.description>蓄力并打出重如山岳的一拳，对敌人造成大量伤害</NzRI_Zd_ShakeMountainFist.description>
+
+    <NzRI_Zd_TouchingHead.label>抚顶</NzRI_Zd_TouchingHead.label>
+    <NzRI_Zd_TouchingHead.description>抚摸对方的头部，使用法力庇护对方</NzRI_Zd_TouchingHead.description>
+
+    
 </LanguageData>
