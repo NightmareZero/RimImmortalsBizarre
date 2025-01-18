@@ -5,8 +5,7 @@
     <defName>NzRI_Zd_StareAngrily</defName>
     <label>stare angrily</label>
     <!-- 愤怒的注释目标，造成火与电伤害。 “怒目金刚瞋目视，恶刹妖魔皆胆裂。” -->
-    <description>Angry comment on the target, causing fire and electric damage. "The angry eyes of
-      the Vajra, the evil temple demons are all frightened."</description>
+    <description>Angry comment on the target, causing fire and electric damage. "The angry eyes of the Vajra, the evil temple demons are all frightened."</description>
     <iconPath>Ability/AoJing1</iconPath>
     <cooldownTicksRange>2500</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>

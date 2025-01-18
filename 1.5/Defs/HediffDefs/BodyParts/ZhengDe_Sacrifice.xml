@@ -78,9 +78,15 @@
                     <li>
                         <label>fist</label>
                         <capacities>
-                            <li>AcidBurn</li>
+                            <li>Blunt</li>
                         </capacities>
-                        <power>61</power>
+                        <extraMeleeDamages>
+                            <li>
+                                <def>AcidBurn</def>
+                                <amount>27</amount>
+                            </li>
+                        </extraMeleeDamages>
+                        <power>41</power>
                         <armorPenetration>2.0</armorPenetration>
                         <cooldownTime>1.25</cooldownTime>
                         <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
