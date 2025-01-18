@@ -13,18 +13,8 @@ namespace NzRimImmortalBizarre
 
         private Pawn Caster => parent.pawn;
 
-        private void preApply()
-        {
-            if (Props.explosionSound == null)
-            {
-                Props.explosionSound = XmlOf.Explosion_GiantBomb;
-            }
-        }
-
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            preApply();
-            
             try
             {
                 // 计算伤害和穿甲

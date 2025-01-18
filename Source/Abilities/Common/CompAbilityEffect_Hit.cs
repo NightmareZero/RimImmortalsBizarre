@@ -12,21 +12,8 @@ namespace NzRimImmortalBizarre
     {
         public new CompProperties_Hit Props => (CompProperties_Hit)props;
 
-        private void preApply()
-        {
-            if (Props.soundHitPawn == null)
-            {
-                Props.soundHitPawn = SoundDefOf.Pawn_Melee_Punch_HitPawn;
-            }
-            if (Props.damageDef == null)
-            {
-                Props.damageDef = DamageDefOf.Blunt;
-            }
-        }
-
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            preApply();
             if (!canDo(target))
             {
                 return;
@@ -59,15 +46,12 @@ namespace NzRimImmortalBizarre
 
 
             // 造成伤害
-            DamageInfo damageInfo = new DamageInfo(Props.damageDef, damAmount, damArmorPenetration, -1, this.parent.pawn, hitPartRcord, null, DamageInfo.SourceCategory.ThingOrUnknown, target.Thing);
+            DamageInfo damageInfo = new DamageInfo(Props.DamageDef, damAmount, damArmorPenetration, -1, this.parent.pawn, hitPartRcord, null, DamageInfo.SourceCategory.ThingOrUnknown, target.Thing);
             target.Pawn.TakeDamage(damageInfo);
 
 
             // 播放打击音效
-            if (Props.soundHitPawn != null)
-            {
-                Props.soundHitPawn.PlayOneShot(target.Pawn);
-            }
+            Props.SoundHitPawn.PlayOneShot(target.Pawn);
         }
 
         public bool canDo(LocalTargetInfo target)
@@ -75,11 +59,6 @@ namespace NzRimImmortalBizarre
             if (target.Pawn == null)
             {
                 return false;
-            }
-
-            if (Props.damageDef == null)
-            {
-                Props.damageDef = DamageDefOf.Blunt;
             }
 
             if (Props.damageAmountBase < 1)
