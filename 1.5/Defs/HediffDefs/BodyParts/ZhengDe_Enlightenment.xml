@@ -66,7 +66,7 @@
             <li>NzRI_ZhengDe_Enlightenment</li>
         </tags>
         <abilities>
-            <li>Zd_TouchingHead</li>
+            <li>NzRI_Zd_TouchingHead</li>
         </abilities>
         <comps>
             <li Class="HediffCompProperties_VerbGiver">
@@ -105,8 +105,8 @@
             <li>NzRI_ZhengDe_Enlightenment</li>
         </tags>
         <abilities>
-            <li>Zd_ShakeMountainFist</li>
-            <li>Zd_MercyHit</li>
+            <li>NzRI_Zd_ShakeMountainFist</li>
+            <li>NzRI_Zd_MercyHit</li>
         </abilities>
         <comps>
             <li Class="HediffCompProperties_VerbGiver">

@@ -21,7 +21,7 @@ namespace NzRimImmortalBizarre
             try
             {
 
-                var Things = DataOf.GetCachedThingList(Props.thingLists);
+                var Things = DataOf.GetCachedItemThingList(Props.itemLists);
 
                 if (Things.Count == 0)
                 {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Collections.Generic;
 
 namespace NzRimImmortalBizarre {
-    public class ThingList : Def { 
+    public class ItemList : Def { 
         public List<ThingDef> things = new List<ThingDef>();
     }
 }

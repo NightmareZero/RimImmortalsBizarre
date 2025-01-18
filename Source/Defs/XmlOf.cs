@@ -44,8 +44,6 @@ namespace NzRimImmortalBizarre
             // Log.Message("Initializing XmlOf...");
             DefOfHelper.EnsureInitializedInCtor(typeof(XmlOf));
 
-            DataOf.Init();
-
             // 自动查找并初始化所有DefPartHurtLevel类型
 
             // Log.Message("XmlOf initialized.");

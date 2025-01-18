@@ -10,7 +10,7 @@ namespace NzRimImmortalBizarre
 {
     public class FictionReality : CompProperties_AbilityEffect {
 
-        public List<ThingList> thingLists = new List<ThingList>();
+        public List<ItemList> itemLists = new List<ItemList>();
 
         public FictionReality() {
             compClass = typeof(CompAbilityEffect_FictionReality);

@@ -30,5 +30,7 @@
     <NzRI_Zd_TouchingHead.label>抚顶</NzRI_Zd_TouchingHead.label>
     <NzRI_Zd_TouchingHead.description>抚摸对方的头部，使用法力庇护对方</NzRI_Zd_TouchingHead.description>
 
+    <NzRI_Zd_ZenMeditation.label>参禅</NzRI_Zd_ZenMeditation.label>
+    <NzRI_Zd_ZenMeditation.description>在行走坐卧中，参悟禅理，降低移动速度，但是修行进度会随时间上升</NzRI_Zd_ZenMeditation.description>
     
 </LanguageData>

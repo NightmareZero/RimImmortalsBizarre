@@ -16,7 +16,10 @@ namespace NzRimImmortalBizarre
     /// </summary>
     public class Zd_Cultivation : HediffWithComps
     {
+        // 每次修行消耗的灵气
         const float trueTickCost = 5f;
+        // 每隔30秒增加一次修行进度
+        const int cultivationSecTick = 30;
 
         private bool _isInitialized = false;
         private Zd_Fruition _fruitionCache; // 不保存
@@ -24,14 +27,14 @@ namespace NzRimImmortalBizarre
         {
             onceInit();
             base.Tick();
-            // 每隔20秒检查一次
-            if (ageTicks % 1200 != 0)
+            if (ageTicks % (cultivationSecTick * 60) != 0)
             {
                 return;
             }
 
             // 检查是否已经被移除
-            if (_fruitionCache.Removed) { 
+            if (_fruitionCache.Removed)
+            {
                 pawn.health.RemoveHediff(this);
                 return;
             }
@@ -50,12 +53,13 @@ namespace NzRimImmortalBizarre
             {
                 // 移除本 Hediff
                 pawn.health.RemoveHediff(this);
-                Messages.Message("Zd_Cultivation_NotEnoughEnergy".Translate(pawn.Name.Named("pawnName")), pawn, MessageTypeDefOf.NegativeEvent);
+                Messages.Message("Zd_Cultivation_NotEnoughEnergy".Translate(pawn.Name.Named("pawnName")), pawn, MessageTypeDefOf.NeutralEvent);
                 return;
             }
 
             // 对果位进行处理(增加修行进度)
             _fruitionCache.Tracker.addFruition(1);
+            eRoot.energy.SetEnergy(-trueTickCost);
 
         }
 

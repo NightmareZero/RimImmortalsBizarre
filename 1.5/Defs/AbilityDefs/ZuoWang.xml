@@ -373,7 +373,7 @@
                 <change>99</change>
             </li>
             <li Class="NzRimImmortalBizarre.FictionReality">
-                <thingLists>
+                <itemLists>
                     <li>Core</li>
                     <li>Immortal</li>
                     <li MayRequire="RI.RimImmortal.Forge">Forge</li>
@@ -381,7 +381,7 @@
                     <li MayRequire="Ludeon.RimWorld.Royalty">Royalty</li>
                     <li MayRequire="Ludeon.RimWorld.Biotech">Biotech</li>
                     <li MayRequire="Ludeon.RimWorld.Anomaly">Anomaly</li>
-                </thingLists>
+                </itemLists>
             </li>
         </comps>
     </AbilityDef>

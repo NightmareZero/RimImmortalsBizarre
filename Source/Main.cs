@@ -59,6 +59,13 @@ namespace NzRimImmortalBizarre
             base.LoadedGame();
             Caches.Clear();
         }
+
+        public override void FinalizeInit()
+        {
+            base.FinalizeInit();
+
+            DataOf.Init();
+        }
     }
 
 

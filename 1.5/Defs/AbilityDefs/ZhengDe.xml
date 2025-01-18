@@ -151,9 +151,10 @@
 				<replaceExisting>True</replaceExisting>
 				<onlyApplyToSelf>True</onlyApplyToSelf>
 			</li>
-			<li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+      <!-- TODO 加点特效 -->
+			<!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
 				<rEnergy>10</rEnergy>
-			</li>
+			</li> -->
 		</comps>
 	</AbilityDef>
 

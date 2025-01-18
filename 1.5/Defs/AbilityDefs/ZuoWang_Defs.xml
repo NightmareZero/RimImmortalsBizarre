@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <!-- 仙路物品 -->
-    <NzRimImmortalBizarre.ThingList>
+    <NzRimImmortalBizarre.ItemList>
         <defName>Immortal</defName>
         <things>
             <li>EnergyRoot</li>
             <li>EnergyRootHigh</li>
         </things>
-    </NzRimImmortalBizarre.ThingList>
+    </NzRimImmortalBizarre.ItemList>
 
     <!-- 神机天纵 -->
-    <NzRimImmortalBizarre.ThingList MayRequire="RI.RimImmortal.Forge">
+    <NzRimImmortalBizarre.ItemList MayRequire="RI.RimImmortal.Forge">
         <defName>Forge</defName>
         <things>
             <!-- 蚩尤怒炎戟【一品】 -->
@@ -39,10 +39,10 @@
             <li>RI_Talisman_WhiteJadeVase</li>
 
         </things>
-    </NzRimImmortalBizarre.ThingList>
+    </NzRimImmortalBizarre.ItemList>
 
     <!-- 原版物品 -->
-    <NzRimImmortalBizarre.ThingList>
+    <NzRimImmortalBizarre.ItemList>
         <defName>Core</defName>
         <things>
             <!-- 护盾腰带 -->
@@ -60,17 +60,17 @@
             <!-- 科技核心 -->
             <li>TechprofSubpersonaCore</li>
         </things>
-    </NzRimImmortalBizarre.ThingList>
+    </NzRimImmortalBizarre.ItemList>
 
     <!-- 文化物品 -->
-    <NzRimImmortalBizarre.ThingList MayRequire="Ludeon.RimWorld.Ideology">
+    <NzRimImmortalBizarre.ItemList MayRequire="Ludeon.RimWorld.Ideology">
         <defName>Ideology</defName>
         <things>
         </things>
-    </NzRimImmortalBizarre.ThingList>
+    </NzRimImmortalBizarre.ItemList>
 
     <!-- 皇权物品 -->
-    <NzRimImmortalBizarre.ThingList MayRequire="Ludeon.RimWorld.Royalty">
+    <NzRimImmortalBizarre.ItemList MayRequire="Ludeon.RimWorld.Royalty">
         <defName>Royalty</defName>
         <things>
             <!-- 心灵权杖 -->
@@ -92,10 +92,10 @@
             <!-- 便携盾包 -->
             <li>Apparel_PackBroadshield</li>
         </things>
-    </NzRimImmortalBizarre.ThingList>
+    </NzRimImmortalBizarre.ItemList>
 
     <!-- 生物科技 -->
-    <NzRimImmortalBizarre.ThingList MayRequire="Ludeon.RimWorld.Biotech">
+    <NzRimImmortalBizarre.ItemList MayRequire="Ludeon.RimWorld.Biotech">
         <defName>Biotech</defName>
         <things>
             <!-- 超凡胶囊 -->
@@ -113,10 +113,10 @@
             <!-- 高级次元核心 -->
             <li>SubcoreHigh</li>
         </things>
-    </NzRimImmortalBizarre.ThingList>
+    </NzRimImmortalBizarre.ItemList>
 
     <!-- 异象 -->
-    <NzRimImmortalBizarre.ThingList MayRequire="Ludeon.RimWorld.Anomaly">
+    <NzRimImmortalBizarre.ItemList MayRequire="Ludeon.RimWorld.Anomaly">
         <defName>Anomaly</defName>
         <things>
             <!-- 超凡食尸鬼复活血清胶囊 -->
@@ -128,5 +128,5 @@
             <!-- 大型扭曲考古科技支撑装置 -->
             <li>TwistedArchotechSupport_Large</li>
         </things>
-    </NzRimImmortalBizarre.ThingList>
+    </NzRimImmortalBizarre.ItemList>
 </Defs>

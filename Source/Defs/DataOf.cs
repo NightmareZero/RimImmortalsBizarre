@@ -10,27 +10,25 @@ namespace NzRimImmortalBizarre
     public static class DataOf
     {
         // 所有损伤清单 DefPartHurtLevel
-        public static List<DefPartHurtLevel> allDefPartHurts => DefDatabase<DefPartHurtLevel>.AllDefsListForReading;
+        public static List<DefPartHurtLevel> allDefPartHurts;
         public static Dictionary<string, DefPartHurtLevel> allDefPartHurtsDict = new Dictionary<string, DefPartHurtLevel>();
 
         // 所有的伤害类型 DamageDef
-        public static List<DamageDef> allDamageDefs => DefDatabase<DamageDef>.AllDefsListForReading;
+        public static List<DamageDef> allDamageDefs;
         public static Dictionary<string, DamageDef> allDamageDefsDict = new Dictionary<string, DamageDef>();
 
         // 所有的物品清单 ThingList
-        public static List<ThingList> allThingLists => DefDatabase<ThingList>.AllDefsListForReading;
+        public static List<ItemList> allItemLists;
         public static Dictionary<string, List<ThingDef>> thingListCache = new Dictionary<string, List<ThingDef>>();
 
         // 正德寺修行路线
-        public static List<DefZdCultivationLine> DefCultivationLines => DefDatabase<DefZdCultivationLine>.AllDefsListForReading;
+        public static List<DefZdCultivationLine> DefCultivationLines;
         // 正德寺修行路线 DefName=> DefZdCultivationLine
         public static Dictionary<string, DefZdCultivationLine> DefCultivationLineDict = new Dictionary<string, DefZdCultivationLine>();
         // 正德寺修行路线 LineName=> DefZdCultivationLine
         public static Dictionary<string, DefZdCultivationLine> DefCultivationLineDictByLine = new Dictionary<string, DefZdCultivationLine>();
 
-        public static void Init() { }
-
-        public static List<ThingDef> GetCachedThingList(List<ThingList> thingLists)
+        public static List<ThingDef> GetCachedItemThingList(List<ItemList> thingLists)
         {
             List<ThingDef> result = new List<ThingDef>();
             thingLists.Sort((a, b) => a.defName.CompareTo(b.defName)); // 先排序
@@ -49,7 +47,7 @@ namespace NzRimImmortalBizarre
             return result;
         }
 
-        public static List<ThingDef> GetCachedThingList(List<string> thingListNames)
+        public static List<ThingDef> GetCachedItemThingList(List<string> thingListNames)
         {
             List<ThingDef> result = new List<ThingDef>();
             thingListNames.Sort(); // 先排序
@@ -63,7 +61,7 @@ namespace NzRimImmortalBizarre
 
             foreach (var thingListName in thingListNames)
             {
-                var thingList = DefDatabase<ThingList>.GetNamed(thingListName);
+                var thingList = DefDatabase<ItemList>.GetNamed(thingListName);
                 if (thingList != null)
                 {
                     result.AddRange(thingList.things);
@@ -72,11 +70,21 @@ namespace NzRimImmortalBizarre
             return result;
         }
 
+        public static void Init() { }
+
         static DataOf()
         {
+            // 初始化
+            allDefPartHurts = DefDatabase<DefPartHurtLevel>.AllDefsListForReading;
+            allDamageDefs = DefDatabase<DamageDef>.AllDefsListForReading;
+            allItemLists = DefDatabase<ItemList>.AllDefsListForReading;
+            DefCultivationLines = DefDatabase<DefZdCultivationLine>.AllDefsListForReading;
 
             #region Debug
-            Log.Message("NzRimImmortalBizarre: got DefPartHurtLevel: " + allDefPartHurts.Count);
+            Log.Message("NzRimImmortalBizarre: Aj. got DefPartHurtLevel: " + allDefPartHurts.Count);
+            Log.Message("NzRimImmortalBizarre: Zd. got DefCultivationLines: " + DefCultivationLines.Count);
+            Log.Message("NzRimImmortalBizarre: Zd. got allItemLists: " + allItemLists.Count);
+            Log.Message("NzRimImmortalBizarre: Zd. got allDamageDefs: " + allDamageDefs.Count);
             #endregion
 
             // 所有DefPartHurtLevel类型
