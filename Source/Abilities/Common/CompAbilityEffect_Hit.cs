@@ -12,8 +12,21 @@ namespace NzRimImmortalBizarre
     {
         public new CompProperties_Hit Props => (CompProperties_Hit)props;
 
+        private void preApply()
+        {
+            if (Props.soundHitPawn == null)
+            {
+                Props.soundHitPawn = SoundDefOf.Pawn_Melee_Punch_HitPawn;
+            }
+            if (Props.damageDef == null)
+            {
+                Props.damageDef = DamageDefOf.Blunt;
+            }
+        }
+
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
+            preApply();
             if (!canDo(target))
             {
                 return;

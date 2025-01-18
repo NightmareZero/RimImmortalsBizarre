@@ -46,7 +46,7 @@ namespace NzRimImmortalBizarre
         public EffecterDef effecterDef;
 
         // 爆炸后音效
-        public SoundDef explosionSound = XmlOf.Explosion_GiantBomb;
+        public SoundDef explosionSound;
 
         // 给受到影响的人添加hediff 不为空时优先使用
         public List<HediffDef> addHediffDefs = new List<HediffDef>();
@@ -58,6 +58,7 @@ namespace NzRimImmortalBizarre
         public CompProperties_AbilityRangeExplosion()
         {
             compClass = typeof(CompAbilityEffect_RangeExplosion);
+
         }
 
         /// <summary>

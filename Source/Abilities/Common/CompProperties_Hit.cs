@@ -10,7 +10,7 @@ namespace NzRimImmortalBizarre
     public class CompProperties_Hit : CompProperties_AbilityEffect
     { 
         // 伤害类型
-        public DamageDef damageDef = DamageDefOf.Blunt;
+        public DamageDef damageDef;
         // 伤害数值
         public float damageAmountBase;
         // 穿甲
@@ -22,7 +22,7 @@ namespace NzRimImmortalBizarre
         // 打击部位
         public BodyPartDef hitPart = null;
         // 声音
-        public SoundDef soundHitPawn = SoundDefOf.Pawn_Melee_Punch_HitPawn;
+        public SoundDef soundHitPawn;
         // 击晕时间
         public int stunTicks = 0;
 
