@@ -22,6 +22,11 @@
             <!-- <li>NzRI_Zd_DebunkingMyths</li> -->
         </abilities>
         <stages>
+            <li>
+                <statFactors>
+                    <NzRI_ZhengDePowerMultiplier>1.25</NzRI_ZhengDePowerMultiplier>
+                </statFactors>
+            </li>
         </stages>
         <addedPartProps>
             <solid>true</solid>
@@ -46,6 +51,13 @@
         <abilities>
             <!-- <li>Zd_TouchingHead</li> -->
         </abilities>
+        <stages>
+            <li>
+                <statFactors>
+                    <NzRI_ZhengDePowerMultiplier>1.25</NzRI_ZhengDePowerMultiplier>
+                </statFactors>
+            </li>
+        </stages>
         <addedPartProps>
             <solid>true</solid>
             <partEfficiency>1.50</partEfficiency>
@@ -70,6 +82,13 @@
             <!-- TODO -->
             <!-- <li>Zd_TouchingHead</li> -->
         </abilities>
+        <stages>
+            <li>
+                <statFactors>
+                    <NzRI_ZhengDePowerMultiplier>1.25</NzRI_ZhengDePowerMultiplier>
+                </statFactors>
+            </li>
+        </stages>
         <addedPartProps>
             <solid>true</solid>
             <partEfficiency>1.50</partEfficiency>
@@ -92,6 +111,13 @@
         <abilities>
             <!-- <li>Zd_TouchingHead</li> -->
         </abilities>
+        <stages>
+            <li>
+                <statFactors>
+                    <NzRI_ZhengDePowerMultiplier>1.25</NzRI_ZhengDePowerMultiplier>
+                </statFactors>
+            </li>
+        </stages>
         <comps>
             <li Class="HediffCompProperties_VerbGiver">
                 <tools>
@@ -138,6 +164,13 @@
             <!-- <li>Zd_ShakeMountainFist</li> -->
             <!-- <li>Zd_MercyHit</li> -->
         </abilities>
+        <stages>
+            <li>
+                <statFactors>
+                    <NzRI_ZhengDePowerMultiplier>1.25</NzRI_ZhengDePowerMultiplier>
+                </statFactors>
+            </li>
+        </stages>
         <comps>
             <li Class="HediffCompProperties_VerbGiver">
                 <tools>
@@ -176,6 +209,13 @@
             <li>NzRI_ZhengDe_BodyPart</li>
             <li>NzRI_ZhengDe_Sacrifice</li>
         </tags>
+        <stages>
+            <li>
+                <statFactors>
+                    <NzRI_ZhengDePowerMultiplier>1.25</NzRI_ZhengDePowerMultiplier>
+                </statFactors>
+            </li>
+        </stages>
         <addedPartProps>
             <solid>true</solid>
             <partEfficiency>1.50</partEfficiency>
@@ -199,6 +239,13 @@
             <li>NzRI_ZhengDe_BodyPart</li>
             <li>NzRI_ZhengDe_Sacrifice</li>
         </tags>
+        <stages>
+            <li>
+                <statFactors>
+                    <NzRI_ZhengDePowerMultiplier>1.25</NzRI_ZhengDePowerMultiplier>
+                </statFactors>
+            </li>
+        </stages>
         <addedPartProps>
             <solid>true</solid>
             <partEfficiency>1.50</partEfficiency>
