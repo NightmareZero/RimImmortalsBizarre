@@ -1,3 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
+    <!-- 扫堂腿 -->
+    <!-- 枯败腿伸展延长，并在周围造成一次切割伤害，由于位置较低，更大概率对敌人的腿部造成伤害 -->
+    <AbilityDef ParentName="RI_PsycastBase">
+        <defName>NzRI_Zd_LegSweep</defName>
+        <label>leg sweep</label>
+        <description>#</description>
+        <iconPath>Ability/AoJing3</iconPath>
+        <cooldownTicksRange>1000</cooldownTicksRange>
+        <aiCanUse>true</aiCanUse>
+        <displayOrder>300</displayOrder>
+        <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+        <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
+        <targetRequired>False</targetRequired>
+        <verbProperties>
+            <violent>false</violent>
+            <warmupTime>0.5</warmupTime>
+            <range>0</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <!-- <li Class="NzRimImmortalBizarre.CompProperties_AbilitySpray">
+                <projectileDef>NzRI_BloodGuts</projectileDef>
+                <numCellsToHit>37</numCellsToHit>
+            </li> -->
+        </comps>
+    </AbilityDef>
 </Defs>

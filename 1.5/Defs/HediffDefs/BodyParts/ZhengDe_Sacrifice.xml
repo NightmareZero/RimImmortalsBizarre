@@ -252,7 +252,7 @@
             <betterThanNatural>true</betterThanNatural>
         </addedPartProps>
         <abilities>
-            <!-- <li>NzRI_Zd_BulletShield</li> -->
+            <li>NzRI_Zd_LegSweep</li>
         </abilities>
     </HediffDef>
 </Defs>
