@@ -9,7 +9,7 @@
     <!-- 猩红眼 -->
     <!-- 战栗注视，降低操作移动 -->
     <HediffDef ParentName="ZdBodyPartBase">
-        <defName>Zd_CrimsonEyes</defName>
+        <defName>NzRI_Zd_CrimsonEyes</defName>
         <label>crimson eyes</label>
         <labelNoun>an crimson eyes</labelNoun>
         <description>#</description>
@@ -33,7 +33,7 @@
     <!-- 怪异舌 -->
     <!-- 恐怖嘶吼，小范围错乱 -->
     <HediffDef ParentName="ZdBodyPartBase">
-        <defName>Zd_StrangeTongue</defName>
+        <defName>NzRI_Zd_StrangeTongue</defName>
         <label>strange tongue</label>
         <labelNoun>an strange tongue</labelNoun>
         <!-- TODO -->
@@ -55,12 +55,32 @@
 
     <!-- 增生肝 -->
     <!-- 吐出血肉野兽 -->
-    <!-- TODO -->
+    <HediffDef ParentName="ZdBodyPartBase">
+        <defName>NzRI_Zd_HypertrophyLiver</defName>
+        <label>hypertrophy liver</label>
+        <labelNoun>an strange tongue</labelNoun>
+        <!-- TODO -->
+        <description>#开发中</description>
+        <defaultInstallPart>Tongue</defaultInstallPart>
+        <tags>
+            <li>NzRI_ZhengDe_BodyPart</li>
+            <li>NzRI_ZhengDe_Sacrifice</li>
+        </tags>
+        <abilities>
+            <!-- TODO -->
+            <!-- <li>Zd_TouchingHead</li> -->
+        </abilities>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.50</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
 
     <!-- 脓疮臂 -->
     <!-- 扇形喷射算液+恶心 -->
     <HediffDef ParentName="ZdBodyPartBase">
-        <defName>Zd_AbscessArm</defName>
+        <defName>NzRI_Zd_AbscessArm</defName>
         <label>abscess arm</label>
         <labelNoun>an abscess arm</labelNoun>
         <description>#</description>
@@ -105,7 +125,7 @@
     <!-- 盘卷臂 -->
     <!-- 范围stuck -->
     <HediffDef ParentName="ZdBodyPartBase">
-        <defName>Zd_CoiledArm</defName>
+        <defName>NzRI_Zd_CoiledArm</defName>
         <label>coiled arms</label>
         <labelNoun>an vajra arm</labelNoun>
         <description>#</description>
@@ -145,7 +165,7 @@
     <!-- 扭结腿 -->
     <!-- 拉拽 -->
     <HediffDef ParentName="ZdBodyPartBase">
-        <defName>Zd_TwistedLeg</defName>
+        <defName>NzRI_Zd_TwistedLeg</defName>
         <label>twisted leg</label>
         <labelNoun>an twisted leg</labelNoun>
         <!-- 这条腿扭结错乱，几乎没有骨骼，如触须一般，缺格外坚韧灵活 -->
@@ -169,7 +189,7 @@
     <!-- 枯败腿 -->
     <!-- 周围切腿 -->
     <HediffDef ParentName="ZdBodyPartBase">
-        <defName>Zd_WitheredLeg</defName>
+        <defName>NzRI_Zd_WitheredLeg</defName>
         <label>withered leg</label>
         <labelNoun>an withered leg</labelNoun>
         <!-- 这条腿黑瘦枯干，却格外结实有力 -->

@@ -33,8 +33,14 @@
         </tags>
         <low>
             <li>Zd_KeenEyes</li>
+            <li>Zd_LotusLeg</li>
+            <li>Zd_DivineLightLeg</li>
+            <li>Zd_UnshakeableArm</li>
+            <li>Zd_GlaringEye</li>
         </low>
         <high>
+            <li>Zd_VajraArm</li>
+            <li>Zd_ThunderLung</li>
         </high>
     </NzRimImmortalBizarre.DefZdCultivationLine>
 
@@ -48,8 +54,15 @@
             <li>NzRI_ZhengDe_Sacrifice</li>
         </tags>
         <low>
+            <li>NzRI_Zd_AbscessArm</li>
+            <li>NzRI_Zd_CoiledArm</li>
+            <li>NzRI_Zd_WitheredLeg</li>
+            <li>NzRI_Zd_TwistedLeg</li>
+            <li>NzRI_Zd_HypertrophyLiver</li>
         </low>
         <high>
+            <li>NzRI_Zd_StrangeTongue</li>
+            <li>NzRI_Zd_CrimsonEyes</li>
         </high>
     </NzRimImmortalBizarre.DefZdCultivationLine>
 </Defs>
