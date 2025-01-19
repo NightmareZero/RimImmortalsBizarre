@@ -8,7 +8,6 @@ using WhoXiuXian;
 namespace NzRimImmortalBizarre
 {
 
-    [StaticConstructorOnStartup]
     public class Zw_Tracker : IExposable, IEnergyBar
     {
 
