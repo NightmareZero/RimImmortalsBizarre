@@ -23,10 +23,17 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <!-- <li Class="NzRimImmortalBizarre.CompProperties_AbilitySpray">
-                <projectileDef>NzRI_BloodGuts</projectileDef>
-                <numCellsToHit>37</numCellsToHit>
-            </li> -->
+            <li Class="NzRimImmortalBizarre.CompProperties_LegSweep">
+                <radius>5</radius>
+                <damage>37</damage>
+                <damageMultiplierStat>NzRI_ZhengDePowerMultiplier</damageMultiplierStat>
+                <damageDef>Cut</damageDef>
+                <stunTicks>90</stunTicks>
+                <armorPenetration>0.5</armorPenetration>
+                <preferredAttackBodyParts>
+                    <li>Legs</li>
+                </preferredAttackBodyParts>
+            </li>
         </comps>
     </AbilityDef>
 </Defs>
