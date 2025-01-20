@@ -27,8 +27,8 @@ namespace NzRimImmortalBizarre
 
             // 生成拖拽Mote
             Mote_Rope mote = (Mote_Rope)ThingMaker.MakeThing(ThingDef.Named("Mote_Rope"), null);
-            mote.start = target.Pawn.DrawPos;
-            mote.end = closestEmptyCell.ToVector3Shifted();
+            mote.caster = caster;
+            mote.target = target.Pawn;
             mote.Scale = 0.1f;
             mote.rotationRate = 0f;
             GenSpawn.Spawn(mote, target.Pawn.Position, caster.Map);

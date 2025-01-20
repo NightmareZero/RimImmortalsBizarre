@@ -5,11 +5,13 @@ namespace NzRimImmortalBizarre
 {
     public class Mote_Rope : MoteThrown
     {
-        public Vector3 start;
-        public Vector3 end;
+        public Pawn caster;
+        public Pawn target;
 
         protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
+            var start = caster.DrawPos;
+            var end = target.DrawPos;
             base.DrawAt(drawLoc, flip);
             if (start != Vector3.zero && end != Vector3.zero)
             {
