@@ -52,6 +52,7 @@
 		<Compile Include="../Source/ModExtension/*" />
 		<Compile Include="../Source/UI/*" />
 		<Compile Include="../Source/Patcher/*" />
+		<Compile Include="../Source/Mote/Effects/*" />
 
 		<!-- Rimworld -->
 		<Reference Include="../../../RimWorldWin64_Data/Managed/*.dll">

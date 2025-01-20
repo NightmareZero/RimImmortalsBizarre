@@ -20,6 +20,20 @@ namespace NzRimImmortalBizarre
             // 获取施法者的位置最近的空位
             IntVec3 closestEmptyCell = CellFinder.RandomClosewalkCellNear(caster.Position, caster.Map, 1);
 
+            // 如果没有空位，就不执行
+            if (closestEmptyCell == IntVec3.Invalid) {
+                return;
+            }
+
+            // 生成拖拽Mote
+            Mote_Rope mote = (Mote_Rope)ThingMaker.MakeThing(ThingDef.Named("Mote_Rope"), null);
+            mote.start = target.Pawn.DrawPos;
+            mote.end = closestEmptyCell.ToVector3Shifted();
+            mote.Scale = 0.1f;
+            mote.rotationRate = 0f;
+            GenSpawn.Spawn(mote, target.Pawn.Position, caster.Map);
+            
+
             // 将目标传送到这个位置
             target.Pawn.Position = closestEmptyCell;
 

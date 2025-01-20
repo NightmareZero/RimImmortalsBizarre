@@ -13,7 +13,7 @@
         <aiCanUse>true</aiCanUse>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
-            <range>68.9</range>
+            <range>36.9</range>
             <warmupTime>0.5</warmupTime>
             <!-- <soundCast>PiercingSpine_Launch</soundCast> -->
         </verbProperties>
