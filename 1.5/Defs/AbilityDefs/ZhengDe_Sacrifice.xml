@@ -1,8 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
+    <!-- 拉拽 -->
+    <AbilityDef ParentName="RI_PsycastBase">
+        <defName>NzRI_Zd_Drag</defName>
+        <label>drag</label>
+        <!-- 让腿部扭曲变长，拖拽一个人到自己面前 -->
+        <description>let the legs twist and elongate, dragging a person in front of you</description>
+        <iconPath>Ability/AoJing1</iconPath>
+        <cooldownTicksRange>60</cooldownTicksRange>
+        <!-- <category>TODO</category> -->
+        <displayOrder>200</displayOrder>
+        <aiCanUse>true</aiCanUse>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>68.9</range>
+            <warmupTime>0.5</warmupTime>
+            <!-- <soundCast>PiercingSpine_Launch</soundCast> -->
+        </verbProperties>
+        <comps>
+            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+                <rEnergy>-1</rEnergy>
+            </li> -->
+            <li Class="NzRimImmortalBizarre.CompProperties_Drag">
+            </li>
+        </comps>
+    </AbilityDef>
     <!-- 扫堂腿 -->
     <!-- 枯败腿伸展延长，并在周围造成一次切割伤害，由于位置较低，更大概率对敌人的腿部造成伤害 -->
-    <AbilityDef ParentName="RI_PsycastBase">
+    <AbilityDef
+        ParentName="RI_PsycastBase">
         <defName>NzRI_Zd_LegSweep</defName>
         <label>leg sweep</label>
         <description>#</description>

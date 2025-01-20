@@ -222,7 +222,7 @@
             <betterThanNatural>true</betterThanNatural>
         </addedPartProps>
         <abilities>
-            <!-- <li>Zd_DivineLightKick</li> -->
+            <li>NzRI_Zd_Drag</li>
         </abilities>
     </HediffDef>
 
