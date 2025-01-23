@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
+
+    <!-- 常规 -->
+    <NzRI_Zd_ZenMeditation.label>参禅</NzRI_Zd_ZenMeditation.label>
+    <NzRI_Zd_ZenMeditation.description>在行走坐卧中，参悟禅理，降低移动速度，但是修行进度会随时间上升</NzRI_Zd_ZenMeditation.description>
+
+    <!-- 明心 -->
     <NzRI_Zw_ZenSound.label>禅音</NzRI_Zw_ZenSound.label>
     <NzRI_Zw_ZenSound.description>发出一声蕴含禅意的声音，令人幡然醒悟。解除迷茫和狂暴状态，同时略微增加意识和操作。\n这会让你更接近 “明心” 路线</NzRI_Zw_ZenSound.description>
-
-    <NzRI_Zd_Almsgiving.label>布施</NzRI_Zd_Almsgiving.label>
-    <NzRI_Zd_Almsgiving.description>效仿佛祖，割肉饲鹰\n 补充目标的饱腹和休息，同时增强目标的愈合速度\n这会让你更接近 “舍身” 路线</NzRI_Zd_Almsgiving.description>
 
     <Zd_DivineLightKick.label>圆光腿</Zd_DivineLightKick.label>
     <Zd_DivineLightKick.description>踢出一道光芒，造成少量伤害，并震慑目标一段时间。</Zd_DivineLightKick.description>
@@ -30,7 +33,8 @@
     <NzRI_Zd_TouchingHead.label>抚顶</NzRI_Zd_TouchingHead.label>
     <NzRI_Zd_TouchingHead.description>抚摸对方的头部，使用法力庇护对方</NzRI_Zd_TouchingHead.description>
 
-    <NzRI_Zd_ZenMeditation.label>参禅</NzRI_Zd_ZenMeditation.label>
-    <NzRI_Zd_ZenMeditation.description>在行走坐卧中，参悟禅理，降低移动速度，但是修行进度会随时间上升</NzRI_Zd_ZenMeditation.description>
+    <!-- 舍身 -->
+    <NzRI_Zd_Almsgiving.label>布施</NzRI_Zd_Almsgiving.label>
+    <NzRI_Zd_Almsgiving.description>效仿佛祖，割肉饲鹰\n 补充目标的饱腹和休息，同时增强目标的愈合速度\n这会让你更接近 “舍身” 路线</NzRI_Zd_Almsgiving.description>
     
 </LanguageData>
