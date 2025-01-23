@@ -26,7 +26,7 @@
         </comps>
     </AbilityDef>
     <!-- 扫堂腿 -->
-    <!-- 枯败腿伸展延长，并在周围造成一次切割伤害，由于位置较低，更大概率对敌人的腿部造成伤害 -->
+    <!-- 枯败腿伸展延长，并在周围造成一次切割伤害，由于位置较低，更大概率对敌人的腿部造成伤害,甚至可能会切断它们 -->
     <AbilityDef
         ParentName="RI_PsycastBase">
         <defName>NzRI_Zd_LegSweep</defName>
@@ -57,7 +57,7 @@
                 <stunTicks>90</stunTicks>
                 <armorPenetration>0.5</armorPenetration>
                 <preferredAttackBodyParts>
-                    <li>Legs</li>
+                    <li>Leg</li>
                 </preferredAttackBodyParts>
             </li>
         </comps>
