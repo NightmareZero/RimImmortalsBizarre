@@ -96,8 +96,23 @@
             </li>
         </comps>
         <stages>
+            <li>
+                <statFactors>
+                    <InjuryHealingFactor>2</InjuryHealingFactor>
+                    <ImmunityGainSpeed>1.5</ImmunityGainSpeed>
+                </statFactors>
+                <capMods>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>1</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodPumping</capacity>
+                        <offset>1</offset>
+                    </li>                  
+                </capMods>
+            </li>
         </stages>
-        <!-- TODO 增强一些 -->
     </HediffDef>
 
     <!-- 慧眼 -->

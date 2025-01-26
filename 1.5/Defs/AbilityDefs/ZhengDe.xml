@@ -9,7 +9,7 @@
     <description>Emit a sound containing Zen meaning, making people suddenly realize. Removes
       confusion and berserk state, and slightly increases consciousness and manipulation.\n\n
       it will make you closer to the "Enlightenment" route</description>
-    <iconPath>Ability/AoJing4</iconPath>
+    <iconPath>Ability/Base/LG</iconPath>
     <cooldownTicksRange>1000</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <displayOrder>300</displayOrder>
@@ -20,7 +20,7 @@
       <verbClass>Verb_CastAbility</verbClass>
       <range>19.9</range>
       <warmupTime>0.5</warmupTime>
-      <soundCast>RocketswarmLauncher_Fire</soundCast>
+      <soundCast>NzRI_ZenSound</soundCast>
       <targetParams>
         <canTargetLocations>true</canTargetLocations>
       </targetParams>
@@ -123,8 +123,8 @@
   <AbilityDef  ParentName="RI_PsycastBase">
 		<defName>NzRI_Zd_ZenMeditation</defName>
 		<label>zen meditation</label>
-    <!-- 在行走坐卧中，参悟禅理，降低移动速度，但是修行进度会随时间上升 -->
-		<description>Contemplate the Zen principles while walking, sitting, and lying down, reduce movement speed, but the progress of practice will increase over time</description>
+    <!-- 在行走坐卧中，参悟禅理，降低移动速度，但是修行进度会随时间上升\n\n 其他特殊能力会随着修行逐渐解锁 -->
+		<description>During walking, sitting and lying, meditate on Zen, reduce movement speed, but the progress of practice will increase over time\n\n Other special abilities will gradually unlock with practice</description>
 		<iconPath>Ability/InternalPellet/RI_Ability_InternalFunction</iconPath>
 		<targetRequired>False</targetRequired>
 		<canUseAoeToGetTargets>False</canUseAoeToGetTargets>

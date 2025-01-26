@@ -59,4 +59,29 @@
 			</li>
 		</comps>
 	</ThingDef>
+
+	<ThingDef ParentName="RI_BookBase">
+		<defName>NzRI_BookZhengDe</defName>
+		<label>a Buddhist scripture</label>
+		<description>An old and unremarkable Buddhist scripture</description>
+		<graphicData>
+			<texPath>Things/Item/Books/ZuoWangMask</texPath>
+		</graphicData>
+		<comps>
+			<li Class="WhoXiuXian.CompProperties_BookStudiable">
+				<route>NzRI_ZhengDe</route>
+				<cost>13</cost>
+				<canCopy>true</canCopy>
+				<abilities>
+					<li>NzRI_Zd_ZenMeditation</li>
+					<li>NzRI_Zw_ZenSound</li>
+					<li>NzRI_Zd_Almsgiving</li>
+				</abilities>
+				<researchProjectDef>RI_InitialApproach</researchProjectDef>
+				<completedLetterTitle>The moment you put on {PARENT_label}, you are horrified to discover that it has fused with your face, transforming into the likeness of your own face.</completedLetterTitle>
+				<completedLetterText>After putting on {PARENT_label}, {STUDIER_labelShort} found that they seemed to possess some strange abilities.</completedLetterText>
+				<completedLetterDef>PositiveEvent</completedLetterDef>
+			</li>
+		</comps>
+	</ThingDef>
 </Defs>

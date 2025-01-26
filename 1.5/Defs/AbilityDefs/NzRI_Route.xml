@@ -108,4 +108,38 @@
             </li>                             
         </routeLevels>
     </WhoXiuXian.RI_RouteDef>
+
+    
+    <WhoXiuXian.RI_RouteDef>
+        <defName>NzRI_ZhengDe</defName>
+        <label>zheng de</label>
+        <description>...</description>
+        <routeLevels>
+            <li>
+                <level>1</level>
+                <abilities>
+                    <li>NzRI_Zd_ZenMeditation</li>
+                    
+                </abilities>
+            </li>
+            <li>
+                <level>2</level>
+                <abilities>
+                    <li>NzRI_Zw_ZenSound</li>
+                    <li>NzRI_Zd_Almsgiving</li>
+                </abilities>
+            </li>
+            
+            <!-- 
+            如来形态
+            <li>
+                <level>9</level>
+                <abilities>
+                    <li></li>
+                </abilities>
+            </li>-->
+        </routeLevels>
+    </WhoXiuXian.RI_RouteDef>
+
+
 </Defs>

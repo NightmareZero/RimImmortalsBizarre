@@ -6,7 +6,7 @@
         <label>drag</label>
         <!-- 让腿部扭曲变长，拖拽一个人到自己面前 -->
         <description>let the legs twist and elongate, dragging a person in front of you</description>
-        <iconPath>Ability/AoJing1</iconPath>
+        <iconPath>Ability/Base/LG</iconPath>
         <cooldownTicksRange>60</cooldownTicksRange>
         <!-- <category>TODO</category> -->
         <displayOrder>200</displayOrder>
@@ -32,7 +32,7 @@
         <defName>NzRI_Zd_LegSweep</defName>
         <label>leg sweep</label>
         <description>#</description>
-        <iconPath>Ability/AoJing3</iconPath>
+        <iconPath>Ability/Base/LG</iconPath>
         <cooldownTicksRange>1000</cooldownTicksRange>
         <aiCanUse>true</aiCanUse>
         <displayOrder>300</displayOrder>

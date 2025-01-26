@@ -6,7 +6,7 @@
     <label>stare angrily</label>
     <!-- 愤怒的注释目标，造成火与电伤害。 “怒目金刚瞋目视，恶刹妖魔皆胆裂。” -->
     <description>Angry comment on the target, causing fire and electric damage. "The angry eyes of the Vajra, the evil temple demons are all frightened."</description>
-    <iconPath>Ability/AoJing1</iconPath>
+    <iconPath>Ability/Base/LG</iconPath>
     <cooldownTicksRange>2500</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <displayOrder>300</displayOrder>
@@ -50,7 +50,7 @@
     <!-- 发出一声洪亮的吼叫，震慑对方，让对方瑟瑟发抖，甚至无法握住自己的武器 -->
     <description>Make a loud roar, intimidate the opponent, make the opponent tremble, and even
       unable to hold their own weapon.</description>
-    <iconPath>Ability/AoJing1</iconPath>
+    <iconPath>Ability/Base/LG</iconPath>
     <cooldownTicksRange>2500</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <displayOrder>300</displayOrder>
@@ -93,7 +93,7 @@
     <defName>NzRI_Zd_DebunkingMyths</defName>
     <label>debunking myths</label>
     <description>the keen eye can see through all falsehoods.\n\nRemove invisible effect</description>
-    <iconPath>Ability/AoJing4</iconPath>
+    <iconPath>Ability/Base/LG</iconPath>
     <cooldownTicksRange>5000</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <displayOrder>300</displayOrder>
@@ -172,7 +172,7 @@
     <!-- 踢出一道蕴含力量的光弧，造成伤害并击晕范围内的敌人 -->
     <description>Kick out a light arc containing power, causing damage and stunning enemies in the
       area.</description>
-    <iconPath>Ability/AoJing2</iconPath>
+    <iconPath>Ability/Base/LG</iconPath>
     <cooldownTicksRange>120</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <ai_IsIncendiary>true</ai_IsIncendiary>
@@ -214,7 +214,7 @@
     <label>mercy hit</label>
     <!-- 使用巧劲攻击对方，尝试打晕目标 -->
     <description>Use skill to attack the opponent, trying to stun the target.</description>
-    <iconPath>Ability/AoJing2</iconPath>
+    <iconPath>Ability/Base/LG</iconPath>
     <cooldownTicksRange>120</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <ai_IsIncendiary>true</ai_IsIncendiary>
@@ -263,7 +263,7 @@
     <!-- 蓄力并打出重如山岳的一拳，对敌人造成大量伤害 -->
     <description>Charge and hit a punch as heavy as a mountain, causing a lot of damage to the
       enemy.</description>
-    <iconPath>Ability/AoJing2</iconPath>
+    <iconPath>Ability/Base/LG</iconPath>
     <cooldownTicksRange>120</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <ai_IsIncendiary>true</ai_IsIncendiary>
@@ -306,7 +306,7 @@
     <label>touch head</label>
     <!-- 抚摸对方的头部，使用法力庇护对方 -->
     <description>Touch the opponent head, use Qi to protect the opponent.</description>
-    <iconPath>Ability/AoJing2</iconPath>
+    <iconPath>Ability/Base/LG</iconPath>
     <cooldownTicksRange>120</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <ai_IsIncendiary>true</ai_IsIncendiary>

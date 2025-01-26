@@ -3,7 +3,7 @@
 
     <!-- 常规 -->
     <NzRI_Zd_ZenMeditation.label>参禅</NzRI_Zd_ZenMeditation.label>
-    <NzRI_Zd_ZenMeditation.description>在行走坐卧中，参悟禅理，降低移动速度，但是修行进度会随时间上升</NzRI_Zd_ZenMeditation.description>
+    <NzRI_Zd_ZenMeditation.description>在行走坐卧中，参悟禅理，降低移动速度，但是修行进度会随时间上升\n\n 其他特殊能力会随着修行逐渐解锁</NzRI_Zd_ZenMeditation.description>
 
     <!-- 明心 -->
     <NzRI_Zw_ZenSound.label>禅音</NzRI_Zw_ZenSound.label>
