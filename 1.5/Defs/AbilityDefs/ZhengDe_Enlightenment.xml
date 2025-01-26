@@ -128,11 +128,11 @@
 
   <!-- 梵界 -->
   <!-- 盾包 -->
-  <!-- 技能：轻踏地面，撑起一片领域，保护其他信众 -->
+  <!-- 技能：轻踏地面，撑起一片保护性的领域。"轻踏坤舆展妙场，护持信众意悠长。佛心化作遮灾域，不见兵戈入此疆" -->
   <AbilityDef ParentName="RI_PsycastBase">
     <defName>NzRI_Zd_BulletShield</defName>
-    <label>brahma world</label>
-    <description>Lightly tread on the ground, create a realm, and protect others.</description>
+    <label>brahma area</label>
+    <description>Step on the ground lightly and hold up a protective field. "Lightly stepping on the ground, showing a wonderful field, protecting the minds of the believers for a long time. The Buddha's heart turns into a disaster area, and no weapons enter this territory."</description>
     <!-- TODO -->
     <iconPath>UI/Abilities/BulletShield</iconPath>
     <writeCombatLog>True</writeCombatLog>
@@ -169,9 +169,9 @@
   <AbilityDef ParentName="RI_PsycastBase">
     <defName>Zd_DivineLightKick</defName>
     <label>divine light kick</label>
-    <!-- 踢出一道蕴含力量的光弧，造成伤害并击晕范围内的敌人 -->
-    <description>Kick out a light arc containing power, causing damage and stunning enemies in the
-      area.</description>
+    <!-- 踢出一道流光，惩戒命中的目标，被击中的目标会被注入一道法力，这道法力会干扰目标的身体动作 -->
+    <description>Kick out a stream of light, punish the target hit, and inject qi into the target
+            hit, which will interfere with the target's body movements.</description>
     <iconPath>Ability/Base/LG</iconPath>
     <cooldownTicksRange>120</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
@@ -211,7 +211,7 @@
   <!-- ParentName="AbilityTouchBase" -->
   <AbilityDef ParentName="RI_PsycastBase">
     <defName>NzRI_Zd_MercyHit</defName>
-    <label>mercy hit</label>
+    <label>merciful hit</label>
     <!-- 使用巧劲攻击对方，尝试打晕目标 -->
     <description>Use skill to attack the opponent, trying to stun the target.</description>
     <iconPath>Ability/Base/LG</iconPath>
