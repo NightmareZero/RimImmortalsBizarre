@@ -55,9 +55,9 @@ namespace NzRimImmortalBizarre
                 case WayFruition:
                     return this.fruition >= 99;
                 case WayEnlightenment:
-                    return this.buddhaNature >= 50;
+                    return this.fruition >= 99 && this.buddhaNature >= 50;
                 case WaySacrifice:
-                    return this.selfSacrifice >= 50;
+                    return this.fruition >= 99 && this.selfSacrifice >= 50;
                 default:
                     return false;
             }

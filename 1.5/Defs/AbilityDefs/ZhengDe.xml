@@ -9,13 +9,13 @@
     <description>Emit a sound containing Zen meaning, making people suddenly realize. Removes
       confusion and berserk state, and slightly increases consciousness and manipulation.\n\n
       it will make you closer to the "Enlightenment" route</description>
-    <iconPath>Ability/Base/LG</iconPath>
+    <iconPath>Ability/Zd1</iconPath>
     <cooldownTicksRange>1000</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <displayOrder>300</displayOrder>
     <!-- <category>Sanguophage</category> -->
     <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
-    <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
+    <warmupStartSound>NzRI_ZenSound</warmupStartSound>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <range>19.9</range>
@@ -26,9 +26,9 @@
       </targetParams>
     </verbProperties>
     <comps>
-      <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
-                <rEnergy>10</rEnergy>
-            </li> -->
+      <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+        <rEnergy>10</rEnergy>
+      </li>
       <li Class="NzRimImmortalBizarre.CompProperties_ZenSound">
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_PlaceMote">
@@ -91,9 +91,9 @@
       </targetParams>
     </verbProperties>
     <comps>
-      <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
-        <rEnergy>-40</rEnergy>
-      </li> -->
+      <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+        <rEnergy>-10</rEnergy>
+      </li>
       <li Class="CompProperties_AbilityGiveHediff">
         <compClass>CompAbilityEffect_GiveHediff</compClass>
         <durationSecondsOverride>1500</durationSecondsOverride>
@@ -120,43 +120,45 @@
 
   <!-- 参禅 -->
   <!-- 修炼状态，降低移速 -->
-  <AbilityDef  ParentName="RI_PsycastBase">
-		<defName>NzRI_Zd_ZenMeditation</defName>
-		<label>zen meditation</label>
+  <AbilityDef ParentName="RI_PsycastBase">
+    <defName>NzRI_Zd_ZenMeditation</defName>
+    <label>zen meditation</label>
     <!-- 在行走坐卧中，参悟禅理，降低移动速度，但是修行进度会随时间上升\n\n 其他特殊能力会随着修行逐渐解锁 -->
-		<description>During walking, sitting and lying, meditate on Zen, reduce movement speed, but the progress of practice will increase over time\n\n Other special abilities will gradually unlock with practice</description>
-		<iconPath>Ability/InternalPellet/RI_Ability_InternalFunction</iconPath>
-		<targetRequired>False</targetRequired>
-		<canUseAoeToGetTargets>False</canUseAoeToGetTargets>
-		<hostile>false</hostile>
-		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
-		<statBases>
-			<Ability_EffectRadius>10</Ability_EffectRadius>
-		</statBases>
-		<verbProperties>
-			<violent>false</violent>
-			<warmupTime>0</warmupTime>
-			<range>0</range>
-			<requireLineOfSight>False</requireLineOfSight>
-			<targetParams>
-				<canTargetSelf>True</canTargetSelf>
-			</targetParams>
-		</verbProperties>
-		<comps>
-			<li Class="CompProperties_AbilityGiveHediff">
-				<compClass>CompAbilityEffect_GiveHediff</compClass>
-				<hediffDef>NzRI_Zd_Cultivation</hediffDef>
+    <description>During walking, sitting and lying, meditate on Zen, reduce movement speed, but the
+      progress of practice will increase over time\n\n Other special abilities will gradually unlock
+      with practice</description>
+    <iconPath>Ability/InternalPellet/RI_Ability_InternalFunction</iconPath>
+    <targetRequired>False</targetRequired>
+    <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <statBases>
+      <Ability_EffectRadius>10</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <violent>false</violent>
+      <warmupTime>0</warmupTime>
+      <range>0</range>
+      <requireLineOfSight>False</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>True</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>NzRI_Zd_Cultivation</hediffDef>
         <durationSecondsOverride>300</durationSecondsOverride>
-				<psychic>False</psychic>
-				<replaceExisting>True</replaceExisting>
-				<onlyApplyToSelf>True</onlyApplyToSelf>
-			</li>
+        <psychic>False</psychic>
+        <replaceExisting>True</replaceExisting>
+        <onlyApplyToSelf>True</onlyApplyToSelf>
+      </li>
       <!-- TODO 加点特效 -->
-			<!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+      <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
 				<rEnergy>10</rEnergy>
 			</li> -->
-		</comps>
-	</AbilityDef>
+    </comps>
+  </AbilityDef>
 
   <!-- 如来 -->
   <!-- 短时间化身五智如来，持续时间内，体型增大，普攻带范围伤害，承伤 0%，不可阻挡，心灵敏感度0% -->

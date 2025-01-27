@@ -5,7 +5,7 @@
 		<defName>NzRI_Zw_Mote_ZenSound</defName>
 		<thingClass>NzRimImmortalBizarre.Mote_ZenSound</thingClass>
 		<graphicData>
-			<texPath>Ability/Base/LG</texPath>
+			<texPath>Ability/Zd1</texPath>
 			<shaderType>MoteGlow</shaderType>
 		</graphicData>
 		<altitudeLayer>MoteOverhead</altitudeLayer>

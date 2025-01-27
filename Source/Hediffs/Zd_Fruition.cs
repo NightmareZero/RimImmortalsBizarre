@@ -156,6 +156,7 @@ namespace NzRimImmortalBizarre
                     {
                         defaultLabel = "Zd_Fruition_LevelUp".Translate(),
                         defaultDesc = "Zd_Fruition_LevelUp_Desc".Translate(),
+                        icon = ContentFinder<Texture2D>.Get("Ability/Base/LG"),
                         action = () =>
                         {
                             wayLevelUp = Zd_Tracker.WayFruition;
@@ -170,6 +171,8 @@ namespace NzRimImmortalBizarre
                     {
                         defaultLabel = "Zd_Fruition_LevelUp_SelfSacrifice".Translate(),
                         defaultDesc = "Zd_Fruition_LevelUp_SelfSacrifice_Desc".Translate(),
+                        icon = ContentFinder<Texture2D>.Get("Ability/Base/LG"),
+                        
                         action = () =>
                         {
                             wayLevelUp = Zd_Tracker.WaySacrifice;
@@ -184,6 +187,7 @@ namespace NzRimImmortalBizarre
                     {
                         defaultLabel = "Zd_Fruition_LevelUp_BuddhaNature".Translate(),
                         defaultDesc = "Zd_Fruition_LevelUp_BuddhaNature_Desc".Translate(),
+                        icon = ContentFinder<Texture2D>.Get("Ability/Base/LG"),
                         action = () =>
                         {
                             wayLevelUp = Zd_Tracker.WayEnlightenment;

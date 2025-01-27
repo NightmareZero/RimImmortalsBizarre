@@ -45,6 +45,7 @@ namespace NzRimImmortalBizarre
                     try
                     {
                         applyLevelUp(actor);
+                        Messages.Message("NzRI_Zd_LevelUpJob_Success".Translate(actor.Name.Named("pawnName")), actor, MessageTypeDefOf.PositiveEvent);
                     }
                     catch (Exception e)
                     {
@@ -108,7 +109,8 @@ namespace NzRimImmortalBizarre
             if (!got)
             {
                 // TODO Message输出
-                Log.Error("Pre create body part failed.");
+                // Log.Error("Pre create body part failed.");
+                Messages.Message("NzRI_Zd_LevelUpJob_NoNewBodyPart".Translate(), pawn, MessageTypeDefOf.PositiveEvent);
                 return false;
             }
 

@@ -20,4 +20,11 @@
 
     <!-- Hediff Desc -->
     <Zd_Fruition_Desc>The path of cultivation</Zd_Fruition_Desc>
+
+    
+    <NzRI_CompAbilityEffect_ReduceEnergy_NotEnough>Not enough energy</NzRI_CompAbilityEffect_ReduceEnergy_NotEnough>
+
+    <NzRI_Zd_LevelUpJob_NoNewBodyPart>Can't continue to upgrade</NzRI_Zd_LevelUpJob_NoNewBodyPart>
+
+    <NzRI_Zd_LevelUpJob_Success>{pawnName} breakthrough successfully</NzRI_Zd_LevelUpJob_Success>
 </LanguageData>

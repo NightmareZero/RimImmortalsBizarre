@@ -11,7 +11,7 @@
     <Zd_Fruition_LevelUp_BuddhaNature_Desc>明心之法，主旨为向众生阐明佛理，普渡众生</Zd_Fruition_LevelUp_BuddhaNature_Desc>
 
     <!-- 精进 "舍身" 之法 -->
-    <Zd_Fruition_LevelUp_SelfSacrifice>精进 "舍身" 之法</Zd_Fruition_LevelUp_SelfSacrifice>
+    <Zd_Fruition_LevelUp_SelfSacrifice>精进 "舍身" 之法(没做完)</Zd_Fruition_LevelUp_SelfSacrifice>
     <Zd_Fruition_LevelUp_SelfSacrifice_Desc>舍身之法，以身殉道，为众生解难</Zd_Fruition_LevelUp_SelfSacrifice_Desc>
 
     <!-- Hediff Label -->
@@ -23,4 +23,10 @@
 
     <!-- Hediff Desc -->
     <Zd_Fruition_Desc>修行之路</Zd_Fruition_Desc>
+
+    <NzRI_CompAbilityEffect_ReduceEnergy_NotEnough>灵气不足</NzRI_CompAbilityEffect_ReduceEnergy_NotEnough>
+
+    <NzRI_Zd_LevelUpJob_NoNewBodyPart>无法再继续精进了</NzRI_Zd_LevelUpJob_NoNewBodyPart>
+
+    <NzRI_Zd_LevelUpJob_Success>{pawnName} 精进成功</NzRI_Zd_LevelUpJob_Success>
 </LanguageData>

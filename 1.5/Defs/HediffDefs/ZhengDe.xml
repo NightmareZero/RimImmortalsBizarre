@@ -109,7 +109,7 @@
                     <li>
                         <capacity>BloodPumping</capacity>
                         <offset>1</offset>
-                    </li>                  
+                    </li>
                 </capMods>
             </li>
         </stages>
@@ -131,7 +131,7 @@
             </li>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>9.9</range>
-                <!-- <mote>Mote_WorkCommand</mote> -->
+                <mote>Mote_WorkCommand</mote>
                 <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -215,7 +215,20 @@
             </li>
         </comps>
         <!-- TODO -->
-        <stages></stages>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>0.2</offset>
+                    </li>
+                </capMods>
+                <statFactors>
+                    <IncomingDamageFactor>0.2</IncomingDamageFactor>
+                </statFactors>
+                <painOffset>-1</painOffset>
+            </li>
+        </stages>
     </HediffDef>
 
     <!-- 头晕耳鸣 -->

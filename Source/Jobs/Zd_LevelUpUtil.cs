@@ -43,7 +43,7 @@ namespace NzRimImmortalBizarre
         /// <param name="cultivationLine">突破路线</param>
         /// <param name="targetHediff">输出: 创建好的Hediff</param>
         /// <param name="targetBodyPart">输出: 找到的BodyPart</param>
-        /// <returns></returns>
+        /// <returns>有可添加的仿生体</returns>
         public static bool PreCreateBodyPart(Pawn pawn, DefZdCultivationLine cultivationLine,
         out Hediff targetHediff, out BodyPartRecord targetBodyPart)
         {

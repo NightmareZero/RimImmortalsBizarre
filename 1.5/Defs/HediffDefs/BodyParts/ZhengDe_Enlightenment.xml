@@ -14,7 +14,8 @@
         <labelNoun>an thunder lung</labelNoun>
         <!-- 伴随着每一次呼吸，似乎都有隐隐的佛经念颂声，当大声吼叫时，一定能震慑众生吧。 附加能力：狮子吼 -->
         <description>With every breath, there seems to be a faint chanting of sutras. When you shout
-            loudly, you can definitely intimidate all living beings.\n\n Additional ability: "lion's roar"</description>
+            loudly, you can definitely intimidate all living beings.\n\n Additional ability: "lion's
+            roar"</description>
         <defaultInstallPart>Lung</defaultInstallPart>
         <tags>
             <li>NzRI_ZhengDe_BodyPart</li>
@@ -28,6 +29,14 @@
             <partEfficiency>1.50</partEfficiency>
             <betterThanNatural>true</betterThanNatural>
         </addedPartProps>
+        <stages>
+            <li>
+                <statFactors>
+                    <NzRI_ZhengDePowerMultiplier>1.25</NzRI_ZhengDePowerMultiplier>
+                    <MeleeDamageFactor>1.25</MeleeDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
     </HediffDef>
 
     <!-- 怒目 -->
@@ -53,6 +62,14 @@
             <partEfficiency>1.50</partEfficiency>
             <betterThanNatural>true</betterThanNatural>
         </addedPartProps>
+        <stages>
+            <li>
+                <statFactors>
+                    <NzRI_ZhengDePowerMultiplier>1.25</NzRI_ZhengDePowerMultiplier>
+                    <MeleeDamageFactor>1.25</MeleeDamageFactor>
+                </statFactors>
+            </li>
+        </stages>        
     </HediffDef>
 
     <!-- 无动臂 -->
@@ -62,7 +79,8 @@
         <label>unshakeable arm</label>
         <labelNoun>an unshakeable arm</labelNoun>
         <!-- 肌肉坚实，如同石头一般，给人以十足的安全感。 附加能力：抚顶 -->
-        <description>The muscles are solid, like stone, giving people a sense of security. Additional
+        <description>The muscles are solid, like stone, giving people a sense of security.
+            Additional
             ability: "touching head"</description>
         <defaultInstallPart>Shoulder</defaultInstallPart>
         <tags>
@@ -94,6 +112,14 @@
             <partEfficiency>1.50</partEfficiency>
             <betterThanNatural>true</betterThanNatural>
         </addedPartProps>
+        <stages>
+            <li>
+                <statFactors>
+                    <NzRI_ZhengDePowerMultiplier>1.25</NzRI_ZhengDePowerMultiplier>
+                    <MeleeDamageFactor>1.25</MeleeDamageFactor>
+                </statFactors>
+            </li>
+        </stages>        
     </HediffDef>
 
     <!-- 金刚臂 -->
@@ -136,6 +162,14 @@
             <partEfficiency>1.50</partEfficiency>
             <betterThanNatural>true</betterThanNatural>
         </addedPartProps>
+        <stages>
+            <li>
+                <statFactors>
+                    <NzRI_ZhengDePowerMultiplier>1.25</NzRI_ZhengDePowerMultiplier>
+                    <MeleeDamageFactor>1.25</MeleeDamageFactor>
+                </statFactors>
+            </li>
+        </stages>        
     </HediffDef>
 
     <!-- 圆光腿 -->
@@ -161,6 +195,14 @@
         <abilities>
             <li>Zd_DivineLightKick</li>
         </abilities>
+        <stages>
+            <li>
+                <statFactors>
+                    <NzRI_ZhengDePowerMultiplier>1.25</NzRI_ZhengDePowerMultiplier>
+                    <MeleeDamageFactor>1.25</MeleeDamageFactor>
+                </statFactors>
+            </li>
+        </stages>        
     </HediffDef>
 
     <!-- 莲花腿 -->
@@ -185,5 +227,13 @@
         <abilities>
             <li>NzRI_Zd_BulletShield</li>
         </abilities>
+        <stages>
+            <li>
+                <statFactors>
+                    <NzRI_ZhengDePowerMultiplier>1.25</NzRI_ZhengDePowerMultiplier>
+                    <MeleeDamageFactor>1.25</MeleeDamageFactor>
+                </statFactors>
+            </li>
+        </stages>        
     </HediffDef>
 </Defs>

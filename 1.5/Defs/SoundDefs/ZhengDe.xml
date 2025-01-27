@@ -30,6 +30,23 @@
                         <clipFolderPath>Abilities/ZenSound</clipFolderPath>
                     </li>
                 </grains>
+                <volumeRange>40</volumeRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>NzRI_SoundCall</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>1</maxSimultaneous>
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Folder">
+                        <clipFolderPath>Abilities/SoundCall</clipFolderPath>
+                    </li>
+                </grains>
                 <volumeRange>20</volumeRange>
             </li>
         </subSounds>
