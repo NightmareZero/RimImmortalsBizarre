@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
     <Zd_Cultivation_LostEnergyRoot>{pawnName} 失去灵根，修行停止</Zd_Cultivation_LostEnergyRoot>
+    <Zd_Cultivation_NotEnoughEnergy>{pawnName} 灵气不足，修行停止</Zd_Cultivation_NotEnoughEnergy>
 
     <!-- 精进 "克己" 之法 -->
     <Zd_Fruition_LevelUp>精进 "克己" 之法</Zd_Fruition_LevelUp>
