@@ -65,7 +65,8 @@
 		<label>a Buddhist scripture</label>
 		<description>An old and unremarkable Buddhist scripture</description>
 		<graphicData>
-			<texPath>Things/Item/Books/ZuoWangMask</texPath>
+			<!-- <texPath>Things/Item/Books/ZuoWangMask</texPath> -->
+			<texPath>Ability/Base/LG</texPath>
 		</graphicData>
 		<comps>
 			<li Class="WhoXiuXian.CompProperties_BookStudiable">
