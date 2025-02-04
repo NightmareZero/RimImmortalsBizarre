@@ -96,15 +96,19 @@ namespace NzRimImmortalBizarre
         /// <returns></returns>
         public DamageDef GetOrderedDamageType()
         {
+            DamageDef res = null;
             if (damageTypeOrder == 0)
             {
                 _damageTypeIndex = Rand.Range(0, damageTypes.Count);
+                res = GetDamageTypes()[_damageTypeIndex];
             }
             else
             {
+                res = GetDamageTypes()[_damageTypeIndex];
                 _damageTypeIndex = (_damageTypeIndex + 1) % damageTypes.Count;
             }
-            return GetDamageTypes()[_damageTypeIndex];
+
+            return res;
         }
         private int _damageTypeIndex = 0;
     }
