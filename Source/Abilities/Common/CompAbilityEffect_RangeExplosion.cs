@@ -24,7 +24,12 @@ namespace NzRimImmortalBizarre
 
                 for (int i = 0; i < Props.damageTimes; i++)
                 {
-                    var targetCell = TargetAffectedCells(target).RandomElement();
+                    IntVec3 targetCell = target.Cell;
+                    if (Props.deviationRange > 0)
+                    {
+                        targetCell = TargetAffectedCells(target).RandomElement();
+                    }
+                    var damageType = Props.GetOrderedDamageType();
                     var explosionCells = GetRangeCells(targetCell, Props.explosionRange);
 
                     // 如果需要添加hediff
@@ -45,7 +50,7 @@ namespace NzRimImmortalBizarre
                         }
                     }
 
-                    GenExplosion.DoExplosion(target.Cell, parent.pawn.MapHeld, Props.explosionRange, Props.GetOrderedDamageType(), Caster,
+                    GenExplosion.DoExplosion(target.Cell, parent.pawn.MapHeld, Props.explosionRange, damageType, Caster,
                         postExplosionSpawnThingDef: Props.filthDef, damAmount: damage, armorPenetration: armorPenetration, explosionSound: Props.explosionSound, weapon: null,
                         projectile: null, intendedTarget: null, postExplosionSpawnChance: 1f, postExplosionSpawnThingCount: 1, postExplosionGasType: null,
                         applyDamageToExplosionCellsNeighbors: false, preExplosionSpawnThingDef: null, preExplosionSpawnChance: 0f, preExplosionSpawnThingCount: 1,
