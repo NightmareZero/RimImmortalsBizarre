@@ -125,8 +125,8 @@
             <li>ShardAnimalPulser</li>
             <!-- 死灵背包 -->
             <li>Shell_Deadlife</li>
-            <!-- 大型扭曲考古科技支撑装置 -->
-            <li>TwistedArchotechSupport_Large</li>
+            <!-- 方尖碑 -->
+            <li>CorruptedObelisk</li>
         </things>
     </NzRimImmortalBizarre.ItemList>
 </Defs>
