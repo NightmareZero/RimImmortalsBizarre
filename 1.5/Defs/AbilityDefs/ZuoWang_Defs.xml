@@ -125,8 +125,6 @@
             <li>ShardAnimalPulser</li>
             <!-- 死灵背包 -->
             <li>Shell_Deadlife</li>
-            <!-- 方尖碑 -->
-            <li>CorruptedObelisk</li>
         </things>
     </NzRimImmortalBizarre.ItemList>
 </Defs>
