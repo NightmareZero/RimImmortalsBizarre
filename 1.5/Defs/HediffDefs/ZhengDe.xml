@@ -332,4 +332,24 @@
             </li>
         </stages>
     </HediffDef>
+
+    <!-- 梦魇凝视 -->
+    <HediffDef>
+        <defName>NzRI_Zd_He_NightmareGaze</defName>
+        <label>nightmare gaze</label>
+        <!-- 被一个恐怖的存在盯上，眼中/传感器中传来的一切，都变成了扭曲的幻象 -->
+        <description>Being stared at by a terrifying existence, everything in the eyes/sensors has become a distorted illusion</description>
+        <isBad>true</isBad>
+        <hediffClass>HediffWithComps</hediffClass>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+            <li Class="HediffCompProperties_Disappears">
+                <!-- 30秒后消失 -->
+                <disappearsAfterTicks>1800</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+                <canUseDecimalsShortForm>true</canUseDecimalsShortForm>
+            </li>
+            <!-- TODO 在添加这个后,添加 疯狂 崩溃 参考心灵冲击枪  -->
+        </comps>
+    </HediffDef>
 </Defs>

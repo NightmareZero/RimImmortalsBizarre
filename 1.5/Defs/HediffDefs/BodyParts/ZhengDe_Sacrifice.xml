@@ -7,7 +7,7 @@
     <!-- 光环: 战栗,降低护甲,承伤系数*3 -->
 
     <!-- 猩红眼 -->
-    <!-- 战栗注视，降低操作移动 -->
+    <!-- 噩梦凝视，小范围精神错乱 -->
     <HediffDef ParentName="ZdBodyPartBase">
         <defName>NzRI_Zd_CrimsonEyes</defName>
         <label>crimson eyes</label>
@@ -19,7 +19,7 @@
             <li>NzRI_ZhengDe_Sacrifice</li>
         </tags>
         <abilities>
-            <!-- <li>NzRI_Zd_DebunkingMyths</li> -->
+            <li>NzRI_Zd_NightmareGaze</li>
         </abilities>
         <stages>
             <li>
@@ -37,7 +37,7 @@
     </HediffDef>
 
     <!-- 怪异舌 -->
-    <!-- 恐怖嘶吼，小范围错乱 -->
+    <!-- 恐怖嘶吼，范围惊吓 -->
     <HediffDef ParentName="ZdBodyPartBase">
         <defName>NzRI_Zd_StrangeTongue</defName>
         <label>strange tongue</label>

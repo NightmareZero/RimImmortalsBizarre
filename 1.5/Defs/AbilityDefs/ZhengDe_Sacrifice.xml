@@ -102,4 +102,41 @@
             </li>
         </comps>
     </AbilityDef>
+
+    <!-- 噩梦凝视 -->
+    <AbilityDef ParentName="RI_PsycastBase">
+        <defName>NzRI_Zd_NightmareGaze</defName>
+        <label>nighmare gaze</label>
+        <!-- 冰冷的凝视，将扭曲与疯狂注入目标的心灵与处理器，即使是机器都会发疯 -->
+        <description>the cold gaze that injects distortion and madness into the target's mind and processor, even machines will go crazy</description>
+        <iconPath>Ability/Base/LG</iconPath>
+        <cooldownTicksRange>1000</cooldownTicksRange>
+        <aiCanUse>true</aiCanUse>
+        <displayOrder>300</displayOrder>
+        <sendMessageOnCooldownComplete>false</sendMessageOnCooldownComplete>
+        <!-- TODO 换成别的 -->
+        <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
+        <targetRequired>True</targetRequired>
+        <verbProperties>
+            <violent>True</violent>
+            <warmupTime>0.5</warmupTime>
+            <range>16</range>
+            <requireLineOfSight>True</requireLineOfSight>
+            <targetParams>
+                <canTargetLocations>True</canTargetLocations>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetMechs>True</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+                <rEnergy>-1</rEnergy>
+            </li> -->        
+            <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeHediff">
+                <radius>6</radius>
+                <hediffDef>NzRI_Zd_NightmareGaze</hediffDef>
+                <effectMote>TODO</effectMote>
+            </li>
+        </comps>
+    </AbilityDef>    
 </Defs>
