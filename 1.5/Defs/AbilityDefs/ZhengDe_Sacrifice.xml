@@ -49,6 +49,9 @@
             </targetParams>
         </verbProperties>
         <comps>
+            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+                <rEnergy>-1</rEnergy>
+            </li> -->        
             <li Class="NzRimImmortalBizarre.CompProperties_LegSweep">
                 <radius>5</radius>
                 <damage>37</damage>
@@ -59,6 +62,43 @@
                 <preferredAttackBodyParts>
                     <li>Leg</li>
                 </preferredAttackBodyParts>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <!-- 恐怖嘶吼 -->
+    <AbilityDef ParentName="RI_PsycastBase">
+        <defName>NzRI_Zd_TerrorScream</defName>
+        <label>terror scream</label>
+        <!-- 发出一声恐怖的吼叫，恐吓敌人，降低其移动和攻击速度 -->
+        <description>emit a terrifying scream to scare enemies, reducing their movement and attack speed</description>
+        <iconPath>Ability/Base/LG</iconPath>
+        <cooldownTicksRange>1000</cooldownTicksRange>
+        <aiCanUse>true</aiCanUse>
+        <displayOrder>300</displayOrder>
+        <sendMessageOnCooldownComplete>false</sendMessageOnCooldownComplete>
+        <!-- TODO 替换为吼叫 -->
+        <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
+        <targetRequired>True</targetRequired>
+        <verbProperties>
+            <violent>True</violent>
+            <warmupTime>0.5</warmupTime>
+            <range>16</range>
+            <requireLineOfSight>True</requireLineOfSight>
+            <targetParams>
+                <canTargetLocations>True</canTargetLocations>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetMechs>False</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+                <rEnergy>-1</rEnergy>
+            </li> -->        
+            <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeHediff">
+                <radius>6</radius>
+                <hediffDef>NzRI_Zd_He_TerrorScream</hediffDef>
+                <effectMote>TODO</effectMote>
             </li>
         </comps>
     </AbilityDef>

@@ -297,4 +297,39 @@
             </li>
         </stages>
     </HediffDef>
+
+    <!-- 恐怖嘶吼 -->
+    <HediffDef>
+        <defName>NzRI_Zd_He_TerrorScream</defName>
+        <label>terror scream</label>
+        <!-- 听到了恐怖的吼叫，感到恐惧 -->
+        <description>Heard the terrifying scream and felt fear</description>
+        <isBad>true</isBad>
+        <hediffClass>HediffWithComps</hediffClass>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+            <li Class="HediffCompProperties_Disappears">
+                <!-- 30秒后消失 -->
+                <disappearsAfterTicks>1800</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+                <canUseDecimalsShortForm>true</canUseDecimalsShortForm>
+            </li>
+            <!-- TODO 在添加这个后,直接 恐惧 崩溃 -->
+
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <setMax>0.5</setMax>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <setMax>0.5</setMax>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>

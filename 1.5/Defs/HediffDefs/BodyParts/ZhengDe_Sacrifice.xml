@@ -50,7 +50,7 @@
             <li>NzRI_ZhengDe_Sacrifice</li>
         </tags>
         <abilities>
-            <!-- <li>Zd_TouchingHead</li> -->
+            <li>NzRI_Zd_TerrorScream</li>
         </abilities>
         <stages>
             <li>
@@ -153,7 +153,7 @@
     </HediffDef>
 
     <!-- 盘卷臂 -->
-    <!-- 范围stuck -->
+    <!-- 高切割伤害 -->
     <HediffDef ParentName="ZdBodyPartBase">
         <defName>NzRI_Zd_CoiledArm</defName>
         <label>coiled arms</label>
