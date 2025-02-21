@@ -100,7 +100,7 @@
     </HediffDef>
 
     <!-- 脓疮臂 -->
-    <!-- 扇形喷射算液+恶心 -->
+    <!-- 攻击造成恶心 -->
     <HediffDef ParentName="ZdBodyPartBase">
         <defName>NzRI_Zd_AbscessArm</defName>
         <label>abscess arm</label>
@@ -111,9 +111,6 @@
             <li>NzRI_ZhengDe_BodyPart</li>
             <li>NzRI_ZhengDe_Sacrifice</li>
         </tags>
-        <abilities>
-            <!-- <li>Zd_TouchingHead</li> -->
-        </abilities>
         <stages>
             <li>
                 <statFactors>
@@ -128,11 +125,15 @@
                     <li>
                         <label>fist</label>
                         <capacities>
-                            <li>Blunt</li>
+                            <li>NzRI_Dm_PustuleStrike</li>
                         </capacities>
                         <extraMeleeDamages>
                             <li>
                                 <def>AcidBurn</def>
+                                <amount>27</amount>
+                            </li>
+                            <li>
+                                <def>Blunt</def>
                                 <amount>27</amount>
                             </li>
                         </extraMeleeDamages>

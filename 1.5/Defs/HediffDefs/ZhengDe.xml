@@ -314,8 +314,10 @@
                 <showRemainingTime>true</showRemainingTime>
                 <canUseDecimalsShortForm>true</canUseDecimalsShortForm>
             </li>
-            <!-- TODO 在添加这个后,直接 恐惧 崩溃 -->
-
+            <!-- 造成恐惧 -->
+            <li Class="NzRimImmortalBizarre.Comp_MentalBreakGiver">
+                <mentalBreakDef>PanicFlee</mentalBreakDef>
+            </li>
         </comps>
         <stages>
             <li>
@@ -349,7 +351,32 @@
                 <showRemainingTime>true</showRemainingTime>
                 <canUseDecimalsShortForm>true</canUseDecimalsShortForm>
             </li>
-            <!-- TODO 在添加这个后,添加 疯狂 崩溃 参考心灵冲击枪  -->
+            <!-- 造成崩溃  -->
+            <li Class="NzRimImmortalBizarre.Comp_MentalBreakGiver">
+                <mentalBreakDef>Berserk</mentalBreakDef>
+            </li>
         </comps>
     </HediffDef>
+
+    <!-- 脓疮覆盖 -->
+    <HediffDef>
+        <defName>NzRI_Zd_He_PustuleCorrosion</defName>
+        <label>pustule corrosion</label>
+        <!-- 被脓疮覆盖，感到剧烈的恶心 -->
+        <description>Being covered by pustules, feeling intense nausea</description>
+        <isBad>true</isBad>
+        <hediffClass>HediffWithComps</hediffClass>
+        <initialSeverity>1</initialSeverity>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-8</severityPerDay>
+            </li>
+            <!-- TODO 根据浓度，每隔一段时间之后会呕吐 -->
+            <li Class="NzRimImmortalBizarre.Comp_MentalBreakGiver">
+                <vomit>true</vomit>
+                <tickInterval>600</tickInterval>
+            </li>
+        </comps>
+    </HediffDef>
+
 </Defs>
