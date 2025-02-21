@@ -138,5 +138,91 @@
                 <effectMote>TODO</effectMote>
             </li>
         </comps>
+    </AbilityDef>
+
+    <!-- 触须突刺 -->
+    <!-- ParentName="AbilityTouchBase" -->
+    <AbilityDef ParentName="RI_PsycastBase">
+        <defName>NzRI_Zd_TentacleStab</defName>
+        <label>tentacle stab</label>
+        <!-- 让触须瞬间变硬，对敌人心脏造成致命一击 -->
+        <description>let the tentacles harden instantly, causing a fatal blow to the enemy's heart</description>
+        <iconPath>Ability/ZdE4</iconPath>
+        <cooldownTicksRange>120</cooldownTicksRange>
+        <aiCanUse>true</aiCanUse>
+        <ai_IsIncendiary>true</ai_IsIncendiary>
+        <sendMessageOnCooldownComplete>false</sendMessageOnCooldownComplete>
+        <jobDef>CastAbilityOnThingMelee</jobDef>
+        <!-- TODO -->
+        <!-- <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound> -->
+        <verbProperties>
+        <verbClass>Verb_CastAbilityTouch</verbClass>
+        <range>-1</range>
+        <warmupTime>2</warmupTime>
+        <!-- <soundCast>FireSpew_Resolve</soundCast> -->
+        <targetParams>
+            <canTargetLocations>false</canTargetLocations>
+            <canTargetMechs>true</canTargetMechs>
+            <canTargetAnimals>true</canTargetAnimals>
+        </targetParams>
+        </verbProperties>
+        <statBases>
+            <Ability_Duration>600</Ability_Duration>
+        </statBases>
+        <comps>
+            <li Class="NzRimImmortalBizarre.CompProperties_ReduceEnergy">
+                <rEnergy>-15</rEnergy>
+            </li>
+            <li Class="NzRimImmortalBizarre.CompProperties_Hit">
+                <damageDef>Poke</damageDef>
+                <damageAmountBase>301</damageAmountBase>
+                <armorPenetrationBase>2</armorPenetrationBase>
+                <damageMultiplierStat>NzRI_ZhengDePowerMultiplier</damageMultiplierStat>
+                <stunTicks>60</stunTicks>
+                <hitPart>Heart</hitPart>
+            </li>
+        </comps>
+    </AbilityDef>
+
+     <!-- 触须挥砍 -->
+    <AbilityDef ParentName="RI_PsycastBase">
+        <defName>NzRI_Zd_TentacleSlash</defName>
+        <label>tentacle slash</label>
+        <!-- 使用触须切割目标，造成大量伤害 -->
+        <description>use tentacles to cut the target, causing a lot of damage</description>
+        <iconPath>Ability/ZdE3</iconPath>
+        <cooldownTicksRange>120</cooldownTicksRange>
+        <aiCanUse>true</aiCanUse>
+        <ai_IsIncendiary>true</ai_IsIncendiary>
+        <sendMessageOnCooldownComplete>false</sendMessageOnCooldownComplete>
+        <!-- <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound> -->
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>4.9</range>
+            <warmupTime>1</warmupTime>
+            <soundCast>FireSpew_Resolve</soundCast>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <statBases>
+            <Ability_Duration>60</Ability_Duration>
+        </statBases>
+        <comps>
+            <!-- <li Class="NzRimImmortalBizarre.CompProperties_ReduceEnergy">
+                <rEnergy>-15</rEnergy>
+            </li> -->
+            <li Class="NzRimImmortalBizarre.CompProperties_AbilitySpew">
+                <compClass>NzRimImmortalBizarre.CompAbilityEffect_TentacleSlash</compClass>
+                <range>4.9</range>
+                <damAmount>192</damAmount>
+                <lineWidthEnd>11</lineWidthEnd>
+                <damageType>Cut</damageType>
+                <damMultiplierStat>NzRI_ZhengDePowerMultiplier</damMultiplierStat>
+                <!-- TODO 修改为专有特效 -->
+                <effecterDef>Acid_Spew</effecterDef>
+                <canHitFilledCells>true</canHitFilledCells>
+            </li>
+        </comps>
     </AbilityDef>    
 </Defs>
