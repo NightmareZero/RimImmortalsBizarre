@@ -371,7 +371,7 @@
             <li Class="HediffCompProperties_SeverityPerDay">
                 <severityPerDay>-8</severityPerDay>
             </li>
-            <!-- TODO 根据浓度，每隔一段时间之后会呕吐 -->
+            <!-- 根据浓度，每隔一段时间之后会呕吐 -->
             <li Class="NzRimImmortalBizarre.Comp_MentalBreakGiver">
                 <vomit>true</vomit>
                 <tickInterval>600</tickInterval>
