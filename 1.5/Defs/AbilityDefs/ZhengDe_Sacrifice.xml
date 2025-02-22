@@ -176,7 +176,7 @@
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Hit">
                 <damageDef>Poke</damageDef>
-                <damageAmountBase>141</damageAmountBase>
+                <damageAmountBase>111</damageAmountBase>
                 <armorPenetrationBase>2</armorPenetrationBase>
                 <damageMultiplierStat>NzRI_ZhengDePowerMultiplier</damageMultiplierStat>
                 <stunTicks>60</stunTicks>
@@ -216,7 +216,7 @@
             <li Class="NzRimImmortalBizarre.CompProperties_AbilitySpew">
                 <compClass>NzRimImmortalBizarre.CompAbilityEffect_TentacleSlash</compClass>
                 <range>4.9</range>
-                <damAmount>72</damAmount>
+                <damAmount>61</damAmount>
                 <lineWidthEnd>11</lineWidthEnd>
                 <damageType>Cut</damageType>
                 <damMultiplierStat>NzRI_ZhengDePowerMultiplier</damMultiplierStat>
