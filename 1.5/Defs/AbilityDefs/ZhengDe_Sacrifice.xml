@@ -98,7 +98,7 @@
             <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeHediff">
                 <radius>6</radius>
                 <hediffDef>NzRI_Zd_He_TerrorScream</hediffDef>
-                <effectMote>TODO</effectMote>
+                <effectMote></effectMote>
             </li>
         </comps>
     </AbilityDef>
@@ -134,8 +134,8 @@
             </li> -->        
             <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeHediff">
                 <radius>6</radius>
-                <hediffDef>NzRI_Zd_NightmareGaze</hediffDef>
-                <effectMote>TODO</effectMote>
+                <hediffDef>NzRI_Zd_He_NightmareGaze</hediffDef>
+                <effectMote></effectMote>
             </li>
         </comps>
     </AbilityDef>

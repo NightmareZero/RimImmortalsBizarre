@@ -21,7 +21,7 @@ namespace NzRimImmortalBizarre
     public class Comp_MentalBreakGiver : HediffCompProperties
     {
         // 精神崩溃类型
-        public MentalStateDef mentalBreaks;
+        public MentalStateDef mentalBreak;
         //  MentalStateDefOf
 
         // 呕吐
@@ -85,7 +85,7 @@ namespace NzRimImmortalBizarre
                 {
                     pawn.jobs.StartJob(new Job(JobDefOf.Vomit), JobCondition.InterruptForced);
                 }
-                var mentalBreakDef = Props.mentalBreaks;
+                var mentalBreakDef = Props.mentalBreak;
                 if (mentalBreakDef != null)
                 {
                     pawn.mindState.mentalStateHandler.TryStartMentalState(mentalBreakDef, null, false, false, false);

@@ -316,7 +316,7 @@
             </li>
             <!-- 造成恐惧 -->
             <li Class="NzRimImmortalBizarre.Comp_MentalBreakGiver">
-                <mentalBreakDef>PanicFlee</mentalBreakDef>
+                <mentalBreak>PanicFlee</mentalBreak>
             </li>
         </comps>
         <stages>
@@ -353,7 +353,7 @@
             </li>
             <!-- 造成崩溃  -->
             <li Class="NzRimImmortalBizarre.Comp_MentalBreakGiver">
-                <mentalBreakDef>Berserk</mentalBreakDef>
+                <mentalBreak>Berserk</mentalBreak>
             </li>
         </comps>
     </HediffDef>

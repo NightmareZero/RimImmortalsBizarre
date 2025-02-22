@@ -10,7 +10,7 @@ namespace NzRimImmortalBizarre
     {
 
         // 作用范围范围
-        public float range;
+        public float radius;
 
         // 生成Hediff
         public HediffDef hediffDef;

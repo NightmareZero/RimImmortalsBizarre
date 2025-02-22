@@ -125,7 +125,7 @@
                     <li>
                         <label>fist</label>
                         <capacities>
-                            <li>NzRI_Dm_PustuleStrike</li>
+                            <li>Blunt</li>
                         </capacities>
                         <extraMeleeDamages>
                             <li>
@@ -133,7 +133,7 @@
                                 <amount>27</amount>
                             </li>
                             <li>
-                                <def>Blunt</def>
+                                <def>NzRI_Dm_PustuleStrike</def>
                                 <amount>27</amount>
                             </li>
                         </extraMeleeDamages>

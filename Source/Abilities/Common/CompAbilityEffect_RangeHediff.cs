@@ -20,7 +20,7 @@ namespace NzRimImmortalBizarre
         {
             try
             {
-                var affectedPawns = GetAffectedPawns(target.Cell, Caster.Map, Props.range);
+                var affectedPawns = GetAffectedPawns(target.Cell, Caster.Map, Props.radius);
                 foreach (var pawn in affectedPawns)
                 {
                     if (pawn != null)
@@ -53,7 +53,7 @@ namespace NzRimImmortalBizarre
 
         public override void DrawEffectPreview(LocalTargetInfo target)
         {
-            GenDraw.DrawFieldEdges(getAffectedCells(target.Cell,Caster.Map,Props.range), Color.red);
+            GenDraw.DrawFieldEdges(getAffectedCells(target.Cell,Caster.Map,Props.radius), Color.red);
         }
 
         public override bool CanApplyOn(LocalTargetInfo target, LocalTargetInfo dest)
