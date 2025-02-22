@@ -58,8 +58,20 @@ namespace NzRimImmortalBizarre
             }
         }
 
+        public override void CompPostPostRemoved()
+        {
+            base.CompPostPostRemoved();
+
+            // 移除时清除精神崩溃
+            var state = pawn?.mindState?.mentalStateHandler?.CurState;
+            if (state != null && state.def == Props.mentalBreak)
+            {
+                pawn.MentalState.RecoverFromState();
+            }
+        }
+
         public override void CompPostTick(ref float severityAdjustment)
-        { 
+        {
             base.CompPostTick(ref severityAdjustment);
 
             if (Props.tickInterval > 0 && parent.ageTicks % Props.tickInterval == 0)

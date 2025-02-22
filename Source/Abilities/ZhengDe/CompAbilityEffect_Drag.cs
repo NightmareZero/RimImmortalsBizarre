@@ -17,6 +17,8 @@ namespace NzRimImmortalBizarre
             }
             // 将目标拉到面前
 
+            Log.Message("Drag1");
+
             // 获取施法者的位置最近的空位
             IntVec3 closestEmptyCell = CellFinder.RandomClosewalkCellNear(caster.Position, caster.Map, 1);
 
@@ -25,17 +27,21 @@ namespace NzRimImmortalBizarre
                 return;
             }
 
+            Log.Message("Drag2");
+
             // 生成拖拽Mote
-            Mote_Rope mote = (Mote_Rope)ThingMaker.MakeThing(ThingDef.Named("Mote_Rope"), null);
-            mote.caster = caster;
-            mote.target = target.Pawn;
-            mote.Scale = 0.1f;
-            mote.rotationRate = 0f;
-            GenSpawn.Spawn(mote, target.Pawn.Position, caster.Map);
+            // Mote_Rope mote = (Mote_Rope)ThingMaker.MakeThing(ThingDef.Named("Mote_Rope"), null);
+            // mote.caster = caster;
+            // mote.target = target.Pawn;
+            // mote.Scale = 0.1f;
+            // mote.rotationRate = 0f;
+            // GenSpawn.Spawn(mote, target.Pawn.Position, caster.Map);
             
 
             // 将目标传送到这个位置
             target.Pawn.Position = closestEmptyCell;
+
+            Log.Message("Drag2");
 
             base.Apply(target, dest);
         }

@@ -53,7 +53,7 @@
                 <rEnergy>-1</rEnergy>
             </li> -->        
             <li Class="NzRimImmortalBizarre.CompProperties_LegSweep">
-                <radius>5</radius>
+                <radius>3</radius>
                 <damage>37</damage>
                 <damageMultiplierStat>NzRI_ZhengDePowerMultiplier</damageMultiplierStat>
                 <damageDef>Cut</damageDef>
@@ -83,12 +83,13 @@
         <verbProperties>
             <violent>True</violent>
             <warmupTime>0.5</warmupTime>
-            <range>16</range>
+            <range>19</range>
             <requireLineOfSight>True</requireLineOfSight>
             <targetParams>
                 <canTargetLocations>True</canTargetLocations>
                 <canTargetBuildings>False</canTargetBuildings>
                 <canTargetMechs>False</canTargetMechs>
+                <canTargetAnimals>True</canTargetAnimals>
             </targetParams>
         </verbProperties>
         <comps>
@@ -133,7 +134,7 @@
                 <rEnergy>-1</rEnergy>
             </li> -->        
             <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeHediff">
-                <radius>6</radius>
+                <radius>4</radius>
                 <hediffDef>NzRI_Zd_He_NightmareGaze</hediffDef>
                 <effectMote></effectMote>
             </li>
@@ -158,7 +159,7 @@
         <verbProperties>
         <verbClass>Verb_CastAbilityTouch</verbClass>
         <range>-1</range>
-        <warmupTime>2</warmupTime>
+        <warmupTime>0</warmupTime>
         <!-- <soundCast>FireSpew_Resolve</soundCast> -->
         <targetParams>
             <canTargetLocations>false</canTargetLocations>
@@ -175,7 +176,7 @@
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Hit">
                 <damageDef>Poke</damageDef>
-                <damageAmountBase>301</damageAmountBase>
+                <damageAmountBase>131</damageAmountBase>
                 <armorPenetrationBase>2</armorPenetrationBase>
                 <damageMultiplierStat>NzRI_ZhengDePowerMultiplier</damageMultiplierStat>
                 <stunTicks>60</stunTicks>
@@ -215,7 +216,7 @@
             <li Class="NzRimImmortalBizarre.CompProperties_AbilitySpew">
                 <compClass>NzRimImmortalBizarre.CompAbilityEffect_TentacleSlash</compClass>
                 <range>4.9</range>
-                <damAmount>192</damAmount>
+                <damAmount>72</damAmount>
                 <lineWidthEnd>11</lineWidthEnd>
                 <damageType>Cut</damageType>
                 <damMultiplierStat>NzRI_ZhengDePowerMultiplier</damMultiplierStat>

@@ -32,7 +32,7 @@
         <stages>
             <li>
                 <statFactors>
-                    <NzRI_ZhengDePowerMultiplier>1.25</NzRI_ZhengDePowerMultiplier>
+                    <NzRI_ZhengDePowerMultiplier>1.15</NzRI_ZhengDePowerMultiplier>
                     <MeleeDamageFactor>1.25</MeleeDamageFactor>
                 </statFactors>
             </li>
@@ -65,7 +65,7 @@
         <stages>
             <li>
                 <statFactors>
-                    <NzRI_ZhengDePowerMultiplier>1.25</NzRI_ZhengDePowerMultiplier>
+                    <NzRI_ZhengDePowerMultiplier>1.15</NzRI_ZhengDePowerMultiplier>
                     <MeleeDamageFactor>1.25</MeleeDamageFactor>
                 </statFactors>
             </li>
@@ -115,7 +115,7 @@
         <stages>
             <li>
                 <statFactors>
-                    <NzRI_ZhengDePowerMultiplier>1.25</NzRI_ZhengDePowerMultiplier>
+                    <NzRI_ZhengDePowerMultiplier>1.15</NzRI_ZhengDePowerMultiplier>
                     <MeleeDamageFactor>1.25</MeleeDamageFactor>
                 </statFactors>
             </li>
@@ -165,7 +165,7 @@
         <stages>
             <li>
                 <statFactors>
-                    <NzRI_ZhengDePowerMultiplier>1.25</NzRI_ZhengDePowerMultiplier>
+                    <NzRI_ZhengDePowerMultiplier>1.15</NzRI_ZhengDePowerMultiplier>
                     <MeleeDamageFactor>1.25</MeleeDamageFactor>
                 </statFactors>
             </li>
@@ -198,7 +198,7 @@
         <stages>
             <li>
                 <statFactors>
-                    <NzRI_ZhengDePowerMultiplier>1.25</NzRI_ZhengDePowerMultiplier>
+                    <NzRI_ZhengDePowerMultiplier>1.15</NzRI_ZhengDePowerMultiplier>
                     <MeleeDamageFactor>1.25</MeleeDamageFactor>
                 </statFactors>
             </li>
@@ -230,7 +230,7 @@
         <stages>
             <li>
                 <statFactors>
-                    <NzRI_ZhengDePowerMultiplier>1.25</NzRI_ZhengDePowerMultiplier>
+                    <NzRI_ZhengDePowerMultiplier>1.15</NzRI_ZhengDePowerMultiplier>
                     <MeleeDamageFactor>1.25</MeleeDamageFactor>
                 </statFactors>
             </li>
