@@ -176,7 +176,7 @@
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Hit">
                 <damageDef>Poke</damageDef>
-                <damageAmountBase>131</damageAmountBase>
+                <damageAmountBase>141</damageAmountBase>
                 <armorPenetrationBase>2</armorPenetrationBase>
                 <damageMultiplierStat>NzRI_ZhengDePowerMultiplier</damageMultiplierStat>
                 <stunTicks>60</stunTicks>
