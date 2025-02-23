@@ -16,4 +16,21 @@
 			<fadeOutTime>0.5</fadeOutTime>
 		</mote>
 	</ThingDef>
+
+	<!-- 正德寺 拖拽技能 绳子特效 Mote -->
+	<ThingDef ParentName="MoteBase">
+		<defName>NzRI_Mote_Rope</defName>
+		<thingClass>NzRimImmortalBizarre.Mote_Rope</thingClass>
+		<graphicData>
+			<texPath>Ability/Zd2</texPath>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<drawOffscreen>true</drawOffscreen>
+		<mote>
+			<fadeInTime>0.1</fadeInTime>
+			<solidTime>1.5</solidTime>
+			<fadeOutTime>0.5</fadeOutTime>
+		</mote>
+	</ThingDef>
 </Defs>
