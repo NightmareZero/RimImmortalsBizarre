@@ -27,4 +27,15 @@
 
     <NzRI_Zd_WeaponDrop.label>兵器脱手</NzRI_Zd_WeaponDrop.label>
     <NzRI_Zd_WeaponDrop.description>几乎无法握住兵器</NzRI_Zd_WeaponDrop.description>
+
+    <NzRI_Zd_He_TerrorScream.label>恐怖嘶吼</NzRI_Zd_He_TerrorScream.label>
+    <NzRI_Zd_He_TerrorScream.description>听到了恐怖的吼叫，感到恐惧</NzRI_Zd_He_TerrorScream.description>
+
+    <NzRI_Zd_He_NightmareGaze.label>噩梦凝视</NzRI_Zd_He_NightmareGaze.label>
+    <NzRI_Zd_He_NightmareGaze.description>感觉被一个恐怖的存在盯上，眼中/传感器中传来的一切，都变成了扭曲的幻象</NzRI_Zd_He_NightmareGaze.description>
+
+    <NzRI_Zd_He_PustuleCorrosion.label>脓疮腐蚀</NzRI_Zd_He_PustuleCorrosion.label>
+    <NzRI_Zd_He_PustuleCorrosion.description>被脓疮覆盖，感到剧烈的恶心</NzRI_Zd_He_PustuleCorrosion.description>
+
+    
 </LanguageData>

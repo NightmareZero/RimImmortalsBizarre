@@ -339,7 +339,7 @@
     <HediffDef>
         <defName>NzRI_Zd_He_NightmareGaze</defName>
         <label>nightmare gaze</label>
-        <!-- 被一个恐怖的存在盯上，眼中/传感器中传来的一切，都变成了扭曲的幻象 -->
+        <!-- 感觉被一个恐怖的存在盯上，眼中/传感器中传来的一切，都变成了扭曲的幻象 -->
         <description>Being stared at by a terrifying existence, everything in the eyes/sensors has become a distorted illusion</description>
         <isBad>true</isBad>
         <hediffClass>HediffWithComps</hediffClass>

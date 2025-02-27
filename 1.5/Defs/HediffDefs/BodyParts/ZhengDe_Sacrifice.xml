@@ -12,7 +12,9 @@
         <defName>NzRI_Zd_CrimsonEyes</defName>
         <label>crimson eyes</label>
         <labelNoun>an crimson eyes</labelNoun>
-        <description>#</description>
+        <!-- 闪烁着猩红的光芒，这与你在那座古怪的巨石上看到的条纹几乎一致 -->
+        <description>Shining with crimson light, it is almost identical to the stripes you saw on that strange
+            monolith.</description>
         <defaultInstallPart>Eye</defaultInstallPart>
         <tags>
             <li>NzRI_ZhengDe_BodyPart</li>
@@ -42,8 +44,9 @@
         <defName>NzRI_Zd_StrangeTongue</defName>
         <label>strange tongue</label>
         <labelNoun>an strange tongue</labelNoun>
-        <!-- TODO -->
-        <description>#</description>
+        <!-- 上面覆盖了诡异的纹路，扭曲仿若蛇舌，隐隐还有眼球连接在其上 -->
+        <description>It is covered with strange patterns, twisted like a snake's tongue, and there are faint
+            eyeballs connected to it.</description>
         <defaultInstallPart>Tongue</defaultInstallPart>
         <tags>
             <li>NzRI_ZhengDe_BodyPart</li>
@@ -73,7 +76,7 @@
         <defName>NzRI_Zd_HypertrophyLiver</defName>
         <label>hypertrophy liver</label>
         <labelNoun>an strange tongue</labelNoun>
-        <!-- TODO -->
+        <!-- 时不时传来隐隐的胀痛 -->
         <description>#开发中</description>
         <defaultInstallPart>Liver</defaultInstallPart>
         <tags>
@@ -105,7 +108,8 @@
         <defName>NzRI_Zd_AbscessArm</defName>
         <label>abscess arm</label>
         <labelNoun>an abscess arm</labelNoun>
-        <description>#</description>
+        <!-- 你的手臂上面覆盖着脓疱，其他部分也呈现半腐烂状态 -->
+        <description>There are pustules on your arm, and other parts are also in a semi-rotten state.</description>
         <defaultInstallPart>Shoulder</defaultInstallPart>
         <tags>
             <li>NzRI_ZhengDe_BodyPart</li>
@@ -159,8 +163,9 @@
         <defName>NzRI_Zd_CoiledArm</defName>
         <label>coiled arms</label>
         <labelNoun>an vajra arm</labelNoun>
-        <!-- 一条真正的触须，在坚硬和柔软之间快速变动着 -->
-        <description>#</description>
+        <!-- 一条真正的触须，在坚硬和柔软之间快速变动着，\n\n在'大傩'以外的世界，似乎司命'五智如来'的回应被某种可怕的东西截取了 -->
+        <description>A real tentacle, quickly moving between hardness and softness, it seems that the response of
+            the 'Five Wisdom Tathagatas' to the 'DaNuo' has been intercepted by something terrible.</description>
         <defaultInstallPart>Shoulder</defaultInstallPart>
         <tags>
             <li>NzRI_ZhengDe_BodyPart</li>
@@ -242,8 +247,10 @@
         <defName>NzRI_Zd_WitheredLeg</defName>
         <label>withered leg</label>
         <labelNoun>an withered leg</labelNoun>
-        <!-- 这条腿黑瘦枯干，却格外结实有力 -->
-        <description>One of the legs is withered, but it is particularly strong and powerful.</description>
+        <!-- 这条腿黑瘦枯干，却格外结实有力，上面覆满了丑陋的疤痕和螺纹，还散发出腐肉般的臭味，还有一种奇异的兼具有机物与金属的特性的纤维物质点缀其中 -->
+        <description>This leg is black, thin, and withered, but it is particularly strong and powerful. It is covered
+            with ugly scars and wrinkles, and it emits a stench of rotten flesh. There is also a strange fiber
+            material with both organic and metallic properties.</description>
         <defaultInstallPart>Leg</defaultInstallPart>
         <tags>
             <li>NzRI_ZhengDe_BodyPart</li>

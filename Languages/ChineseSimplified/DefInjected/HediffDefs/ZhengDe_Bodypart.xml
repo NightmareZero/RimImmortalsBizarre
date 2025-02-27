@@ -55,5 +55,32 @@
     <Zd_LotusLeg.description>花开见佛，步步生莲。\n\n 附加能力：梵界</Zd_LotusLeg.description>
 
     <!-- 舍身 -->
+    <NzRI_Zd_CrimsonEyes.label>猩红眼</NzRI_Zd_CrimsonEyes.label>
+    <NzRI_Zd_CrimsonEyes.labelNoun>猩红眼</NzRI_Zd_CrimsonEyes.labelNoun>
+    <NzRI_Zd_CrimsonEyes.description>闪烁着猩红的光芒，这与你在那座古怪的巨石上看到的条纹几乎一致</NzRI_Zd_CrimsonEyes.description>
+
+    <NzRI_Zd_StrangeTongue.label>怪异舌</NzRI_Zd_StrangeTongue.label>
+    <NzRI_Zd_StrangeTongue.labelNoun>怪异舌</NzRI_Zd_StrangeTongue.labelNoun>
+    <NzRI_Zd_StrangeTongue.description>上面覆盖了诡异的纹路，扭曲仿若蛇舌，隐隐还有眼球连接在其上</NzRI_Zd_StrangeTongue.description>
+
+    <NzRI_Zd_HypertrophyLiver.label>增生肝</NzRI_Zd_HypertrophyLiver.label>
+    <NzRI_Zd_HypertrophyLiver.labelNoun>增生肝</NzRI_Zd_HypertrophyLiver.labelNoun>
+    <NzRI_Zd_HypertrophyLiver.description>时不时传来隐隐的胀痛</NzRI_Zd_HypertrophyLiver.description>
+
+    <NzRI_Zd_AbscessArm.label>脓疮臂</NzRI_Zd_AbscessArm.label>
+    <NzRI_Zd_AbscessArm.labelNoun>脓疮臂</NzRI_Zd_AbscessArm.labelNoun>
+    <NzRI_Zd_AbscessArm.description>你的手臂上面覆盖着脓疱，其他部分也呈现半腐烂状态，打击生物目标，会让目标感到恶心</NzRI_Zd_AbscessArm.description>
+
+    <NzRI_Zd_CoiledArm.label>盘卷臂</NzRI_Zd_CoiledArm.label>
+    <NzRI_Zd_CoiledArm.labelNoun>盘卷臂</NzRI_Zd_CoiledArm.labelNoun>
+    <NzRI_Zd_CoiledArm.description>一条真正的触须，在坚硬和柔软之间快速变动着，\n\n在'大傩'以外的世界，似乎司命'五智如来'的回应被某种可怕的东西截取了</NzRI_Zd_CoiledArm.description>
+
+    <NzRI_Zd_TwistedLeg.label>扭结腿</NzRI_Zd_TwistedLeg.label>
+    <NzRI_Zd_TwistedLeg.labelNoun>扭结腿</NzRI_Zd_TwistedLeg.labelNoun>
+    <NzRI_Zd_TwistedLeg.description>这条腿扭结错乱，几乎没有骨骼，如触须一般，缺格外坚韧灵活</NzRI_Zd_TwistedLeg.description>
+
+    <NzRI_Zd_WitheredLeg.label>枯败腿</NzRI_Zd_WitheredLeg.label>
+    <NzRI_Zd_WitheredLeg.labelNoun>枯败腿</NzRI_Zd_WitheredLeg.labelNoun>
+    <NzRI_Zd_WitheredLeg.description>这条腿黑瘦枯干，却格外结实有力，上面覆满了丑陋的疤痕和螺纹，还散发出腐肉般的臭味，还有一种奇异的兼具有机物与金属的特性的纤维物质点缀其中</NzRI_Zd_WitheredLeg.description>
 
 </LanguageData>
