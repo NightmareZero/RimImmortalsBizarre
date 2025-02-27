@@ -147,8 +147,8 @@
     <AbilityDef ParentName="RI_PsycastBase">
         <defName>NzRI_Zd_TentacleStab</defName>
         <label>tentacle stab</label>
-        <!-- 让触须瞬间变硬，对敌人心脏造成致命一击 -->
-        <description>let the tentacles harden instantly, causing a fatal blow to the enemy's heart</description>
+        <!-- 让触须中的活铁瞬间硬化，对敌人的心脏造成致命一击 -->
+        <description>let the bioferrite in the tentacles harden instantly, causing a fatal blow to the enemy's heart</description>
         <iconPath>Ability/ZdE4</iconPath>
         <cooldownTicksRange>120</cooldownTicksRange>
         <aiCanUse>true</aiCanUse>
@@ -190,8 +190,8 @@
     <AbilityDef ParentName="RI_PsycastBase">
         <defName>NzRI_Zd_TentacleSlash</defName>
         <label>tentacle slash</label>
-        <!-- 使用触须切割目标，造成大量伤害 -->
-        <description>use tentacles to cut the target, causing a lot of damage</description>
+        <!-- 让触须中的活铁瞬间硬化，对范围内的敌人进行一次挥砍 -->
+        <description>let the bioferrite in the tentacles harden instantly, and make a slash on the enemies in the area</description>
         <iconPath>Ability/ZdE3</iconPath>
         <cooldownTicksRange>120</cooldownTicksRange>
         <aiCanUse>true</aiCanUse>

@@ -43,4 +43,15 @@
     <NzRI_Zd_LegSweep.label>扫堂腿</NzRI_Zd_LegSweep.label>
     <NzRI_Zd_LegSweep.description>让你的腿伸展延长，并在周围造成一次切割伤害，由于位置较低，更大概率对敌人的腿部造成伤害,甚至可能会切断它们</NzRI_Zd_LegSweep.description>
     
+    <NzRI_Zd_TerrorScream.label>恐怖嘶吼</NzRI_Zd_TerrorScream.label>
+    <NzRI_Zd_TerrorScream.description>发出一声恐怖的吼叫，恐吓敌人，降低其移动和攻击速度</NzRI_Zd_TerrorScream.description>
+
+    <NzRI_Zd_NightmareGaze.label>噩梦凝视</NzRI_Zd_NightmareGaze.label>
+    <NzRI_Zd_NightmareGaze.description>冰冷的凝视，将扭曲与疯狂注入目标的心灵与处理器，即使是机器都会发疯</NzRI_Zd_NightmareGaze.description>
+
+    <NzRI_Zd_TentacleStab.label>触须突刺</NzRI_Zd_TentacleStab.label>
+    <NzRI_Zd_TentacleStab.description>让触须中的活铁瞬间硬化，对敌人的心脏造成致命一击</NzRI_Zd_TentacleStab.description>
+
+    <NzRI_Zd_TentacleSlash.label>触须斩击</NzRI_Zd_TentacleSlash.label>
+    <NzRI_Zd_TentacleSlash.description>让触须中的活铁瞬间硬化，对范围内的敌人进行一次挥砍</NzRI_Zd_TentacleSlash.description>
 </LanguageData>
