@@ -56,6 +56,7 @@
 		<defName>NzRI_AoJing_Ascend</defName>
 		<label>CangQiang Ascend</label>
 		<hediffClass>NzRimImmortalBizarre.AoJing_Ascend</hediffClass>
+		<duplicationAllowed>false</duplicationAllowed>
 		<description>You're watched by Ba-Hui, your skill power is increased, and your recovery
 			speed is increased.</description>
 		<stages>

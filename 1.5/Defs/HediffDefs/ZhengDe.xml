@@ -4,6 +4,7 @@
     <HediffDef>
         <defName>NzRI_Zd_Fruition</defName>
         <label>Fruition</label>
+        <duplicationAllowed>false</duplicationAllowed>
         <hediffClass>NzRimImmortalBizarre.Zd_Fruition</hediffClass>
         <description>#</description>
         <isBad>false</isBad>
@@ -16,6 +17,7 @@
         <label>Cultivation</label>
         <description>#TODO</description>
         <defaultLabelColor>(0.39,0.68,0.96)</defaultLabelColor>
+        <duplicationAllowed>false</duplicationAllowed>
         <scenarioCanAdd>false</scenarioCanAdd>
         <isBad>false</isBad>
         <hediffClass>NzRimImmortalBizarre.Zd_Cultivation</hediffClass>
@@ -121,6 +123,7 @@
         <label>keen eye</label>
         <description>Opened the keen eye</description>
         <isBad>false</isBad>
+        <duplicationAllowed>false</duplicationAllowed>
         <hediffClass>HediffWithComps</hediffClass>
         <comps>
             <li Class="HediffCompProperties_DisappearsOnDeath" />
@@ -149,6 +152,7 @@
     <HediffDef>
         <defName>NzRI_Zd_RecognizeTruth</defName>
         <label>recognize truth</label>
+        <duplicationAllowed>false</duplicationAllowed>
         <description>Recognize the truth</description>
         <isBad>false</isBad>
         <hediffClass>HediffWithComps</hediffClass>

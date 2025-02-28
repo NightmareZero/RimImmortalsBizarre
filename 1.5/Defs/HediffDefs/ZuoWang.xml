@@ -5,6 +5,7 @@
         <defName>NzRI_Zw_Fg</defName>
         <label>FeiGang</label>
         <hediffClass>NzRimImmortalBizarre.Zw_Fg</hediffClass>
+        <duplicationAllowed>false</duplicationAllowed>
         <description>#</description>
         <minSeverity>0</minSeverity>
         <maxSeverity>3000</maxSeverity>
