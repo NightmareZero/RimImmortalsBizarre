@@ -129,7 +129,7 @@
                 <showRemainingTime>true</showRemainingTime>
                 <canUseDecimalsShortForm>true</canUseDecimalsShortForm>
             </li>
-            <li Class="HediffCompProperties_GiveHediffsInRange">
+            <li Class="NzRimImmortalBizarre.HediffCompProperties_GiveHediffsInRange1">
                 <range>9.9</range>
                 <mote>Mote_WorkCommand</mote>
                 <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
@@ -140,6 +140,7 @@
                     <canTargetHumans>true</canTargetHumans>
                     <onlyTargetColonists>false</onlyTargetColonists>
                 </targetingParameters>
+                <onlyPawnsInSameFaction>False</onlyPawnsInSameFaction>
                 <hediff>NzRI_Zd_RecognizeTruth</hediff>
             </li>
         </comps>
