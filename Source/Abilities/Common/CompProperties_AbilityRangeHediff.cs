@@ -21,6 +21,8 @@ namespace NzRimImmortalBizarre
         // 特效mote(每个人)
         public ThingDef effectMote;
 
+        public TargetingParameters targetParams;
+
         public CompProperties_AbilityRangeHediff()
         {
             compClass = typeof(CompAbilityEffect_RangeHediff);

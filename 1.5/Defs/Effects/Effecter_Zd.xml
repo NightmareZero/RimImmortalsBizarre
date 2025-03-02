@@ -10,7 +10,7 @@
                 <fleckDef>NzRI_Fl_ZenSound2_1</fleckDef>
                 <chancePerTick>1.0</chancePerTick>
                 <speed>0.0</speed>
-                <scale>0.1~4.0</scale> <!-- 初始大小为0.1，最大大小为2.0 -->
+                <scale>0.1~10.0</scale> <!-- 初始大小为0.1，最大大小为2.0 -->
                 <angle>0</angle>
                 <positionLerpFactor>1.0</positionLerpFactor>
                 <fleckUsesAngleForVelocity>false</fleckUsesAngleForVelocity>
@@ -24,10 +24,10 @@
         <fadeInTime>0.5</fadeInTime>
         <solidTime>1.0</solidTime>
         <fadeOutTime>0.5</fadeOutTime>
-        <growthRate>1.0</growthRate> <!-- 设置增长率 -->
+        <growthRate>2.0</growthRate> <!-- 设置增长率 -->
         <graphicData>
             <graphicClass>Graphic_FleckPulse</graphicClass>
-            <shaderType>TransparentPostLight</shaderType>
+            <shaderType>MoteGlow</shaderType>
             <texPath>Things/Mote/ZenSoundMote1</texPath>
             <drawSize>1</drawSize>
         </graphicData>

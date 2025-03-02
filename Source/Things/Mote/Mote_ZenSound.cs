@@ -70,7 +70,7 @@ namespace NzRimImmortalBizarre
             {
                 this.effecter.EffectTick(new TargetInfo(this.Position, this.Map), new TargetInfo(this.Position, this.Map));
             }
-            if (this.AgeSecs >= 0.4f && this.effecter == null)
+            if (this.AgeSecs >= 0.3f && this.effecter == null)
             {
                 Log.Message("Mote_ZenSound.Tick: " + this.AgeSecs);
                 effecter = effecterDef.Spawn();

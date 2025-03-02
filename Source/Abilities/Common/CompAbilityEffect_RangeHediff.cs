@@ -18,6 +18,15 @@ namespace NzRimImmortalBizarre
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
+            if (Props.hediffDef == null)
+            {
+                Log.Error("CompAbilityEffect_RangeHediff: hediffDef is null");
+                return;
+            }
+            if (Props.targetParams == null)
+            {
+                Props.targetParams = parent.verb.targetParams;
+            }
             try
             {
                 var affectedPawns = GetAffectedPawns(target.Cell, Caster.Map, Props.radius);
@@ -25,22 +34,29 @@ namespace NzRimImmortalBizarre
                 {
                     if (pawn != null)
                     {
-                        if (Props.del)
+                        // 检查是否是合法的目标
+                        if (canTarget(pawn))
                         {
-                            var hediff = pawn.health.hediffSet.GetFirstHediffOfDef(Props.hediffDef);
-                            if (hediff != null)
+
+
+                            if (Props.del)
                             {
-                                pawn.health.RemoveHediff(hediff);
+                                var hediff = pawn.health.hediffSet.GetFirstHediffOfDef(Props.hediffDef);
+                                if (hediff != null)
+                                {
+                                    pawn.health.RemoveHediff(hediff);
+                                }
                             }
-                        }
-                        else
-                        {
-                            var hediff = HediffMaker.MakeHediff(Props.hediffDef, pawn);
-                            pawn.health.AddHediff(hediff);
-                        }
-                        if (Props.effectMote != null)
-                        {
-                            MoteMaker.MakeAttachedOverlay(pawn, Props.effectMote, Vector3.zero, 1f, -1f);
+                            else
+                            {
+                                var hediff = HediffMaker.MakeHediff(Props.hediffDef, pawn);
+                                pawn.health.AddHediff(hediff);
+                            }
+
+                            if (Props.effectMote != null)
+                            {
+                                MoteMaker.MakeAttachedOverlay(pawn, Props.effectMote, Vector3.zero, 1f, -1f);
+                            }
                         }
                     }
                 }
@@ -53,7 +69,7 @@ namespace NzRimImmortalBizarre
 
         public override void DrawEffectPreview(LocalTargetInfo target)
         {
-            GenDraw.DrawFieldEdges(getAffectedCells(target.Cell,Caster.Map,Props.radius), Color.red);
+            GenDraw.DrawFieldEdges(getAffectedCells(target.Cell, Caster.Map, Props.radius), Color.red);
         }
 
         public override bool CanApplyOn(LocalTargetInfo target, LocalTargetInfo dest)
@@ -61,7 +77,7 @@ namespace NzRimImmortalBizarre
             return target.Cell.IsValid && target.Cell.InBounds(Caster.Map);
         }
 
-        private List<IntVec3> getAffectedCells(IntVec3 center,Map map, float range)
+        private List<IntVec3> getAffectedCells(IntVec3 center, Map map, float range)
         {
             var cells = GenRadial.RadialCellsAround(center, range, true).ToList();
             cells.RemoveAll(c => !c.InBounds(map));
@@ -88,6 +104,20 @@ namespace NzRimImmortalBizarre
         {
             // 根据Verb的TargetParameters来判断是否是合法的目标
             return Verb.targetParams.CanTarget(pawn);
+        }
+
+        private bool canTarget(Pawn pawn)
+        {
+
+            var ok = Props.targetParams.CanTarget(pawn);
+            if (ok && Props.targetParams.canTargetSelf)
+            { 
+                return true;
+            }
+            else
+            {
+                return pawn != Caster;
+            }
         }
     }
 }
