@@ -13,6 +13,10 @@ namespace NzRimImmortalBizarre
         // MoteAttached
         private int range { get; set; } = 5;
 
+        EffecterDef effecterDef = DefDatabase<EffecterDef>.GetNamed("NzRI_Ef_ZenSound2");
+
+        private Effecter effecter;
+
         private void invoke()
         {
             if (this.isFinished)
@@ -62,12 +66,19 @@ namespace NzRimImmortalBizarre
             {
                 return;
             }
+            if (this.AgeSecs >= 0.4f && this.effecter == null)
+            {
+                Log.Message("Mote_ZenSound.Tick: " + this.AgeSecs);
+                effecter = effecterDef.Spawn();
+                effecter.Trigger(new TargetInfo(this.Position, this.Map), new TargetInfo(this.Position, this.Map));
+                // effecter.Trigger(this.Position, target);
+            }
 
             // 在第1.5秒执行效果
             if (this.AgeSecs >= 1.5f)
             {
                 // // 播放音效
-                // SoundDefOf.ZenSound.PlayOneShot(new TargetInfo(this.Position, this.Map, false));
+                // SoundDefOf1.ZenSound.PlayOneShot(new TargetInfo(this.Position, this.Map, false));
                 try
                 {
                     this.invoke();
@@ -85,5 +96,14 @@ namespace NzRimImmortalBizarre
             }
 
         }
+
+        public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
+        {
+            base.DeSpawn(mode);
+
+            this.effecter.Cleanup();
+
+        }
+
     }
 }
