@@ -10,7 +10,7 @@
                 <fleckDef>NzRI_Fl_ZenSound2_1</fleckDef>
                 <chancePerTick>1.0</chancePerTick>
                 <speed>0.0</speed>
-                <scale>0.1~10.0</scale> <!-- 初始大小为0.1，最大大小为2.0 -->
+                <scale>0.1~12.0</scale> <!-- 初始大小为0.1，最大大小为2.0 -->
                 <angle>0</angle>
                 <positionLerpFactor>1.0</positionLerpFactor>
                 <fleckUsesAngleForVelocity>false</fleckUsesAngleForVelocity>
@@ -18,7 +18,7 @@
         </children>
     </EffecterDef>
 
-    <FleckDef ParentName="FleckBase_Thrown">
+    <FleckDef Class="RI_Starch.RI_ThingDef.RI_FleckDef"  ParentName="FleckBase_Thrown">
         <defName>NzRI_Fl_ZenSound2_1</defName>
         <altitudeLayer>MoteOverhead</altitudeLayer>
         <fadeInTime>0.5</fadeInTime>
@@ -31,5 +31,7 @@
             <texPath>Things/Mote/ZenSoundMote1</texPath>
             <drawSize>1</drawSize>
         </graphicData>
+        <RotationAngle>90~90</RotationAngle>
+		<VelocityAngle>0~360</VelocityAngle>
     </FleckDef>
 </Defs>
