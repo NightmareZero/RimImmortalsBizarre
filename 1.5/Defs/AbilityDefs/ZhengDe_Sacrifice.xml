@@ -16,6 +16,12 @@
             <range>16.9</range>
             <warmupTime>0.5</warmupTime>
             <soundCast>Longjump_Jump</soundCast>
+            <targetParams>
+                <canTargetAnimals>True</canTargetAnimals>
+                <canTargetHumans>True</canTargetHumans>
+                <canTargetMechs>True</canTargetMechs>
+                <canTargetMutants>True</canTargetMutants>
+            </targetParams>
             <!-- <soundCast>PiercingSpine_Launch</soundCast> -->
         </verbProperties>
         <comps>

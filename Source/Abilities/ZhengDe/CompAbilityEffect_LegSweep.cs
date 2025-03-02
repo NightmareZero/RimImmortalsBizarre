@@ -17,9 +17,25 @@ namespace NzRimImmortalBizarre
 
         private Pawn Caster => parent.pawn;
 
+        public void playEffect()
+        {
+            // 生成特效
+            Mote_SpinningLine mote = (Mote_SpinningLine)ThingMaker.MakeThing(ThingDef.Named("NzRI_Mote_LegSweep"), null);
+            if (mote != null)
+            {
+                mote.caster = Caster;
+                mote.range = Props.radius;
+                mote.speed = 3f;
+                mote.lineSize = 2;
+                GenSpawn.Spawn(mote, Caster.Position, Caster.Map);
+            }
+        }
+
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
+            playEffect();
+
             var affectedCells = AffectedCells(Caster);
 
             var damage = Props.damage;

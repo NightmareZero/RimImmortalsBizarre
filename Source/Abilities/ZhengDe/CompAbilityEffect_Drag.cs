@@ -36,6 +36,8 @@ namespace NzRimImmortalBizarre
                 mote.target = target.Pawn;
                 mote.Scale = 0.1f;
                 mote.rotationRate = 0f;
+                
+
                 GenSpawn.Spawn(mote, target.Pawn.Position, caster.Map);
             }
 
