@@ -66,6 +66,10 @@ namespace NzRimImmortalBizarre
             {
                 return;
             }
+            if (this.effecter != null)
+            {
+                this.effecter.EffectTick(new TargetInfo(this.Position, this.Map), new TargetInfo(this.Position, this.Map));
+            }
             if (this.AgeSecs >= 0.4f && this.effecter == null)
             {
                 Log.Message("Mote_ZenSound.Tick: " + this.AgeSecs);
