@@ -6,8 +6,8 @@
         <label>drag</label>
         <!-- 让腿部扭曲变长，拖拽一个人到自己面前 -->
         <description>let the legs twist and elongate, dragging a person in front of you</description>
-        <iconPath>Ability/Base/LG</iconPath>
-        <cooldownTicksRange>60</cooldownTicksRange>
+        <iconPath>Ability/ZdS1</iconPath>
+        <cooldownTicksRange>120</cooldownTicksRange>
         <!-- <category>TODO</category> -->
         <displayOrder>200</displayOrder>
         <aiCanUse>true</aiCanUse>
@@ -33,7 +33,7 @@
         <defName>NzRI_Zd_LegSweep</defName>
         <label>leg sweep</label>
         <description>#</description>
-        <iconPath>Ability/Base/LG</iconPath>
+        <iconPath>Ability/ZdS2</iconPath>
         <cooldownTicksRange>1000</cooldownTicksRange>
         <aiCanUse>true</aiCanUse>
         <displayOrder>300</displayOrder>
@@ -73,7 +73,7 @@
         <label>terror scream</label>
         <!-- 发出一声恐怖的吼叫，恐吓敌人，降低其移动和攻击速度 -->
         <description>emit a terrifying scream to scare enemies, reducing their movement and attack speed</description>
-        <iconPath>Ability/Base/LG</iconPath>
+        <iconPath>Ability/ZdS3</iconPath>
         <cooldownTicksRange>1000</cooldownTicksRange>
         <aiCanUse>true</aiCanUse>
         <displayOrder>300</displayOrder>
@@ -111,7 +111,7 @@
         <label>nighmare gaze</label>
         <!-- 冰冷的凝视，将扭曲与疯狂注入目标的心灵与处理器，即使是机器都会发疯 -->
         <description>the cold gaze that injects distortion and madness into the target's mind and processor, even machines will go crazy</description>
-        <iconPath>Ability/Base/LG</iconPath>
+        <iconPath>Ability/ZdS4</iconPath>
         <cooldownTicksRange>1000</cooldownTicksRange>
         <aiCanUse>true</aiCanUse>
         <displayOrder>300</displayOrder>
@@ -149,7 +149,7 @@
         <label>tentacle stab</label>
         <!-- 让触须中的活铁瞬间硬化，对敌人的心脏造成致命一击 -->
         <description>let the bioferrite in the tentacles harden instantly, causing a fatal blow to the enemy's heart</description>
-        <iconPath>Ability/ZdE4</iconPath>
+        <iconPath>Ability/ZdS5</iconPath>
         <cooldownTicksRange>120</cooldownTicksRange>
         <aiCanUse>true</aiCanUse>
         <ai_IsIncendiary>true</ai_IsIncendiary>
@@ -192,7 +192,7 @@
         <label>tentacle slash</label>
         <!-- 让触须中的活铁瞬间硬化，对范围内的敌人进行一次挥砍 -->
         <description>let the bioferrite in the tentacles harden instantly, and make a slash on the enemies in the area</description>
-        <iconPath>Ability/ZdE3</iconPath>
+        <iconPath>Ability/ZdS6</iconPath>
         <cooldownTicksRange>120</cooldownTicksRange>
         <aiCanUse>true</aiCanUse>
         <ai_IsIncendiary>true</ai_IsIncendiary>

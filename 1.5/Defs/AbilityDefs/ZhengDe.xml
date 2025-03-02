@@ -66,7 +66,7 @@
     <description>Imitate the ancestors, cut meat to feed the eagle\n
       Supplement the target's fullness and rest, while enhancing the target's healing speed.\n\n
       it will make you closer to the "Sacrifice" route</description>
-    <iconPath>Ability/AoJing4</iconPath>
+    <iconPath>Ability/Zd3</iconPath>
     <stunTargetWhileCasting>true</stunTargetWhileCasting>
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
