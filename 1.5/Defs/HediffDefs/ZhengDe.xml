@@ -168,6 +168,9 @@
                     <li>HoraxianInvisibility</li>
                     <li>PsychicInvisibility</li>
                 </hediffs>
+                <comps>
+                    <li>HediffCompProperties_Invisibility</li>
+                </comps>
                 <addBack>true</addBack>
             </li>
         </comps>

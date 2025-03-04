@@ -17,10 +17,11 @@ namespace NzRimImmortalBizarre
     public class Comp_StashHediff : HediffCompProperties
     {
         // 处理的hediff列表
-        // !! 请注意会触发 PostAdd和PostRemoved, 提前检查hediff有没有特殊的代码
         public List<HediffDef> hediffs = new List<HediffDef>();
-
-
+        // 处理的comp列表
+        public List<HediffComp> comps = new List<HediffComp>();
+        // 是否使用or关系
+        // public bool or = true;
 
         // 当结束时是否加回来
         public bool addBack = false;
@@ -36,6 +37,8 @@ namespace NzRimImmortalBizarre
         public Comp_StashHediff Props => (Comp_StashHediff)props;
 
         public Dictionary<string, HediffDef> hediffCache = new Dictionary<string, HediffDef>();
+
+        public Dictionary<Type, HediffComp> compCache = new Dictionary<Type, HediffComp>();
 
         public List<Hediff> stashed = new List<Hediff>();
 
@@ -54,17 +57,30 @@ namespace NzRimImmortalBizarre
                     {
                         hediffCache[hediffDef.defName] = hediffDef;
                     }
+                    foreach (var comp in Props.comps)
+                    {
+                        compCache[comp.GetType()] = comp;
+                    }
                 }
 
                 // 遍历，移除并添加到 stashed
                 if (pawn?.health?.hediffSet?.hediffs != null)
                 {
-
                     foreach (var hediff in pawn.health.hediffSet.hediffs)
                     {
                         if (hediffCache.ContainsKey(hediff.def.defName))
                         {
                             stashed.Add(hediff);
+                        } else if (hediff is HediffWithComps hediffWithComps)
+                        {
+                            foreach (var comp in hediffWithComps.comps)
+                            {
+                                if (compCache.ContainsKey(comp.GetType()))
+                                {
+                                    stashed.Add(hediff);
+                                    break;
+                                }
+                            }
                         }
                     }
 
