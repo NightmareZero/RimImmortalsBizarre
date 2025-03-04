@@ -19,7 +19,7 @@ namespace NzRimImmortalBizarre
         // 处理的hediff列表
         public List<HediffDef> hediffs = new List<HediffDef>();
         // 处理的comp列表
-        public List<HediffComp> comps = new List<HediffComp>();
+        public List<HediffCompProperties> comps = new List<HediffCompProperties>();
         // 是否使用or关系
         // public bool or = true;
 
@@ -38,7 +38,7 @@ namespace NzRimImmortalBizarre
 
         public Dictionary<string, HediffDef> hediffCache = new Dictionary<string, HediffDef>();
 
-        public Dictionary<Type, HediffComp> compCache = new Dictionary<Type, HediffComp>();
+        public Dictionary<Type, int> compCache = new Dictionary<Type, int>();
 
         public List<Hediff> stashed = new List<Hediff>();
 
@@ -59,7 +59,7 @@ namespace NzRimImmortalBizarre
                     }
                     foreach (var comp in Props.comps)
                     {
-                        compCache[comp.GetType()] = comp;
+                        compCache[comp.compClass] = 1;
                     }
                 }
 
