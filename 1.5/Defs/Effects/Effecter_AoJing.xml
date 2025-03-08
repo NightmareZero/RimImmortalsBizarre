@@ -61,4 +61,36 @@
       </li>
     </children>
   </EffecterDef>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>ArrowSpew_A1</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.2</fadeInTime>
+    <solidTime>0.4</solidTime>
+    <fadeOutTime>0.2</fadeOutTime>
+    <rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+    <rotateTowardsMoveDirectionExtraAngle>-90</rotateTowardsMoveDirectionExtraAngle>
+    <graphicData>
+      <graphicClass>Graphic_FleckPulse</graphicClass>
+      <shaderType>GlowAnimated</shaderType>
+      <texPath>Things/Mote/BloodSplash</texPath>
+      <shaderParameters>
+        <_NumFrames>5</_NumFrames>
+        <_FramesPerSec>7</_FramesPerSec>
+      </shaderParameters>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+  </FleckDef>
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>ArrowSpray_A1</defName>
+    <graphicData>
+      <texPath>Things/Mote/BloodSplash</texPath>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.04</fadeInTime>
+    <solidTime>0.2</solidTime>
+    <fadeOutTime>1</fadeOutTime>
+    <growthRate>0.9</growthRate>
+  </FleckDef>
 </Defs>
