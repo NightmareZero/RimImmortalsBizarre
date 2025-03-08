@@ -185,12 +185,13 @@
     <aiCanUse>true</aiCanUse>
     <ai_IsIncendiary>true</ai_IsIncendiary>
     <sendMessageOnCooldownComplete>false</sendMessageOnCooldownComplete>
+    <!-- TODO 修改声音 -->
     <!-- <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound> -->
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <range>13.9</range>
       <warmupTime>1</warmupTime>
-      <soundCast>FireSpew_Resolve</soundCast>
+      <!-- <soundCast>FireSpew_Resolve</soundCast> -->
       <targetParams>
         <canTargetLocations>true</canTargetLocations>
       </targetParams>
@@ -209,7 +210,7 @@
         <damageType>Blunt</damageType>
         <damMultiplierStat>NzRI_ZhengDePowerMultiplier</damMultiplierStat>
         <!-- TODO 修改为专有特效 -->
-        <effecterDef>Acid_Spew</effecterDef>
+        <effecterDef>NzRI_Ef_DivineLightKick</effecterDef>
         <stunTime>6</stunTime>
         <canHitFilledCells>true</canHitFilledCells>
       </li>
