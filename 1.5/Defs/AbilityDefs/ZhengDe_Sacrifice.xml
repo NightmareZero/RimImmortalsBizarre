@@ -247,7 +247,7 @@
                 <damageType>Cut</damageType>
                 <damMultiplierStat>NzRI_ZhengDePowerMultiplier</damMultiplierStat>
                 <!-- TODO 修改为专有特效 -->
-                <effecterDef>Acid_Spew</effecterDef>
+                <effecterDef>NzRI_Ef_TentacleSlash</effecterDef>
                 <canHitFilledCells>true</canHitFilledCells>
             </li>
         </comps>

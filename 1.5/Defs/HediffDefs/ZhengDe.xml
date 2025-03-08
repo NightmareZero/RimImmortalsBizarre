@@ -132,7 +132,8 @@
                 <showRemainingTime>true</showRemainingTime>
                 <canUseDecimalsShortForm>true</canUseDecimalsShortForm>
             </li>
-            <li Class="NzRimImmortalBizarre.HediffCompProperties_GiveHediffsInRange1">
+            <li Class="NzRimImmortalBizarre.HediffCompProperties_GiveHediffsInRangeEx">
+            <!-- <li Class="HediffCompProperties_GiveHediffsInRange"> -->
                 <range>9.9</range>
                 <mote>Mote_WorkCommand</mote>
                 <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
@@ -169,7 +170,7 @@
                     <li>PsychicInvisibility</li>
                 </hediffs>
                 <comps>
-                    <li>HediffCompProperties_Invisibility</li>
+                    <li Class="HediffCompProperties_Invisibility"></li>
                 </comps>
                 <addBack>true</addBack>
             </li>

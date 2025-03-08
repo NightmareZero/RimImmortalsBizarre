@@ -6,7 +6,7 @@ using UnityEngine;
 namespace NzRimImmortalBizarre
 {
 
-    public class HediffCompProperties_GiveHediffsInRange1 : HediffCompProperties
+    public class HediffCompProperties_GiveHediffsInRangeEx : HediffCompProperties
     {
         public float range;
 
@@ -22,19 +22,19 @@ namespace NzRimImmortalBizarre
 
         public bool onlyPawnsInSameFaction = true;
 
-        public HediffCompProperties_GiveHediffsInRange1()
+        public HediffCompProperties_GiveHediffsInRangeEx()
         {
-            compClass = typeof(HediffComp_GiveHediffsInRange1);
+            compClass = typeof(HediffComp_GiveHediffsInRangeEx);
         }
     }
 
-    public class HediffComp_GiveHediffsInRange1 : HediffComp
+    public class HediffComp_GiveHediffsInRangeEx : HediffComp
     {
         // 自原版 HediffComp_GiveHediffsInRange 复制
         // 修改了对非 Humanlike 的支持
         private Mote mote;
 
-        public HediffCompProperties_GiveHediffsInRange Props => (HediffCompProperties_GiveHediffsInRange)props;
+        public HediffCompProperties_GiveHediffsInRangeEx Props => (HediffCompProperties_GiveHediffsInRangeEx)props;
 
         public override void CompPostTick(ref float severityAdjustment)
         {

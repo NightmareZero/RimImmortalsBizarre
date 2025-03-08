@@ -18,7 +18,7 @@
         </children>
     </EffecterDef>
 
-    <FleckDef Class="RI_Starch.RI_ThingDef.RI_FleckDef"  ParentName="FleckBase_Thrown">
+    <FleckDef Class="RI_Starch.RI_ThingDef.RI_FleckDef" ParentName="FleckBase_Thrown">
         <defName>NzRI_Fl_ZenSound2_1</defName>
         <altitudeLayer>MoteOverhead</altitudeLayer>
         <fadeInTime>0.5</fadeInTime>
@@ -32,6 +32,39 @@
             <drawSize>1</drawSize>
         </graphicData>
         <RotationAngle>90~90</RotationAngle>
-		<VelocityAngle>0~360</VelocityAngle>
+        <VelocityAngle>0~360</VelocityAngle>
     </FleckDef>
+
+    <EffecterDef>
+    <defName>NzRI_Ef_TentacleSlash</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.0</positionRadius>
+        <fleckDef>NzRI_Fl_TentacleSlash</fleckDef>
+        <burstCount>1</burstCount>
+        <speed>0.0</speed>
+        <scale>1.0~2.0</scale> <!-- 初始大小为1.0，最大大小为2.0 -->
+        <angle>0</angle>
+        <positionLerpFactor>1.0</positionLerpFactor>
+        <fleckUsesAngleForVelocity>false</fleckUsesAngleForVelocity>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>NzRI_Fl_TentacleSlash</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.1</fadeInTime>
+    <solidTime>0.3</solidTime>
+    <fadeOutTime>0.1</fadeOutTime>
+    <growthRate>1.0</growthRate> <!-- 设置增长率 -->
+    <graphicData>
+      <graphicClass>Graphic_FleckPulse</graphicClass>
+      <shaderType>TransparentPostLight</shaderType> <!-- 使用支持透明度的着色器 -->
+      <texPath>Things/Mote/TentacleSlash</texPath> <!-- 替换为你的纹理路径 -->
+      <drawSize>1</drawSize>
+    </graphicData>
+  </FleckDef>
+
 </Defs>
