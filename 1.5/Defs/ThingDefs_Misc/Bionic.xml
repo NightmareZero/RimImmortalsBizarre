@@ -11,9 +11,9 @@
         <statBases>
             <Mass>0.3</Mass>
         </statBases>
-        <tradeTags>
-            <!-- <li>ExoticMisc</li> -->
-        </tradeTags>
+		<tradeTags>
+			<li>RI_NoTrade_Tag</li>
+		</tradeTags>
     </ThingDef>
 
     <!-- 仿生体基础 -->
