@@ -61,8 +61,8 @@
     <growthRate>1.0</growthRate> <!-- 设置增长率 -->
     <graphicData>
       <graphicClass>Graphic_FleckPulse</graphicClass>
-      <shaderType>TransparentPostLight</shaderType> <!-- 使用支持透明度的着色器 -->
-      <texPath>Things/Mote/DivineLightKick</texPath> <!-- 替换为你的纹理路径 -->
+      <shaderType>MoteGlow</shaderType> <!-- 使用支持透明度的着色器 -->
+      <texPath>Things/Mote/Ability/ZdE2</texPath> <!-- 替换为你的纹理路径 -->
       <drawSize>5</drawSize>
     </graphicData>
     <rotateTowardsMoveDirection>true</rotateTowardsMoveDirection> <!-- 使其朝向移动方向旋转 -->
@@ -94,8 +94,8 @@
       <growthRate>1.0</growthRate> <!-- 设置增长率 -->
       <graphicData>
         <graphicClass>Graphic_FleckPulse</graphicClass>
-        <shaderType>TransparentPostLight</shaderType> <!-- 使用支持透明度的着色器 -->
-        <texPath>Things/Mote/TentacleSlash</texPath> <!-- 替换为你的纹理路径 -->
+        <shaderType>MoteGlow</shaderType> <!-- 使用支持透明度的着色器 -->
+        <texPath>Things/Mote/Ability/ZdS2</texPath> <!-- 替换为你的纹理路径 -->
         <drawSize>5</drawSize>
       </graphicData>
       <rotateTowardsMoveDirection>true</rotateTowardsMoveDirection> <!-- 使其朝向移动方向旋转 -->
