@@ -15,7 +15,7 @@
             <verbClass>Verb_CastAbility</verbClass>
             <range>16.9</range>
             <warmupTime>0.5</warmupTime>
-            <soundCast>Longjump_Jump</soundCast>
+            <soundCast>NzRI_Jump</soundCast>
             <targetParams>
                 <canTargetAnimals>True</canTargetAnimals>
                 <canTargetHumans>True</canTargetHumans>
@@ -25,9 +25,9 @@
             <!-- <soundCast>PiercingSpine_Launch</soundCast> -->
         </verbProperties>
         <comps>
-            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
-                <rEnergy>-1</rEnergy>
-            </li> -->
+            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+                <rEnergy>-30</rEnergy>
+            </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Drag">
             </li>
         </comps>
@@ -44,7 +44,7 @@
         <aiCanUse>true</aiCanUse>
         <displayOrder>300</displayOrder>
         <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
-        <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
+        <warmupStartSound>NzRI_CutMeat</warmupStartSound>
         <targetRequired>False</targetRequired>
         <verbProperties>
             <violent>false</violent>
@@ -56,9 +56,9 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
-                <rEnergy>-1</rEnergy>
-            </li> -->        
+            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+                <rEnergy>-60</rEnergy>
+            </li>
             <li Class="NzRimImmortalBizarre.CompProperties_LegSweep">
                 <radius>3</radius>
                 <damage>37</damage>
@@ -85,7 +85,7 @@
         <displayOrder>300</displayOrder>
         <sendMessageOnCooldownComplete>false</sendMessageOnCooldownComplete>
         <!-- TODO 替换为吼叫 -->
-        <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
+        <warmupStartSound>NzRI_Scream</warmupStartSound>
         <targetRequired>True</targetRequired>
         <verbProperties>
             <violent>True</violent>
@@ -101,9 +101,9 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
-                <rEnergy>-1</rEnergy>
-            </li> -->        
+            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+                <rEnergy>-120</rEnergy>
+            </li>        
             <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeHediff">
                 <radius>6</radius>
                 <hediffDef>NzRI_Zd_He_TerrorScream</hediffDef>
@@ -131,7 +131,7 @@
         <displayOrder>300</displayOrder>
         <sendMessageOnCooldownComplete>false</sendMessageOnCooldownComplete>
         <!-- TODO 换成别的 -->
-        <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
+        <warmupStartSound>NzRI_TerrifyingGaze</warmupStartSound>
         <targetRequired>True</targetRequired>
         <verbProperties>
             <violent>True</violent>
@@ -148,9 +148,9 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
-                <rEnergy>-1</rEnergy>
-            </li> -->        
+            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+                <rEnergy>-110</rEnergy>
+            </li>        
             <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeHediff">
                 <radius>4</radius>
                 <hediffDef>NzRI_Zd_He_NightmareGaze</hediffDef>
@@ -186,7 +186,7 @@
         <verbClass>Verb_CastAbilityTouch</verbClass>
         <range>-1</range>
         <warmupTime>0</warmupTime>
-        <!-- <soundCast>FireSpew_Resolve</soundCast> -->
+        <soundCast>NzRI_CutMeat</soundCast>
         <targetParams>
             <canTargetLocations>false</canTargetLocations>
             <canTargetMechs>true</canTargetMechs>
@@ -198,7 +198,7 @@
         </statBases>
         <comps>
             <li Class="NzRimImmortalBizarre.CompProperties_ReduceEnergy">
-                <rEnergy>-15</rEnergy>
+                <rEnergy>-60</rEnergy>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Hit">
                 <damageDef>Poke</damageDef>
@@ -227,7 +227,7 @@
             <verbClass>Verb_CastAbility</verbClass>
             <range>4.9</range>
             <warmupTime>1</warmupTime>
-            <soundCast>FireSpew_Resolve</soundCast>
+            <soundCast>NzRI_CutMeat</soundCast>
             <targetParams>
                 <canTargetLocations>true</canTargetLocations>
             </targetParams>
@@ -236,9 +236,9 @@
             <Ability_Duration>60</Ability_Duration>
         </statBases>
         <comps>
-            <!-- <li Class="NzRimImmortalBizarre.CompProperties_ReduceEnergy">
-                <rEnergy>-15</rEnergy>
-            </li> -->
+            <li Class="NzRimImmortalBizarre.CompProperties_ReduceEnergy">
+                <rEnergy>-90</rEnergy>
+            </li>
             <li Class="NzRimImmortalBizarre.CompProperties_AbilitySpew">
                 <compClass>NzRimImmortalBizarre.CompAbilityEffect_TentacleSlash</compClass>
                 <range>4.9</range>

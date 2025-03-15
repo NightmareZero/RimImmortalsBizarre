@@ -23,7 +23,7 @@
     </verbProperties>
     <comps>
       <li Class="NzRimImmortalBizarre.CompProperties_ReduceEnergy">
-        <rEnergy>-15</rEnergy>
+        <rEnergy>-70</rEnergy>
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeExplosion">
         <deviationRange>1</deviationRange>
@@ -67,7 +67,7 @@
     </verbProperties>
     <comps>
       <li Class="NzRimImmortalBizarre.CompProperties_ReduceEnergy">
-        <rEnergy>-15</rEnergy>
+        <rEnergy>-90</rEnergy>
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeExplosion">
         <deviationRange>1</deviationRange>
@@ -157,7 +157,7 @@
     </verbProperties>
     <comps>
       <li Class="NzRimImmortalBizarre.CompProperties_ReduceEnergy">
-        <rEnergy>-15</rEnergy>
+        <rEnergy>-100</rEnergy>
       </li>
       <!-- 生成指定物体 -->
       <li Class="CompProperties_AbilitySpawn">
@@ -201,7 +201,7 @@
     </statBases>
     <comps>
       <li Class="NzRimImmortalBizarre.CompProperties_ReduceEnergy">
-        <rEnergy>-15</rEnergy>
+        <rEnergy>-80</rEnergy>
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_DivineLightKick">
         <range>13.9</range>
@@ -245,9 +245,8 @@
       <Ability_Duration>600</Ability_Duration>
     </statBases>
     <comps>
-      <!-- TODO -->
       <li Class="NzRimImmortalBizarre.CompProperties_ReduceEnergy">
-        <rEnergy>-15</rEnergy>
+        <rEnergy>-130</rEnergy>
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_Hit">
         <damageAmountBase>1</damageAmountBase>
@@ -297,7 +296,7 @@
     </statBases>
     <comps>
       <li Class="NzRimImmortalBizarre.CompProperties_ReduceEnergy">
-        <rEnergy>-15</rEnergy>
+        <rEnergy>-100</rEnergy>
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_Hit">
         <damageDef>Blunt</damageDef>
@@ -339,7 +338,7 @@
     </statBases>
     <comps>
       <li Class="NzRimImmortalBizarre.CompProperties_ReduceEnergy">
-        <rEnergy>-15</rEnergy>
+        <rEnergy>-110</rEnergy>
       </li>
       <li Class="CompProperties_AbilityGiveHediff">
         <compClass>CompAbilityEffect_GiveHediff</compClass>
