@@ -233,7 +233,7 @@
                     </li>
                 </capMods>
                 <statFactors>
-                    <IncomingDamageFactor>0.2</IncomingDamageFactor>
+                    <IncomingDamageFactor>0.15</IncomingDamageFactor>
                 </statFactors>
                 <painOffset>-1</painOffset>
             </li>
