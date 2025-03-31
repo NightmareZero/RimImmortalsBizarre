@@ -49,7 +49,7 @@ namespace NzRimImmortalBizarre
             if (Utils.HasAscendHediff(pawn))
             {
                 Hediff hediff = Utils.GetAscendHediff(pawn);
-                if (hediff.Severity >= 0.5f) {
+                if (hediff.Severity >= 0.99f) {
                     // 恢复满灵气
                     Hediff_RI_EnergyRoot energyRoot = pawn?.health?.hediffSet?.GetFirstHediff<Hediff_RI_EnergyRoot>();
                     if (energyRoot != null)

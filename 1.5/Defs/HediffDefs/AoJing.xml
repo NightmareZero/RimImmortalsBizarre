@@ -77,7 +77,7 @@
 				<painFactor>0.8</painFactor>
 				<minSeverity>0.19</minSeverity>
 				<statFactors>
-					<InjuryHealingFactor>3</InjuryHealingFactor>
+					<InjuryHealingFactor>2.0</InjuryHealingFactor>
 					<IncomingDamageFactor>0.8</IncomingDamageFactor>
 					<NzRI_AoJingPowerMultiplier>1.5</NzRI_AoJingPowerMultiplier>
 				</statFactors>
@@ -88,7 +88,7 @@
 				<painFactor>0.7</painFactor>
 				<minSeverity>0.29</minSeverity>
 				<statFactors>
-					<InjuryHealingFactor>5</InjuryHealingFactor>
+					<InjuryHealingFactor>3</InjuryHealingFactor>
 					<IncomingDamageFactor>0.7</IncomingDamageFactor>
 					<NzRI_AoJingPowerMultiplier>1.75</NzRI_AoJingPowerMultiplier>
 				</statFactors>
@@ -99,7 +99,7 @@
 				<painFactor>0.6</painFactor>
 				<minSeverity>0.39</minSeverity>
 				<statFactors>
-					<InjuryHealingFactor>7</InjuryHealingFactor>
+					<InjuryHealingFactor>3.5</InjuryHealingFactor>
 					<IncomingDamageFactor>0.6</IncomingDamageFactor>
 					<NzRI_AoJingPowerMultiplier>2.0</NzRI_AoJingPowerMultiplier>
 				</statFactors>
@@ -110,9 +110,64 @@
 				<painFactor>0.5</painFactor>
 				<minSeverity>0.49</minSeverity>
 				<statFactors>
-					<InjuryHealingFactor>9</InjuryHealingFactor>
+					<InjuryHealingFactor>4.5</InjuryHealingFactor>
 					<IncomingDamageFactor>0.5</IncomingDamageFactor>
 					<NzRI_AoJingPowerMultiplier>2.5</NzRI_AoJingPowerMultiplier>
+				</statFactors>
+			</li>
+			<li>
+				<label>lv6</label>
+				<painOffset>-0.35</painOffset>
+				<painFactor>0.45</painFactor>
+				<minSeverity>0.59</minSeverity>
+				<statFactors>
+					<InjuryHealingFactor>5</InjuryHealingFactor>
+					<IncomingDamageFactor>0.45</IncomingDamageFactor>
+					<NzRI_AoJingPowerMultiplier>3</NzRI_AoJingPowerMultiplier>
+				</statFactors>
+			</li>
+			<li>
+				<label>lv7</label>
+				<painOffset>-0.4</painOffset>
+				<painFactor>0.43</painFactor>
+				<minSeverity>0.69</minSeverity>
+				<statFactors>
+					<InjuryHealingFactor>6</InjuryHealingFactor>
+					<IncomingDamageFactor>0.45</IncomingDamageFactor>
+					<NzRI_AoJingPowerMultiplier>3.5</NzRI_AoJingPowerMultiplier>
+				</statFactors>
+			</li>
+			<li>
+				<label>lv7</label>
+				<painOffset>-0.4</painOffset>
+				<painFactor>0.4</painFactor>
+				<minSeverity>0.79</minSeverity>
+				<statFactors>
+					<InjuryHealingFactor>6.5</InjuryHealingFactor>
+					<IncomingDamageFactor>0.42</IncomingDamageFactor>
+					<NzRI_AoJingPowerMultiplier>4</NzRI_AoJingPowerMultiplier>
+				</statFactors>
+			</li>
+			<li>
+				<label>lv8</label>
+				<painOffset>-0.45</painOffset>
+				<painFactor>0.4</painFactor>
+				<minSeverity>0.89</minSeverity>
+				<statFactors>
+					<InjuryHealingFactor>7</InjuryHealingFactor>
+					<IncomingDamageFactor>0.39</IncomingDamageFactor>
+					<NzRI_AoJingPowerMultiplier>4.5</NzRI_AoJingPowerMultiplier>
+				</statFactors>
+			</li>
+			<li>
+				<label>lv9</label>
+				<painOffset>-0.45</painOffset>
+				<painFactor>0.4</painFactor>
+				<minSeverity>0.99</minSeverity>
+				<statFactors>
+					<InjuryHealingFactor>8</InjuryHealingFactor>
+					<IncomingDamageFactor>0.35</IncomingDamageFactor>
+					<NzRI_AoJingPowerMultiplier>5</NzRI_AoJingPowerMultiplier>
 				</statFactors>
 			</li>
 		</stages>
