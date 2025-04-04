@@ -54,7 +54,7 @@ Thus, when designing Zhengde Temple, I thought about whether, when the "Great Nu
 
 [u] Almsgiving [/u]: Cut flesh to feed the eagle. Replenishes the target's hunger and rest, while enhancing the target's healing speed. This will bring you closer to the "Self-Sacrifice" path.
 
-[u] Breakthrough [/u]: Choose an available path for breakthrough.
+[u] Breakthrough [/u]: Choose an available path for breakthrough.(With each successful breakthrough, a new bionic organism will be obtained, with a maximum of 8 bionic organisms per route)
 
 [b] Cultivation Paths [/b]
 
