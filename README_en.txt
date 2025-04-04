@@ -30,6 +30,8 @@ At the same time, they also specialize in healing spells for repairing their wou
 [h3] Zuowang Dao [/h3]
 
 Zuowang Dao is a faction that specializes in deception, with most of their spells focusing on tricking the senses of their opponents, and using this to gain access to a resource known as "FeiGang", which can be used to unleash more powerful spells.
+With more fraudulent activities, occasionally attract "xinsu". Their eyes, on the ZuoWang Dao, can gradually generate CongenitalQi.
+The higher the social status of the person who practices sitting and forgetting the Dao, the lower the intelligence of the other person, the higher the other person's liking for you, and the higher the probability of deception. Try to establish a good relationship first.
 
 [u] graceful words [/u]: Subtle compliments that make the heart grow fonder, success will generate a small amount of FeiGang.
 
