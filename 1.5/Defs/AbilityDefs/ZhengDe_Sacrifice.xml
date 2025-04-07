@@ -25,7 +25,7 @@
             <!-- <soundCast>PiercingSpine_Launch</soundCast> -->
         </verbProperties>
         <comps>
-            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+            <li Class="NzRimImmortalBizarre.CompProperties_ReduceEnergy">
                 <rEnergy>-30</rEnergy>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_Drag">
@@ -56,7 +56,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+            <li Class="NzRimImmortalBizarre.CompProperties_ReduceEnergy">
                 <rEnergy>-60</rEnergy>
             </li>
             <li Class="NzRimImmortalBizarre.CompProperties_LegSweep">
@@ -101,7 +101,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+            <li Class="NzRimImmortalBizarre.CompProperties_ReduceEnergy">
                 <rEnergy>-120</rEnergy>
             </li>        
             <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeHediff">
@@ -130,7 +130,6 @@
         <aiCanUse>true</aiCanUse>
         <displayOrder>300</displayOrder>
         <sendMessageOnCooldownComplete>false</sendMessageOnCooldownComplete>
-        <!-- TODO 换成别的 -->
         <warmupStartSound>NzRI_TerrifyingGaze</warmupStartSound>
         <targetRequired>True</targetRequired>
         <verbProperties>
@@ -148,7 +147,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+            <li Class="NzRimImmortalBizarre.CompProperties_ReduceEnergy">
                 <rEnergy>-110</rEnergy>
             </li>        
             <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeHediff">
