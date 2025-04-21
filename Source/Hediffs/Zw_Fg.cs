@@ -91,7 +91,7 @@ namespace NzRimImmortalBizarre
                 {
                     defaultLabel = "来点非罡",
                     defaultDesc = "给我整点非罡",
-                    icon = ContentFinder<Texture2D>.Get("Ability/Base/LG"),
+                    icon = ContentFinder<Texture2D>.Get("UI/Abilities/Base/LG"),
                     action = delegate
                     {
                         // 生成非罡
@@ -102,7 +102,7 @@ namespace NzRimImmortalBizarre
                 {
                     defaultLabel = "来一堆非罡",
                     defaultDesc = "整满",
-                    icon = ContentFinder<Texture2D>.Get("Ability/Base/LG"),
+                    icon = ContentFinder<Texture2D>.Get("UI/Abilities/Base/LG"),
                     action = delegate
                     {
                         // 生成非罡
@@ -113,7 +113,7 @@ namespace NzRimImmortalBizarre
                 {
                     defaultLabel = "非罡清除",
                     defaultDesc = "清空",
-                    icon = ContentFinder<Texture2D>.Get("Ability/Base/LG"),
+                    icon = ContentFinder<Texture2D>.Get("UI/Abilities/Base/LG"),
                     action = delegate
                     {
                         // 生成非罡
@@ -124,7 +124,7 @@ namespace NzRimImmortalBizarre
                 {
                     defaultLabel = "来个心素",
                     defaultDesc = "心素",
-                    icon = ContentFinder<Texture2D>.Get("Ability/Base/LG"),
+                    icon = ContentFinder<Texture2D>.Get("UI/Abilities/Base/LG"),
                     action = delegate
                     {
                         // 创建事件参数
@@ -141,7 +141,7 @@ namespace NzRimImmortalBizarre
                     {
                         defaultLabel = "来点先天一气",
                         defaultDesc = "给我整点先天一气",
-                        icon = ContentFinder<Texture2D>.Get("Ability/Base/LG"),
+                        icon = ContentFinder<Texture2D>.Get("UI/Abilities/Base/LG"),
                         action = delegate
                         {
                             // 生成非罡
@@ -152,7 +152,7 @@ namespace NzRimImmortalBizarre
                     {
                         defaultLabel = "来一堆先天一气",
                         defaultDesc = "整满",
-                        icon = ContentFinder<Texture2D>.Get("Ability/Base/LG"),
+                        icon = ContentFinder<Texture2D>.Get("UI/Abilities/Base/LG"),
                         action = delegate
                         {
                             // 生成非罡
@@ -163,7 +163,7 @@ namespace NzRimImmortalBizarre
                     {
                         defaultLabel = "先天一气清除",
                         defaultDesc = "清空",
-                        icon = ContentFinder<Texture2D>.Get("Ability/Base/LG"),
+                        icon = ContentFinder<Texture2D>.Get("UI/Abilities/Base/LG"),
                         action = delegate
                         {
                             // 生成非罡

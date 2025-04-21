@@ -137,7 +137,7 @@ namespace NzRimImmortalBizarre
                 {
                     defaultLabel = "充满修行进度",
                     defaultDesc = "充满修行进度",
-                    icon = ContentFinder<Texture2D>.Get("Ability/Base/LG"),
+                    icon = ContentFinder<Texture2D>.Get("UI/Abilities/Base/LG"),
                     action = () =>
                     {
                         this.Tracker.addFruition(999);
