@@ -15,6 +15,10 @@
       <range>28.9</range>
       <warmupTime>0.5</warmupTime>
       <soundCast>PiercingSpine_Launch</soundCast>
+      <targetParams>
+        <canTargetMechs>true</canTargetMechs>
+        <canTargetAnimals>true</canTargetAnimals>
+      </targetParams>
     </verbProperties>
     <comps>
       <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
@@ -67,6 +71,8 @@
       <soundCast>FireSpew_Resolve</soundCast>
       <targetParams>
         <canTargetLocations>true</canTargetLocations>
+        <canTargetMechs>true</canTargetMechs>
+        <canTargetAnimals>true</canTargetAnimals>
       </targetParams>
     </verbProperties>
     <statBases>
