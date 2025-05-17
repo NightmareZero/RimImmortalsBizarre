@@ -4,7 +4,8 @@
   <AbilityDef ParentName="RI_PsycastBase">
     <defName>NzRI_AoJing_FingerNail</defName>
     <label>fingernail</label>
-    <description>attach your fingernails to your aura and fire them out, dealing a small amount of damage to the enemy.</description>
+    <description>attach your fingernails to your aura and fire them out, dealing a small amount of
+      damage to the enemy.</description>
     <iconPath>Ability/AoJing1</iconPath>
     <cooldownTicksRange>60</cooldownTicksRange>
     <!-- <category>TODO</category> -->
@@ -18,14 +19,16 @@
       <targetParams>
         <canTargetMechs>true</canTargetMechs>
         <canTargetAnimals>true</canTargetAnimals>
+        <canTargetMutants>true</canTargetMutants>
       </targetParams>
     </verbProperties>
     <comps>
       <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
         <rEnergy>-1</rEnergy>
       </li>
-      <li Class="NzRimImmortalBizarre.CompProperties_AbilityLaunchProjectile">
+      <li Class="CompProperties_AbilityLaunchProjectile">
         <projectileDef>NzRI_SmallBloodGuts</projectileDef>
+        <!-- <damageMultiplier>NzRI_AoJingPowerMultiplier</damageMultiplier> -->
       </li>
       <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
         <group>projectile</group>
@@ -39,6 +42,8 @@
   <ThingDef ParentName="BaseBullet">
     <defName>NzRI_SmallBloodGuts</defName>
     <label>blood guts</label>
+    <!-- TODO 这个貌似有点问题需要修复 -->
+    <!-- <thingClass>NzRimImmortalBizarre.ProjectileExt</thingClass> -->
     <graphicData>
       <texPath>Things/Projectile/PiercingSpine</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -171,7 +176,8 @@
   <AbilityDef ParentName="RI_PsycastBase">
     <defName>NzRI_AoJing_Arm</defName>
     <label>Arm</label>
-    <description>use your arm as a medium to cause multiple large explosions at the target location, dealing high damage to enemies within range.</description>
+    <description>use your arm as a medium to cause multiple large explosions at the target location,
+      dealing high damage to enemies within range.</description>
     <iconPath>Ability/AoJing4</iconPath>
     <cooldownTicksRange>1000</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
@@ -191,7 +197,7 @@
     <comps>
       <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
         <rEnergy>-50</rEnergy>
-      </li>      
+      </li>
       <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeExplosion">
         <deviationRange>6.9</deviationRange>
         <explosionRange>5.9</explosionRange>
@@ -251,7 +257,8 @@
   <AbilityDef ParentName="AbilityTouchBase">
     <defName>NzRI_FireTherapy</defName>
     <label>fire therapy</label>
-    <description>shoots a small burst of flame at the target so that their wounds will heal quickly, but also causes a small amount of burns.\n\nIt seems to have been taken from the another book.</description>
+    <description>shoots a small burst of flame at the target so that their wounds will heal quickly,
+      but also causes a small amount of burns.\n\nIt seems to have been taken from the another book.</description>
     <iconPath>Ability/AoJing5</iconPath>
     <stunTargetWhileCasting>true</stunTargetWhileCasting>
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -298,7 +305,8 @@
   <AbilityDef ParentName="AbilityTouchBase">
     <defName>NzRI_AoJing_Regeneration</defName>
     <label>regeneration</label>
-    <description>Use a secret spell to repair the target's missing parts, but it will cause damage to your own internal organs.</description>
+    <description>Use a secret spell to repair the target's missing parts, but it will cause damage
+      to your own internal organs.</description>
     <iconPath>Ability/AoJing6</iconPath>
     <stunTargetWhileCasting>true</stunTargetWhileCasting>
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -343,7 +351,8 @@
   <AbilityDef ParentName="AbilityTouchBase">
     <defName>NzRI_AoJing_Molt</defName>
     <label>molt</label>
-    <description>strip your own skin and infuse a large amount of aura into it, turning it into armor</description>
+    <description>strip your own skin and infuse a large amount of aura into it, turning it into
+      armor</description>
     <iconPath>Ability/AoJing7</iconPath>
     <stunTargetWhileCasting>true</stunTargetWhileCasting>
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -389,38 +398,40 @@
   </AbilityDef>
 
   <AbilityDef>
-		<defName>NzRI_AoJing_Ascend</defName>
-		<label>Ascend</label>
-		<cooldownTicksRange>120000</cooldownTicksRange>
-		<description>Attract the attention of the demon Ba-Hui. The more pain and suffering one experiences in their mind and body, the higher the chances of success. However, it can cause severe damage to their internal organs.</description>
+    <defName>NzRI_AoJing_Ascend</defName>
+    <label>Ascend</label>
+    <cooldownTicksRange>120000</cooldownTicksRange>
+    <description>Attract the attention of the demon Ba-Hui. The more pain and suffering one
+      experiences in their mind and body, the higher the chances of success. However, it can cause
+      severe damage to their internal organs.</description>
     <iconPath>Ability/AoJing8</iconPath>
-		<warmupStartSound>ReimplantXenogerm_Cast</warmupStartSound>
-		<warmupEffecter>Implant_Xenogerm</warmupEffecter>
-		<aiCanUse>false</aiCanUse>
-		<jobDef>CastAbilityOnThing</jobDef>
-		<targetRequired>False</targetRequired>
-		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
-		<stunTargetWhileCasting>True</stunTargetWhileCasting>
-		<showPsycastEffects>True</showPsycastEffects>
-		<verbProperties>
-			<verbClass>Verb_CastAbility</verbClass>
-			<warmupTime>10</warmupTime>
-			<drawAimPie>False</drawAimPie>
-			<requireLineOfSight>False</requireLineOfSight>
-			<targetParams>
-				<canTargetSelf>true</canTargetSelf>
-				<canTargetPawns>false</canTargetPawns>
-				<canTargetBuildings>false</canTargetBuildings>
-				<canTargetAnimals>false</canTargetAnimals>
-				<canTargetHumans>false</canTargetHumans>
-				<canTargetMechs>false</canTargetMechs>
-			</targetParams>
-		</verbProperties>
-		<comps>
+    <warmupStartSound>ReimplantXenogerm_Cast</warmupStartSound>
+    <warmupEffecter>Implant_Xenogerm</warmupEffecter>
+    <aiCanUse>false</aiCanUse>
+    <jobDef>CastAbilityOnThing</jobDef>
+    <targetRequired>False</targetRequired>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <stunTargetWhileCasting>True</stunTargetWhileCasting>
+    <showPsycastEffects>True</showPsycastEffects>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>10</warmupTime>
+      <drawAimPie>False</drawAimPie>
+      <requireLineOfSight>False</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetHumans>false</canTargetHumans>
+        <canTargetMechs>false</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+    <comps>
       <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
         <rEnergy>-1</rEnergy>
       </li>
-			<li Class="NzRimImmortalBizarre.CompProperties_AbilityAscend" />
+      <li Class="NzRimImmortalBizarre.CompProperties_AbilityAscend" />
       <li Class="NzRimImmortalBizarre.CompProperties_AoJing_HurtSelf">
         <group>ascend</group>
         <level>1</level>
@@ -428,6 +439,6 @@
         <damageMin>9</damageMin>
         <damageMax>11</damageMax>
       </li>
-		</comps>
-	</AbilityDef>
+    </comps>
+  </AbilityDef>
 </Defs>

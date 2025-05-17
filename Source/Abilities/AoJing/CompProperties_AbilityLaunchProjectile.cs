@@ -8,6 +8,8 @@ namespace NzRimImmortalBizarre
     {
         public ThingDef projectileDef;
 
+        public StatDef damageMultiplier;
+
         public CompProperties_AbilityLaunchProjectile()
         {
             compClass = typeof(CompAbilityEffect_LaunchProjectile);

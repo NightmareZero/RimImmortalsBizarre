@@ -78,7 +78,8 @@
         <defName>NzRI_Zd_TerrorScream</defName>
         <label>terror scream</label>
         <!-- 发出一声恐怖的吼叫，恐吓敌人，降低其移动和攻击速度 -->
-        <description>emit a terrifying scream to scare enemies, reducing their movement and attack speed</description>
+        <description>emit a terrifying scream to scare enemies, reducing their movement and attack
+            speed</description>
         <iconPath>Ability/ZdS3</iconPath>
         <cooldownTicksRange>1000</cooldownTicksRange>
         <aiCanUse>true</aiCanUse>
@@ -103,7 +104,7 @@
         <comps>
             <li Class="NzRimImmortalBizarre.CompProperties_ReduceEnergy">
                 <rEnergy>-120</rEnergy>
-            </li>        
+            </li>
             <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeHediff">
                 <radius>6</radius>
                 <hediffDef>NzRI_Zd_He_TerrorScream</hediffDef>
@@ -124,7 +125,8 @@
         <defName>NzRI_Zd_NightmareGaze</defName>
         <label>nighmare gaze</label>
         <!-- 冰冷的凝视，将扭曲与疯狂注入目标的心灵与处理器，即使是机器都会发疯 -->
-        <description>the cold gaze that injects distortion and madness into the target's mind and processor, even machines will go crazy</description>
+        <description>the cold gaze that injects distortion and madness into the target's mind and
+            processor, even machines will go crazy</description>
         <iconPath>Ability/ZdS4</iconPath>
         <cooldownTicksRange>1000</cooldownTicksRange>
         <aiCanUse>true</aiCanUse>
@@ -149,7 +151,7 @@
         <comps>
             <li Class="NzRimImmortalBizarre.CompProperties_ReduceEnergy">
                 <rEnergy>-110</rEnergy>
-            </li>        
+            </li>
             <li Class="NzRimImmortalBizarre.CompProperties_AbilityRangeHediff">
                 <radius>4</radius>
                 <hediffDef>NzRI_Zd_He_NightmareGaze</hediffDef>
@@ -172,7 +174,8 @@
         <defName>NzRI_Zd_TentacleStab</defName>
         <label>tentacle stab</label>
         <!-- 让触须中的活铁瞬间硬化，对敌人的心脏造成致命一击 -->
-        <description>let the bioferrite in the tentacles harden instantly, causing a fatal blow to the enemy's heart</description>
+        <description>let the bioferrite in the tentacles harden instantly, causing a fatal blow to
+            the enemy's heart</description>
         <iconPath>Ability/ZdS5</iconPath>
         <cooldownTicksRange>120</cooldownTicksRange>
         <aiCanUse>true</aiCanUse>
@@ -182,15 +185,15 @@
         <!-- TODO -->
         <!-- <warmupStartSound>NzRI_FireSpew_Warmup</warmupStartSound> -->
         <verbProperties>
-        <verbClass>Verb_CastAbilityTouch</verbClass>
-        <range>-1</range>
-        <warmupTime>0</warmupTime>
-        <soundCast>NzRI_CutMeat</soundCast>
-        <targetParams>
-            <canTargetLocations>false</canTargetLocations>
-            <canTargetMechs>true</canTargetMechs>
-            <canTargetAnimals>true</canTargetAnimals>
-        </targetParams>
+            <verbClass>Verb_CastAbilityTouch</verbClass>
+            <range>-1</range>
+            <warmupTime>0</warmupTime>
+            <soundCast>NzRI_CutMeat</soundCast>
+            <targetParams>
+                <canTargetLocations>false</canTargetLocations>
+                <canTargetMechs>true</canTargetMechs>
+                <canTargetAnimals>true</canTargetAnimals>
+            </targetParams>
         </verbProperties>
         <statBases>
             <Ability_Duration>600</Ability_Duration>
@@ -210,12 +213,13 @@
         </comps>
     </AbilityDef>
 
-     <!-- 触须挥砍 -->
+    <!-- 触须挥砍 -->
     <AbilityDef ParentName="RI_PsycastBase">
         <defName>NzRI_Zd_TentacleSlash</defName>
         <label>tentacle slash</label>
         <!-- 让触须中的活铁瞬间硬化，对范围内的敌人进行一次挥砍 -->
-        <description>let the bioferrite in the tentacles harden instantly, and make a slash on the enemies in the area</description>
+        <description>let the bioferrite in the tentacles harden instantly, and make a slash on the
+            enemies in the area</description>
         <iconPath>Ability/ZdS6</iconPath>
         <cooldownTicksRange>120</cooldownTicksRange>
         <aiCanUse>true</aiCanUse>
@@ -250,5 +254,5 @@
                 <canHitFilledCells>true</canHitFilledCells>
             </li>
         </comps>
-    </AbilityDef>    
+    </AbilityDef>
 </Defs>

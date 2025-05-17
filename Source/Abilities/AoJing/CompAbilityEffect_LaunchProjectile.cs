@@ -20,16 +20,28 @@ namespace NzRimImmortalBizarre
             if (Props.projectileDef != null)
             {
                 Pawn pawn = parent.pawn;
-                Projectile projectile = (Projectile)GenSpawn.Spawn(Props.projectileDef, pawn.Position, pawn.Map);
-                // TODO 修改技能伤害
-                
+                Projectile projectile;
+
+                if (Props.projectileDef.thingClass == typeof(ProjectileExt))
+                {
+                    ProjectileExt projectile1 = (ProjectileExt)GenSpawn.Spawn(Props.projectileDef, pawn.Position, pawn.Map);
+                    if (Props.damageMultiplier != null)
+                    {
+
+                        projectile1.DamageAmountMultiplier = Props.damageMultiplier;
+
+
+                    }
+                    projectile = projectile1;
+                }
+                else
+                {
+                    projectile = (Projectile)GenSpawn.Spawn(Props.projectileDef, pawn.Position, pawn.Map);
+                }
+
+
                 projectile.Launch(pawn, pawn.DrawPos, target, target, ProjectileHitFlags.IntendedTarget);
             }
-        }
-
-        public override bool AICanTargetNow(LocalTargetInfo target)
-        {
-            return target.Pawn != null;
         }
 
     }
