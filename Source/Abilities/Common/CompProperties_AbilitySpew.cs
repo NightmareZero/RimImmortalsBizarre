@@ -1,10 +1,11 @@
 using Verse;
 using RimWorld;
+using System.Collections.Generic;
 
 namespace NzRimImmortalBizarre
 {
 
-    
+
     public class CompProperties_AbilitySpew : CompProperties_AbilityEffect
     {
         public float range;
@@ -27,5 +28,17 @@ namespace NzRimImmortalBizarre
         // {
         //     compClass = typeof(CompAbilityEffect_Spew);
         // }
+        public override IEnumerable<string> ConfigErrors(AbilityDef parentDef)
+        {
+            foreach (string error in base.ConfigErrors(parentDef))
+            {
+                yield return error;
+            }
+            if (compClass == null)
+            {
+                yield return parentDef.defName + " has a CompProperties_AbilitySpew but compClass is null.";
+            }
+        }
+
     }
 }
