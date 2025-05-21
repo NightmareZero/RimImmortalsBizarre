@@ -33,7 +33,7 @@
             <li>
                 <statFactors>
                     <NzRI_ZhengDePowerMultiplier>1.15</NzRI_ZhengDePowerMultiplier>
-                    <MeleeDamageFactor>1.25</MeleeDamageFactor>
+                    <MeleeDamageFactor>1.1</MeleeDamageFactor>
                 </statFactors>
             </li>
         </stages>
@@ -66,7 +66,7 @@
             <li>
                 <statFactors>
                     <NzRI_ZhengDePowerMultiplier>1.15</NzRI_ZhengDePowerMultiplier>
-                    <MeleeDamageFactor>1.25</MeleeDamageFactor>
+                    <MeleeDamageFactor>1.1</MeleeDamageFactor>
                 </statFactors>
             </li>
         </stages>        
@@ -116,7 +116,7 @@
             <li>
                 <statFactors>
                     <NzRI_ZhengDePowerMultiplier>1.15</NzRI_ZhengDePowerMultiplier>
-                    <MeleeDamageFactor>1.25</MeleeDamageFactor>
+                    <MeleeDamageFactor>1.1</MeleeDamageFactor>
                 </statFactors>
             </li>
         </stages>        
@@ -166,7 +166,7 @@
             <li>
                 <statFactors>
                     <NzRI_ZhengDePowerMultiplier>1.15</NzRI_ZhengDePowerMultiplier>
-                    <MeleeDamageFactor>1.25</MeleeDamageFactor>
+                    <MeleeDamageFactor>1.1</MeleeDamageFactor>
                 </statFactors>
             </li>
         </stages>        
@@ -199,7 +199,7 @@
             <li>
                 <statFactors>
                     <NzRI_ZhengDePowerMultiplier>1.15</NzRI_ZhengDePowerMultiplier>
-                    <MeleeDamageFactor>1.25</MeleeDamageFactor>
+                    <MeleeDamageFactor>1.1</MeleeDamageFactor>
                 </statFactors>
             </li>
         </stages>        
@@ -231,7 +231,7 @@
             <li>
                 <statFactors>
                     <NzRI_ZhengDePowerMultiplier>1.15</NzRI_ZhengDePowerMultiplier>
-                    <MeleeDamageFactor>1.25</MeleeDamageFactor>
+                    <MeleeDamageFactor>1.1</MeleeDamageFactor>
                 </statFactors>
             </li>
         </stages>        

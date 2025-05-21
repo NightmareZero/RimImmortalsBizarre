@@ -27,6 +27,7 @@
         <stages>
             <li>
                 <statFactors>
+                    <MeleeDamageFactor>1.2</MeleeDamageFactor>
                     <NzRI_ZhengDePowerMultiplier>1.1</NzRI_ZhengDePowerMultiplier>
                     <ShootingAccuracyFactor_Long>1.2</ShootingAccuracyFactor_Long>
                     <ShootingAccuracyFactor_Medium>1.5</ShootingAccuracyFactor_Medium>
@@ -67,6 +68,7 @@
                     <NegotiationAbility>2.0</NegotiationAbility>
                     <SocialImpact>2.0</SocialImpact>
                     <TradePriceImprovement>2.0</TradePriceImprovement>
+                    <MeleeDamageFactor>1.2</MeleeDamageFactor>
                 </statFactors>
             </li>
         </stages>
@@ -102,6 +104,7 @@
                     <NzRI_ZhengDePowerMultiplier>1.1</NzRI_ZhengDePowerMultiplier>
                     <!-- 毒素抵抗 -->
                     <ToxicResistance>1.0</ToxicResistance>
+                    <MeleeDamageFactor>1.2</MeleeDamageFactor>
                 </statFactors>
                 <makeImmuneTo>
                     <!-- 免疫原版成瘾品 -->
@@ -144,6 +147,7 @@
                     <NzRI_ZhengDePowerMultiplier>1.1</NzRI_ZhengDePowerMultiplier>
                     <!-- 不可阻挡 -->
                     <StaggerDurationFactor>0</StaggerDurationFactor>
+                    <MeleeDamageFactor>1.2</MeleeDamageFactor>
                 </statFactors>
             </li>
         </stages>
@@ -176,6 +180,7 @@
                     <ResearchSpeed>2.0</ResearchSpeed>
                     <!-- 破解速度 -->
                     <HackingSpeed>2.0</HackingSpeed>
+                    <MeleeDamageFactor>1.2</MeleeDamageFactor>
                 </statFactors>
                 <statOffsets>
                 </statOffsets>
@@ -234,6 +239,7 @@
                     <GeneralLaborSpeed>2.1</GeneralLaborSpeed>
                     <!-- 建造速度 -->
                     <ConstructionSpeed>2.0</ConstructionSpeed>
+                    <MeleeDamageFactor>1.2</MeleeDamageFactor>
                 </statFactors>
                 <statOffsets>
                 </statOffsets>
@@ -291,6 +297,7 @@
                     <PlantWorkSpeed>3</PlantWorkSpeed>
                     <!-- 挖掘速度 -->
                     <MiningSpeed>3</MiningSpeed>
+                    <MeleeDamageFactor>1.2</MeleeDamageFactor>
                 </statFactors>
                 <statOffsets>
                 </statOffsets>
