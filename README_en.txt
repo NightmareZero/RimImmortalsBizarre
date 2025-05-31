@@ -66,7 +66,7 @@ Thus, when designing Zhengde Temple, I thought about whether, when the "Great Nu
 
 [u] Self-Sacrifice [/u]: Sacrificing oneself to solve difficulties for all beings. However, be careful, this is not 'Great Nuo', and the one responding to you may not necessarily be 'Siming'.
 
-[h3] Bingjia [/h3]
+[h3] Military Strategists [/h3]
 
 This is a recent idea that emerged temporarily, it should be a small-scale sect with fewer skills. It is a relatively cheap frontline, relying on weapons imbued with evil energy to inherit cultivation.
 
