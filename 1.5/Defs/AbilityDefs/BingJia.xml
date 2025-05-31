@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- 列阵 -->
+    <AbilityDef ParentName="RI_PsycastBase">
+        <defName>NzRI_Bj_Embattle​</defName>
+        <label>embattle</label>
+        <!-- 让你的盟友在周围列阵，增加他们的战斗力，持续6小时 -->
+        <description>Let your allies embattle around you, increasing their combat effectiveness, lasting 6 hours.</description>
+        <iconPath>UI/Abilities/Base/LG</iconPath>
+        <cooldownTicksRange>30000</cooldownTicksRange>
+        <aiCanUse>true</aiCanUse>
+        <displayOrder>300</displayOrder>
+        <!-- <category>Sanguophage</category> -->
+        <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+        <!-- TODO 替换声音为怒吼 -->
+        <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
+        <targetRequired>False</targetRequired>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>0.01</warmupTime>
+            <!-- TODO -->
+            <range>-1</range>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <!-- <li Class="NzRimImmortalBizarre.CompProperties_ReduceEnergy">
+                <rEnergy>-15</rEnergy>
+            </li> -->
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <durationSecondsOverride>167</durationSecondsOverride>
+                <hediffDef>NzRI_He_Bj_Embattle​</hediffDef>
+                <psychic>False</psychic>
+                <replaceExisting>true</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef> 
+
+    <!-- 血战 -->
+    <AbilityDef ParentName="RI_PsycastBase">
+        <defName>NzRI_Bj_DieFighting​</defName>
+        <label>die fighting</label>
+        <!-- 进入狂暴的战斗状态，决不投降，绝不后退 -->
+        <description>Enter a berserk fighting state, never surrendering or retreating</description>
+        <iconPath>UI/Abilities/Base/LG</iconPath>
+        <cooldownTicksRange>30000</cooldownTicksRange>
+        <aiCanUse>true</aiCanUse>
+        <displayOrder>300</displayOrder>
+        <!-- <category>Sanguophage</category> -->
+        <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+        <!-- TODO 替换声音为怒吼 -->
+        <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
+        <targetRequired>False</targetRequired>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>0.01</warmupTime>
+            <!-- TODO -->
+            <range>-1</range>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <!-- <li Class="NzRimImmortalBizarre.CompProperties_ReduceEnergy">
+                <rEnergy>-15</rEnergy>
+            </li> -->
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <durationSecondsOverride>167</durationSecondsOverride>
+                <hediffDef>NzRI_He_Bj_DieFighting​</hediffDef>
+                <psychic>False</psychic>
+                <replaceExisting>true</replaceExisting>
+            </li>
+            <li Class="CompProperties_AbilityGiveMentalState">
+                <compClass>CompAbilityEffect_GiveMentalState</compClass>
+                <stateDef>BerserkTrance</stateDef>
+                <soundMale>BerserkTrance_Resolve_Male</soundMale>
+                <soundFemale>BerserkTrance_Resolve_Female</soundFemale>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <!-- 染煞 -->
+
+    <!-- 将相首 -->
+</Defs>
