@@ -83,6 +83,46 @@
     </AbilityDef>
 
     <!-- 染煞 -->
+    <AbilityDef ParentName="RI_PsycastBase">
+        <defName>NzRI_Bj_DyeingEvil</defName>
+        <label>dyeing evil</label>
+        <!-- 使一件近战武器沾染煞气，使用这件武器的人会变的非常强大，但是也会更加容易激怒 -->
+        <cooldownTicksRange>120000</cooldownTicksRange>
+        <description>Make a melee weapon tainted with evil, the user of this weapon will become very powerful, but also more easily angered.</description>
+        <iconPath>UI/Abilities/Base/LG</iconPath>
+        <!-- TODO 声音是皇权的 -->
+        <!-- <warmupStartSound>Psycast_Neuroquake_CastStart</warmupStartSound> -->
+        <!-- <warmupSound>Psycast_Neuroquake_CastLoop</warmupSound> -->
+        <!-- <warmupEffecter>Implant_Xenogerm</warmupEffecter> -->
+        <aiCanUse>false</aiCanUse>
+        <jobDef>CastAbilityOnThing</jobDef>
+        <targetRequired>True</targetRequired>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <stunTargetWhileCasting>True</stunTargetWhileCasting>
+        <showPsycastEffects>True</showPsycastEffects>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>3.9</range>
+            <warmupTime>6</warmupTime>
+            <drawAimPie>True</drawAimPie>
+            <requireLineOfSight>True</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>False</canTargetSelf>
+                <canTargetPawns>False</canTargetPawns>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetMechs>False</canTargetMechs>
+                <canTargetItems>True</canTargetItems>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <!-- <li Class="WhoXiuXian.Abilities.CompProperties__ReduceEnergy">
+                <rEnergy>-299</rEnergy>
+            </li> -->
+            
+        </comps>
+    </AbilityDef> 
+
+    <!-- 铁魄 -->
 
     <!-- 将相首 -->
 </Defs>
