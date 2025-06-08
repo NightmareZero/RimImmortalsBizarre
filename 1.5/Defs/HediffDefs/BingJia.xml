@@ -2,7 +2,7 @@
 <Defs>
     <!-- 死战 -->
     <HediffDef>
-        <defName>NzRI_He_Bj_DieFighting​</defName>
+        <defName>NzRI_He_Bj_DieFighting</defName>
         <label>die fighting</label>
         <description>Enter a berserk fighting state, never surrendering or retreating</description>
         <hediffClass>HediffWithComps</hediffClass>
@@ -28,9 +28,9 @@
 
     <!-- 列阵 -->
     <HediffDef>
-        <defName>NzRI_He_Bj_Embattle​</defName>
+        <defName>NzRI_He_Bj_Embattle</defName>
         <label>embattle</label>
-        <description></description>
+        <description>TODO</description>
         <isBad>false</isBad>
         <duplicationAllowed>false</duplicationAllowed>
         <hediffClass>HediffWithComps</hediffClass>
@@ -54,7 +54,7 @@
                     <onlyTargetColonists>false</onlyTargetColonists>
                 </targetingParameters>
                 <onlyPawnsInSameFaction>true</onlyPawnsInSameFaction>
-                <hediff>NzRI_He_Bj_Standby​</hediff>
+                <hediff>NzRI_He_Bj_Standby</hediff>
             </li>
         </comps>
         <stages>
@@ -70,7 +70,7 @@
     </HediffDef>
     <!-- 待战 -->
     <HediffDef>
-        <defName>NzRI_He_Bj_Standby​</defName>
+        <defName>NzRI_He_Bj_Standby</defName>
         <label>standby</label>
         <description>Standby for battle, ready to fight at any moment</description>
         <duplicationAllowed>false</duplicationAllowed>

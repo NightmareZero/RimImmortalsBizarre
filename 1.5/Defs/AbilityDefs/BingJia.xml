@@ -2,7 +2,7 @@
 <Defs>
     <!-- 列阵 -->
     <AbilityDef ParentName="RI_PsycastBase">
-        <defName>NzRI_Bj_Embattle​</defName>
+        <defName>NzRI_Bj_Embattle</defName>
         <label>embattle</label>
         <!-- 让你的盟友在周围列阵，增加他们的战斗力，持续6小时 -->
         <description>Let your allies embattle around you, increasing their combat effectiveness, lasting 6 hours.</description>
@@ -31,7 +31,7 @@
             <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <durationSecondsOverride>167</durationSecondsOverride>
-                <hediffDef>NzRI_He_Bj_Embattle​</hediffDef>
+                <hediffDef>NzRI_He_Bj_Embattle</hediffDef>
                 <psychic>False</psychic>
                 <replaceExisting>true</replaceExisting>
             </li>
@@ -40,7 +40,7 @@
 
     <!-- 血战 -->
     <AbilityDef ParentName="RI_PsycastBase">
-        <defName>NzRI_Bj_DieFighting​</defName>
+        <defName>NzRI_Bj_DieFighting</defName>
         <label>die fighting</label>
         <!-- 进入狂暴的战斗状态，决不投降，绝不后退 -->
         <description>Enter a berserk fighting state, never surrendering or retreating</description>
@@ -69,7 +69,7 @@
             <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <durationSecondsOverride>167</durationSecondsOverride>
-                <hediffDef>NzRI_He_Bj_DieFighting​</hediffDef>
+                <hediffDef>NzRI_He_Bj_DieFighting</hediffDef>
                 <psychic>False</psychic>
                 <replaceExisting>true</replaceExisting>
             </li>
