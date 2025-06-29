@@ -64,15 +64,17 @@ namespace NzRimImmortalBizarre
             tmpCellDots.Clear();
             tmpCells.Clear();
             HashSet<IntVec3> visitedCells = new HashSet<IntVec3>();
-            Queue<IntVec3> cellsToProcess = new Queue<IntVec3>();
+            List<IntVec3> cellsToProcess = new List<IntVec3>();
         
             // 初始化队列和集合
-            cellsToProcess.Enqueue(target.Cell);
+            cellsToProcess.Add(target.Cell);
             visitedCells.Add(target.Cell);
         
-            while (cellsToProcess.Count > 0 && tmpCellDots.Count < Props.numCellsToHit)
+            int processIndex = 0;
+            while (processIndex < cellsToProcess.Count && tmpCellDots.Count < Props.numCellsToHit)
             {
-                IntVec3 currentCell = cellsToProcess.Dequeue();
+                IntVec3 currentCell = cellsToProcess[processIndex];
+                processIndex++;
                 tmpCellDots.Add(new Pair<IntVec3, float>(currentCell, 0f));
         
                 // 获取当前格子的邻居格子
@@ -81,7 +83,7 @@ namespace NzRimImmortalBizarre
                     if (!visitedCells.Contains(neighbor))
                     {
                         visitedCells.Add(neighbor);
-                        cellsToProcess.Enqueue(neighbor);
+                        cellsToProcess.Add(neighbor);
                     }
                 }
             }
