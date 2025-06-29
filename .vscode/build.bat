@@ -15,4 +15,4 @@ REM remove unnecessary assemblies
 DEL /Q .\1.6\Assemblies\*.*
 
 REM build dll with specified configuration
-dotnet build .vscode -c %BUILD_CONFIG%
+dotnet build 1.6 -c %BUILD_CONFIG%

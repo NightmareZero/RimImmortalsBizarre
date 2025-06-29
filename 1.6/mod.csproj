@@ -7,7 +7,7 @@
 		<!-- Modify [RootNamespace], [AssemblyName], [OutputPath], [VersionPrefix] -->
 		<RootNamespace>NzRimImmortalBizarre</RootNamespace>
 		<AssemblyName>NzRimImmortalBizarre</AssemblyName>
-		<OutputPath>../1.5/Assemblies</OutputPath>
+		<OutputPath>../1.6/Assemblies</OutputPath>
 		<VersionPrefix>0.1.0.0</VersionPrefix>
 
 
@@ -67,15 +67,15 @@
 		</Reference>
 
 		<!-- RimImmortal-Core -->
-		<Reference Include="../../RimImmortal-Core/1.5/Assemblies/Mod.dll">
+		<Reference Include="../../RimImmortal-Core/1.6/Assemblies/Mod.dll">
 			<Private>False</Private>
 		</Reference>
 
-		<Reference Include="../../RimImmortal-Core/1.5/Assemblies/RI_Effect.dll">
+		<Reference Include="../../RimImmortal-Core/1.6/Assemblies/RI_Effect.dll">
 			<Private>False</Private>
 		</Reference>
 
-		<Reference Include="../../RimImmortal-Core/1.5/Assemblies/RimImmortalEffect_Library.dll">
+		<Reference Include="../../RimImmortal-Core/1.6/Assemblies/RimImmortalEffect_Library.dll">
 			<Private>False</Private>
 		</Reference>
 	</ItemGroup>
