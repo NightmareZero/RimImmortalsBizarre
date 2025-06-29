@@ -58,7 +58,7 @@ namespace NzRimImmortalBizarre
             this.isFinished = false; // 标记为未完成
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
 

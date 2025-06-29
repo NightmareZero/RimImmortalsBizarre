@@ -20,7 +20,7 @@
                 <canTargetAnimals>True</canTargetAnimals>
                 <canTargetHumans>True</canTargetHumans>
                 <canTargetMechs>True</canTargetMechs>
-                <canTargetMutants>True</canTargetMutants>
+                <canTargetEntities>True</canTargetEntities>
             </targetParams>
             <!-- <soundCast>PiercingSpine_Launch</soundCast> -->
         </verbProperties>
@@ -144,7 +144,7 @@
                 <canTargetBuildings>False</canTargetBuildings>
                 <canTargetMechs>True</canTargetMechs>
                 <canTargetAnimals>True</canTargetAnimals>
-                <canTargetMutants>False</canTargetMutants>
+                <canTargetEntities>False</canTargetEntities>
                 <canTargetSelf>False</canTargetSelf>
             </targetParams>
         </verbProperties>
@@ -161,7 +161,7 @@
                     <canTargetBuildings>False</canTargetBuildings>
                     <canTargetMechs>True</canTargetMechs>
                     <canTargetAnimals>True</canTargetAnimals>
-                    <canTargetMutants>False</canTargetMutants>
+                    <canTargetEntities>False</canTargetEntities>
                     <canTargetSelf>False</canTargetSelf>
                 </targetParams>
             </li>

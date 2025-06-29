@@ -1,6 +1,5 @@
 using Verse;
 using RimWorld;
-using NzRimImmortalBizarre;
 using System.Collections.Generic;
 using System.Linq;
 using Verse.Noise;
@@ -13,7 +12,7 @@ namespace NzRimImmortalBizarre
     {
         public new CompProperties_Zw_MvIllness Props => (CompProperties_Zw_MvIllness)props;
 
-        private Pawn Caster => parent.pawn;
+        private new Pawn Caster => parent.pawn;
 
         private bool preApply(LocalTargetInfo target, LocalTargetInfo dest)
         {

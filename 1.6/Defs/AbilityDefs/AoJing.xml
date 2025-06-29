@@ -19,7 +19,7 @@
       <targetParams>
         <canTargetMechs>true</canTargetMechs>
         <canTargetAnimals>true</canTargetAnimals>
-        <canTargetMutants>true</canTargetMutants>
+        <canTargetEntities>true</canTargetEntities>
       </targetParams>
     </verbProperties>
     <comps>

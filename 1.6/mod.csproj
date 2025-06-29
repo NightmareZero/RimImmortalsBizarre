@@ -75,8 +75,8 @@
 			<Private>False</Private>
 		</Reference>
 
-		<Reference Include="../../RimImmortal-Core/1.6/Assemblies/RimImmortalEffect_Library.dll">
+		<!-- <Reference Include="../../RimImmortal-Core/1.6/Assemblies/RimImmortalEffect_Library.dll">
 			<Private>False</Private>
-		</Reference>
+		</Reference> -->
 	</ItemGroup>
 </Project>

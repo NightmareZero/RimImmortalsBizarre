@@ -27,7 +27,7 @@
                 <canTargetMechs>False</canTargetMechs>
                 <canTargetItems>False</canTargetItems>
                 <canTargetHumans>True</canTargetHumans>
-                <canTargetMutants>False</canTargetMutants>
+                <canTargetEntities>False</canTargetEntities>
                 <neverTargetHostileFaction>True</neverTargetHostileFaction>
             </targetParams>
         </verbProperties>
@@ -85,7 +85,7 @@
                 <canTargetMechs>False</canTargetMechs>
                 <canTargetItems>False</canTargetItems>
                 <canTargetHumans>True</canTargetHumans>
-                <canTargetMutants>False</canTargetMutants>
+                <canTargetEntities>False</canTargetEntities>
                 <neverTargetHostileFaction>True</neverTargetHostileFaction>
             </targetParams>
         </verbProperties>
@@ -141,7 +141,7 @@
                 <canTargetMechs>False</canTargetMechs>
                 <canTargetItems>False</canTargetItems>
                 <canTargetHumans>True</canTargetHumans>
-                <canTargetMutants>False</canTargetMutants>
+                <canTargetEntities>False</canTargetEntities>
                 <neverTargetHostileFaction>True</neverTargetHostileFaction>
             </targetParams>
         </verbProperties>

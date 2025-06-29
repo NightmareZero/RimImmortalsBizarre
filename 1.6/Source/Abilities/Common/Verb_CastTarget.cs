@@ -59,10 +59,10 @@ namespace NzRimImmortalBizarre
                         {
                             DrawSensitivityStat(affectedTarget);
                         }
-                        else
-                        {
-                            DrawIneffectiveWarning(affectedTarget);
-                        }
+                        // else
+                        // {
+                        //     DrawIneffectiveWarning(affectedTarget);
+                        // }
                     }
                 }
 

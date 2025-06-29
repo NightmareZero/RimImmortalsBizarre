@@ -12,7 +12,7 @@ namespace NzRimImmortalBizarre
 
         public float lineSize = 1f; // 线的粗细
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
             angle += 360f * Time.deltaTime * speed; // 根据speed调整旋转速度

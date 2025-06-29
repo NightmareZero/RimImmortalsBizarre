@@ -9,6 +9,8 @@ namespace NzRimImmortalBizarre
     {
         public new CompProperties_AbilityLaunchProjectile Props => (CompProperties_AbilityLaunchProjectile)props;
 
+        private Pawn Caster => parent.pawn;
+
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
@@ -28,7 +30,15 @@ namespace NzRimImmortalBizarre
                     if (Props.damageMultiplier != null)
                     {
 
-                        projectile1.DamageAmountMultiplier = Props.damageMultiplier;
+                        if (Props.damageMultiplier !=null)
+                        {
+                            projectile1.DamageAmountMultiplier = Caster.GetStatValue(Props.damageMultiplier, true, 600);
+                            
+                        }
+                        else
+                        {
+                            projectile1.DamageAmountMultiplier = 1f;
+                        }
 
 
                     }

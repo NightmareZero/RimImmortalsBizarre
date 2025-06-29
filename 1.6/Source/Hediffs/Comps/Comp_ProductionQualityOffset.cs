@@ -46,7 +46,7 @@ namespace NzRimImmortalBizarre
     // 由于本身没有提供修改质量的方法，所以只能通过 Harmony 修改
     [HarmonyPatch(typeof(QualityUtility))]
     [HarmonyPatch(nameof(QualityUtility.GenerateQualityCreatedByPawn))]
-    [HarmonyPatch(new Type[] { typeof(Pawn), typeof(SkillDef) })]
+    [HarmonyPatch(new Type[] { typeof(Pawn), typeof(SkillDef), typeof(bool) })]
     public static class HarmonyPatchProductionQualityOffset
     {
         public static void Postfix(ref QualityCategory __result, Pawn pawn, SkillDef relevantSkill)
