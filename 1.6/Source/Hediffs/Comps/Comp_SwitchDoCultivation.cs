@@ -16,22 +16,22 @@ namespace NzRimImmortalBizarre
         public Pawn pawn => base.Pawn;
         public override void CompPostTick(ref float severityAdjustment)
         {
-            if (EnergyRootUtility.GetRoot(pawn).openingBasicAbility == false)
+            if (pawn.GetRIRoot().openingBasicAbility == false)
             {
                 parent.Severity = 0;
             }
         }
         public override void CompPostMake()
         {
-            if (EnergyRootUtility.GetRoot(pawn).openingBasicAbility == false)
+            if (pawn.GetRIRoot().openingBasicAbility == false)
             {
-                EnergyRootUtility.GetRoot(pawn).openingBasicAbility = true;
+                pawn.GetRIRoot().openingBasicAbility = true;
                 base.CompPostMake();
                 return;
             }
-            if (EnergyRootUtility.GetRoot(pawn).openingBasicAbility == true)
+            if (pawn.GetRIRoot().openingBasicAbility == true)
             {
-                EnergyRootUtility.GetRoot(pawn).openingBasicAbility = false;
+                pawn.GetRIRoot().openingBasicAbility = false;
                 base.CompPostMake();
                 return;
             }

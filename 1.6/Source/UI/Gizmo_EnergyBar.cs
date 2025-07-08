@@ -15,7 +15,6 @@ namespace NzRimImmortalBizarre
 
 		private float barLength = 122f; // 每个bar的长度
 
-		private float barLineHeight = 10f; // 每个bar的高度
 		private float gizmoLength = 180f; // 整个gizmo的长度
 
 		public override bool Visible
@@ -61,7 +60,7 @@ namespace NzRimImmortalBizarre
 			(data.bar2Num == null || !data.bar2Num.Enabled()))
 			{
 				barLength = 60f;
-				barLineHeight = 20f;
+				// barLineHeight = 20f;
 			}
 		}
 
