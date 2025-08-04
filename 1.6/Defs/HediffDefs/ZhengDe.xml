@@ -166,7 +166,7 @@
             </li>
             <li Class="NzRimImmortalBizarre.Comp_StashHediff">
                 <hediffs>
-                    <li>HoraxianInvisibility</li>
+                    <li MayRequire="Ludeon.RimWorld.Anomaly">HoraxianInvisibility</li>
                     <li>PsychicInvisibility</li>
                 </hediffs>
                 <comps>
