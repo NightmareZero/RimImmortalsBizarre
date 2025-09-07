@@ -176,13 +176,9 @@ namespace NzRimImmortalBizarre
             // 能量条
             if (this.Tracker != null)
             {
-                if (energyBar == null)
-                {
-                    energyBar = new Gizmo_EnergyBar(Tracker);
-                }
                 if (this.Tracker.Visible)
                 {
-                    yield return energyBar;
+                    yield return new Gizmo_EnergyBar(Tracker);
                 }
             }
 
